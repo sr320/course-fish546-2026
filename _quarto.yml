@@ -1,6 +1,10 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - tutorials/*.html
+    - tutorials/tutorial.css
+    - tutorials/progress.js
 
 website:
   title: "2026 :: Bioinformatics — FISH 546"
