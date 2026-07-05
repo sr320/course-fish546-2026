@@ -14,8 +14,8 @@ website:
         text: Before Class
       - href: support.qmd
         text: Self-Directed Skills
-      - href: edna.qmd
-        text: eDNA
+      - href: turn-in.qmd
+        text: Turn In Work
       - href: https://github.com/course-fish546-2026
         text: GitHub Org
     right:

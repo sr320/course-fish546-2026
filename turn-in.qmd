@@ -1,0 +1,128 @@
+---
+title: "Turn In Work"
+subtitle: "GitHub-native submission and automatic assessment"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## The idea
+
+You turn in work by opening a GitHub Issue that points to an exact commit in your course repository. The commit contains your answer files, output files, and a small `submission.yml` manifest. GitHub Actions reads the issue, checks the files, and comments with an automatic assessment report.
+
+This gives everyone the same workflow:
+
+1. Do the work in your repository.
+2. Commit and push.
+3. Open the correct submission issue.
+4. Paste the repository URL, commit SHA, and path to your manifest.
+5. Read the automatic report and fix anything flagged before the deadline.
+
+The Issue is the receipt. The commit SHA freezes the submitted version. The manifest tells the grader what evidence belongs to the submission.
+
+## What gets assessed automatically
+
+The automatic check is not meant to replace instructor judgment. It checks the things software is good at checking:
+
+- Required files exist.
+- Files are in the expected week directory.
+- Rendered reports are present when required.
+- Output tables and figures are non-empty.
+- A `submission.yml` file identifies the week, type, title, and submitted files.
+- Raw data are not accidentally committed from `data/raw/`.
+- The submission issue links to a specific commit.
+- The repository has recent commits before the deadline.
+
+The instructor still evaluates interpretation, biological reasoning, caveats, and scientific quality.
+
+## Question set submissions
+
+Question sets should live in `homework/`.
+
+Example:
+
+```text
+homework/
+  week02.qmd
+  week02.html
+  week02-submission.yml
+```
+
+Example `week02-submission.yml`:
+
+```yaml
+type: question-set
+week: "02"
+title: "Raw reads, FASTQ, QC, and trimming"
+source: "homework/week02.qmd"
+rendered: "homework/week02.html"
+questions_answered: 5
+project_connection: true
+```
+
+## Assignment submissions
+
+Assignments should live in `assignment/`.
+
+Example:
+
+```text
+assignment/
+  02-fastq-qc/
+    analysis.qmd
+    analysis.html
+    output/read-counts.csv
+    output/qc-summary.png
+    submission.yml
+```
+
+Example `submission.yml`:
+
+```yaml
+type: assignment
+week: "02"
+title: "FASTQ Quality Control"
+source: "assignment/02-fastq-qc/analysis.qmd"
+rendered: "assignment/02-fastq-qc/analysis.html"
+outputs:
+  - "assignment/02-fastq-qc/output/read-counts.csv"
+  - "assignment/02-fastq-qc/output/qc-summary.png"
+uses_raw_data: true
+raw_data_committed: false
+project_connection: true
+```
+
+## Automatic report
+
+After the issue is opened or edited, GitHub Actions posts a report like:
+
+```text
+Automatic assessment: warning
+
+Passed
+- Manifest found.
+- Rendered report found.
+- Output table found.
+
+Warnings
+- No project_connection field found.
+
+Needs human review
+- Biological interpretation and caveats.
+```
+
+If the report says `fail`, fix the flagged items, push a new commit, and edit the submission issue with the new commit SHA.
+
+## Why this is better than uploads
+
+This system assesses the same habits the course is trying to teach:
+
+- Version-controlled work.
+- Reproducible project structure.
+- Clear evidence trails.
+- Precise submission versions.
+- Fast feedback before grading.
+- Human review reserved for scientific judgment.
+
+It also lets the instructor see cohort-level progress through labels such as `auto:pass`, `auto:warn`, `auto:fail`, `question-set`, and `assignment`.

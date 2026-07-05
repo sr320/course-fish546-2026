@@ -183,6 +183,30 @@ The core schedule should read as a coherent progression:
 RStudio, Quarto, GitHub Issues, Hyak, containers, and archiving live in `support.qmd`
 and are invoked by assignments as needed.
 
+---
+
+## 6. GitHub-native submission and automatic assessment
+
+Students submit question sets and assignments through GitHub Issue Forms. Each submission
+issue points to:
+
+- Student repository URL.
+- Exact commit SHA.
+- Week number.
+- Path to a `submission.yml` manifest.
+- Rendered report path.
+- Key output paths for assignments.
+
+The automatic assessment workflow checks the evidence packet and comments on the issue
+with a report. It can verify required files, manifests, rendered outputs, non-empty
+tables/figures, raw-data hygiene, and basic metadata. It does **not** replace human
+review of biological reasoning, interpretation, caveats, or writing quality.
+
+This creates a useful distinction:
+
+- **Automatic checks:** structure, completeness, reproducibility evidence.
+- **Instructor review:** scientific quality and judgment.
+
 ### Topics intentionally not made core weeks
 
 These are valuable, but the 10-week course will become scattered if all are treated as
@@ -200,7 +224,7 @@ mini-lessons when they directly support student projects.
 
 ---
 
-## 6. Repository / site structure
+## 7. Repository / site structure
 
 ```
 course-fish546-2026/
@@ -209,6 +233,7 @@ course-fish546-2026/
 ├── schedule.qmd             # 10-week schedule incl. eDNA + pre-course setup row
 ├── setup.qmd                # pre-course landing → the 3 HTML tutorials + setup issue
 ├── support.qmd              # self-directed RStudio, Quarto, GitHub, Hyak, archiving
+├── turn-in.qmd              # GitHub submission contract + automatic assessment
 ├── edna.qmd                 # eDNA topic hub (links lecture + assignment + resources)
 ├── about.qmd
 ├── styles.css
@@ -224,11 +249,12 @@ course-fish546-2026/
 ├── .github/
 │   ├── ISSUE_TEMPLATE/      # the YAML forms + config.yml from §3a
 │   ├── labels.yml           # §3b
-│   └── workflows/           # greetings, label-sync, (schedule bot)
+│   └── workflows/           # greetings, label-sync, submission assessment
+├── scripts/                 # submission parsing and assessment helpers
 └── docs/                    # rendered site (GitHub Pages)
 ```
 
-## 7. Build sequence (checklist)
+## 8. Build sequence (checklist)
 
 - [x] **Scaffold** Quarto site (`_quarto.yml`, `index`, `schedule`, `about`, `setup`, `styles`).
 - [x] **Tutorials** — shared CSS/JS + the three HTML files; verify each opens standalone.
@@ -237,11 +263,12 @@ course-fish546-2026/
 - [x] **eDNA** — draft `lectures/edna.qmd`, `assignments/edna-metabarcoding.qmd`, `edna.qmd` hub.
 - [x] **Content migration** — add first-pass 2026 lectures, assignments, and question sets for every scheduled week.
 - [x] **Refocus schedule** — make weekly topics bioinformatics-first and move RStudio/Quarto/archiving to self-directed support.
+- [x] **Submission workflow** — add submission issue forms, assessment labels, `turn-in.qmd`, and starter GitHub Actions checker.
 - [x] **Schedule** — insert setup (week 0) + eDNA rows; linked weekly materials now exist.
 - [ ] **Publish** — `quarto render`, confirm Pages serves `docs/`, set the course GitHub org.
 - [ ] **Dry run** — walk all 3 tutorials on a clean machine; open a test setup issue end-to-end.
 
-## 8. Open decisions (instructor input)
+## 9. Open decisions (instructor input)
 - Course GitHub org name for 2026 (e.g. `course-fish546-2026`) + Pages URL.
 - Meeting times / room / Zoom for 2026.
 - Whether eDNA is an *elective* project track or a shared week-long assignment for all.

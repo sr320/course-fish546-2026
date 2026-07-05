@@ -54,9 +54,11 @@ Each week has a bioinformatics assignment, expected research-project progress, a
 
 ## Submitting work
 
-- **Question sets** → markdown file in your repo's `homework/` directory (same filename, with answers).
-- **Class assignments** → your repo's `assignment/` directory, numeric-prefixed; commits pushed by Friday 5:00pm.
+- **Question sets** → files in your repo's `homework/` directory, submitted with a question-set submission issue that points to a commit SHA and manifest.
+- **Class assignments** → files in your repo's `assignment/` directory, submitted with an assignment submission issue that points to a commit SHA and manifest.
 - **Project progress** → assessed from your **weekly-progress GitHub issue** and your card on the course project board (goals set vs. met, issues resolved, best practices applied).
+
+See [Turn In Work](turn-in.qmd) for the submission contract and automatic assessment report format.
 
 **Late policy:** 40% deduction; not accepted more than 5 days past due.
 

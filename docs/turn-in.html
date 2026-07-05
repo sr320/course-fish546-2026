@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Bioinformatics for Environmental Sciences – 2026 :: Bioinformatics — FISH 546</title>
+<title>Turn In Work – 2026 :: Bioinformatics — FISH 546</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -43,8 +78,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0f9aa9b9e44320098794e46e8ae1c927.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-799b2e67dced8356c059a1018004f018.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-664b9df428bbab9c1f6680386e992356.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d757336e2410f929f25436ca4854d534.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -255,7 +290,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
@@ -271,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Self-Directed Skills</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./turn-in.html"> 
+    <a class="nav-link active" href="./turn-in.html" aria-current="page"> 
 <span class="menu-text">Turn In Work</span></a>
   </li>  
   <li class="nav-item">
@@ -302,15 +337,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a></li>
-  <li><a href="#format" id="toc-format" class="nav-link" data-scroll-target="#format">Format</a></li>
-  <li><a href="#platforms" id="toc-platforms" class="nav-link" data-scroll-target="#platforms">Platforms</a></li>
-  <li><a href="#textbook" id="toc-textbook" class="nav-link" data-scroll-target="#textbook">Textbook</a></li>
-  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
-  <li><a href="#submitting-work" id="toc-submitting-work" class="nav-link" data-scroll-target="#submitting-work">Submitting work</a></li>
-  <li><a href="#core-competencies" id="toc-core-competencies" class="nav-link" data-scroll-target="#core-competencies">Core competencies</a></li>
-  <li><a href="#weekly-arc" id="toc-weekly-arc" class="nav-link" data-scroll-target="#weekly-arc">Weekly arc</a></li>
-  <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful resources</a></li>
+  <li><a href="#the-idea" id="toc-the-idea" class="nav-link active" data-scroll-target="#the-idea">The idea</a></li>
+  <li><a href="#what-gets-assessed-automatically" id="toc-what-gets-assessed-automatically" class="nav-link" data-scroll-target="#what-gets-assessed-automatically">What gets assessed automatically</a></li>
+  <li><a href="#question-set-submissions" id="toc-question-set-submissions" class="nav-link" data-scroll-target="#question-set-submissions">Question set submissions</a></li>
+  <li><a href="#assignment-submissions" id="toc-assignment-submissions" class="nav-link" data-scroll-target="#assignment-submissions">Assignment submissions</a></li>
+  <li><a href="#automatic-report" id="toc-automatic-report" class="nav-link" data-scroll-target="#automatic-report">Automatic report</a></li>
+  <li><a href="#why-this-is-better-than-uploads" id="toc-why-this-is-better-than-uploads" class="nav-link" data-scroll-target="#why-this-is-better-than-uploads">Why this is better than uploads</a></li>
   </ul>
 </nav>
     </div>
@@ -320,8 +352,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Bioinformatics for Environmental Sciences</h1>
-<p class="subtitle lead">Syllabus — FISH 546 (2026)</p>
+<h1 class="title">Turn In Work</h1>
+<p class="subtitle lead">GitHub-native submission and automatic assessment</p>
 </div>
 
 
@@ -338,159 +370,104 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="about" class="level2">
-<h2 class="anchored" data-anchor-id="about">About</h2>
-<p>This course teaches graduate students how to move from biological sequence data to defensible environmental bioinformatics interpretation. Each student develops and completes a research project targeting a reproducible final compendium by the end of the quarter. The weekly topics emphasize bioinformatics data types and analyses; computing tools such as RStudio, Quarto, GitHub, Raven, Hyak, and archiving are handled through <a href="./support.html">self-directed support modules</a> and used throughout the quarter.</p>
-<hr>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Do this before Week 1
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Complete the <strong>three self-directed setup tutorials</strong> on the <a href="./setup.html">Before Class</a> page — one for each computing platform you will use (your own computer, Raven, and Hyak). Then open your <strong>Setup Check</strong> issue. You cannot keep up in Week 1 without a working setup on all three.</p>
-</div>
-</div>
-<p>Bioinformatics is not only running tools. It is the practice of keeping data provenance clear, choosing appropriate analyses, checking intermediate products, and making biological claims that the evidence can support.</p>
-</section>
-<section id="format" class="level2">
-<h2 class="anchored" data-anchor-id="format">Format</h2>
-<p>This class is driven in part by student needs and is flexible in content. It is practical and problem-driven. Tuesdays focus on the week’s bioinformatics concept and data type. Thursdays are working sessions for applying that concept to assignments and research projects.</p>
-<div class="callout callout-style-default callout-important callout-titled" style="color: orange">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Issues are how we work.</strong> Structured, trackable work happens in <strong>GitHub Issues</strong> using course <a href="https://github.com/course-fish546-2026">issue forms</a> — weekly progress, project proposals, and help requests. Open-ended conversation happens in <a href="https://github.com/orgs/course-fish546-2026/discussions">GitHub Discussions</a> and on <a href="https://genefish.slack.com">Slack</a>. Be sure you have a GitHub account, are part of the course organization, and have notifications turned on.</p>
-</div>
-</div>
-</section>
-<section id="platforms" class="level2">
-<h2 class="anchored" data-anchor-id="platforms">Platforms</h2>
-<p>You will work across three computing tiers. Each has a dedicated <a href="./setup.html">setup tutorial</a>, and the operational details live on the <a href="./support.html">Self-Directed Skills</a> page.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Tier</th>
-<th>Platform</th>
-<th>Access</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Your computer</td>
-<td>Local shell + Git/GitHub</td>
-<td>your laptop/desktop</td>
-</tr>
-<tr class="even">
-<td>Raven</td>
-<td>RStudio Server</td>
-<td><a href="http://raven.fish.washington.edu:8787" class="uri">http://raven.fish.washington.edu:8787</a></td>
-</tr>
-<tr class="odd">
-<td>Hyak / Klone</td>
-<td>HPC (SLURM + containers)</td>
-<td><code>ssh &lt;UWNetID&gt;@klone.hyak.uw.edu</code> · <a href="https://ondemand.hyak.uw.edu">On-Demand</a></td>
-</tr>
-</tbody>
-</table>
-<p>Course GitHub Organization: <a href="https://github.com/course-fish546-2026" class="uri">https://github.com/course-fish546-2026</a></p>
-</section>
-<section id="textbook" class="level2">
-<h2 class="anchored" data-anchor-id="textbook">Textbook</h2>
-<p><a href="https://www.amazon.com/Bioinformatics-Data-Skills-Reproducible-Research/dp/1449367372/">Bioinformatics Data Skills</a> — Reproducible and Robust Research with Open Source Tools, by Vince Buffalo (O’Reilly, 2015). <a href="https://github.com/vsbuffalo/bds-files">Supplementary repo</a>.</p>
-</section>
-<section id="grading" class="level2">
-<h2 class="anchored" data-anchor-id="grading">Grading</h2>
-<p>Each week has a bioinformatics assignment, expected research-project progress, and a question set. You will give a mid-quarter project update and a final compendium presentation. Question sets are based on the week’s reading/material and are due by 3:00pm Tuesday - review the <a href="./schedule.html">weekly topic</a> before class.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><em>Assignments</em></th>
-<th>Grade %</th>
-<th><em>comment</em></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Weekly Question Set</td>
-<td>25%</td>
-<td>due Tuesday 3:00pm</td>
-</tr>
-<tr class="even">
-<td>Weekly Class Assignment</td>
-<td>35%</td>
-<td>due Friday 5:00pm</td>
-</tr>
-<tr class="odd">
-<td>Weekly Research Project Progress</td>
-<td>20%</td>
-<td>assessed via your <strong>weekly-progress issue</strong> + project board</td>
-</tr>
-<tr class="even">
-<td>Project Presentation</td>
-<td>10%</td>
-<td>mid-quarter update + final presentation</td>
-</tr>
-<tr class="odd">
-<td>Project Completion</td>
-<td>10%</td>
-<td>Week 10: compendium</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="submitting-work" class="level2">
-<h2 class="anchored" data-anchor-id="submitting-work">Submitting work</h2>
-<ul>
-<li><strong>Question sets</strong> → markdown file in your repo’s <code>homework/</code> directory (same filename, with answers).</li>
-<li><strong>Class assignments</strong> → your repo’s <code>assignment/</code> directory, numeric-prefixed; commits pushed by Friday 5:00pm.</li>
-<li><strong>Project progress</strong> → assessed from your <strong>weekly-progress GitHub issue</strong> and your card on the course project board (goals set vs.&nbsp;met, issues resolved, best practices applied).</li>
-</ul>
-<p><strong>Late policy:</strong> 40% deduction; not accepted more than 5 days past due.</p>
-</section>
-<section id="core-competencies" class="level2">
-<h2 class="anchored" data-anchor-id="core-competencies">Core competencies</h2>
-<p>Skills in this course are anchored to the <strong><a href="https://robertslab.github.io/resources/">Roberts Lab Handbook</a></strong> — its computing best practices, data management, and platform guides (Raven, Klone) are the reference standard for how you are expected to work.</p>
-</section>
-<section id="weekly-arc" class="level2">
-<h2 class="anchored" data-anchor-id="weekly-arc">Weekly arc</h2>
-<p>The course moves from sequence identification and raw sequencing data toward multi-assay environmental interpretation:</p>
+<section id="the-idea" class="level2">
+<h2 class="anchored" data-anchor-id="the-idea">The idea</h2>
+<p>You turn in work by opening a GitHub Issue that points to an exact commit in your course repository. The commit contains your answer files, output files, and a small <code>submission.yml</code> manifest. GitHub Actions reads the issue, checks the files, and comments with an automatic assessment report.</p>
+<p>This gives everyone the same workflow:</p>
 <ol type="1">
-<li>Sequence databases and BLAST.</li>
-<li>Raw reads, FASTQ, quality control, and trimming.</li>
-<li>Mapping, alignment, assembly, and quantification.</li>
-<li>RNA-seq and differential expression.</li>
-<li>Genome annotation and genomic ranges.</li>
-<li>Variants and population signals.</li>
-<li>DNA methylation and regulatory genomics.</li>
-<li>eDNA and metabarcoding.</li>
-<li>Project synthesis and biological interpretation.</li>
-<li>Final compendium.</li>
+<li>Do the work in your repository.</li>
+<li>Commit and push.</li>
+<li>Open the correct submission issue.</li>
+<li>Paste the repository URL, commit SHA, and path to your manifest.</li>
+<li>Read the automatic report and fix anything flagged before the deadline.</li>
 </ol>
+<p>The Issue is the receipt. The commit SHA freezes the submitted version. The manifest tells the grader what evidence belongs to the submission.</p>
 </section>
-<section id="useful-resources" class="level2">
-<h2 class="anchored" data-anchor-id="useful-resources">Useful resources</h2>
+<section id="what-gets-assessed-automatically" class="level2">
+<h2 class="anchored" data-anchor-id="what-gets-assessed-automatically">What gets assessed automatically</h2>
+<p>The automatic check is not meant to replace instructor judgment. It checks the things software is good at checking:</p>
 <ul>
-<li><a href="https://robertslab.github.io/resources/">Roberts Lab Handbook</a> — computing, data management, and platform guides.</li>
-<li><a href="https://marineomics.github.io">MarineOmics Portal</a> — genomic tutorials.</li>
-<li><a href="https://sandbox.bio">sandbox.bio</a> — interactive bioinformatics tutorials.</li>
-<li><a href="https://happygitwithr.com/">Happy Git with R</a> — Git + GitHub + RStudio.</li>
+<li>Required files exist.</li>
+<li>Files are in the expected week directory.</li>
+<li>Rendered reports are present when required.</li>
+<li>Output tables and figures are non-empty.</li>
+<li>A <code>submission.yml</code> file identifies the week, type, title, and submitted files.</li>
+<li>Raw data are not accidentally committed from <code>data/raw/</code>.</li>
+<li>The submission issue links to a specific commit.</li>
+<li>The repository has recent commits before the deadline.</li>
 </ul>
+<p>The instructor still evaluates interpretation, biological reasoning, caveats, and scientific quality.</p>
+</section>
+<section id="question-set-submissions" class="level2">
+<h2 class="anchored" data-anchor-id="question-set-submissions">Question set submissions</h2>
+<p>Question sets should live in <code>homework/</code>.</p>
+<p>Example:</p>
+<pre class="text"><code>homework/
+  week02.qmd
+  week02.html
+  week02-submission.yml</code></pre>
+<p>Example <code>week02-submission.yml</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">type</span><span class="kw">:</span><span class="at"> question-set</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">week</span><span class="kw">:</span><span class="at"> </span><span class="st">"02"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Raw reads, FASTQ, QC, and trimming"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span><span class="kw">:</span><span class="at"> </span><span class="st">"homework/week02.qmd"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">rendered</span><span class="kw">:</span><span class="at"> </span><span class="st">"homework/week02.html"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">questions_answered</span><span class="kw">:</span><span class="at"> </span><span class="dv">5</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">project_connection</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="assignment-submissions" class="level2">
+<h2 class="anchored" data-anchor-id="assignment-submissions">Assignment submissions</h2>
+<p>Assignments should live in <code>assignment/</code>.</p>
+<p>Example:</p>
+<pre class="text"><code>assignment/
+  02-fastq-qc/
+    analysis.qmd
+    analysis.html
+    output/read-counts.csv
+    output/qc-summary.png
+    submission.yml</code></pre>
+<p>Example <code>submission.yml</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">type</span><span class="kw">:</span><span class="at"> assignment</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">week</span><span class="kw">:</span><span class="at"> </span><span class="st">"02"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"FASTQ Quality Control"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span><span class="kw">:</span><span class="at"> </span><span class="st">"assignment/02-fastq-qc/analysis.qmd"</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">rendered</span><span class="kw">:</span><span class="at"> </span><span class="st">"assignment/02-fastq-qc/analysis.html"</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">outputs</span><span class="kw">:</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="st">"assignment/02-fastq-qc/output/read-counts.csv"</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="st">"assignment/02-fastq-qc/output/qc-summary.png"</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">uses_raw_data</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="fu">raw_data_committed</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">project_connection</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="automatic-report" class="level2">
+<h2 class="anchored" data-anchor-id="automatic-report">Automatic report</h2>
+<p>After the issue is opened or edited, GitHub Actions posts a report like:</p>
+<pre class="text"><code>Automatic assessment: warning
+
+Passed
+- Manifest found.
+- Rendered report found.
+- Output table found.
+
+Warnings
+- No project_connection field found.
+
+Needs human review
+- Biological interpretation and caveats.</code></pre>
+<p>If the report says <code>fail</code>, fix the flagged items, push a new commit, and edit the submission issue with the new commit SHA.</p>
+</section>
+<section id="why-this-is-better-than-uploads" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-is-better-than-uploads">Why this is better than uploads</h2>
+<p>This system assesses the same habits the course is trying to teach:</p>
+<ul>
+<li>Version-controlled work.</li>
+<li>Reproducible project structure.</li>
+<li>Clear evidence trails.</li>
+<li>Precise submission versions.</li>
+<li>Fast feedback before grading.</li>
+<li>Human review reserved for scientific judgment.</li>
+</ul>
+<p>It also lets the instructor see cohort-level progress through labels such as <code>auto:pass</code>, <code>auto:warn</code>, <code>auto:fail</code>, <code>question-set</code>, and <code>assignment</code>.</p>
 
 
 </section>

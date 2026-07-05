@@ -1,0 +1,62 @@
+name: "Question Set Submission"
+description: Submit a weekly question set for automatic pre-checking.
+title: "[question-set] week NN - <your name>"
+labels: ["submission", "question-set"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Submit the exact version you want assessed. The automatic checker uses the repository URL, commit SHA, and manifest path below.
+  - type: dropdown
+    id: week
+    attributes:
+      label: Week
+      options: ["01","02","03","04","05","06","07","08","09","10"]
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Course repository URL
+      placeholder: "https://github.com/course-fish546-2026/<your-repo>"
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Commit SHA
+      description: The exact commit that contains your submitted work.
+      placeholder: "abc1234..."
+    validations:
+      required: true
+  - type: input
+    id: manifest
+    attributes:
+      label: Submission manifest path
+      placeholder: "homework/week02-submission.yml"
+    validations:
+      required: true
+  - type: input
+    id: rendered
+    attributes:
+      label: Rendered answer path
+      placeholder: "homework/week02.html"
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: "I answered all questions in my own words."
+          required: true
+        - label: "I linked this question set to my project where asked."
+          required: true
+        - label: "I understand that editing this issue with a new commit SHA resubmits the work."
+          required: true
+  - type: textarea
+    id: note
+    attributes:
+      label: Optional note to instructor
+      description: Use this for anything the automatic checker will not understand.
+        

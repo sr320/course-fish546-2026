@@ -10,6 +10,7 @@ See **[PLAN.md](PLAN.md)** for the full build plan. In short, this iteration:
 - Ships **three self-directed, pre-course HTML tutorials** — one per platform students use — in `tutorials/`, with Hyak/Klone getting the deepest treatment.
 - Structures weekly lectures, assignments, and question sets around a bioinformatics-first arc: sequence search, raw reads/QC, mapping/quantification, RNA-seq, annotation/ranges, variants, methylation, eDNA, and project synthesis.
 - Moves RStudio, Quarto, Hyak mechanics, GitHub Issues, and archiving guidance into `support.qmd` as self-directed skills.
+- Adds a GitHub-native submission and automatic assessment workflow using Issue Forms, exact commit SHAs, `submission.yml` manifests, and GitHub Actions.
 
 Core competencies are anchored to the [Roberts Lab Handbook](https://robertslab.github.io/resources/).
 
@@ -30,8 +31,10 @@ The three setup tutorials are standalone HTML — just open `tutorials/*.html` i
 | `schedule.qmd` | 10-week bioinformatics-first schedule |
 | `setup.qmd` | Before-class landing page → the 3 tutorials |
 | `support.qmd` | Self-directed skills: RStudio, Quarto, GitHub Issues, Hyak, archiving |
+| `turn-in.qmd` | Submission contract and automatic assessment workflow |
 | `edna.qmd` | eDNA topic hub |
 | `tutorials/` | 3 pre-course HTML tutorials (+ shared CSS/JS) |
 | `lectures/`, `assignments/`, `questions/` | weekly content |
-| `.github/` | issue forms, labels, workflows |
+| `.github/` | issue forms, labels, submission assessment workflow |
+| `scripts/` | submission parsing and assessment helpers |
 | `PLAN.md` | full build plan & open decisions |

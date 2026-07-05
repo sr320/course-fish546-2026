@@ -1,0 +1,63 @@
+name: Assess submissions
+
+on:
+  issues:
+    types: [opened, edited, reopened, labeled]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  assess:
+    if: contains(github.event.issue.labels.*.name, 'submission')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout course assessment tools
+        uses: actions/checkout@v4
+        with:
+          path: _course
+
+      - name: Parse submission issue
+        id: parse
+        run: python3 _course/scripts/parse_submission_issue.py "$GITHUB_EVENT_PATH"
+
+      - name: Checkout submitted student repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ steps.parse.outputs.repository }}
+          ref: ${{ steps.parse.outputs.commit }}
+          path: _student
+          token: ${{ secrets.COURSE_BOT_TOKEN || github.token }}
+
+      - name: Assess submission packet
+        run: |
+          python3 _course/scripts/assess_submission.py \
+            --student-root _student \
+            --manifest "${{ steps.parse.outputs.manifest }}" \
+            --week "${{ steps.parse.outputs.week }}" \
+            --submission-type "${{ steps.parse.outputs.submission_type }}" \
+            --rendered "${{ steps.parse.outputs.rendered }}" \
+            --outputs "${{ steps.parse.outputs.outputs }}" \
+            --report assessment-report.md \
+            --status-file assessment-status.txt
+
+      - name: Comment assessment report
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: gh issue comment "$ISSUE_NUMBER" --body-file assessment-report.md
+
+      - name: Update automatic assessment labels
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh issue edit "$ISSUE_NUMBER" --remove-label "auto:pass" || true
+          gh issue edit "$ISSUE_NUMBER" --remove-label "auto:warn" || true
+          gh issue edit "$ISSUE_NUMBER" --remove-label "auto:fail" || true
+          STATUS="$(cat assessment-status.txt)"
+          gh issue edit "$ISSUE_NUMBER" --add-label "auto:$STATUS"
+          if [ "$STATUS" != "pass" ]; then
+            gh issue edit "$ISSUE_NUMBER" --add-label "needs-review"
+          fi

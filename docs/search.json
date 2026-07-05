@@ -1846,5 +1846,54 @@
     "title": "Week 03 Questions",
     "section": "",
     "text": "Answer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat is the difference between mapping reads to a reference and assembling reads without a reference?\nWhat kind of biological question requires a reference genome, transcriptome, or database?\nWhat intermediate summary would you inspect before trusting a mapping or quantification result?\nWhat does an analysis-ready table look like for one workflow you care about?\nWhat is the smallest meaningful workflow slice you can run for your project this week?"
+  },
+  {
+    "objectID": "turn-in.html",
+    "href": "turn-in.html",
+    "title": "Turn In Work",
+    "section": "",
+    "text": "You turn in work by opening a GitHub Issue that points to an exact commit in your course repository. The commit contains your answer files, output files, and a small submission.yml manifest. GitHub Actions reads the issue, checks the files, and comments with an automatic assessment report.\nThis gives everyone the same workflow:\n\nDo the work in your repository.\nCommit and push.\nOpen the correct submission issue.\nPaste the repository URL, commit SHA, and path to your manifest.\nRead the automatic report and fix anything flagged before the deadline.\n\nThe Issue is the receipt. The commit SHA freezes the submitted version. The manifest tells the grader what evidence belongs to the submission."
+  },
+  {
+    "objectID": "turn-in.html#the-idea",
+    "href": "turn-in.html#the-idea",
+    "title": "Turn In Work",
+    "section": "",
+    "text": "You turn in work by opening a GitHub Issue that points to an exact commit in your course repository. The commit contains your answer files, output files, and a small submission.yml manifest. GitHub Actions reads the issue, checks the files, and comments with an automatic assessment report.\nThis gives everyone the same workflow:\n\nDo the work in your repository.\nCommit and push.\nOpen the correct submission issue.\nPaste the repository URL, commit SHA, and path to your manifest.\nRead the automatic report and fix anything flagged before the deadline.\n\nThe Issue is the receipt. The commit SHA freezes the submitted version. The manifest tells the grader what evidence belongs to the submission."
+  },
+  {
+    "objectID": "turn-in.html#what-gets-assessed-automatically",
+    "href": "turn-in.html#what-gets-assessed-automatically",
+    "title": "Turn In Work",
+    "section": "What gets assessed automatically",
+    "text": "What gets assessed automatically\nThe automatic check is not meant to replace instructor judgment. It checks the things software is good at checking:\n\nRequired files exist.\nFiles are in the expected week directory.\nRendered reports are present when required.\nOutput tables and figures are non-empty.\nA submission.yml file identifies the week, type, title, and submitted files.\nRaw data are not accidentally committed from data/raw/.\nThe submission issue links to a specific commit.\nThe repository has recent commits before the deadline.\n\nThe instructor still evaluates interpretation, biological reasoning, caveats, and scientific quality."
+  },
+  {
+    "objectID": "turn-in.html#question-set-submissions",
+    "href": "turn-in.html#question-set-submissions",
+    "title": "Turn In Work",
+    "section": "Question set submissions",
+    "text": "Question set submissions\nQuestion sets should live in homework/.\nExample:\nhomework/\n  week02.qmd\n  week02.html\n  week02-submission.yml\nExample week02-submission.yml:\ntype: question-set\nweek: \"02\"\ntitle: \"Raw reads, FASTQ, QC, and trimming\"\nsource: \"homework/week02.qmd\"\nrendered: \"homework/week02.html\"\nquestions_answered: 5\nproject_connection: true"
+  },
+  {
+    "objectID": "turn-in.html#assignment-submissions",
+    "href": "turn-in.html#assignment-submissions",
+    "title": "Turn In Work",
+    "section": "Assignment submissions",
+    "text": "Assignment submissions\nAssignments should live in assignment/.\nExample:\nassignment/\n  02-fastq-qc/\n    analysis.qmd\n    analysis.html\n    output/read-counts.csv\n    output/qc-summary.png\n    submission.yml\nExample submission.yml:\ntype: assignment\nweek: \"02\"\ntitle: \"FASTQ Quality Control\"\nsource: \"assignment/02-fastq-qc/analysis.qmd\"\nrendered: \"assignment/02-fastq-qc/analysis.html\"\noutputs:\n  - \"assignment/02-fastq-qc/output/read-counts.csv\"\n  - \"assignment/02-fastq-qc/output/qc-summary.png\"\nuses_raw_data: true\nraw_data_committed: false\nproject_connection: true"
+  },
+  {
+    "objectID": "turn-in.html#automatic-report",
+    "href": "turn-in.html#automatic-report",
+    "title": "Turn In Work",
+    "section": "Automatic report",
+    "text": "Automatic report\nAfter the issue is opened or edited, GitHub Actions posts a report like:\nAutomatic assessment: warning\n\nPassed\n- Manifest found.\n- Rendered report found.\n- Output table found.\n\nWarnings\n- No project_connection field found.\n\nNeeds human review\n- Biological interpretation and caveats.\nIf the report says fail, fix the flagged items, push a new commit, and edit the submission issue with the new commit SHA."
+  },
+  {
+    "objectID": "turn-in.html#why-this-is-better-than-uploads",
+    "href": "turn-in.html#why-this-is-better-than-uploads",
+    "title": "Turn In Work",
+    "section": "Why this is better than uploads",
+    "text": "Why this is better than uploads\nThis system assesses the same habits the course is trying to teach:\n\nVersion-controlled work.\nReproducible project structure.\nClear evidence trails.\nPrecise submission versions.\nFast feedback before grading.\nHuman review reserved for scientific judgment.\n\nIt also lets the instructor see cohort-level progress through labels such as auto:pass, auto:warn, auto:fail, question-set, and assignment."
   }
 ]
