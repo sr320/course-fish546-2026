@@ -1,0 +1,85 @@
+---
+title: "Project and Compendium Rubric"
+subtitle: "Research progress, presentation, and final compendium"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Purpose
+
+The project grade rewards steady, reproducible research practice as much as the final biological result. A strong project does not need to prove a perfect story. It should show clear decisions, traceable data, working code, interpretable outputs, and honest limits.
+
+This rubric covers the project-facing parts of the course grade:
+
+| Course component | Course weight | Main evidence |
+|---|---:|---|
+| Weekly Research Project Progress | 20% | Weekly progress issues, project issue, linked commits, outputs, blockers, and next steps |
+| Project Presentation | 10% | Mid-quarter update and final presentation |
+| Project Completion | 10% | Week 10 final research compendium |
+
+Automatic checks confirm that required files, manifests, rendered reports, links, and commits exist. Instructor review evaluates scientific judgment, interpretation, reproducibility, and communication.
+
+## Weekly research project progress
+
+Weekly progress is assessed from the weekly-progress issue, project issue, project board card, linked commits, and linked evidence.
+
+| Criterion | Points | Excellent | Complete | Developing | Incomplete |
+|---|---:|---|---|---|---|
+| Goals and follow-through | 20 | Goals are specific, realistic, and clearly connected to the final compendium; previous goals are addressed directly. | Goals are stated and mostly connected to the project; most previous goals are addressed. | Goals are vague, too broad, or weakly connected to the final product. | Goals are missing or not meaningfully updated. |
+| Evidence of work | 25 | Links to commits, reports, figures, tables, logs, issues, or outputs provide concrete proof of progress. | Evidence is present and generally supports the progress claim. | Evidence is thin, hard to inspect, or only partially connected to the claim. | Evidence is missing or cannot be accessed. |
+| Technical progress | 20 | Work advances the project workflow, resolves a risk, or creates a meaningful intermediate or final product. | Work shows forward movement on analysis, data organization, or documentation. | Work is mostly exploratory, disconnected, or repeated without clear learning. | Little or no project movement is visible. |
+| Reproducible practice | 15 | Repository organization, commit history, file paths, and documentation make the work easy to inspect. | Most project materials are organized and version-controlled. | Organization is inconsistent, with unclear paths or stale outputs. | Work cannot be followed from the repository. |
+| Blockers and help-seeking | 10 | Blockers are described precisely, with attempted fixes and linked help requests when needed. | Blockers or risks are named with enough context to respond. | Blockers are vague or raised late. | Blockers are absent despite stalled progress. |
+| Next-week plan | 10 | Next steps are concrete, prioritized, and sized for one week. | Next steps are stated and plausible. | Next steps are too broad or not actionable. | Next steps are missing. |
+
+## Final compendium
+
+The final compendium is the complete project package in the student's repository. It should include a top-level `README.md`, final rendered report, source `.qmd` or scripts, key outputs, data availability statement, software/platform statement, and links to project and weekly-progress issues.
+
+| Criterion | Points | Excellent | Complete | Developing | Incomplete |
+|---|---:|---|---|---|---|
+| Research question and context | 10 | Question is clear, biologically meaningful, and grounded in appropriate background. | Question and context are understandable. | Question is present but broad, shifting, or weakly motivated. | Question or context is missing. |
+| Data provenance and organization | 15 | Data sources, sample structure, file locations, raw/processed distinction, and data availability are explicit. | Main data sources and project structure are described. | Some data details are unclear or scattered. | Data source, structure, or availability cannot be determined. |
+| Workflow and reproducibility | 20 | A reader can trace the workflow from input to output; code, commands, environment notes, and render instructions are sufficient to rerun or audit the analysis. | Workflow is mostly reproducible with minor gaps. | Workflow can be partially followed but requires guessing. | Workflow is not reproducible from the repository. |
+| Technical execution | 15 | Methods are appropriate for the data type and project question; QC and intermediate checks support the analysis. | Methods are generally appropriate and include some checks. | Methods are attempted but weakly justified or missing important checks. | Analysis is technically absent, broken, or inappropriate. |
+| Results and evidence | 15 | Figures, tables, and summaries directly support the main result and are clearly labeled. | Results are present and mostly connected to the question. | Results are thin, hard to interpret, or disconnected from the question. | Results are missing or not inspectable. |
+| Interpretation and biological reasoning | 10 | Claims are proportional to the evidence and distinguish results from interpretation. | Interpretation is reasonable but may be limited. | Interpretation overreaches, stays superficial, or misses key uncertainty. | Biological interpretation is missing. |
+| Caveats and next steps | 10 | Limitations are specific, honest, and connected to concrete next analyses or data needs. | Main caveats and next steps are included. | Caveats are generic or next steps are vague. | Caveats or next steps are missing. |
+| Communication and polish | 5 | Report and README are readable, well structured, linked, and free of avoidable confusion. | Materials are readable with minor rough spots. | Materials are difficult to scan or inconsistently formatted. | Materials are too incomplete or confusing to evaluate. |
+
+## Project presentation
+
+The presentation grade includes the mid-quarter update and final presentation. The goal is to explain the project clearly enough that another student can understand the question, workflow, strongest evidence, and remaining uncertainty.
+
+| Criterion | Points | Excellent | Complete | Developing | Incomplete |
+|---|---:|---|---|---|---|
+| Project framing | 15 | Research question, motivation, and data type are immediately clear. | Question and data type are understandable. | Framing is present but hard to follow. | Framing is missing. |
+| Workflow explanation | 20 | Workflow is explained at the right level, with key inputs, tools, decisions, and checks. | Workflow is mostly clear. | Workflow is too vague, too detailed, or missing important steps. | Workflow cannot be understood. |
+| Evidence and results | 25 | Figures or tables are legible, relevant, and support the main claim. | Results are shown and generally interpreted. | Results are present but hard to read or weakly connected to the claim. | Results are missing. |
+| Interpretation and limits | 20 | Speaker clearly separates what the evidence supports from what remains uncertain. | Interpretation and at least one limitation are included. | Interpretation is superficial or caveats are generic. | Interpretation or limitations are missing. |
+| Delivery and discussion | 20 | Talk is organized, fits the time, uses clear visuals, and handles questions thoughtfully. | Talk is understandable and mostly within time. | Talk is hard to follow, too rushed, or visually cluttered. | Talk is not prepared or cannot be evaluated. |
+
+## Baseline expectations
+
+These expectations apply to all project submissions:
+
+- Do not commit large raw data files unless the instructor has explicitly approved it.
+- Link to exact commits, not only the repository homepage.
+- Keep source files and rendered outputs together or clearly linked.
+- Label figures and tables so they can be understood outside the live presentation.
+- Document software, platforms, and major package versions when they affect reproducibility.
+- Explain what did not work. Failed or partial analyses can still earn credit when they are documented clearly and used to motivate next steps.
+
+## Grade interpretation
+
+Use these ranges as a guide when translating points into feedback:
+
+| Range | Meaning |
+|---:|---|
+| 90-100 | Strong, reproducible, clearly interpreted project work |
+| 80-89 | Solid work with minor gaps in reproducibility, evidence, or explanation |
+| 70-79 | Meaningful progress, but important pieces are unclear, incomplete, or weakly connected |
+| 60-69 | Limited project evidence or substantial reproducibility and interpretation gaps |
+| Below 60 | Missing, inaccessible, or too incomplete to evaluate reliably |

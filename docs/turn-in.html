@@ -310,6 +310,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Turn In Work</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./rubric.html"> 
+<span class="menu-text">Rubric</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="https://github.com/course-fish546-2026"> 
 <span class="menu-text">GitHub Org</span></a>
   </li>  
@@ -343,6 +347,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#assignment-submissions" id="toc-assignment-submissions" class="nav-link" data-scroll-target="#assignment-submissions">Assignment submissions</a></li>
   <li><a href="#automatic-report" id="toc-automatic-report" class="nav-link" data-scroll-target="#automatic-report">Automatic report</a></li>
   <li><a href="#why-this-is-better-than-uploads" id="toc-why-this-is-better-than-uploads" class="nav-link" data-scroll-target="#why-this-is-better-than-uploads">Why this is better than uploads</a></li>
+  <li><a href="#weekly-research-progress" id="toc-weekly-research-progress" class="nav-link" data-scroll-target="#weekly-research-progress">Weekly research progress</a></li>
   </ul>
 </nav>
     </div>
@@ -468,6 +473,51 @@ Needs human review
 <li>Human review reserved for scientific judgment.</li>
 </ul>
 <p>It also lets the instructor see cohort-level progress through labels such as <code>auto:pass</code>, <code>auto:warn</code>, <code>auto:fail</code>, <code>question-set</code>, and <code>assignment</code>.</p>
+</section>
+<section id="weekly-research-progress" class="level2">
+<h2 class="anchored" data-anchor-id="weekly-research-progress">Weekly research progress</h2>
+<p>Weekly project progress is assessed through a separate <strong>Weekly Research Progress</strong> issue. This is not a file submission. It is a structured project-management checkpoint.</p>
+<p>Each progress issue asks for:</p>
+<ul>
+<li>Week number.</li>
+<li>Course repository URL.</li>
+<li>Project issue URL.</li>
+<li>Current commit SHA or GitHub compare URL.</li>
+<li>What you accomplished this week.</li>
+<li>Evidence links to commits, outputs, reports, figures, Issues, or PRs.</li>
+<li>Whether last week’s goals were met.</li>
+<li>Goals for next week.</li>
+<li>Self-rating: <code>On track</code>, <code>Some risk</code>, or <code>Blocked</code>.</li>
+<li>Blockers or help needs.</li>
+</ul>
+<p>The automatic progress check comments on the issue and applies labels:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Label</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>progress:on-track</code></td>
+<td>The weekly record is complete and the student reports forward motion.</td>
+</tr>
+<tr class="even">
+<td><code>progress:watch</code></td>
+<td>The record is incomplete, thin, risky, or needs instructor attention.</td>
+</tr>
+<tr class="odd">
+<td><code>progress:blocked</code></td>
+<td>The student reports being blocked and should have a linked Help Request or Blocker/Bug issue.</td>
+</tr>
+</tbody>
+</table>
+<p>The progress checker looks for completeness and evidence, not whether the science is “good enough.” The instructor uses the report to review trajectory, intervene early, and assess weekly project-progress credit.</p>
 
 
 </section>

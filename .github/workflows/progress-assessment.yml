@@ -1,0 +1,70 @@
+name: Assess weekly progress
+
+on:
+  issues:
+    types: [opened, edited, reopened, labeled]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  assess:
+    if: contains(github.event.issue.labels.*.name, 'progress')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout course assessment tools
+        uses: actions/checkout@v4
+        with:
+          path: _course
+
+      - name: Parse progress issue
+        id: parse
+        run: python3 _course/scripts/parse_progress_issue.py "$GITHUB_EVENT_PATH"
+
+      - name: Assess weekly project progress
+        run: |
+          python3 _course/scripts/assess_progress_issue.py \
+            --week "${{ steps.parse.outputs.week }}" \
+            --repository "${{ steps.parse.outputs.repository }}" \
+            --repo-url "${{ steps.parse.outputs.repo_url }}" \
+            --project-issue "${{ steps.parse.outputs.project_issue }}" \
+            --commit-or-compare "${{ steps.parse.outputs.commit_or_compare }}" \
+            --done "${{ steps.parse.outputs.done }}" \
+            --evidence "${{ steps.parse.outputs.evidence }}" \
+            --goals-met "${{ steps.parse.outputs.goals_met }}" \
+            --next-goals "${{ steps.parse.outputs.next_goals }}" \
+            --self-rating "${{ steps.parse.outputs.self_rating }}" \
+            --blockers "${{ steps.parse.outputs.blockers }}" \
+            --report progress-report.md \
+            --status-file progress-status.txt \
+            --triage-file progress-triage.txt
+
+      - name: Comment progress assessment report
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: gh issue comment "$ISSUE_NUMBER" --body-file progress-report.md
+
+      - name: Update progress labels
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          WEEK: ${{ steps.parse.outputs.week }}
+        run: |
+          gh issue edit "$ISSUE_NUMBER" --remove-label "auto:pass" || true
+          gh issue edit "$ISSUE_NUMBER" --remove-label "auto:warn" || true
+          gh issue edit "$ISSUE_NUMBER" --remove-label "auto:fail" || true
+          gh issue edit "$ISSUE_NUMBER" --remove-label "progress:on-track" || true
+          gh issue edit "$ISSUE_NUMBER" --remove-label "progress:watch" || true
+          gh issue edit "$ISSUE_NUMBER" --remove-label "progress:blocked" || true
+          STATUS="$(cat progress-status.txt)"
+          TRIAGE="$(cat progress-triage.txt)"
+          gh issue edit "$ISSUE_NUMBER" --add-label "auto:$STATUS"
+          gh issue edit "$ISSUE_NUMBER" --add-label "$TRIAGE"
+          if [ -n "$WEEK" ]; then
+            gh issue edit "$ISSUE_NUMBER" --add-label "week-$WEEK" || true
+          fi
+          if [ "$STATUS" != "pass" ]; then
+            gh issue edit "$ISSUE_NUMBER" --add-label "needs-review"
+          fi

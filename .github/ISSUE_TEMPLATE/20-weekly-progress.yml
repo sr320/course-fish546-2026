@@ -14,11 +14,44 @@ body:
       options: ["01","02","03","04","05","06","07","08","09","10"]
     validations:
       required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Course repository URL
+      placeholder: "https://github.com/course-fish546-2026/<your-repo>"
+    validations:
+      required: true
+  - type: input
+    id: project-issue
+    attributes:
+      label: Project issue URL
+      description: Link to your quarter-long project proposal/home-base issue.
+      placeholder: "https://github.com/course-fish546-2026/<your-repo>/issues/1"
+    validations:
+      required: true
+  - type: input
+    id: commit-or-compare
+    attributes:
+      label: Current commit SHA or compare URL
+      description: Use the commit that best represents this week's progress, or a GitHub compare link for the week.
+      placeholder: "abc1234 or https://github.com/.../compare/old...new"
+    validations:
+      required: true
   - type: textarea
     id: done
     attributes:
       label: What I accomplished this week
       description: Link commits/PRs/outputs where possible.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence links
+      description: One link per line. Include commits, rendered reports, figures, tables, scripts, Issues, or PRs that show the work.
+      placeholder: |
+        https://github.com/course-fish546-2026/<your-repo>/commit/abc1234
+        https://github.com/course-fish546-2026/<your-repo>/blob/main/output/figure.png
     validations:
       required: true
   - type: textarea
@@ -32,6 +65,18 @@ body:
     id: next
     attributes:
       label: Goals for next week
+      description: List 2-4 concrete goals. Start each goal on a new line.
+    validations:
+      required: true
+  - type: dropdown
+    id: self-rating
+    attributes:
+      label: Self-rating
+      description: This helps the instructor triage the cohort.
+      options:
+        - On track
+        - Some risk
+        - Blocked
     validations:
       required: true
   - type: textarea

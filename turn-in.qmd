@@ -126,3 +126,30 @@ This system assesses the same habits the course is trying to teach:
 - Human review reserved for scientific judgment.
 
 It also lets the instructor see cohort-level progress through labels such as `auto:pass`, `auto:warn`, `auto:fail`, `question-set`, and `assignment`.
+
+## Weekly research progress
+
+Weekly project progress is assessed through a separate **Weekly Research Progress** issue. This is not a file submission. It is a structured project-management checkpoint.
+
+Each progress issue asks for:
+
+- Week number.
+- Course repository URL.
+- Project issue URL.
+- Current commit SHA or GitHub compare URL.
+- What you accomplished this week.
+- Evidence links to commits, outputs, reports, figures, Issues, or PRs.
+- Whether last week's goals were met.
+- Goals for next week.
+- Self-rating: `On track`, `Some risk`, or `Blocked`.
+- Blockers or help needs.
+
+The automatic progress check comments on the issue and applies labels:
+
+| Label | Meaning |
+|-------|---------|
+| `progress:on-track` | The weekly record is complete and the student reports forward motion. |
+| `progress:watch` | The record is incomplete, thin, risky, or needs instructor attention. |
+| `progress:blocked` | The student reports being blocked and should have a linked Help Request or Blocker/Bug issue. |
+
+The progress checker looks for completeness and evidence, not whether the science is "good enough." The instructor uses the report to review trajectory, intervene early, and assess weekly project-progress credit.

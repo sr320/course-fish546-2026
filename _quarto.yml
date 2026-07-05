@@ -16,6 +16,8 @@ website:
         text: Self-Directed Skills
       - href: turn-in.qmd
         text: Turn In Work
+      - href: rubric.qmd
+        text: Rubric
       - href: https://github.com/course-fish546-2026
         text: GitHub Org
     right:

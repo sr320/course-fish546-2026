@@ -42,4 +42,4 @@ Submit the final compendium through your repository and link it from your final 
 
 ## Assessment
 
-The final project is assessed on clarity, reproducibility, technical progress, interpretation, and honest treatment of limitations.
+The final project is assessed on clarity, reproducibility, technical progress, interpretation, and honest treatment of limitations. See the [Project and Compendium Rubric](../rubric.qmd) for detailed criteria.

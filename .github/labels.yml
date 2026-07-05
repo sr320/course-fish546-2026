@@ -11,6 +11,15 @@
 - name: progress
   color: "5319e7"
   description: Weekly research-progress report
+- name: "progress:on-track"
+  color: "0e8a16"
+  description: Weekly project progress appears on track
+- name: "progress:watch"
+  color: "fbca04"
+  description: Weekly project progress needs attention
+- name: "progress:blocked"
+  color: "b60205"
+  description: Weekly project progress is blocked
 - name: submission
   color: "0e8a16"
   description: Work submitted for automatic assessment

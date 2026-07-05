@@ -207,6 +207,19 @@ This creates a useful distinction:
 - **Automatic checks:** structure, completeness, reproducibility evidence.
 - **Instructor review:** scientific quality and judgment.
 
+Weekly research progress uses the same pattern, but assesses trajectory rather than a
+single submitted file packet. The Weekly Research Progress issue requires a project
+issue link, repository URL, current commit or compare URL, evidence links, prior-goal
+accounting, next goals, self-rating, and blockers. A separate workflow comments with a
+progress report and applies one of:
+
+- `progress:on-track`
+- `progress:watch`
+- `progress:blocked`
+
+This lets the instructor scan the cohort by risk level and intervene before projects
+stall near the final compendium.
+
 ### Topics intentionally not made core weeks
 
 These are valuable, but the 10-week course will become scattered if all are treated as
@@ -264,6 +277,7 @@ course-fish546-2026/
 - [x] **Content migration** — add first-pass 2026 lectures, assignments, and question sets for every scheduled week.
 - [x] **Refocus schedule** — make weekly topics bioinformatics-first and move RStudio/Quarto/archiving to self-directed support.
 - [x] **Submission workflow** — add submission issue forms, assessment labels, `turn-in.qmd`, and starter GitHub Actions checker.
+- [x] **Progress workflow** — extend weekly progress issues with evidence fields and add automatic trajectory assessment.
 - [x] **Schedule** — insert setup (week 0) + eDNA rows; linked weekly materials now exist.
 - [ ] **Publish** — `quarto render`, confirm Pages serves `docs/`, set the course GitHub org.
 - [ ] **Dry run** — walk all 3 tutorials on a clean machine; open a test setup issue end-to-end.

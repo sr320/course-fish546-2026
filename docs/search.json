@@ -1895,5 +1895,12 @@
     "title": "Turn In Work",
     "section": "Why this is better than uploads",
     "text": "Why this is better than uploads\nThis system assesses the same habits the course is trying to teach:\n\nVersion-controlled work.\nReproducible project structure.\nClear evidence trails.\nPrecise submission versions.\nFast feedback before grading.\nHuman review reserved for scientific judgment.\n\nIt also lets the instructor see cohort-level progress through labels such as auto:pass, auto:warn, auto:fail, question-set, and assignment."
+  },
+  {
+    "objectID": "turn-in.html#weekly-research-progress",
+    "href": "turn-in.html#weekly-research-progress",
+    "title": "Turn In Work",
+    "section": "Weekly research progress",
+    "text": "Weekly research progress\nWeekly project progress is assessed through a separate Weekly Research Progress issue. This is not a file submission. It is a structured project-management checkpoint.\nEach progress issue asks for:\n\nWeek number.\nCourse repository URL.\nProject issue URL.\nCurrent commit SHA or GitHub compare URL.\nWhat you accomplished this week.\nEvidence links to commits, outputs, reports, figures, Issues, or PRs.\nWhether last week’s goals were met.\nGoals for next week.\nSelf-rating: On track, Some risk, or Blocked.\nBlockers or help needs.\n\nThe automatic progress check comments on the issue and applies labels:\n\n\n\n\n\n\n\nLabel\nMeaning\n\n\n\n\nprogress:on-track\nThe weekly record is complete and the student reports forward motion.\n\n\nprogress:watch\nThe record is incomplete, thin, risky, or needs instructor attention.\n\n\nprogress:blocked\nThe student reports being blocked and should have a linked Help Request or Blocker/Bug issue.\n\n\n\nThe progress checker looks for completeness and evidence, not whether the science is “good enough.” The instructor uses the report to review trajectory, intervene early, and assess weekly project-progress credit."
   }
 ]
