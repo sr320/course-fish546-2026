@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>plan – 2026 :: Bioinformatics — FISH 546</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-0f9aa9b9e44320098794e46e8ae1c927.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-799b2e67dced8356c059a1018004f018.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = true;
+    const darkModeDefault = authorPrefersDark;
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">2026 :: Bioinformatics — FISH 546</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./schedule.html"> 
+<span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./setup.html"> 
+<span class="menu-text">Before Class</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./support.html"> 
+<span class="menu-text">Self-Directed Skills</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./edna.html"> 
+<span class="menu-text">eDNA</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/course-fish546-2026"> 
+<span class="menu-text">GitHub Org</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/course-fish546-2026"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#fish-546-2026-build-plan" id="toc-fish-546-2026-build-plan" class="nav-link active" data-scroll-target="#fish-546-2026-build-plan">FISH 546 (2026) — Build Plan</a>
+  <ul class="collapse">
+  <li><a href="#platforms-the-three-tier-compute-story" id="toc-platforms-the-three-tier-compute-story" class="nav-link" data-scroll-target="#platforms-the-three-tier-compute-story">1. Platforms &amp; the three-tier compute story</a></li>
+  <li><a href="#three-self-directed-pre-course-tutorials-html" id="toc-three-self-directed-pre-course-tutorials-html" class="nav-link" data-scroll-target="#three-self-directed-pre-course-tutorials-html">2. Three self-directed pre-course tutorials (HTML)</a>
+  <ul class="collapse">
+  <li><a href="#tutorial-1-01-your-computer.html-local-setup-shell-gitgithub" id="toc-tutorial-1-01-your-computer.html-local-setup-shell-gitgithub" class="nav-link" data-scroll-target="#tutorial-1-01-your-computer.html-local-setup-shell-gitgithub">Tutorial 1 — <code>01-your-computer.html</code> · Local Setup, Shell &amp; Git/GitHub</a></li>
+  <li><a href="#tutorial-2-02-raven.html-raven-reproducible-analysis" id="toc-tutorial-2-02-raven.html-raven-reproducible-analysis" class="nav-link" data-scroll-target="#tutorial-2-02-raven.html-raven-reproducible-analysis">Tutorial 2 — <code>02-raven.html</code> · Raven &amp; Reproducible Analysis</a></li>
+  <li><a href="#tutorial-3-03-hyak.html-hyak-klone-hpc-steepest-curve-deepest-tutorial" id="toc-tutorial-3-03-hyak.html-hyak-klone-hpc-steepest-curve-deepest-tutorial" class="nav-link" data-scroll-target="#tutorial-3-03-hyak.html-hyak-klone-hpc-steepest-curve-deepest-tutorial">Tutorial 3 — <code>03-hyak.html</code> · Hyak / Klone HPC (steepest curve — deepest tutorial)</a></li>
+  </ul></li>
+  <li><a href="#making-better-use-of-github-issue-features" id="toc-making-better-use-of-github-issue-features" class="nav-link" data-scroll-target="#making-better-use-of-github-issue-features">3. Making better use of GitHub Issue features</a>
+  <ul class="collapse">
+  <li><a href="#a.-issue-forms-yaml-in-.githubissue_template" id="toc-a.-issue-forms-yaml-in-.githubissue_template" class="nav-link" data-scroll-target="#a.-issue-forms-yaml-in-.githubissue_template">3a. Issue Forms (YAML) in <code>.github/ISSUE_TEMPLATE/</code></a></li>
+  <li><a href="#b.-labels-.githublabels.yml-a-sync-action" id="toc-b.-labels-.githublabels.yml-a-sync-action" class="nav-link" data-scroll-target="#b.-labels-.githublabels.yml-a-sync-action">3b. Labels (<code>.github/labels.yml</code> + a sync action)</a></li>
+  <li><a href="#c.-project-board-github-projects-v2" id="toc-c.-project-board-github-projects-v2" class="nav-link" data-scroll-target="#c.-project-board-github-projects-v2">3c. Project board (GitHub Projects v2)</a></li>
+  <li><a href="#d.-automation-.githubworkflows" id="toc-d.-automation-.githubworkflows" class="nav-link" data-scroll-target="#d.-automation-.githubworkflows">3d. Automation (<code>.github/workflows/</code>)</a></li>
+  </ul></li>
+  <li><a href="#more-edna-content" id="toc-more-edna-content" class="nav-link" data-scroll-target="#more-edna-content">4. More eDNA content</a>
+  <ul class="collapse">
+  <li><a href="#a.-new-module-lecturesedna.qmd-assignment-assignmentsedna-metabarcoding.qmd" id="toc-a.-new-module-lecturesedna.qmd-assignment-assignmentsedna-metabarcoding.qmd" class="nav-link" data-scroll-target="#a.-new-module-lecturesedna.qmd-assignment-assignmentsedna-metabarcoding.qmd">4a. New module: <code>lectures/edna.qmd</code> (+ assignment <code>assignments/edna-metabarcoding.qmd</code>)</a></li>
+  <li><a href="#b.-edna-project-track" id="toc-b.-edna-project-track" class="nav-link" data-scroll-target="#b.-edna-project-track">4b. eDNA project track</a></li>
+  <li><a href="#c.-schedule-placement" id="toc-c.-schedule-placement" class="nav-link" data-scroll-target="#c.-schedule-placement">4c. Schedule placement</a></li>
+  </ul></li>
+  <li><a href="#bioinformatics-first-weekly-arc" id="toc-bioinformatics-first-weekly-arc" class="nav-link" data-scroll-target="#bioinformatics-first-weekly-arc">5. Bioinformatics-first weekly arc</a>
+  <ul class="collapse">
+  <li><a href="#topics-intentionally-not-made-core-weeks" id="toc-topics-intentionally-not-made-core-weeks" class="nav-link" data-scroll-target="#topics-intentionally-not-made-core-weeks">Topics intentionally not made core weeks</a></li>
+  </ul></li>
+  <li><a href="#repository-site-structure" id="toc-repository-site-structure" class="nav-link" data-scroll-target="#repository-site-structure">6. Repository / site structure</a></li>
+  <li><a href="#build-sequence-checklist" id="toc-build-sequence-checklist" class="nav-link" data-scroll-target="#build-sequence-checklist">7. Build sequence (checklist)</a></li>
+  <li><a href="#open-decisions-instructor-input" id="toc-open-decisions-instructor-input" class="nav-link" data-scroll-target="#open-decisions-instructor-input">8. Open decisions (instructor input)</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="fish-546-2026-build-plan" class="level1">
+<h1>FISH 546 (2026) — Build Plan</h1>
+<p>Bioinformatics for Environmental Sciences. This document is the blueprint for the 2026 course website. It carries forward the working parts of <a href="https://github.com/sr320/course-fish546-2025"><code>course-fish546-2025</code></a> and changes five things deliberately:</p>
+<ol type="1">
+<li><strong>Stay Quarto</strong> — same publish-to-<code>docs/</code>, GitHub Pages workflow, refreshed theme.</li>
+<li><strong>Lean on GitHub Issues</strong> — Issue <em>Forms</em> (YAML), labels, a project board, and templates drive weekly progress, help requests, and project tracking. Issues become the assessed artifact, not an afterthought.</li>
+<li><strong>Bioinformatics-first schedule</strong> — weekly topics follow the data arc from sequence search to raw reads, mapping/quantification, assay-specific analysis, ecological and genomic interpretation, and final synthesis. Tool mechanics are support skills, not the subject of entire weeks.</li>
+<li><strong>More eDNA</strong> — a dedicated eDNA module (metabarcoding, DADA2/OTU→ASV, taxonomic assignment, occupancy) added alongside the existing RNA-seq / methylation / variants content, plus an eDNA project track.</li>
+<li><strong>Three self-directed pre-course tutorials (HTML)</strong> — one per compute platform the students use (own computer, Raven, Hyak/Klone), completed <em>before</em> week 1. Hyak gets the deepest treatment because it has the steepest learning curve.</li>
+</ol>
+<p>Core competencies are anchored to the <strong>Roberts Lab Handbook</strong> (<code>../resources</code>, published at <a href="https://robertslab.github.io/resources/" class="uri">https://robertslab.github.io/resources/</a>). Every tutorial and module maps to specific handbook pages so the course and the lab’s living documentation stay in sync.</p>
+<hr>
+<section id="platforms-the-three-tier-compute-story" class="level2">
+<h2 class="anchored" data-anchor-id="platforms-the-three-tier-compute-story">1. Platforms &amp; the three-tier compute story</h2>
+<p>Students work across three environments. The course is explicit about <em>what runs where</em> and <em>why</em>, and the pre-course tutorials get each student a verified working setup on all three before week 1.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 28%">
+<col style="width: 21%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tier</th>
+<th>Environment</th>
+<th>Used for</th>
+<th>Handbook anchor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><strong>Own computer</strong></td>
+<td>Git/GitHub, shell, editing, small tasks, writing</td>
+<td><code>Computing-Best-Practices.md</code>, <code>Data-Management.md</code>, <code>github-tutorial.html</code>, <code>bash-tutorial.html</code></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><strong>Raven</strong> (<code>raven.fish.washington.edu:8787</code>)</td>
+<td>RStudio Server, interactive R/bioinformatics, moderate jobs</td>
+<td><code>raven_RStudio-Server.md</code>, <code>raven_Conda.md</code></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><strong>Hyak / Klone</strong> (<code>klone.hyak.uw.edu</code>)</td>
+<td>SLURM batch jobs, containers, big compute</td>
+<td><code>klone_*</code> pages (Logging-In, Running-a-Job, containers, File-Transfers, Conda, quick-start)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Design principle:</strong> difficulty ramps with the tier. Tier 3 (Hyak) is where students struggle, so it gets its own tutorial, the most scaffolding, and an explicit “you will hit walls — here’s how to get unstuck” posture.</p>
+<hr>
+</section>
+<section id="three-self-directed-pre-course-tutorials-html" class="level2">
+<h2 class="anchored" data-anchor-id="three-self-directed-pre-course-tutorials-html">2. Three self-directed pre-course tutorials (HTML)</h2>
+<p>Standalone, self-paced HTML files (no build step, open in any browser), styled to match the handbook’s existing tutorials (<code>github-tutorial.html</code>, <code>bash-tutorial.html</code>, <code>agentic-ai-bootcamp.html</code>) — ocean theme, sticky sidebar, a progress bar, and copy-paste command blocks. Each ends with a <strong>completion checklist</strong> and a <strong>“paste this into your setup issue”</strong> block so completion is verifiable via GitHub (see §3).</p>
+<p>Live at <code>tutorials/</code> and linked from a <code>setup.qmd</code> landing page.</p>
+<section id="tutorial-1-01-your-computer.html-local-setup-shell-gitgithub" class="level3">
+<h3 class="anchored" data-anchor-id="tutorial-1-01-your-computer.html-local-setup-shell-gitgithub">Tutorial 1 — <code>01-your-computer.html</code> · Local Setup, Shell &amp; Git/GitHub</h3>
+<ul>
+<li><strong>Goal:</strong> a working local environment and fluency in the daily version-control loop.</li>
+<li><strong>Covers:</strong> installing Git + GitHub Desktop + a terminal; <code>~/GitHub/</code> convention and the “don’t put repos in iCloud/Dropbox” rule; project directory layout (<code>code/ data/ output/</code> each with a <code>README.md</code>); shell navigation (<code>pwd cd ls</code>), moving/inspecting files; clone → edit → commit → push; what a good commit message is.</li>
+<li><strong>Competency source:</strong> <code>Computing-Best-Practices.md</code>, <code>Data-Management.md</code>, <code>github-tutorial.html</code>, <code>bash-tutorial.html</code>.</li>
+<li><strong>Done when:</strong> student has a personal repo, a correct directory tree, and one pushed commit.</li>
+</ul>
+</section>
+<section id="tutorial-2-02-raven.html-raven-reproducible-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="tutorial-2-02-raven.html-raven-reproducible-analysis">Tutorial 2 — <code>02-raven.html</code> · Raven &amp; Reproducible Analysis</h3>
+<ul>
+<li><strong>Goal:</strong> run an interactive analysis on the lab’s RStudio Server and understand server vs.&nbsp;laptop.</li>
+<li><strong>Covers:</strong> logging into Raven RStudio Server; where files live on a shared server; cloning a repo on the server; Conda/environments on Raven; running a small R bioinformatics task; pushing results back to GitHub; data hygiene (don’t commit big files; <code>.gitignore</code>; hashes/manifests).</li>
+<li><strong>Competency source:</strong> <code>raven_RStudio-Server.md</code>, <code>raven_Conda.md</code>, <code>Data-Management.md</code>, <code>Computing-Best-Practices.md</code>.</li>
+<li><strong>Done when:</strong> student rendered/ran something on Raven and pushed the output.</li>
+</ul>
+</section>
+<section id="tutorial-3-03-hyak.html-hyak-klone-hpc-steepest-curve-deepest-tutorial" class="level3">
+<h3 class="anchored" data-anchor-id="tutorial-3-03-hyak.html-hyak-klone-hpc-steepest-curve-deepest-tutorial">Tutorial 3 — <code>03-hyak.html</code> · Hyak / Klone HPC (steepest curve — deepest tutorial)</h3>
+<ul>
+<li><strong>Goal:</strong> de-mystify HPC so a first SLURM job isn’t terrifying. This is the flagship tutorial.</li>
+<li><strong>Covers:</strong> what an HPC cluster <em>is</em> (login vs.&nbsp;compute nodes, the scheduler, why you never compute on the login node); <code>ssh</code> into Klone; the <code>/gscratch/srlab/</code> storage layout; moving data (<code>scp</code>/<code>rsync</code>, Globus); modules &amp; <strong>Apptainer containers</strong> (the lab’s standard); anatomy of a SLURM script (the header + the commands script); <code>chmod +x</code>; <code>sbatch</code>, <code>squeue</code>, <code>scancel</code>, reading <code>slurm-*.out</code>; Klone on-demand / RStudio-on-Klone as an escape hatch; a <strong>troubleshooting/“getting unstuck”</strong> section and an explicit “how to ask for help via a GitHub issue” pointer.</li>
+<li><strong>Competency source:</strong> <code>klone_quick-start.md</code>, <code>klone_Logging-In.md</code>, <code>klone_Running-a-Job.md</code>, <code>klone_containers.md</code>, <code>klone_Data-Storage-and-System-Organization.md</code>, <code>klone_File-Transfers.md</code>, <code>klone_Conda.md</code>, <code>klone_Node-Types.md</code>.</li>
+<li><strong>Done when:</strong> student submitted one trivial <code>sbatch</code> job and pasted the job ID + output tail into their setup issue.</li>
+</ul>
+<p>All three share <code>tutorials/tutorial.css</code> and a tiny <code>tutorials/progress.js</code> (localStorage-backed checkbox progress bar).</p>
+<hr>
+</section>
+</section>
+<section id="making-better-use-of-github-issue-features" class="level2">
+<h2 class="anchored" data-anchor-id="making-better-use-of-github-issue-features">3. Making better use of GitHub Issue features</h2>
+<p>The 2025 course used a Discussion board. 2026 keeps discussions for open-ended Q&amp;A but moves <strong>structured, trackable work into Issues</strong>, using features the old course didn’t:</p>
+<section id="a.-issue-forms-yaml-in-.githubissue_template" class="level3">
+<h3 class="anchored" data-anchor-id="a.-issue-forms-yaml-in-.githubissue_template">3a. Issue Forms (YAML) in <code>.github/ISSUE_TEMPLATE/</code></h3>
+<p>Modern web forms (not just markdown) with required fields, dropdowns, and auto-labels:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 28%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Template</th>
+<th>Purpose</th>
+<th>Auto-labels</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>00-setup-check.yml</code></td>
+<td>Pre-course: confirm the 3 tutorials done (paste completion blocks)</td>
+<td><code>setup</code>, <code>week-00</code></td>
+</tr>
+<tr class="even">
+<td><code>10-project-proposal.yml</code></td>
+<td>One issue per student’s research project; endpoint, data, platform, eDNA?/RNA-seq?/etc.</td>
+<td><code>project</code></td>
+</tr>
+<tr class="odd">
+<td><code>20-weekly-progress.yml</code></td>
+<td>Weekly self-assessed progress (goals set / met), tied to the schedule</td>
+<td><code>progress</code></td>
+</tr>
+<tr class="even">
+<td><code>30-help-request.yml</code></td>
+<td>“I’m stuck” — platform dropdown (own/Raven/Hyak), what I tried, error text</td>
+<td><code>help</code></td>
+</tr>
+<tr class="odd">
+<td><code>40-blocker-bug.yml</code></td>
+<td>Reproducible technical blocker with environment + steps</td>
+<td><code>bug</code>, <code>help</code></td>
+</tr>
+<tr class="even">
+<td><code>config.yml</code></td>
+<td>Turns off blank issues; routes open chat to Discussions &amp; Slack</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="b.-labels-.githublabels.yml-a-sync-action" class="level3">
+<h3 class="anchored" data-anchor-id="b.-labels-.githublabels.yml-a-sync-action">3b. Labels (<code>.github/labels.yml</code> + a sync action)</h3>
+<p><code>week-00</code>…<code>week-10</code>, <code>setup</code>, <code>project</code>, <code>progress</code>, <code>help</code>, <code>bug</code>, <code>edna</code>, <code>rna-seq</code>, <code>methylation</code>, <code>variants</code>, <code>platform:own</code>, <code>platform:raven</code>, <code>platform:hyak</code>, <code>needs-review</code>, <code>resolved</code>. Applied automatically by the forms above.</p>
+</section>
+<section id="c.-project-board-github-projects-v2" class="level3">
+<h3 class="anchored" data-anchor-id="c.-project-board-github-projects-v2">3c. Project board (GitHub Projects v2)</h3>
+<p>A course-org project with a per-student view; weekly-progress and project issues appear as cards moving Todo → In progress → Review → Done. Gives the instructor a single at-a-glance status across the cohort.</p>
+</section>
+<section id="d.-automation-.githubworkflows" class="level3">
+<h3 class="anchored" data-anchor-id="d.-automation-.githubworkflows">3d. Automation (<code>.github/workflows/</code>)</h3>
+<ul>
+<li><code>greetings.yml</code> — welcome message on a student’s first issue (mirrors the handbook repo).</li>
+<li><code>auto-label.yml</code> / label-sync — keep labels consistent from <code>labels.yml</code>.</li>
+<li>(Optional) an action that comments the weekly schedule row when a <code>week-NN</code> issue opens.</li>
+</ul>
+<p><strong>Assessment tie-in:</strong> “Weekly Research Project Progress” (20% in 2025) is now assessed directly from the weekly-progress issues and the project board, making the grade legible and the paper-trail automatic.</p>
+<hr>
+</section>
+</section>
+<section id="more-edna-content" class="level2">
+<h2 class="anchored" data-anchor-id="more-edna-content">4. More eDNA content</h2>
+<p>eDNA becomes a first-class topic alongside the existing molecular-ecology content, with both a <strong>lecture/module</strong> and a supported <strong>project track</strong>.</p>
+<section id="a.-new-module-lecturesedna.qmd-assignment-assignmentsedna-metabarcoding.qmd" class="level3">
+<h3 class="anchored" data-anchor-id="a.-new-module-lecturesedna.qmd-assignment-assignmentsedna-metabarcoding.qmd">4a. New module: <code>lectures/edna.qmd</code> (+ assignment <code>assignments/edna-metabarcoding.qmd</code>)</h3>
+<ul>
+<li>eDNA/eRNA concepts: what environmental nucleic acids are, sampling, contamination control.</li>
+<li>Metabarcoding workflow: primers/markers (COI, 12S, 16S, 18S), amplicon data.</li>
+<li>From reads to biology: QC → <strong>DADA2</strong> (ASVs) vs.&nbsp;OTU clustering → taxonomic assignment (reference databases) → an abundance/occurrence table.</li>
+<li>Ecological readouts: diversity, detection/occupancy, community comparison.</li>
+<li>Reproducibility &amp; caveats specific to eDNA (false positives/negatives, index hopping).</li>
+<li>Competency anchor: <code>bio_Basics.md</code>, <code>bio-Annotation.md</code>, <code>Genomic-Resources.md</code>, <code>Data-Management.md</code>; run heavy steps on Hyak (ties the eDNA track to Tutorial 3).</li>
+</ul>
+</section>
+<section id="b.-edna-project-track" class="level3">
+<h3 class="anchored" data-anchor-id="b.-edna-project-track">4b. eDNA project track</h3>
+<p>A supported alternative to the RNA-seq/DGE default project so a student can take an eDNA dataset end-to-end (raw amplicons → community table → figure/report), reusing the same GitHub/issue/compendium machinery.</p>
+</section>
+<section id="c.-schedule-placement" class="level3">
+<h3 class="anchored" data-anchor-id="c.-schedule-placement">4c. Schedule placement</h3>
+<p>Slot the eDNA lecture after students have seen raw-read QC, mapping/quantification, annotation, variants, and methylation, so metabarcoding feels like an applied workflow rather than a disconnected topic.</p>
+<hr>
+</section>
+</section>
+<section id="bioinformatics-first-weekly-arc" class="level2">
+<h2 class="anchored" data-anchor-id="bioinformatics-first-weekly-arc">5. Bioinformatics-first weekly arc</h2>
+<p>The core schedule should read as a coherent progression:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 20%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Week</th>
+<th>Focus</th>
+<th>Why it belongs here</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>00</td>
+<td>Bioinformatics habits and data provenance</td>
+<td>Establish repository, data, and issue-tracking expectations.</td>
+</tr>
+<tr class="even">
+<td>01</td>
+<td>Sequence databases and BLAST</td>
+<td>First sequence-to-interpretation workflow.</td>
+</tr>
+<tr class="odd">
+<td>02</td>
+<td>Raw reads, FASTQ, QC, trimming</td>
+<td>All sequencing workflows depend on read quality and provenance.</td>
+</tr>
+<tr class="even">
+<td>03</td>
+<td>Mapping, assembly, quantification</td>
+<td>Converts reads into intermediate biological data products.</td>
+</tr>
+<tr class="odd">
+<td>04</td>
+<td>RNA-seq and differential expression</td>
+<td>Full expression-analysis example.</td>
+</tr>
+<tr class="even">
+<td>05</td>
+<td>Genome annotation and genomic ranges</td>
+<td>Connects outputs to genomic context.</td>
+</tr>
+<tr class="odd">
+<td>06</td>
+<td>Variants and population signals</td>
+<td>Adds genotype/population interpretation.</td>
+</tr>
+<tr class="even">
+<td>07</td>
+<td>Epigenetics and DNA methylation</td>
+<td>Adds regulatory genomics and genome-browser inspection.</td>
+</tr>
+<tr class="odd">
+<td>08</td>
+<td>eDNA and metabarcoding</td>
+<td>Applies read/QC/database logic to ecological community data.</td>
+</tr>
+<tr class="even">
+<td>09</td>
+<td>Project synthesis and biological interpretation</td>
+<td>Turns outputs into defensible claims.</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>Final compendium and presentations</td>
+<td>Publishes the full reproducible project.</td>
+</tr>
+</tbody>
+</table>
+<p>RStudio, Quarto, GitHub Issues, Hyak, containers, and archiving live in <code>support.qmd</code> and are invoked by assignments as needed.</p>
+<section id="topics-intentionally-not-made-core-weeks" class="level3">
+<h3 class="anchored" data-anchor-id="topics-intentionally-not-made-core-weeks">Topics intentionally not made core weeks</h3>
+<p>These are valuable, but the 10-week course will become scattered if all are treated as full weekly units:</p>
+<ul>
+<li>Workflow managers such as Snakemake or Nextflow.</li>
+<li>Functional enrichment and pathway analysis.</li>
+<li>Metagenomics and genome-resolved metagenomics.</li>
+<li>Phylogenetics and tree thinking.</li>
+<li>Protein structure and comparative protein analysis.</li>
+<li>Advanced statistics beyond the models needed for weekly assignments.</li>
+</ul>
+<p>These can be used as project-specific extensions, readings, or Thursday working-session mini-lessons when they directly support student projects.</p>
+<hr>
+</section>
+</section>
+<section id="repository-site-structure" class="level2">
+<h2 class="anchored" data-anchor-id="repository-site-structure">6. Repository / site structure</h2>
+<pre><code>course-fish546-2026/
+├── _quarto.yml              # website config, publishes to docs/
+├── index.qmd                # syllabus (updated platforms, grading, comms → Issues)
+├── schedule.qmd             # 10-week schedule incl. eDNA + pre-course setup row
+├── setup.qmd                # pre-course landing → the 3 HTML tutorials + setup issue
+├── support.qmd              # self-directed RStudio, Quarto, GitHub, Hyak, archiving
+├── edna.qmd                 # eDNA topic hub (links lecture + assignment + resources)
+├── about.qmd
+├── styles.css
+├── tutorials/
+│   ├── tutorial.css         # shared ocean theme
+│   ├── progress.js          # localStorage progress bar
+│   ├── 01-your-computer.html
+│   ├── 02-raven.html
+│   └── 03-hyak.html
+├── lectures/                # 00-before … 10-lastmile (+ edna.qmd)
+├── assignments/             # blast, DGE, knit, hyak, … , edna-metabarcoding.qmd
+├── questions/               # weekly question sets
+├── .github/
+│   ├── ISSUE_TEMPLATE/      # the YAML forms + config.yml from §3a
+│   ├── labels.yml           # §3b
+│   └── workflows/           # greetings, label-sync, (schedule bot)
+└── docs/                    # rendered site (GitHub Pages)</code></pre>
+</section>
+<section id="build-sequence-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="build-sequence-checklist">7. Build sequence (checklist)</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" checked=""><strong>Scaffold</strong> Quarto site (<code>_quarto.yml</code>, <code>index</code>, <code>schedule</code>, <code>about</code>, <code>setup</code>, <code>styles</code>).</label></li>
+<li><label><input type="checkbox" checked=""><strong>Tutorials</strong> — shared CSS/JS + the three HTML files; verify each opens standalone.</label></li>
+<li><label><input type="checkbox" checked=""><strong>Issues</strong> — author the five Issue Forms + <code>config.yml</code>; add <code>labels.yml</code>; wire workflows.</label></li>
+<li><label><input type="checkbox"><strong>Project board</strong> — create org Project v2, add the per-student view (manual, one-time).</label></li>
+<li><label><input type="checkbox" checked=""><strong>eDNA</strong> — draft <code>lectures/edna.qmd</code>, <code>assignments/edna-metabarcoding.qmd</code>, <code>edna.qmd</code> hub.</label></li>
+<li><label><input type="checkbox" checked=""><strong>Content migration</strong> — add first-pass 2026 lectures, assignments, and question sets for every scheduled week.</label></li>
+<li><label><input type="checkbox" checked=""><strong>Refocus schedule</strong> — make weekly topics bioinformatics-first and move RStudio/Quarto/archiving to self-directed support.</label></li>
+<li><label><input type="checkbox" checked=""><strong>Schedule</strong> — insert setup (week 0) + eDNA rows; linked weekly materials now exist.</label></li>
+<li><label><input type="checkbox"><strong>Publish</strong> — <code>quarto render</code>, confirm Pages serves <code>docs/</code>, set the course GitHub org.</label></li>
+<li><label><input type="checkbox"><strong>Dry run</strong> — walk all 3 tutorials on a clean machine; open a test setup issue end-to-end.</label></li>
+</ul>
+</section>
+<section id="open-decisions-instructor-input" class="level2">
+<h2 class="anchored" data-anchor-id="open-decisions-instructor-input">8. Open decisions (instructor input)</h2>
+<ul>
+<li>Course GitHub org name for 2026 (e.g.&nbsp;<code>course-fish546-2026</code>) + Pages URL.</li>
+<li>Meeting times / room / Zoom for 2026.</li>
+<li>Whether eDNA is an <em>elective</em> project track or a shared week-long assignment for all.</li>
+<li>Keep JupyterHub (<code>jupyter.rttl.uw.edu</code>) in the mix, or Raven + Hyak only?</li>
+<li>Grading weights if project-board assessment changes the progress component. ```</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,12 @@
+---
+title: "Week 06 Questions"
+subtitle: "Variants and population signals"
+---
+
+Answer these in your repository's `homework/` directory before Tuesday at 3:00pm.
+
+1. What does a variant call represent?
+2. What information is stored in a VCF header, and why should you read it?
+3. How can read depth, genotype quality, or filtering thresholds affect biological interpretation?
+4. What kinds of environmental or population questions can variant data support?
+5. What is your strongest current project output, and what is the riskiest step remaining?

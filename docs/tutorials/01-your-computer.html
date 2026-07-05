@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutorial 1 · Your Computer: Shell &amp; Git/GitHub · FISH 546</title>
+<link rel="stylesheet" href="tutorial.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="side">
+    <h1>FISH 546 · Setup 1</h1>
+    <div class="sub">Your Computer:<br>Shell &amp; Git/GitHub</div>
+    <div class="grp">Sections</div>
+    <a href="#intro">Overview</a>
+    <a href="#install">1 · Install the tools</a>
+    <a href="#organize">2 · Where repos live</a>
+    <a href="#shell">3 · Shell basics</a>
+    <a href="#structure">4 · Project structure</a>
+    <a href="#loop">5 · Clone → commit → push</a>
+    <a href="#done">✔ Completion</a>
+    <div class="prog-wrap">
+      <div class="lbl"><span>Progress</span><span class="prog-pct">0/0</span></div>
+      <div class="bar"><i></i></div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="intro">
+      <div class="kick">Pre-course · Tutorial 1 of 3</div>
+      <h2>Your Computer: Shell &amp; Git/GitHub</h2>
+      <p class="lead">Get a working local setup and learn the everyday version-control loop. This is the foundation for everything else in the course — do it first.</p>
+      <div class="pills"><span>~1 hour</span><span>Your laptop/desktop</span><span>No prior experience needed</span></div>
+    </section>
+
+    <section id="install">
+      <div class="eyebrow">Step 1</div>
+      <h2 class="sec">Install the tools</h2>
+      <p class="lede">You need three things: a terminal, Git, and a GitHub account (plus the GitHub Desktop app if you prefer clicking to typing).</p>
+
+      <div class="card">
+        <h4>GitHub account</h4>
+        <p>Create a free account at <a href="https://github.com/join">github.com/join</a> if you don't have one. Use a name you'd be comfortable with a future employer seeing. Then tell the instructor your username so you can be added to the <a href="https://github.com/course-fish546-2026">course organization</a>.</p>
+
+        <h4>Git + GitHub Desktop</h4>
+        <p>Install <a href="https://desktop.github.com/">GitHub Desktop</a> — it bundles Git and gives you a friendly interface for the daily loop. On macOS you already have a terminal (<code>Terminal.app</code>); on Windows, GitHub Desktop installs Git Bash, which you'll use as your terminal.</p>
+
+        <h4>Verify Git works</h4>
+        <p>Open your terminal and run:</p>
+        <pre><span class="p">git --version</span>
+<span class="o">git version 2.43.0</span>   <span class="c"># any recent version is fine</span></pre>
+      </div>
+
+      <div class="tip"><strong>Handbook:</strong> This mirrors the <a href="https://robertslab.github.io/resources/Computing-Best-Practices/">Computing Best Practices</a> page and the lab's <a href="https://robertslab.github.io/resources/github-tutorial.html">Git &amp; GitHub tutorial</a>. Keep them open.</div>
+
+      <div class="check" data-check>
+        <label><input type="checkbox"> I have a GitHub account and gave my username to the instructor</label>
+        <label><input type="checkbox"> GitHub Desktop is installed and <code>git --version</code> prints a version</label>
+      </div>
+    </section>
+
+    <section id="organize">
+      <div class="eyebrow">Step 2</div>
+      <h2 class="sec">Where your repositories live</h2>
+      <p class="lede">A little discipline here prevents a lot of pain later.</p>
+      <div class="card">
+        <ul>
+          <li>Create <strong>one</strong> dedicated folder for all GitHub repos. On a personal computer, <code>~/GitHub/</code> is the convention.</li>
+          <li><strong>Do not</strong> put repositories inside folders that auto-sync with iCloud Drive, Dropbox, Google Drive, or OneDrive. Sync services corrupt Git state.</li>
+          <li>Once a repo is cloned, don't casually move or rename it — code and settings depend on its location.</li>
+        </ul>
+        <pre><span class="p">mkdir -p ~/GitHub</span>
+<span class="p">cd ~/GitHub</span></pre>
+      </div>
+      <div class="warn"><strong>Why it matters:</strong> "My code can't find the file" is the most common early problem, and it's almost always because files moved or live in a synced folder. Pick a home and leave it there.</div>
+      <div class="check" data-check>
+        <label><input type="checkbox"> I created <code>~/GitHub/</code> (or the equivalent) and it is <em>not</em> inside a cloud-sync folder</label>
+      </div>
+    </section>
+
+    <section id="shell">
+      <div class="eyebrow">Step 3</div>
+      <h2 class="sec">Shell basics</h2>
+      <p class="lede">You'll live in the terminal all quarter. Five commands get you 80% of the way.</p>
+      <div class="card">
+        <table>
+          <tr><th>Command</th><th>Does</th></tr>
+          <tr><td><code>pwd</code></td><td>print working directory — "where am I?"</td></tr>
+          <tr><td><code>ls</code></td><td>list files here (<code>ls -l</code> for detail, <code>ls -a</code> to show hidden)</td></tr>
+          <tr><td><code>cd &lt;dir&gt;</code></td><td>change directory (<code>cd ..</code> goes up one)</td></tr>
+          <tr><td><code>mkdir &lt;name&gt;</code></td><td>make a directory</td></tr>
+          <tr><td><code>cat &lt;file&gt;</code></td><td>print a file's contents</td></tr>
+        </table>
+        <p>Try it — every path is a real location on disk:</p>
+        <pre><span class="p">cd ~/GitHub</span>
+<span class="p">pwd</span>
+<span class="o">/Users/you/GitHub</span>
+<span class="p">ls -la</span></pre>
+      </div>
+      <div class="tip"><strong>Go deeper:</strong> The handbook's <a href="https://robertslab.github.io/resources/bash-tutorial.html">bash tutorial</a> is a full hands-on walkthrough. If the shell is brand new to you, work through it now.</div>
+      <div class="check" data-check>
+        <label><input type="checkbox"> I can navigate with <code>cd</code>, list with <code>ls</code>, and know what <code>pwd</code> tells me</label>
+      </div>
+    </section>
+
+    <section id="structure">
+      <div class="eyebrow">Step 4</div>
+      <h2 class="sec">Project structure</h2>
+      <p class="lede">Every project in this course uses the same skeleton. A <code>README.md</code> in each directory says what's inside.</p>
+      <div class="card">
+        <pre>Project-01/
+├── README.md
+├── code/
+│   └── README.md
+├── data/
+│   ├── raw/
+│   │   └── README.md
+│   └── README.md
+└── output/
+    └── README.md</pre>
+        <p>The rules that make this reproducible:</p>
+        <ul>
+          <li><strong>code</strong> reads from <strong>data</strong> and writes to <strong>output</strong> — never the other way around.</li>
+          <li>Raw data in <code>data/raw/</code> is <em>read-only</em>; you never edit it by hand.</li>
+          <li>Number files so the order of operations is obvious: <code>01-QC.Rmd</code>, <code>02-DESeq2.Rmd</code>.</li>
+          <li>Anyone should be able to clone your repo and understand it from the READMEs.</li>
+        </ul>
+      </div>
+      <div class="tip"><strong>Handbook:</strong> This is straight from <a href="https://robertslab.github.io/resources/Data-Management/">Data Management</a> and <a href="https://robertslab.github.io/resources/Computing-Best-Practices/">Computing Best Practices</a> — the standard you'll be assessed against.</div>
+      <div class="check" data-check>
+        <label><input type="checkbox"> I understand the <code>code / data / output</code> layout and the read-only raw-data rule</label>
+      </div>
+    </section>
+
+    <section id="loop">
+      <div class="eyebrow">Step 5</div>
+      <h2 class="sec">The daily loop: clone → edit → commit → push</h2>
+      <p class="lede">This four-beat loop is how work moves from your machine to GitHub. You'll do it dozens of times a week.</p>
+      <div class="card">
+        <h4>Create your course repo</h4>
+        <p>On GitHub, create a new repository in the <a href="https://github.com/course-fish546-2026">course org</a> named for yourself (e.g. <code>your-name-546</code>), with a README. Then clone it — via GitHub Desktop (<em>File → Clone repository</em>) or the command line:</p>
+        <pre><span class="p">cd ~/GitHub</span>
+<span class="p">git clone https://github.com/course-fish546-2026/your-repo.git</span>
+<span class="p">cd your-repo</span></pre>
+
+        <h4>Build the skeleton</h4>
+        <pre><span class="p">mkdir -p code data/raw output</span>
+<span class="p">printf "# code\nScripts for this project.\n" &gt; code/README.md</span></pre>
+
+        <h4>Commit and push</h4>
+        <p>A commit is a labeled snapshot. Push sends it to GitHub.</p>
+        <pre><span class="p">git add .</span>
+<span class="p">git commit -m "Add project directory skeleton"</span>
+<span class="p">git push</span></pre>
+        <p>In GitHub Desktop this is the same three beats: <em>check the changed files → write a summary → Commit → Push origin.</em></p>
+      </div>
+      <div class="tip"><strong>Good commit messages</strong> describe <em>what changed and why</em> in the imperative: "Add QC script", not "stuff" or "update". Your future self reads these.</div>
+      <div class="check" data-check>
+        <label><input type="checkbox"> I created my course repo and cloned it into <code>~/GitHub/</code></label>
+        <label><input type="checkbox"> I built the <code>code / data / output</code> skeleton with READMEs</label>
+        <label><input type="checkbox"> I made a commit and pushed it — I can see it on GitHub</label>
+      </div>
+    </section>
+
+    <section id="done">
+      <div class="eyebrow">Finish</div>
+      <h2 class="sec">✔ Completion <span class="tag">Tutorial 1</span></h2>
+      <p class="lede">When every box above is checked, you're done. Copy the block below into your <strong>Setup Check</strong> issue (fill in the two blanks).</p>
+      <div class="done-block">## Tutorial 1 — Your Computer ✅
+Repo: https://github.com/course-fish546-2026/&lt;your-repo&gt;
+First commit: &lt;paste the commit URL&gt;
+Directory tree matches code / data / output with READMEs.</div>
+      <div class="note">Next up: <a href="02-raven.html">Tutorial 2 — Raven</a>, where you'll do this same loop on the lab's server.</div>
+    </section>
+  </main>
+</div>
+<script>window.TUTORIAL_KEY = "fish546-t1-your-computer";</script>
+<script src="progress.js"></script>
+</body>
+</html>

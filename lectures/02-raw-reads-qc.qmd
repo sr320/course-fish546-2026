@@ -1,0 +1,58 @@
+---
+title: "Raw Reads, FASTQ, QC, and Trimming"
+subtitle: "Week 02"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Purpose
+
+Week 02 starts where most sequencing projects actually start: raw reads. Before differential expression, metabarcoding, variant calling, or methylation analysis, you need to know what FASTQ files contain and whether the data are fit for the next step.
+
+## By the end of this week
+
+You should be able to:
+
+- Explain the structure of FASTQ records.
+- Distinguish read counts, base quality, adapter contamination, and duplication.
+- Run or interpret FastQC/MultiQC-style summaries.
+- Decide whether trimming is justified.
+- Record raw-data provenance and checksums.
+
+## FASTQ records
+
+A FASTQ record contains four lines:
+
+```text
+@read_id
+ACGTTGCA
++
+FFFFFFFF
+```
+
+The sequence line stores bases. The quality line stores per-base confidence scores encoded as characters. Most downstream workflows assume these records are correctly paired, named, and formatted.
+
+## Common QC questions
+
+Ask these before analysis:
+
+- How many reads are in each sample?
+- Are read qualities acceptable across the full read length?
+- Are adapters or primers present?
+- Do paired files have matching read counts?
+- Are there unexpected overrepresented sequences?
+- Are any samples obvious outliers?
+
+## Trimming is a decision
+
+Trimming can remove adapters, primers, and low-quality sequence, but it can also discard useful data. Record the exact command, software version, and parameters. If you trim, compare before and after QC summaries.
+
+## Project checkpoint
+
+For your project, identify the raw file format, source, expected sample structure, and first QC step. Add this to your project issue or README.
+
+## Self-directed tools
+
+Use the [Self-Directed Skills](../support.qmd) page when you need help with Raven, Quarto rendering, Hyak jobs, or GitHub Issues.

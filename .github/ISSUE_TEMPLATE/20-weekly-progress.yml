@@ -1,0 +1,41 @@
+name: "📈 Weekly Research Progress"
+description: Your weekly self-assessed project progress (counts toward your grade).
+title: "[progress] week NN — <your name>"
+labels: ["progress"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        File one of these each week. Progress is assessed from this issue and your card on the course project board.
+  - type: dropdown
+    id: week
+    attributes:
+      label: Week
+      options: ["01","02","03","04","05","06","07","08","09","10"]
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: What I accomplished this week
+      description: Link commits/PRs/outputs where possible.
+    validations:
+      required: true
+  - type: textarea
+    id: goals-met
+    attributes:
+      label: Goals I set last week — met or not?
+      description: Be honest; unmet goals are fine if you explain what happened.
+    validations:
+      required: true
+  - type: textarea
+    id: next
+    attributes:
+      label: Goals for next week
+    validations:
+      required: true
+  - type: textarea
+    id: blockers
+    attributes:
+      label: Blockers / where I need help
+      description: If you're stuck, also open a Help Request issue and link it here.

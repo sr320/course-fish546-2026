@@ -1,0 +1,55 @@
+---
+title: "Epigenetics and DNA Methylation"
+subtitle: "Week 07"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Purpose
+
+Week 07 introduces DNA methylation and related genomic-feature workflows. The emphasis is on interpreting methylation calls in genomic context and using genome browsers or motif tools carefully.
+
+## By the end of this week
+
+You should be able to:
+
+- Explain what DNA methylation is and why it matters in environmental biology.
+- Distinguish loci, regions, motifs, and annotations.
+- Interpret methylation results with appropriate caveats.
+- Use IGV or genome-browser-style inspection to check a result.
+- Connect epigenetic outputs to genomic intervals.
+
+## DNA methylation in brief
+
+DNA methylation is a chemical modification of DNA that can be associated with gene regulation, genome defense, development, and environmental response. In many analyses, the core data product is a table of methylation estimates at genomic positions or regions.
+
+## Common analysis questions
+
+Methylation analyses often ask:
+
+- Which loci or regions differ among groups?
+- Are differentially methylated regions near genes or regulatory features?
+- Are particular sequence motifs enriched?
+- Do methylation patterns align with expression or phenotype?
+
+## Genome context matters
+
+A coordinate alone is not an interpretation. You usually need annotation:
+
+- Chromosome or scaffold.
+- Start and end coordinate.
+- Strand where relevant.
+- Nearby genes or features.
+- Genome version.
+
+## Project checkpoint
+
+Launch the structure of your final project report. It can be mostly placeholders, but every planned section should exist with notes about what evidence will go there.
+
+## References
+
+- Roberts Lab Handbook: Genomic Resources
+- IGV documentation
+- BEDtools documentation

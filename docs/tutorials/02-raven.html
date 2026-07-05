@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutorial 2 · Raven: RStudio Server &amp; Reproducible Analysis · FISH 546</title>
+<link rel="stylesheet" href="tutorial.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="side">
+    <h1>FISH 546 · Setup 2</h1>
+    <div class="sub">Raven:<br>RStudio Server &amp; Analysis</div>
+    <div class="grp">Sections</div>
+    <a href="#intro">Overview</a>
+    <a href="#why">1 · Server vs. laptop</a>
+    <a href="#login">2 · Log into Raven</a>
+    <a href="#clone">3 · Clone your repo</a>
+    <a href="#env">4 · Environments &amp; Conda</a>
+    <a href="#run">5 · Run &amp; push a result</a>
+    <a href="#data">6 · Data hygiene</a>
+    <a href="#done">✔ Completion</a>
+    <div class="prog-wrap">
+      <div class="lbl"><span>Progress</span><span class="prog-pct">0/0</span></div>
+      <div class="bar"><i></i></div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="intro">
+      <div class="kick">Pre-course · Tutorial 2 of 3</div>
+      <h2>Raven: RStudio Server &amp; Reproducible Analysis</h2>
+      <p class="lead">Run an interactive analysis on the lab's shared server and push the result back to GitHub. Raven is the middle tier — more power than your laptop, gentler than the HPC cluster.</p>
+      <div class="pills"><span>~1 hour</span><span>Raven RStudio Server</span><span>Finish Tutorial 1 first</span></div>
+    </section>
+
+    <section id="why">
+      <div class="eyebrow">Step 1</div>
+      <h2 class="sec">Why a server? (server vs. laptop)</h2>
+      <p class="lede">Raven is a computer that lives in the department and runs RStudio in your browser. You use its CPU, memory, and disk — not your laptop's.</p>
+      <div class="card">
+        <ul>
+          <li><strong>More resources:</strong> bigger jobs than your laptop can handle, without tying up your machine.</li>
+          <li><strong>Shared environment:</strong> everyone has the same software installed, so "works on my machine" problems shrink.</li>
+          <li><strong>It's still just files + Git:</strong> the same clone → commit → push loop from Tutorial 1 works here.</li>
+          <li><strong>Shared, not private:</strong> your home directory is yours, but the machine is communal — be tidy and don't hog resources.</li>
+        </ul>
+      </div>
+      <div class="tip"><strong>Handbook:</strong> <a href="https://robertslab.github.io/resources/raven_RStudio-Server/">Raven RStudio Server</a> and <a href="https://robertslab.github.io/resources/raven_Conda/">Raven Conda</a> are your references for this tutorial.</div>
+    </section>
+
+    <section id="login">
+      <div class="eyebrow">Step 2</div>
+      <h2 class="sec">Log into Raven</h2>
+      <div class="card">
+        <p>Open <a href="http://raven.fish.washington.edu:8787">http://raven.fish.washington.edu:8787</a> in your browser and sign in with the credentials the instructor provides. You'll land in a full RStudio IDE — Console, Files pane, Terminal tab, and all.</p>
+        <div class="warn"><strong>Access note:</strong> Raven may require being on the campus network or UW VPN (Husky OnNet). If the page won't load off campus, connect to the VPN first.</div>
+        <p>Open the <strong>Terminal</strong> tab inside RStudio (next to Console) — this is a real shell on Raven, where your Tutorial&nbsp;1 commands work.</p>
+        <pre><span class="p">whoami</span>
+<span class="p">pwd</span>
+<span class="o">/home/your-username</span></pre>
+      </div>
+      <div class="check" data-check>
+        <label><input type="checkbox"> I logged into Raven RStudio Server in my browser</label>
+        <label><input type="checkbox"> I opened the Terminal tab and ran <code>pwd</code></label>
+      </div>
+    </section>
+
+    <section id="clone">
+      <div class="eyebrow">Step 3</div>
+      <h2 class="sec">Clone your repo on the server</h2>
+      <p class="lede">Your GitHub repo is the bridge between machines: clone it on Raven exactly like you did on your laptop.</p>
+      <div class="card">
+        <pre><span class="p">mkdir -p ~/GitHub</span>
+<span class="p">cd ~/GitHub</span>
+<span class="p">git clone https://github.com/course-fish546-2026/your-repo.git</span>
+<span class="p">cd your-repo</span></pre>
+        <p>Set your Git identity on Raven the first time (so commits are attributed to you):</p>
+        <pre><span class="p">git config --global user.name  "Your Name"</span>
+<span class="p">git config --global user.email "you@uw.edu"</span></pre>
+      </div>
+      <div class="note">Now the <em>same</em> project exists in three places by the end of the setup: your laptop, Raven, and GitHub. GitHub is the source of truth; you <code>git pull</code> to sync a machine before working and <code>git push</code> when done.</div>
+      <div class="check" data-check>
+        <label><input type="checkbox"> I cloned my course repo onto Raven and set my Git name/email</label>
+      </div>
+    </section>
+
+    <section id="env">
+      <div class="eyebrow">Step 4</div>
+      <h2 class="sec">Environments &amp; Conda</h2>
+      <p class="lede">Reproducibility means pinning <em>which</em> software versions you used. On Raven, Conda manages that.</p>
+      <div class="card">
+        <p>List available environments and activate one:</p>
+        <pre><span class="p">conda env list</span>
+<span class="p">conda activate &lt;env-name&gt;</span></pre>
+        <p>Check what's installed — e.g. R and a common tool:</p>
+        <pre><span class="p">R --version</span>
+<span class="p">which samtools</span></pre>
+        <p>If you need a package that isn't there, note it in an issue rather than installing globally — the <a href="https://robertslab.github.io/resources/raven_Conda/">Raven Conda guide</a> shows the right way to make your own environment.</p>
+      </div>
+      <div class="check" data-check>
+        <label><input type="checkbox"> I listed Conda environments and activated one</label>
+        <label><input type="checkbox"> I confirmed R is available (<code>R --version</code>)</label>
+      </div>
+    </section>
+
+    <section id="run">
+      <div class="eyebrow">Step 5</div>
+      <h2 class="sec">Run something and push the result</h2>
+      <p class="lede">Prove the round trip: compute on Raven, write to <code>output/</code>, commit, push, and see it on GitHub.</p>
+      <div class="card">
+        <p>In the RStudio <strong>Console</strong>, run a tiny analysis that writes a figure to your repo's <code>output/</code> directory:</p>
+        <pre><span class="p">setwd("~/GitHub/your-repo")</span>
+<span class="p">dir.create("output", showWarnings = FALSE)</span>
+<span class="p">png("output/hello-raven.png", width = 700, height = 450)</span>
+<span class="p">hist(rnorm(1000), col = "#0b7285",</span>
+<span class="p">     main = "Hello from Raven", xlab = "value")</span>
+<span class="p">dev.off()</span></pre>
+        <p>Then, in the Terminal tab, commit and push:</p>
+        <pre><span class="p">git add output/hello-raven.png</span>
+<span class="p">git commit -m "Add first Raven output figure"</span>
+<span class="p">git push</span></pre>
+      </div>
+      <div class="tip">Refresh your repo on GitHub — the PNG should be there. That's a complete reproducible cycle on the server.</div>
+      <div class="check" data-check>
+        <label><input type="checkbox"> I generated an output file on Raven</label>
+        <label><input type="checkbox"> I committed and pushed it — I can see it on GitHub</label>
+      </div>
+    </section>
+
+    <section id="data">
+      <div class="eyebrow">Step 6</div>
+      <h2 class="sec">Data hygiene on a shared server</h2>
+      <div class="card">
+        <ul>
+          <li><strong>Don't commit big data.</strong> Sequence files and large outputs don't belong in Git. Add them to <code>.gitignore</code> and keep them in <code>data/</code> on the server.</li>
+          <li><strong>Record provenance.</strong> When you bring in raw data, store a checksum/manifest so you can prove it didn't change:
+            <pre><span class="p">md5sum data/raw/*.fastq.gz &gt; data/raw/md5.txt</span></pre>
+          </li>
+          <li><strong>Clean up.</strong> Delete scratch files you no longer need — the disk is shared.</li>
+        </ul>
+      </div>
+      <div class="tip"><strong>Handbook:</strong> <a href="https://robertslab.github.io/resources/Data-Management/">Data Management</a> covers metadata, backups, and archiving — the standard for the quarter.</div>
+      <div class="check" data-check>
+        <label><input type="checkbox"> I understand not to commit large data files, and how to record a checksum</label>
+      </div>
+    </section>
+
+    <section id="done">
+      <div class="eyebrow">Finish</div>
+      <h2 class="sec">✔ Completion <span class="tag">Tutorial 2</span></h2>
+      <p class="lede">All boxes checked? Paste this into your <strong>Setup Check</strong> issue.</p>
+      <div class="done-block">## Tutorial 2 — Raven ✅
+Logged into Raven RStudio Server and cloned my repo.
+Output pushed from Raven: https://github.com/course-fish546-2026/&lt;your-repo&gt;/blob/main/output/hello-raven.png</div>
+      <div class="note">Last one — and the toughest: <a href="03-hyak.html">Tutorial 3 — Hyak / Klone HPC</a>. Give yourself time and don't panic when something breaks.</div>
+    </section>
+  </main>
+</div>
+<script>window.TUTORIAL_KEY = "fish546-t2-raven";</script>
+<script src="progress.js"></script>
+</body>
+</html>

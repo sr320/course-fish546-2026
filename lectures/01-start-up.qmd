@@ -1,0 +1,69 @@
+---
+title: "Getting Started"
+subtitle: "Week 01"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Purpose
+
+Week 01 turns setup into practice. You will use command-line tools, web resources, GitHub, and NCBI BLAST to answer a small biological question and begin framing your quarter project.
+
+## By the end of this week
+
+You should be able to:
+
+- Explain what a FASTA file is.
+- Run or interpret a BLAST search.
+- Capture commands and results in a reproducible record.
+- Open a project-proposal issue with a research question, data source, platform, and endpoint.
+- Use Issues for help and project tracking.
+
+## Biological sequence files
+
+Many bioinformatics workflows begin with plain-text sequence files. FASTA is one of the most common formats:
+
+```text
+>sequence_id optional description
+ATGCTAGCTAGCTACGATCG
+```
+
+The header identifies the sequence. The following lines contain the sequence itself. Simple formats are powerful because they can be inspected, searched, counted, and transformed with many tools.
+
+## BLAST as a first bioinformatics workflow
+
+BLAST compares a query sequence against a database and reports similar sequences. It is often used to ask:
+
+- What organism or gene does this sequence resemble?
+- Is this sequence likely contaminated?
+- Does this marker identify the expected taxonomic group?
+- Which reference sequence should I use next?
+
+BLAST results require judgment. A low e-value helps, but interpretation also depends on query coverage, percent identity, database choice, and whether the top hits make biological sense.
+
+## GitHub Issues as the course notebook
+
+This course uses Issues for structured work:
+
+- Project proposal: one home-base issue for your quarter project.
+- Weekly progress: what you completed, what slipped, what comes next.
+- Help request: what failed, where, and what you already tried.
+- Bug/blocker: a reproducible failure with commands and output.
+
+## Project checkpoint
+
+Open your project-proposal issue. At this stage, the proposal can be rough, but it must include:
+
+- A research question or objective.
+- The data you expect to use.
+- The likely project track.
+- The compute platform needed for the heavy work.
+- A draft endpoint: the figure, table, or result that would make the project feel complete.
+
+## References
+
+- NCBI BLAST documentation
+- Roberts Lab Handbook: Bioinformatics Basics
+- Bioinformatics Data Skills, early chapters on project organization

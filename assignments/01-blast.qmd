@@ -1,0 +1,34 @@
+---
+title: "Assignment 01 - NCBI BLAST"
+subtitle: "Week 01"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Goal
+
+Use BLAST to identify or interpret an unknown sequence, then document the result in a reproducible way.
+
+## Tasks
+
+1. Choose a provided sequence or a sequence relevant to your project.
+2. Save the query as `assignment/01-blast/query.fasta`.
+3. Run a BLAST search using NCBI web BLAST or command-line BLAST if available.
+4. Save the top-hit table or downloaded results in `assignment/01-blast/output/`.
+5. Write a short interpretation that includes:
+   - Database searched.
+   - Top hit.
+   - Percent identity.
+   - Query coverage.
+   - E-value.
+   - Whether the result makes biological sense.
+
+## What to submit
+
+Submit a rendered Quarto or Markdown report in `assignment/01-blast/` with the query, result summary, and interpretation.
+
+## Project connection
+
+Open your project-proposal issue this week. Include a draft endpoint and identify whether sequence similarity, annotation, or database choice will matter for your project.

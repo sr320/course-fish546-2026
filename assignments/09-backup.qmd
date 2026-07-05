@@ -1,0 +1,36 @@
+---
+title: "Assignment 09 - Backup and Repository Audit"
+subtitle: "Week 09"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Goal
+
+Prepare your repository for final submission by auditing organization, documentation, reproducibility, and archiving readiness.
+
+## Tasks
+
+1. Update the top-level `README.md`.
+2. Confirm each major directory has a README or is self-explanatory.
+3. Remove or ignore files that should not be committed.
+4. Confirm raw data are either excluded or intentionally tracked.
+5. Add a workflow section explaining how to reproduce the main result.
+6. List software, platforms, containers, and major package versions.
+7. Close or update stale Issues.
+
+## What to submit
+
+In `assignment/09-backup/`, include an audit report with:
+
+- Repository map.
+- Data availability note.
+- Reproducibility checklist.
+- Backup/archive plan.
+- Remaining risks before final submission.
+
+## Assessment
+
+This assignment is about project readiness. A clear audit that identifies remaining problems is better than pretending the project has no problems.

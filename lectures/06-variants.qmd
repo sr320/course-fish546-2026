@@ -1,0 +1,56 @@
+---
+title: "Variants and Population Signals"
+subtitle: "Week 06"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Purpose
+
+Week 06 introduces variant data and the kinds of biological questions they can support, from individual genotypes to population structure and candidate loci.
+
+## By the end of this week
+
+You should be able to:
+
+- Explain what a variant call represents.
+- Read the major parts of a VCF file.
+- Distinguish SNPs, indels, genotypes, depth, and quality.
+- Summarize variant data by sample, region, or annotation.
+- Describe why filtering choices affect biological conclusions.
+
+## Variant calling in context
+
+Variant workflows typically include:
+
+1. Raw reads.
+2. QC and trimming.
+3. Mapping to a reference.
+4. Variant calling.
+5. Filtering.
+6. Annotation or population summary.
+7. Biological interpretation.
+
+Every step can introduce bias. Low coverage, reference choice, population structure, and filtering thresholds all matter.
+
+## VCF essentials
+
+A VCF file stores genomic position, reference allele, alternate allele, quality, filters, annotations, and sample genotypes. The header is part of the data: it defines fields and records provenance.
+
+## Population signals
+
+Depending on the design, variant data can support questions about:
+
+- Genetic diversity.
+- Relatedness.
+- Population structure.
+- Local adaptation.
+- Candidate genes or regions.
+
+These claims require careful filtering and appropriate sampling.
+
+## Project checkpoint
+
+Update your project issue with a four-week plan. Identify the strongest output you already have and the riskiest step remaining.

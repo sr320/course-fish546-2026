@@ -1,0 +1,47 @@
+---
+title: "RNA-seq and Differential Expression"
+subtitle: "Week 04"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Purpose
+
+Week 04 focuses on RNA-seq as a full bioinformatics workflow: raw reads become expression estimates, expression estimates become model outputs, and model outputs become biological claims.
+
+## By the end of this week
+
+You should be able to:
+
+- Describe the RNA-seq workflow from FASTQ to count matrix.
+- Explain why experimental design and metadata matter.
+- Interpret differential-expression output cautiously.
+- Connect expression changes to annotation and biological context.
+- Identify batch effects, outliers, and weak designs.
+
+## The RNA-seq data products
+
+Common products include:
+
+- FASTQ files: raw reads.
+- QC reports: read quality and sample diagnostics.
+- BAM files or pseudoalignment outputs: read placement or transcript assignment.
+- Count matrix: samples by genes/transcripts.
+- Differential-expression table: model results.
+- Figures: PCA, MA plot, heatmap, volcano plot, or focused gene plot.
+
+## Differential expression is a model
+
+A differential-expression table is not a list of truths. It is evidence from a model. Interpret with:
+
+- Effect size.
+- Adjusted p-value or false-discovery rate.
+- Sample size.
+- Biological function.
+- Consistency with QC and exploratory plots.
+
+## Project checkpoint
+
+If your project is not RNA-seq, use this week to compare your own workflow to RNA-seq: what is your raw input, analysis-ready table, model or summary step, and final biological interpretation?

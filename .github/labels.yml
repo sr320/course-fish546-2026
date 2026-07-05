@@ -1,0 +1,76 @@
+# Course labels. Sync with an action (e.g. crazy-max/ghaction-github-labeler) or the gh CLI:
+#   gh label create <name> --color <hex> --description "<desc>"
+# Weekly + workflow labels are applied automatically by the issue forms in ISSUE_TEMPLATE/.
+
+- name: setup
+  color: "0e8a16"
+  description: Pre-course environment setup
+- name: project
+  color: "1d76db"
+  description: Student research project (home-base issue)
+- name: progress
+  color: "5319e7"
+  description: Weekly research-progress report
+- name: help
+  color: "d93f0b"
+  description: Student needs help / is stuck
+- name: bug
+  color: "b60205"
+  description: Reproducible technical failure
+
+# Topic labels
+- name: edna
+  color: "006b75"
+  description: eDNA / metabarcoding
+- name: rna-seq
+  color: "0052cc"
+  description: RNA-seq / differential expression
+- name: methylation
+  color: "5319e7"
+  description: DNA methylation / epigenetics
+- name: variants
+  color: "fbca04"
+  description: Variants / genomic ranges
+
+# Platform labels
+- name: "platform:own"
+  color: "c5def5"
+  description: Student's own computer
+- name: "platform:raven"
+  color: "c5def5"
+  description: Raven RStudio Server
+- name: "platform:hyak"
+  color: "c5def5"
+  description: Hyak / Klone HPC
+
+# Triage
+- name: needs-review
+  color: "fef2c0"
+  description: Awaiting instructor review
+- name: resolved
+  color: "0e8a16"
+  description: Closed / resolved
+
+# Weekly labels
+- name: week-00
+  color: "ededed"
+- name: week-01
+  color: "ededed"
+- name: week-02
+  color: "ededed"
+- name: week-03
+  color: "ededed"
+- name: week-04
+  color: "ededed"
+- name: week-05
+  color: "ededed"
+- name: week-06
+  color: "ededed"
+- name: week-07
+  color: "ededed"
+- name: week-08
+  color: "ededed"
+- name: week-09
+  color: "ededed"
+- name: week-10
+  color: "ededed"

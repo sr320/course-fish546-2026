@@ -1,0 +1,64 @@
+---
+title: "Preparing for Class"
+subtitle: "Week 00"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Purpose
+
+Week 00 makes sure every student starts with the same working habits: a GitHub repository, a sensible project layout, a terminal they can use, and a first record of their setup in GitHub Issues.
+
+The goal is not speed. The goal is to make your work legible to yourself, your future collaborators, and the instructor.
+
+## By the end of this week
+
+You should be able to:
+
+- Navigate your computer with the shell.
+- Create and explain a `code/`, `data/`, `output/`, `docs/`, and `notebooks/` project layout.
+- Clone, edit, commit, and push to GitHub.
+- Open a GitHub Issue with enough context that someone else can help you.
+- Describe which tasks belong on your computer, Raven, and Hyak.
+
+## Core habits
+
+### Work in a repository
+
+Every course artifact should live in your course repository unless there is a clear reason it should not. Raw or very large data are usually recorded but not committed.
+
+### Make directories explain themselves
+
+Each major directory should contain a short `README.md` explaining what belongs there. This prevents the common end-of-quarter problem where `final-final2-new/` becomes the most important directory in the project.
+
+### Commit small, useful checkpoints
+
+A commit should capture a meaningful step: a script added, a result regenerated, an assignment completed, or a figure revised. Commit messages should tell the next reader what changed and why.
+
+## Project setup checklist
+
+Create this structure in your repository:
+
+```bash
+mkdir -p code data/raw data/processed output docs notebooks assignment homework
+touch code/README.md data/README.md output/README.md docs/README.md
+```
+
+Add `data/raw/` to `.gitignore` if it will contain large or restricted files.
+
+## Project checkpoint
+
+Open your setup issue after the three pre-course tutorials are complete. Then make sure your repository has:
+
+- A clear top-level `README.md`.
+- The standard project directories.
+- At least one pushed commit after setup.
+- A note about any setup problems you still have.
+
+## References
+
+- Roberts Lab Handbook: Computing Best Practices
+- Roberts Lab Handbook: Data Management
+- Happy Git with R

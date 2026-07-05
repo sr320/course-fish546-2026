@@ -1,0 +1,47 @@
+name: "🆘 Help Request (I'm stuck)"
+description: Ask for help on a specific problem — the right way to get unstuck fast.
+title: "[help] <one-line summary of the problem>"
+labels: ["help"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A good help request gets a fast answer. Tell us **what you expected**, **what happened**, and **what you already tried**.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Which platform?
+      options:
+        - Own computer
+        - Raven
+        - Hyak / Klone
+        - GitHub / Git
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you already tried?
+      description: Show us — this is required. Include the exact command(s) you ran.
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: Exact error message / output
+      description: Copy-paste the full text (not a screenshot of text).
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: handbook
+    attributes:
+      label: Relevant handbook page (if you checked one)
+      placeholder: "https://robertslab.github.io/resources/klone_Running-a-Job/"

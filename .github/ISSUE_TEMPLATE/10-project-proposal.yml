@@ -1,0 +1,58 @@
+name: "🔬 Project Proposal"
+description: Propose your quarter-long research project (one per student).
+title: "[project] <short project title>"
+labels: ["project"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One issue per student. This issue is the home base for your project all quarter — it will move across the course project board.
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question / objective
+      description: What are you trying to find out?
+    validations:
+      required: true
+  - type: dropdown
+    id: track
+    attributes:
+      label: Project track
+      options:
+        - RNA-seq / differential gene expression
+        - eDNA / metabarcoding
+        - DNA methylation / epigenetics
+        - Variants / genomic ranges
+        - Other (describe below)
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Data
+      description: What data will you use? Source, size, format, and whether it already exists.
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Primary compute platform for the heavy lifting
+      options:
+        - Hyak / Klone (batch)
+        - Raven (RStudio Server)
+        - Own computer
+        - Mix (describe below)
+    validations:
+      required: true
+  - type: textarea
+    id: endpoint
+    attributes:
+      label: Endpoint / "ultimate figure"
+      description: What does "done" look like? Describe the final figure or result you're driving toward.
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Anticipated challenges
+      description: Where do you expect to get stuck (data access, compute, methods)?

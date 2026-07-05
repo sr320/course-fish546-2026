@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "2026 :: Bioinformatics — FISH 546"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Syllabus
+      - href: schedule.qmd
+        text: Schedule
+      - href: setup.qmd
+        text: Before Class
+      - href: support.qmd
+        text: Self-Directed Skills
+      - href: edna.qmd
+        text: eDNA
+      - href: https://github.com/course-fish546-2026
+        text: GitHub Org
+    right:
+      - icon: github
+        href: https://github.com/course-fish546-2026
+        aria-label: GitHub
+
+format:
+  html:
+    theme:
+      dark: superhero
+      light: Lumen
+    css: styles.css
+    toc: true
+
+editor: visual

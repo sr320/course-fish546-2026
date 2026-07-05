@@ -1,0 +1,49 @@
+---
+title: "Mapping, Assembly, and Quantification"
+subtitle: "Week 03"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Purpose
+
+Week 03 covers the central transformation in many bioinformatics workflows: reads are connected to biological references or assembled into inferred sequences, then summarized into analysis-ready tables.
+
+## By the end of this week
+
+You should be able to:
+
+- Explain the difference between alignment, mapping, assembly, and quantification.
+- Identify when a workflow uses a reference genome, transcriptome, marker database, or no reference.
+- Interpret common intermediate files such as SAM/BAM, count tables, and assembly summaries.
+- Choose a small workflow slice that can be run reproducibly.
+
+## Three common paths
+
+### Reference mapping
+
+Reads are aligned to a known reference genome or transcriptome. This is common in RNA-seq, variant calling, methylation, and ChIP/ATAC-style workflows.
+
+### Assembly
+
+Reads are assembled into longer contigs or inferred sequences when a suitable reference is absent or when the goal is to reconstruct sequence content.
+
+### Quantification
+
+Reads are summarized into counts, abundance estimates, coverage, or feature-level tables. These tables often become the input to statistical analysis.
+
+## The key habit
+
+Do not skip intermediate checks. For any mapping or quantification workflow, inspect:
+
+- Number of input reads.
+- Number or proportion mapped.
+- Output file size and format.
+- A small preview of the result.
+- Logs or summary reports.
+
+## Project checkpoint
+
+Choose the smallest meaningful slice of your project workflow. Run it from raw or prepared input to one intermediate product, then document what the output means.

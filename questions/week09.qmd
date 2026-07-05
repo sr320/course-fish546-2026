@@ -1,0 +1,12 @@
+---
+title: "Week 09 Questions"
+subtitle: "Project synthesis and biological interpretation"
+---
+
+Answer these in your repository's `homework/` directory before Tuesday at 3:00pm.
+
+1. What is the main biological claim your project can support right now?
+2. Which figure or table best supports that claim?
+3. What evidence would make the claim stronger?
+4. What is the most important limitation or caveat?
+5. What is the largest remaining gap before your final compendium?

@@ -1,0 +1,37 @@
+---
+title: "Assignment 03 - Explain and Knit"
+subtitle: "Week 03"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Goal
+
+Turn an analysis into a readable rendered document that combines code, output, figures, and explanation.
+
+## Tasks
+
+1. Create `assignment/03-knit/analysis.qmd`.
+2. Use a small dataset from a previous assignment or your project.
+3. Include:
+   - A short introduction.
+   - At least two code chunks.
+   - One saved table or output file.
+   - One figure.
+   - A short interpretation.
+4. Render the document to HTML.
+5. Commit both the source `.qmd` and rendered `.html`.
+
+## What to submit
+
+Submit the `assignment/03-knit/` directory with:
+
+- `analysis.qmd`.
+- Rendered `analysis.html`.
+- Any small supporting output files.
+
+## Assessment
+
+Your document should be readable from top to bottom. The reader should understand what ran, what it produced, and what the result means.

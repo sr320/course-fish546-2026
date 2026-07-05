@@ -1,0 +1,45 @@
+---
+title: "Assignment 10 - Final Research Compendium"
+subtitle: "Week 10"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Goal
+
+Submit a final project compendium that documents your research question, data, workflow, results, caveats, and reproducible artifacts.
+
+## Required components
+
+Your repository should include:
+
+- Top-level `README.md` with project overview and reproduction notes.
+- Final rendered report in `docs/` or `assignment/10-compendium/`.
+- Source `.qmd` or scripts used to generate final results.
+- Key figures in `output/`.
+- Key small processed tables where appropriate.
+- Data availability statement.
+- Software/platform statement.
+- Link to your project issue and relevant weekly-progress issues.
+
+## Final report structure
+
+Use this structure unless your project needs something different:
+
+1. Research question.
+2. Background and data.
+3. Methods/workflow.
+4. Results.
+5. Caveats and limitations.
+6. Next steps.
+7. Reproducibility notes.
+
+## What to submit
+
+Submit the final compendium through your repository and link it from your final weekly-progress issue.
+
+## Assessment
+
+The final project is assessed on clarity, reproducibility, technical progress, interpretation, and honest treatment of limitations.

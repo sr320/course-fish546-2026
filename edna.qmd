@@ -1,0 +1,35 @@
+---
+title: "eDNA & Environmental Metabarcoding"
+subtitle: "Topic hub"
+---
+
+Environmental DNA (eDNA) — genetic material shed into water, soil, or air — lets us detect and characterize communities without capturing organisms. This is a growing thread in the course, with its own lecture, assignment, and an optional project track.
+
+## Module materials
+
+- **Lecture:** [eDNA & Metabarcoding](lectures/edna.qmd)
+- **Assignment:** [eDNA Metabarcoding pipeline](assignments/edna-metabarcoding.qmd)
+- **Question set:** [Week 08](questions/week08.qmd)
+
+## What you'll learn
+
+- **Concepts:** what environmental nucleic acids are, how samples are collected and filtered, and why contamination control matters.
+- **Markers:** common metabarcoding markers (COI, 12S, 16S, 18S) and when to use each.
+- **From reads to biology:** amplicon QC → **DADA2** (amplicon sequence variants) vs. OTU clustering → taxonomic assignment against reference databases → an abundance / occurrence table.
+- **Ecological readouts:** diversity, species detection and occupancy, and comparing communities across sites or time.
+- **Caveats:** false positives/negatives, index hopping, and reproducibility concerns specific to eDNA.
+
+## Where it runs
+
+The heavy steps (denoising, taxonomic assignment) run on **Hyak/Klone** — this is exactly why you complete the [Hyak tutorial](tutorials/03-hyak.html) before class. Interactive exploration and figures happen on **Raven** or your own machine.
+
+## eDNA project track
+
+You may take an eDNA dataset as your quarter research project: raw amplicons → community table → figure/report, using the same GitHub, issue-tracking, and compendium workflow as every other project. Flag this in your **project-proposal** issue.
+
+## Competency anchors (Roberts Lab Handbook)
+
+- [Bioinformatics Basics](https://robertslab.github.io/resources/bio_Basics/)
+- [Annotation](https://robertslab.github.io/resources/bio-Annotation/)
+- [Genomic Resources](https://robertslab.github.io/resources/Genomic-Resources/)
+- [Data Management](https://robertslab.github.io/resources/Data-Management/)

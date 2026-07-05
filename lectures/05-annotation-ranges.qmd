@@ -1,0 +1,47 @@
+---
+title: "Genome Annotation and Genomic Ranges"
+subtitle: "Week 05"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Purpose
+
+Week 05 gives students the coordinate logic needed across genomics: features, intervals, annotation, genome versions, and overlaps.
+
+## By the end of this week
+
+You should be able to:
+
+- Explain BED, GFF/GTF, FASTA, BAM, and VCF at a high level.
+- Describe why genome build and coordinate convention matter.
+- Use interval logic to connect results to genes or genomic features.
+- Summarize overlap results without overinterpreting them.
+- Present a mid-quarter project update grounded in evidence.
+
+## Why annotation matters
+
+Bioinformatics results often begin as identifiers or coordinates. Annotation connects those results to possible biological meaning:
+
+- Gene names and descriptions.
+- Functional domains.
+- Pathways or ontology terms.
+- Genomic neighborhoods.
+- Regulatory or repetitive features.
+
+Annotation is useful, but it is not final proof. It gives hypotheses and context.
+
+## Genomic ranges
+
+A genomic range is a chromosome/scaffold, start, end, and sometimes strand. Range operations answer questions such as:
+
+- Which variants overlap coding regions?
+- Which methylated regions are near genes?
+- Which peaks overlap promoters?
+- Which features are closest to my candidate loci?
+
+## Project checkpoint
+
+Prepare a mid-quarter update that shows the current evidence, not only a plan. Include one concrete output, diagnostic, or figure.

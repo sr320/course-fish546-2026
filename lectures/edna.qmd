@@ -1,0 +1,81 @@
+---
+title: "eDNA & Environmental Metabarcoding"
+subtitle: "Week 08 lecture"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## What is environmental DNA?
+
+Environmental DNA (eDNA) is genetic material organisms shed into their surroundings — water, sediment, soil, air. Sampling and sequencing it lets us detect and characterize whole communities without capturing or even seeing the organisms. In aquatic systems it has become a workhorse for biodiversity surveys, invasive-species early warning, and monitoring rare or cryptic taxa.
+
+::: {.callout-note}
+This lecture connects directly to the [Hyak setup tutorial](../tutorials/03-hyak.html) — the compute-heavy steps below run as SLURM jobs on Klone.
+:::
+
+## Sampling and contamination control
+
+- **Collection:** filter water (capturing DNA on a membrane), or sample sediment/soil; preserve immediately.
+- **Degradation:** eDNA breaks down over hours to days, so detections are biased toward recent presence — a feature for monitoring, a caveat for interpretation.
+- **Contamination is the enemy.** Field blanks, filter blanks, and negative controls at extraction and PCR are mandatory. Track them through the whole pipeline; they tell you your false-positive floor.
+
+## Metabarcoding markers
+
+Metabarcoding amplifies a short, taxonomically informative marker across many taxa at once, then sequences the amplicons.
+
+| Marker | Typical target group |
+|--------|----------------------|
+| **COI** | metazoan invertebrates |
+| **12S** | fish and vertebrates |
+| **16S** | bacteria / archaea (and some vertebrate assays) |
+| **18S** | broad eukaryotes |
+
+Marker choice determines what you can detect and which reference database you assign against — decide it before you sequence.
+
+## From reads to biology
+
+The core pipeline, and where each step runs:
+
+1. **Demultiplex & QC** — separate samples, trim primers/adapters, filter by quality. *(Klone)*
+2. **Denoise or cluster:**
+   - **DADA2** infers exact **amplicon sequence variants (ASVs)** — resolves single-nucleotide differences, database-independent, reproducible across studies.
+   - **OTU clustering** groups reads at a similarity threshold (e.g. 97%) — coarser, still common. *(Klone)*
+3. **Taxonomic assignment** — match ASVs/OTUs to a reference database (BLAST, or classifiers like the RDP/naïve-Bayes approach) to get names. *(Klone)*
+4. **Build the table** — a sample × taxon abundance/occurrence matrix: the analysis-ready product. *(Raven / laptop)*
+
+```bash
+# Sketch of the heavy step as a Klone job — see assignments/edna-metabarcoding.qmd
+module load apptainer
+apptainer exec --home $PWD --bind /gscratch/ \
+  /gscratch/srlab/containers/srlab-bioinformatics-container-<hash>.sif \
+  <dada2-or-cutadapt-command>
+```
+
+## Ecological readouts
+
+Once you have the table:
+
+- **Diversity** — richness and community composition per sample.
+- **Detection / occupancy** — did marker X show up at site Y? Occupancy models can separate true absence from failure-to-detect using your replicates and controls.
+- **Community comparison** — ordination and differential-abundance methods to compare sites, depths, or time points.
+
+## Caveats specific to eDNA
+
+- **False positives** — contamination, index hopping between samples on a shared run.
+- **False negatives** — degradation, PCR inhibition, primer bias against some taxa.
+- **Abundance is soft** — read counts are a noisy proxy for biomass; treat quantitative claims carefully.
+- **Reproducibility** — record primers, database version, and every parameter. This is exactly the [Data Management](https://robertslab.github.io/resources/Data-Management/) discipline the course emphasizes.
+
+## This week
+
+- **Assignment:** [eDNA Metabarcoding pipeline](../assignments/edna-metabarcoding.qmd)
+- **Question set:** [Week 08](../questions/week08.qmd)
+- **Topic hub:** [eDNA](../edna.qmd)
+
+## References & resources
+
+- [MarineOmics Portal](https://marineomics.github.io) — reproducible marine genomics, including amplicon workflows.
+- [DADA2 tutorial](https://benjjneb.github.io/dada2/tutorial.html) — the standard ASV workflow.
+- Roberts Lab Handbook: [Bioinformatics Basics](https://robertslab.github.io/resources/bio_Basics/), [Annotation](https://robertslab.github.io/resources/bio-Annotation/), [Genomic Resources](https://robertslab.github.io/resources/Genomic-Resources/).

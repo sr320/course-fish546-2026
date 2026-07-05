@@ -1,0 +1,66 @@
+---
+title: "RNA-seq"
+subtitle: "Week 02"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Purpose
+
+Week 02 introduces RNA-seq as a complete example of a high-throughput bioinformatics workflow: raw reads become quality checks, counts, differential expression results, and biological interpretation.
+
+## By the end of this week
+
+You should be able to:
+
+- Describe the major steps in an RNA-seq workflow.
+- Explain the difference between raw reads, aligned reads, count matrices, and differential expression tables.
+- Inspect quality-control outputs.
+- Record data provenance with checksums and metadata.
+- Connect differential expression results to a project question.
+
+## RNA-seq workflow
+
+A typical RNA-seq analysis moves through these stages:
+
+1. Experimental design and metadata.
+2. Raw FASTQ quality assessment.
+3. Trimming or filtering if needed.
+4. Alignment or pseudoalignment.
+5. Gene- or transcript-level quantification.
+6. Differential expression modeling.
+7. Annotation, visualization, and interpretation.
+
+Each step changes the data. Your job is to record what changed, why it changed, and where the resulting files live.
+
+## Differential expression
+
+Differential expression asks whether transcript abundance differs among groups after accounting for variation and experimental design. The output is not simply a list of "important genes." It is a model-based table that must be interpreted with:
+
+- Effect size.
+- Statistical uncertainty.
+- Multiple-testing correction.
+- Biological context.
+- Sample size and design limitations.
+
+## Quality control
+
+Before trusting the final table, ask whether the data support the analysis:
+
+- Do samples have enough reads?
+- Are read-quality profiles reasonable?
+- Do samples cluster by treatment, batch, or something unexpected?
+- Are there outliers that require explanation?
+
+## Project checkpoint
+
+For your own project, identify the raw input data, the first processed product, and the final endpoint. Add this to your project issue or repository README.
+
+## References
+
+- Bioinformatics Data Skills: robust data handling
+- DESeq2 documentation
+- MultiQC documentation
+- Roberts Lab Handbook: Data Management

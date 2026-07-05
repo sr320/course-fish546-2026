@@ -1,0 +1,12 @@
+---
+title: "Week 07 Questions"
+subtitle: "Methylation and genome context"
+---
+
+Answer these in your repository's `homework/` directory before Tuesday at 3:00pm.
+
+1. What biological questions can DNA methylation data help address?
+2. Why is genome build/version important when interpreting methylation or genomic-feature data?
+3. What does a genome-browser inspection add that a table alone may not show?
+4. What is one way methylation results could be overinterpreted?
+5. What sections now exist in your draft final project report, and which one is weakest?

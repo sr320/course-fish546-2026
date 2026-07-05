@@ -1,0 +1,35 @@
+---
+title: "Assignment 08 - BEDtools and Genomic Ranges"
+subtitle: "Week 08"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Goal
+
+Use genomic interval logic to ask whether one set of features overlaps another.
+
+## Tasks
+
+1. Use provided BED/GFF/VCF-style files or a project-relevant interval file.
+2. Confirm genome build and chromosome/scaffold naming.
+3. Use BEDtools or an equivalent R/Bioconductor workflow to perform at least one overlap operation.
+4. Save the overlap result as a small table.
+5. Summarize the result with a count table or figure.
+6. Draft your project's ultimate figure, even if some values are placeholders.
+
+## What to submit
+
+In `assignment/08-bedtools/`, include:
+
+- Commands or code used for the interval operation.
+- Input-file descriptions.
+- Output overlap table.
+- Summary figure or table.
+- Mock ultimate figure for your project.
+
+## Assessment
+
+The analysis should show that your files are compatible and that the overlap result is interpreted carefully.

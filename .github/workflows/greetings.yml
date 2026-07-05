@@ -1,0 +1,23 @@
+name: Greet first issue
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: |
+            👋 Thanks for opening your first issue in FISH 546!
+
+            A few reminders:
+            - For **open-ended questions**, use [Discussions](https://github.com/orgs/course-fish546-2026/discussions) instead.
+            - If you're stuck, the [Roberts Lab Handbook](https://robertslab.github.io/resources/) is your first stop.
+            - Good issues show **what you tried** and the **exact error text** — that gets you a faster answer.

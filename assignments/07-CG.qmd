@@ -1,0 +1,35 @@
+---
+title: "Assignment 07 - Methylation, Motifs, and IGV"
+subtitle: "Week 07"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Goal
+
+Interpret a small methylation or genomic-feature dataset in context using coordinates, annotation, and visual inspection.
+
+## Tasks
+
+1. Start with a provided table of loci, regions, or features.
+2. Identify the genome build and coordinate convention.
+3. Annotate or summarize nearby genomic features.
+4. Inspect at least one region in IGV or an equivalent genome-browser view.
+5. Produce one table and one figure or screenshot-style evidence panel.
+6. Write a paragraph explaining what the result does and does not show.
+
+## What to submit
+
+In `assignment/07-CG/`, include:
+
+- A rendered report.
+- Any script used to process the data.
+- A small annotated output table.
+- One figure or inspection image.
+- A caveats paragraph.
+
+## Assessment
+
+Credit depends on coordinate hygiene, clear interpretation, and appropriate caution. Do not overstate what a single locus or region proves.

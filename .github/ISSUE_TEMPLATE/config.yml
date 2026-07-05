@@ -1,0 +1,12 @@
+# Force students through the structured issue forms; route open chat elsewhere.
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Open-ended question or discussion
+    url: https://github.com/orgs/course-fish546-2026/discussions
+    about: For broad questions, ideas, and peer help, use Discussions (not an issue).
+  - name: 💬 Slack (day-to-day chat)
+    url: https://genefish.slack.com
+    about: Quick, informal questions during the quarter.
+  - name: 📖 Roberts Lab Handbook
+    url: https://robertslab.github.io/resources/
+    about: Computing, data management, Raven, and Klone/Hyak reference guides.

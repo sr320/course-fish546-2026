@@ -1,0 +1,32 @@
+---
+title: "Before Class — Self-Directed Setup"
+subtitle: "Complete all three tutorials before Week 1"
+---
+
+You will work across **three computing platforms** this quarter. Difficulty ramps up with each tier, so get a working, verified setup on all three *before* the first class. Each tutorial is self-paced, opens in your browser, and ends with a completion checklist.
+
+::: {.callout-tip}
+Work through them **in order** — each builds on the last. Budget ~1 hour for Tutorial 1, ~1 hour for Tutorial 2, and ~1.5–2 hours for Tutorial 3 (Hyak is the hardest; give yourself time and don't panic when something breaks).
+:::
+
+## The three tutorials
+
+| # | Tutorial | Platform | What you'll be able to do |
+|---|----------|----------|---------------------------|
+| 1 | [Your Computer: Shell & Git/GitHub](tutorials/01-your-computer.html) | Your laptop/desktop | Install the tools, organize a repo, run the clone→commit→push loop |
+| 2 | [Raven: RStudio Server & Reproducible Analysis](tutorials/02-raven.html) | Raven | Log into the lab server, run an analysis, push results |
+| 3 | [Hyak / Klone: HPC with SLURM & Containers](tutorials/03-hyak.html) | Hyak / Klone | Submit your first batch job on the cluster |
+
+## After you finish
+
+Open a **Setup Check** issue in your course repository (use the *Setup Check* issue form) and paste in the completion block from the bottom of each tutorial. This is how we confirm you're ready — and your first taste of how the course uses [GitHub Issues](index.qmd) to track work.
+
+## Why these three, and where they come from
+
+Each tutorial maps to the **[Roberts Lab Handbook](https://robertslab.github.io/resources/)**, the reference standard for how you're expected to work:
+
+- **Tutorial 1** → [Computing Best Practices](https://robertslab.github.io/resources/Computing-Best-Practices/), [Data Management](https://robertslab.github.io/resources/Data-Management/), and the handbook's Git/GitHub and bash tutorials.
+- **Tutorial 2** → the handbook's Raven (RStudio Server, Conda) guides.
+- **Tutorial 3** → the handbook's Klone guides (logging in, running a job, containers, file transfers, storage).
+
+Keep the handbook open in a tab while you work — it's where you'll return all quarter.

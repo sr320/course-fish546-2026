@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutorial 3 · Hyak / Klone: HPC with SLURM &amp; Containers · FISH 546</title>
+<link rel="stylesheet" href="tutorial.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="side">
+    <h1>FISH 546 · Setup 3</h1>
+    <div class="sub">Hyak / Klone:<br>HPC, SLURM &amp; Containers</div>
+    <div class="grp">Sections</div>
+    <a href="#intro">Overview</a>
+    <a href="#model">1 · How a cluster works</a>
+    <a href="#login">2 · SSH in</a>
+    <a href="#storage">3 · Where files go</a>
+    <a href="#transfer">4 · Moving data</a>
+    <a href="#containers">5 · Modules &amp; containers</a>
+    <a href="#slurm">6 · Your first SLURM job</a>
+    <a href="#monitor">7 · Watch &amp; read output</a>
+    <a href="#unstuck">8 · Getting unstuck</a>
+    <a href="#done">✔ Completion</a>
+    <div class="prog-wrap">
+      <div class="lbl"><span>Progress</span><span class="prog-pct">0/0</span></div>
+      <div class="bar"><i></i></div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="intro">
+      <div class="kick">Pre-course · Tutorial 3 of 3 · The steepest climb</div>
+      <h2>Hyak / Klone: HPC with SLURM &amp; Containers</h2>
+      <p class="lead">Hyak (the <strong>Klone</strong> cluster) is where the heavy compute happens — RNA-seq, eDNA metabarcoding, big alignments. It has the steepest learning curve of the three platforms, so this tutorial goes slow and explains the <em>why</em>. Your only goal today: submit one trivial job and read its output.</p>
+      <div class="pills"><span>~1.5–2 hours</span><span>Klone HPC</span><span>Finish Tutorials 1 &amp; 2 first</span></div>
+    </section>
+
+    <section id="model">
+      <div class="eyebrow">Step 1</div>
+      <h2 class="sec">How a cluster works (read this before touching anything)</h2>
+      <p class="lede">A cluster is not one big computer you log into and run things on. Understanding this one distinction prevents the most common beginner mistake.</p>
+      <div class="card">
+        <h4>Login node vs. compute nodes</h4>
+        <ul>
+          <li>When you <code>ssh</code> in, you land on a <strong>login node</strong>. It's shared by everyone and is only for light tasks: editing files, moving data, submitting jobs.</li>
+          <li>The real work runs on <strong>compute nodes</strong>, which you never touch directly. You ask the <strong>scheduler</strong> for them.</li>
+          <li><strong>Never run analysis on the login node.</strong> It slows the cluster for everyone and admins will notice. This is the #1 rule.</li>
+        </ul>
+        <h4>The scheduler (SLURM)</h4>
+        <p>You write a small script describing what you want (how many CPUs, how much memory, how long, which account) and hand it to <strong>SLURM</strong> with <code>sbatch</code>. SLURM finds a compute node, runs your job there, and writes the output to a file. You wait, then read the file.</p>
+        <div class="note"><strong>Mental model:</strong> the login node is the front desk; SLURM is the host who seats you; the compute node is your table. You order at the desk, but you don't cook in the lobby.</div>
+      </div>
+      <div class="tip"><strong>Handbook:</strong> Keep <a href="https://robertslab.github.io/resources/klone_quick-start/">Klone quick-start</a> and <a href="https://robertslab.github.io/resources/klone_Running-a-Job/">Running a job on Klone</a> open the whole time.</div>
+      <div class="check" data-check>
+        <label><input type="checkbox"> I understand the difference between the login node and compute nodes, and that I never compute on the login node</label>
+      </div>
+    </section>
+
+    <section id="login">
+      <div class="eyebrow">Step 2</div>
+      <h2 class="sec">SSH into Klone</h2>
+      <div class="card">
+        <p>From your laptop's terminal (or Raven's), connect with your UW NetID:</p>
+        <pre><span class="p">ssh &lt;UWNetID&gt;@klone.hyak.uw.edu</span></pre>
+        <p>You'll enter your UW password and approve a <strong>Duo</strong> two-factor prompt. On success you land on a login node:</p>
+        <pre><span class="o">[your-netid@klone-login01 ~]$</span></pre>
+        <div class="warn"><strong>First-time access:</strong> you must be added to the lab's Hyak allocation (the <code>srlab</code> account) before jobs will run. If <code>ssh</code> is refused or you have no allocation, open a <strong>Help Request</strong> issue with the platform set to <em>Hyak</em> — this is expected and easy to fix.</div>
+        <p>Prefer a GUI? <a href="https://ondemand.hyak.uw.edu">Hyak On-Demand</a> gives you a browser dashboard (including RStudio on Klone) — a gentler on-ramp covered in the handbook's <a href="https://robertslab.github.io/resources/klone_RStudio-Server/">Klone RStudio</a> guide.</p>
+      </div>
+      <div class="check" data-check>
+        <label><input type="checkbox"> I SSH'd into Klone and reached a login-node prompt (or opened Hyak On-Demand)</label>
+      </div>
+    </section>
+
+    <section id="storage">
+      <div class="eyebrow">Step 3</div>
+      <h2 class="sec">Where files go on Klone</h2>
+      <p class="lede">Klone has several storage areas with very different rules. Put things in the wrong place and they get purged or you run out of space.</p>
+      <div class="card">
+        <table>
+          <tr><th>Location</th><th>Use for</th><th>Note</th></tr>
+          <tr><td><code>/mmfs1/home/&lt;netid&gt;</code></td><td>small config, scripts</td><td>small quota — not for data</td></tr>
+          <tr><td><code>/gscratch/srlab/</code></td><td>lab data &amp; analyses</td><td>the lab's shared working space</td></tr>
+          <tr><td><code>/gscratch/scrubbed/</code></td><td>large temporary work</td><td>auto-deleted after a set time — never permanent</td></tr>
+        </table>
+        <p>Make yourself a working directory in the lab space:</p>
+        <pre><span class="p">cd /gscratch/srlab/</span>
+<span class="p">mkdir -p &lt;netid&gt;/fish546-setup</span>
+<span class="p">cd &lt;netid&gt;/fish546-setup</span></pre>
+      </div>
+      <div class="tip"><strong>Handbook:</strong> <a href="https://robertslab.github.io/resources/klone_Data-Storage-and-System-Organization/">Data Storage &amp; System Organization</a> is the authority on what lives where.</div>
+      <div class="check" data-check>
+        <label><input type="checkbox"> I made a working directory under <code>/gscratch/srlab/&lt;netid&gt;/</code></label>
+      </div>
+    </section>
+
+    <section id="transfer">
+      <div class="eyebrow">Step 4</div>
+      <h2 class="sec">Moving data on and off</h2>
+      <div class="card">
+        <p>Small files — run this <strong>from your laptop</strong> (not from Klone):</p>
+        <pre><span class="c"># copy a local file up to Klone</span>
+<span class="p">scp myfile.txt &lt;netid&gt;@klone.hyak.uw.edu:/gscratch/srlab/&lt;netid&gt;/fish546-setup/</span>
+
+<span class="c"># sync a whole directory (resumable, skips unchanged files)</span>
+<span class="p">rsync -avP mydir/ &lt;netid&gt;@klone.hyak.uw.edu:/gscratch/srlab/&lt;netid&gt;/mydir/</span></pre>
+        <p>Large datasets: use <strong>Globus</strong> (a managed transfer service) rather than <code>scp</code> — it's faster and recovers from interruptions.</p>
+      </div>
+      <div class="tip"><strong>Handbook:</strong> <a href="https://robertslab.github.io/resources/klone_File-Transfers/">File Transfers</a> covers <code>scp</code>, <code>rsync</code>, and Globus in detail.</div>
+      <div class="check" data-check>
+        <label><input type="checkbox"> I know how to move files with <code>scp</code>/<code>rsync</code> and when to use Globus instead</label>
+      </div>
+    </section>
+
+    <section id="containers">
+      <div class="eyebrow">Step 5</div>
+      <h2 class="sec">Software: modules &amp; containers</h2>
+      <p class="lede">You don't install bioinformatics tools system-wide on Klone. The lab runs them from <strong>Apptainer containers</strong> — a single file holding a whole reproducible software stack.</p>
+      <div class="card">
+        <p>Load the container runtime with a module:</p>
+        <pre><span class="p">module load apptainer</span></pre>
+        <p>Then run a command <em>inside</em> the lab container. The container file lives in <code>/gscratch/srlab/containers/</code>:</p>
+        <pre><span class="p">apptainer exec \</span>
+<span class="p">  --home $PWD \</span>
+<span class="p">  --bind /mmfs1/home/ \</span>
+<span class="p">  --bind /gscratch/ \</span>
+<span class="p">  /gscratch/srlab/containers/srlab-bioinformatics-container-&lt;hash&gt;.sif \</span>
+<span class="p">  blastn -version</span></pre>
+        <p>The <code>--bind</code> flags make cluster storage visible inside the container. You'll reuse this exact pattern for every real tool this quarter.</p>
+      </div>
+      <div class="tip"><strong>Handbook:</strong> <a href="https://robertslab.github.io/resources/klone_containers/">Using containers on Klone</a> explains Apptainer, the current container hash, and binding.</div>
+      <div class="check" data-check>
+        <label><input type="checkbox"> I ran <code>module load apptainer</code> and understand what a container gives me</label>
+      </div>
+    </section>
+
+    <section id="slurm">
+      <div class="eyebrow">Step 6 · the main event</div>
+      <h2 class="sec">Your first SLURM job</h2>
+      <p class="lede">A SLURM job is a plain text script: a <strong>header</strong> of <code>#SBATCH</code> lines telling the scheduler what you need, then the commands to run. Create this file with <code>nano</code> in your working directory.</p>
+      <div class="card">
+        <p>Create <code>hello-slurm.sh</code>:</p>
+        <pre><span class="c">#!/bin/bash</span>
+<span class="c">## --- SLURM header: what to ask the scheduler for ---</span>
+<span class="p">#SBATCH --job-name=hello-546</span>
+<span class="p">#SBATCH --account=srlab</span>
+<span class="p">#SBATCH --partition=ckpt</span>
+<span class="p">#SBATCH --nodes=1</span>
+<span class="p">#SBATCH --ntasks=1</span>
+<span class="p">#SBATCH --time=00:05:00</span>
+<span class="p">#SBATCH --mem=1G</span>
+<span class="p">#SBATCH --output=slurm-%j.out</span>
+
+<span class="c">## --- the actual work ---</span>
+<span class="p">echo "Hello from Klone!"</span>
+<span class="p">echo "Running on host: $(hostname)"</span>
+<span class="p">echo "Date: $(date)"</span>
+<span class="p">sleep 20</span>
+<span class="p">echo "Job finished."</span></pre>
+        <p>Submit it to the scheduler:</p>
+        <pre><span class="p">sbatch hello-slurm.sh</span>
+<span class="o">Submitted batch job 1234567</span></pre>
+        <p>That number is your <strong>job ID</strong> — you'll need it below.</p>
+      </div>
+      <div class="warn"><strong>The header matters:</strong> <code>--account</code> and <code>--partition</code> must match an allocation you belong to (the lab uses <code>srlab</code>). Ask too much <code>--time</code> or <code>--mem</code> and you wait longer in the queue; ask too little and the job is killed mid-run. Start small.</div>
+      <div class="check" data-check>
+        <label><input type="checkbox"> I wrote a SLURM script with a header and a command block</label>
+        <label><input type="checkbox"> I submitted it with <code>sbatch</code> and got a job ID</label>
+      </div>
+    </section>
+
+    <section id="monitor">
+      <div class="eyebrow">Step 7</div>
+      <h2 class="sec">Watch it, then read the output</h2>
+      <div class="card">
+        <p>Check the queue for your job (it may be <code>PD</code> pending, then <code>R</code> running):</p>
+        <pre><span class="p">squeue -u $USER</span></pre>
+        <p>Need to cancel one? Use the job ID:</p>
+        <pre><span class="p">scancel 1234567</span></pre>
+        <p>When it's gone from the queue, it finished. SLURM wrote everything your script printed to <code>slurm-&lt;jobid&gt;.out</code>. Read it:</p>
+        <pre><span class="p">cat slurm-1234567.out</span>
+<span class="o">Hello from Klone!</span>
+<span class="o">Running on host: n3148</span>
+<span class="o">Date: ...</span>
+<span class="o">Job finished.</span></pre>
+        <p>That output file — and the fact it ran on a compute node (<code>n3148</code>), not the login node — is proof your job worked.</p>
+      </div>
+      <div class="check" data-check>
+        <label><input type="checkbox"> I watched my job with <code>squeue</code> and it completed</label>
+        <label><input type="checkbox"> I read <code>slurm-&lt;jobid&gt;.out</code> and saw my "Hello from Klone!" output</label>
+      </div>
+    </section>
+
+    <section id="unstuck">
+      <div class="eyebrow">Step 8</div>
+      <h2 class="sec">Getting unstuck (you will need this)</h2>
+      <p class="lede">Everyone hits walls on HPC — it's normal, not a sign you're doing it wrong. Here's how to diagnose and how to ask for help well.</p>
+      <div class="card">
+        <table>
+          <tr><th>Symptom</th><th>Likely cause / fix</th></tr>
+          <tr><td>Job stuck in <code>PD</code> (pending) a long time</td><td>Cluster is busy, or you asked for a lot of resources. Reduce <code>--mem</code>/<code>--time</code>, or wait.</td></tr>
+          <tr><td>Job vanishes instantly, tiny <code>.out</code></td><td>Header error — wrong <code>--account</code>/<code>--partition</code>, or a typo. Read the top of the <code>.out</code> file.</td></tr>
+          <tr><td><code>command not found</code></td><td>You're not inside the container. Wrap the command in <code>apptainer exec ... </code> (Step 5).</td></tr>
+          <tr><td>Killed with an out-of-memory message</td><td>Raise <code>--mem</code> and resubmit.</td></tr>
+          <tr><td>Permission denied on your script</td><td>Make it executable: <code>chmod +x yourscript.sh</code>.</td></tr>
+        </table>
+      </div>
+      <div class="tip"><strong>Asking for help the right way</strong> gets you unstuck fastest. Open a <strong>Help Request</strong> issue in your repo (platform = Hyak) with: what you were trying to do, the exact command, the full error text, and your job ID. This is the same skill you'll use all quarter — vague "it doesn't work" gets slow answers; a precise report gets fast ones.</div>
+      <div class="check" data-check>
+        <label><input type="checkbox"> I know where to look when a job fails, and how to file a good Help Request issue</label>
+      </div>
+    </section>
+
+    <section id="done">
+      <div class="eyebrow">Finish</div>
+      <h2 class="sec">✔ Completion <span class="tag">Tutorial 3</span></h2>
+      <p class="lede">You submitted a real job to a supercomputer and read its output — the hardest setup milestone in the course. Paste this into your <strong>Setup Check</strong> issue (fill in the blanks).</p>
+      <div class="done-block">## Tutorial 3 — Hyak / Klone ✅
+SLURM job ID: &lt;paste your job number&gt;
+Ran on compute node: &lt;the hostname from your .out&gt;
+Tail of slurm-*.out:
+  Hello from Klone!
+  ...
+  Job finished.</div>
+      <div class="note">That completes all three setup tutorials. Open your <strong>Setup Check</strong> issue, paste in the three completion blocks, and you're ready for Week 1. See you in class.</div>
+    </section>
+  </main>
+</div>
+<script>window.TUTORIAL_KEY = "fish546-t3-hyak";</script>
+<script src="progress.js"></script>
+</body>
+</html>

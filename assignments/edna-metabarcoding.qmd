@@ -1,0 +1,46 @@
+---
+title: "Assignment · eDNA Metabarcoding"
+subtitle: "Week 08"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Goal
+
+Take a set of amplicon (metabarcoding) reads from raw FASTQ to an analysis-ready **sample × taxon** table, and produce one figure summarizing the community. You'll run the compute-heavy steps on **Klone** (the [Hyak tutorial](../tutorials/03-hyak.html) prepared you for this) and do exploration/plots on **Raven** or your laptop.
+
+## Setup
+
+- Work in your course repo using the standard `code / data / output` layout.
+- A demonstration dataset (a small 12S or COI amplicon set) will be provided; note its marker and the reference database to assign against.
+- Keep raw reads in `data/raw/` and **do not commit** them — add them to `.gitignore` and record checksums (`md5sum`).
+
+## Steps
+
+1. **Inspect & QC.** Count reads, look at quality profiles, and trim primers/adapters (e.g. `cutadapt`). Record the exact primer sequences.
+2. **Denoise to ASVs** with **DADA2** (filter/trim → learn errors → denoise → merge pairs → remove chimeras). Report how many reads survive each step — this table is part of your submission.
+3. **Assign taxonomy** against the reference database for your marker. Note the database name and version.
+4. **Build the table.** Produce a sample × taxon abundance matrix (`output/asv-table.csv`).
+5. **One figure.** A community summary — a stacked-bar composition plot or a richness-by-sample plot — saved to `output/`.
+6. **Controls.** Report what your negative/blank controls contained. What does that imply about false positives?
+
+## What to submit
+
+In your repo's `assignment/06-edna/` directory:
+
+- A rendered Quarto/R document (`.qmd` → `.html`) walking through steps 1–6 with code and commentary.
+- The SLURM script(s) you used on Klone, plus the tail of the relevant `slurm-*.out`.
+- `output/asv-table.csv` and your figure.
+- A short **caveats** paragraph: given your controls and marker, how confident are you in the detections?
+
+## Assessment
+
+You're assessed on reproducibility as much as results: can someone clone your repo and follow exactly what you did — primers, parameters, database version, which steps ran on Klone? See the handbook's [Data Management](https://robertslab.github.io/resources/Data-Management/) and [Computing Best Practices](https://robertslab.github.io/resources/Computing-Best-Practices/) for the standard.
+
+## Hints
+
+- Denoising is the slow step — request modest `--mem`/`--time` first and scale up only if a job is killed.
+- Run everything inside the lab [Apptainer container](https://robertslab.github.io/resources/klone_containers/); don't install tools on the login node.
+- Stuck? Open a **Help Request** issue (platform = Hyak) with your command, the error, and your job ID.

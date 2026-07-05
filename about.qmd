@@ -1,0 +1,7 @@
+---
+title: "About"
+---
+
+FISH 546 — Bioinformatics for Environmental Sciences — University of Washington, School of Aquatic and Fishery Sciences. Taught by [Steven Roberts](http://faculty.washington.edu/sr320/) ([Roberts Lab](https://robertslab.github.io/resources/)).
+
+This site is built with [Quarto](https://quarto.org) and published via GitHub Pages. Source: <https://github.com/course-fish546-2026>.

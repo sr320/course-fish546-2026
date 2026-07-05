@@ -1,0 +1,47 @@
+---
+title: "Project Synthesis and Biological Interpretation"
+subtitle: "Week 09"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Purpose
+
+Week 09 is where bioinformatics results become an argument. Students synthesize evidence, choose the final figure, write caveats, and make the project understandable to another scientist.
+
+## By the end of this week
+
+You should be able to:
+
+- Identify the main claim your data can support.
+- Separate evidence, interpretation, and speculation.
+- Choose a final figure or table that answers the project question.
+- Write a limitations paragraph that improves credibility.
+- Prepare the final compendium structure.
+
+## From output to claim
+
+Computational output is not the same as a result. A defensible result connects:
+
+- A biological question.
+- A data source.
+- A documented workflow.
+- A figure or table.
+- A cautious interpretation.
+
+## Common synthesis problems
+
+Watch for:
+
+- Figures that show workflow success but not biology.
+- Claims that depend on uninspected intermediate files.
+- Missing metadata.
+- Unclear sample names.
+- Overstated conclusions from weak design.
+- Results that cannot be regenerated.
+
+## Project checkpoint
+
+By the end of this week, your project should have a complete report skeleton, a candidate final figure, and a short list of remaining fixes.

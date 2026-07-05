@@ -1,0 +1,63 @@
+name: "✅ Setup Check (before class)"
+description: Confirm you completed the three pre-course setup tutorials.
+title: "[setup] <your name> — pre-course setup complete"
+labels: ["setup", "week-00"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Complete all three [setup tutorials](https://course-fish546-2026.github.io/setup.html) first, then paste each completion block below.
+  - type: input
+    id: github-handle
+    attributes:
+      label: Your GitHub username
+      placeholder: "@username"
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Link to your course repository
+      placeholder: "https://github.com/course-fish546-2026/<your-repo>"
+    validations:
+      required: true
+  - type: checkboxes
+    id: tutorials
+    attributes:
+      label: Tutorials completed
+      options:
+        - label: "Tutorial 1 — Your Computer: Shell & Git/GitHub"
+          required: true
+        - label: "Tutorial 2 — Raven: RStudio Server & Reproducible Analysis"
+          required: true
+        - label: "Tutorial 3 — Hyak / Klone: HPC with SLURM & Containers"
+          required: true
+  - type: textarea
+    id: tutorial1
+    attributes:
+      label: Tutorial 1 completion block
+      description: Paste the completion block from the bottom of Tutorial 1 (includes your repo tree + first commit link).
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: tutorial2
+    attributes:
+      label: Tutorial 2 completion block
+      description: Paste the Raven completion block (link to the output you pushed).
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: tutorial3
+    attributes:
+      label: Tutorial 3 completion block (Hyak)
+      description: Paste your SLURM job ID and the tail of your slurm-*.out.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: snags
+    attributes:
+      label: Anything break along the way?
+      description: Optional — note anything that tripped you up so we can improve the tutorials.

@@ -1,0 +1,58 @@
+---
+title: "Variants and Genomic Ranges"
+subtitle: "Week 08"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Purpose
+
+Week 08 focuses on genomic coordinates: intervals, features, variants, and overlaps. These are the connective tissue of many genomics workflows.
+
+## By the end of this week
+
+You should be able to:
+
+- Explain BED, GFF/GTF, and VCF at a high level.
+- Use BEDtools-style thinking to intersect genomic features.
+- Track genome builds and coordinate systems.
+- Turn interval overlaps into interpretable biological summaries.
+- Draft the ultimate figure for your project.
+
+## Genomic intervals
+
+Many questions can be expressed as interval operations:
+
+- Which variants fall inside genes?
+- Which methylation regions overlap promoters?
+- Which peaks are near annotated features?
+- Which eDNA ASVs map to reference sequences of interest?
+
+The difficult part is often not the command. It is making sure the files use the same genome build, coordinate convention, and naming scheme.
+
+## File formats
+
+Common formats:
+
+- BED: intervals.
+- GFF/GTF: genome annotations.
+- VCF: variants.
+- BAM: alignments.
+
+Each format has conventions. Read the header and keep an example row in your notes.
+
+## Overlap is not meaning
+
+An overlap is evidence, not a conclusion. You still need to decide what the feature means, whether the overlap is expected by chance, and whether the result supports the biological claim.
+
+## Project checkpoint
+
+Mock your ultimate figure. It does not have to contain final data yet, but it should show the layout, axes, comparisons, and caption logic.
+
+## References
+
+- BEDtools documentation
+- Roberts Lab Handbook: Genomic Resources
+- Bioinformatics Data Skills: working with genomic data

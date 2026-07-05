@@ -1,0 +1,112 @@
+---
+title: "Self-Directed Skills"
+subtitle: "Use these when a weekly assignment requires the tool"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Why this page exists
+
+The weekly course arc is organized around bioinformatics questions and data types. The tools below are still required, but they are taught as self-directed support skills rather than as the main topic of a week.
+
+Return here whenever an assignment asks you to render a report, work on Raven, submit a Hyak job, open an Issue, or prepare final files.
+
+## Required before Week 1
+
+Complete the three setup tutorials on the [Before Class](setup.qmd) page:
+
+1. Your computer: shell, Git, GitHub, project layout.
+2. Raven: RStudio Server and interactive analysis.
+3. Hyak/Klone: SLURM, containers, and first batch job.
+
+## RStudio and Raven
+
+Use Raven when you need an interactive R environment that is consistent with the lab's server setup.
+
+You should be able to:
+
+- Log in to Raven RStudio Server.
+- Clone or pull your course repository.
+- Open a project from the repository root.
+- Run R code from a script or Quarto document.
+- Save figures and tables to `output/`.
+- Commit and push changes back to GitHub.
+
+Use the Raven tutorial as your reference when you get stuck.
+
+## Quarto reports and slides
+
+Quarto is the default format for assignments and project reports because it keeps code, results, and explanation together.
+
+Minimum expectations:
+
+- Use relative paths from the repository root.
+- Render from a clean session before submitting.
+- Include enough narrative that another student can follow your reasoning.
+- Save important output files, not only printed tables in HTML.
+- Keep figures generated from code whenever possible.
+
+Suggested report structure:
+
+1. Question or objective.
+2. Data and provenance.
+3. Methods or commands.
+4. Results.
+5. Interpretation and caveats.
+6. Reproducibility notes.
+
+## GitHub Issues
+
+Issues are the course workflow record.
+
+Use:
+
+- Setup Check before Week 1.
+- Project Proposal in Week 1.
+- Weekly Research Progress every week.
+- Help Request when you are blocked.
+- Blocker/Bug when you can reproduce a technical failure.
+
+A useful help issue includes the platform, command, error message, what you tried, and a link to the relevant commit or output.
+
+## Hyak and containers
+
+Use Hyak when a workflow step is too large, slow, or environment-sensitive for your computer or Raven.
+
+For every Hyak job, save:
+
+- SLURM script.
+- Job ID.
+- Container path or software environment.
+- Input and output paths.
+- Relevant `slurm-*.out` lines.
+
+Never run heavy analyses on the login node.
+
+## Archiving and final compendium
+
+Archiving is not a separate bioinformatics topic week; it is a habit you practice throughout the quarter.
+
+Before the final submission, your repository should include:
+
+- A clear top-level `README.md`.
+- Scripts or Quarto files used to generate final outputs.
+- Key output tables and figures.
+- A data availability note.
+- Software/platform/container notes.
+- Links to your project issue and weekly progress issues.
+
+If raw data cannot be committed, document where they came from, how they were named, and how checksums or manifests were recorded.
+
+## Fast troubleshooting checklist
+
+When something breaks:
+
+1. Confirm which platform you are on.
+2. Confirm the working directory.
+3. Confirm the input file exists.
+4. Copy the exact command and error.
+5. Check whether the problem is path, permissions, software, memory/time, or data format.
+6. Open a Help Request issue if you are still stuck.

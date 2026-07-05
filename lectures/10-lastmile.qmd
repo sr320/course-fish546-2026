@@ -1,0 +1,58 @@
+---
+title: "Presentations and the Last Mile"
+subtitle: "Week 10"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+## Purpose
+
+Week 10 turns the quarter's work into a final research compendium and presentation. The focus is synthesis: what you did, what you found, what remains uncertain, and how someone else can inspect the work.
+
+## By the end of this week
+
+You should be able to:
+
+- Present a bioinformatics project clearly.
+- Submit a reproducible final compendium.
+- Separate results from interpretation and caveats.
+- Archive code, outputs, and documentation.
+- Reflect on what you would do next with more time.
+
+## The final compendium
+
+Your compendium is the complete project package. It should include:
+
+- A rendered report.
+- Code used to produce the main results.
+- Key output tables and figures.
+- A README that explains the repository.
+- A note about software, platforms, and data availability.
+
+## Presentation goals
+
+Your final presentation should answer:
+
+- What was the research question?
+- What data and workflow did you use?
+- What is the strongest result?
+- What are the main limitations?
+- What should happen next?
+
+## Last-mile checks
+
+Before submission:
+
+- Render the report from a clean session.
+- Confirm links work.
+- Confirm figures are not stale screenshots.
+- Confirm raw data are handled according to policy.
+- Confirm the project issue and weekly progress issues tell the story of the work.
+
+## References
+
+- Quarto documentation
+- Roberts Lab Handbook: Data Management
+- Course final-release assignment
