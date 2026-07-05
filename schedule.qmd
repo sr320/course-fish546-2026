@@ -10,12 +10,17 @@ format:
     code-overflow: wrap
 ---
 
-::: callout-note
-Dates are placeholders for 2026. The weekly topics are organized as a bioinformatics workflow: sequence identification, raw reads, mapping/quantification, assay-specific analysis, ecological/genomic interpretation, and final synthesis.
+::: {.callout-note appearance="simple"}
+Dates are placeholders for 2026. The course moves from sequence identification to raw reads, analysis workflows, interpretation, and final synthesis.
 :::
 
-Operational skills such as RStudio, Quarto, GitHub Issues, Hyak, containers, and archiving are handled through [self-directed skills](support.qmd) and used repeatedly in the weekly assignments.
+::: {.callout-tip appearance="simple"}
+## Weekly rhythm
 
+Questions Tuesday. Assignment Friday. Project progress every week. Use [Skills](support.qmd) when an assignment asks for GitHub, Quarto, Raven, Hyak, containers, or archiving.
+:::
+
+::: {.schedule-table}
 | Date | Questions | Bioinformatics Topic | Assignment | Project Status |
 |---------------|---------------|---------------|---------------|---------------|
 | **before class** |  | [Setup: your computer, Raven, Hyak](setup.qmd) | Complete 3 tutorials → open **Setup Check** issue | — |
@@ -30,6 +35,7 @@ Operational skills such as RStudio, Quarto, GitHub Issues, Hyak, containers, and
 | week 08 | [week 08](questions/week08.qmd) | [eDNA and metabarcoding](lectures/edna.qmd) | [eDNA metabarcoding](assignments/edna-metabarcoding.qmd) | Mock ultimate figure |
 | week 09 | [week 09](questions/week09.qmd) | [Project synthesis and biological interpretation](lectures/09-synthesis.qmd) | [Project synthesis](assignments/09-synthesis.qmd) | Clear repo organization |
 | week 10 | [week 10](questions/week10.qmd) | [Final compendium and presentations](lectures/10-lastmile.qmd) | [Final release](assignments/10-compendium.qmd) | **Compendium** |
+:::
 
 ------------------------------------------------------------------------
 

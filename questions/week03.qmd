@@ -3,6 +3,8 @@ title: "Week 03 Questions"
 subtitle: "Mapping, assembly, and quantification"
 ---
 
+{{< include ../_student-checklist.qmd >}}
+
 Answer these in your repository's `homework/` directory before Tuesday at 3:00pm.
 
 1. What is the difference between mapping reads to a reference and assembling reads without a reference?

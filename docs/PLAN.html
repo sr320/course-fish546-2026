@@ -264,19 +264,23 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./setup.html"> 
-<span class="menu-text">Before Class</span></a>
+<span class="menu-text">Setup</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./support.html"> 
-<span class="menu-text">Self-Directed Skills</span></a>
+<span class="menu-text">Skills</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./edna.html"> 
-<span class="menu-text">eDNA</span></a>
+    <a class="nav-link" href="./turn-in.html"> 
+<span class="menu-text">Submit</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./rubric.html"> 
+<span class="menu-text">Rubric</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://github.com/course-fish546-2026"> 
-<span class="menu-text">GitHub Org</span></a>
+<span class="menu-text">GitHub</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -324,13 +328,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#b.-edna-project-track" id="toc-b.-edna-project-track" class="nav-link" data-scroll-target="#b.-edna-project-track">4b. eDNA project track</a></li>
   <li><a href="#c.-schedule-placement" id="toc-c.-schedule-placement" class="nav-link" data-scroll-target="#c.-schedule-placement">4c. Schedule placement</a></li>
   </ul></li>
-  <li><a href="#bioinformatics-first-weekly-arc" id="toc-bioinformatics-first-weekly-arc" class="nav-link" data-scroll-target="#bioinformatics-first-weekly-arc">5. Bioinformatics-first weekly arc</a>
+  <li><a href="#bioinformatics-first-weekly-arc" id="toc-bioinformatics-first-weekly-arc" class="nav-link" data-scroll-target="#bioinformatics-first-weekly-arc">5. Bioinformatics-first weekly arc</a></li>
+  <li><a href="#github-native-submission-and-automatic-assessment" id="toc-github-native-submission-and-automatic-assessment" class="nav-link" data-scroll-target="#github-native-submission-and-automatic-assessment">6. GitHub-native submission and automatic assessment</a>
   <ul class="collapse">
   <li><a href="#topics-intentionally-not-made-core-weeks" id="toc-topics-intentionally-not-made-core-weeks" class="nav-link" data-scroll-target="#topics-intentionally-not-made-core-weeks">Topics intentionally not made core weeks</a></li>
   </ul></li>
-  <li><a href="#repository-site-structure" id="toc-repository-site-structure" class="nav-link" data-scroll-target="#repository-site-structure">6. Repository / site structure</a></li>
-  <li><a href="#build-sequence-checklist" id="toc-build-sequence-checklist" class="nav-link" data-scroll-target="#build-sequence-checklist">7. Build sequence (checklist)</a></li>
-  <li><a href="#open-decisions-instructor-input" id="toc-open-decisions-instructor-input" class="nav-link" data-scroll-target="#open-decisions-instructor-input">8. Open decisions (instructor input)</a></li>
+  <li><a href="#repository-site-structure" id="toc-repository-site-structure" class="nav-link" data-scroll-target="#repository-site-structure">7. Repository / site structure</a></li>
+  <li><a href="#build-sequence-checklist" id="toc-build-sequence-checklist" class="nav-link" data-scroll-target="#build-sequence-checklist">8. Build sequence (checklist)</a></li>
+  <li><a href="#open-decisions-instructor-input" id="toc-open-decisions-instructor-input" class="nav-link" data-scroll-target="#open-decisions-instructor-input">9. Open decisions (instructor input)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -601,6 +606,32 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>RStudio, Quarto, GitHub Issues, Hyak, containers, and archiving live in <code>support.qmd</code> and are invoked by assignments as needed.</p>
+<hr>
+</section>
+<section id="github-native-submission-and-automatic-assessment" class="level2">
+<h2 class="anchored" data-anchor-id="github-native-submission-and-automatic-assessment">6. GitHub-native submission and automatic assessment</h2>
+<p>Students submit question sets and assignments through GitHub Issue Forms. Each submission issue points to:</p>
+<ul>
+<li>Student repository URL.</li>
+<li>Exact commit SHA.</li>
+<li>Week number.</li>
+<li>Path to a <code>submission.yml</code> manifest.</li>
+<li>Rendered report path.</li>
+<li>Key output paths for assignments.</li>
+</ul>
+<p>The automatic assessment workflow checks the evidence packet and comments on the issue with a report. It can verify required files, manifests, rendered outputs, non-empty tables/figures, raw-data hygiene, and basic metadata. It does <strong>not</strong> replace human review of biological reasoning, interpretation, caveats, or writing quality.</p>
+<p>This creates a useful distinction:</p>
+<ul>
+<li><strong>Automatic checks:</strong> structure, completeness, reproducibility evidence.</li>
+<li><strong>Instructor review:</strong> scientific quality and judgment.</li>
+</ul>
+<p>Weekly research progress uses the same pattern, but assesses trajectory rather than a single submitted file packet. The Weekly Research Progress issue requires a project issue link, repository URL, current commit or compare URL, evidence links, prior-goal accounting, next goals, self-rating, and blockers. A separate workflow comments with a progress report and applies one of:</p>
+<ul>
+<li><code>progress:on-track</code></li>
+<li><code>progress:watch</code></li>
+<li><code>progress:blocked</code></li>
+</ul>
+<p>This lets the instructor scan the cohort by risk level and intervene before projects stall near the final compendium.</p>
 <section id="topics-intentionally-not-made-core-weeks" class="level3">
 <h3 class="anchored" data-anchor-id="topics-intentionally-not-made-core-weeks">Topics intentionally not made core weeks</h3>
 <p>These are valuable, but the 10-week course will become scattered if all are treated as full weekly units:</p>
@@ -617,13 +648,14 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 <section id="repository-site-structure" class="level2">
-<h2 class="anchored" data-anchor-id="repository-site-structure">6. Repository / site structure</h2>
+<h2 class="anchored" data-anchor-id="repository-site-structure">7. Repository / site structure</h2>
 <pre><code>course-fish546-2026/
 ├── _quarto.yml              # website config, publishes to docs/
 ├── index.qmd                # syllabus (updated platforms, grading, comms → Issues)
 ├── schedule.qmd             # 10-week schedule incl. eDNA + pre-course setup row
 ├── setup.qmd                # pre-course landing → the 3 HTML tutorials + setup issue
 ├── support.qmd              # self-directed RStudio, Quarto, GitHub, Hyak, archiving
+├── turn-in.qmd              # GitHub submission contract + automatic assessment
 ├── edna.qmd                 # eDNA topic hub (links lecture + assignment + resources)
 ├── about.qmd
 ├── styles.css
@@ -639,11 +671,12 @@ ul.task-list li input[type="checkbox"] {
 ├── .github/
 │   ├── ISSUE_TEMPLATE/      # the YAML forms + config.yml from §3a
 │   ├── labels.yml           # §3b
-│   └── workflows/           # greetings, label-sync, (schedule bot)
+│   └── workflows/           # greetings, label-sync, submission assessment
+├── scripts/                 # submission parsing and assessment helpers
 └── docs/                    # rendered site (GitHub Pages)</code></pre>
 </section>
 <section id="build-sequence-checklist" class="level2">
-<h2 class="anchored" data-anchor-id="build-sequence-checklist">7. Build sequence (checklist)</h2>
+<h2 class="anchored" data-anchor-id="build-sequence-checklist">8. Build sequence (checklist)</h2>
 <ul class="task-list">
 <li><label><input type="checkbox" checked=""><strong>Scaffold</strong> Quarto site (<code>_quarto.yml</code>, <code>index</code>, <code>schedule</code>, <code>about</code>, <code>setup</code>, <code>styles</code>).</label></li>
 <li><label><input type="checkbox" checked=""><strong>Tutorials</strong> — shared CSS/JS + the three HTML files; verify each opens standalone.</label></li>
@@ -652,13 +685,15 @@ ul.task-list li input[type="checkbox"] {
 <li><label><input type="checkbox" checked=""><strong>eDNA</strong> — draft <code>lectures/edna.qmd</code>, <code>assignments/edna-metabarcoding.qmd</code>, <code>edna.qmd</code> hub.</label></li>
 <li><label><input type="checkbox" checked=""><strong>Content migration</strong> — add first-pass 2026 lectures, assignments, and question sets for every scheduled week.</label></li>
 <li><label><input type="checkbox" checked=""><strong>Refocus schedule</strong> — make weekly topics bioinformatics-first and move RStudio/Quarto/archiving to self-directed support.</label></li>
+<li><label><input type="checkbox" checked=""><strong>Submission workflow</strong> — add submission issue forms, assessment labels, <code>turn-in.qmd</code>, and starter GitHub Actions checker.</label></li>
+<li><label><input type="checkbox" checked=""><strong>Progress workflow</strong> — extend weekly progress issues with evidence fields and add automatic trajectory assessment.</label></li>
 <li><label><input type="checkbox" checked=""><strong>Schedule</strong> — insert setup (week 0) + eDNA rows; linked weekly materials now exist.</label></li>
 <li><label><input type="checkbox"><strong>Publish</strong> — <code>quarto render</code>, confirm Pages serves <code>docs/</code>, set the course GitHub org.</label></li>
 <li><label><input type="checkbox"><strong>Dry run</strong> — walk all 3 tutorials on a clean machine; open a test setup issue end-to-end.</label></li>
 </ul>
 </section>
 <section id="open-decisions-instructor-input" class="level2">
-<h2 class="anchored" data-anchor-id="open-decisions-instructor-input">8. Open decisions (instructor input)</h2>
+<h2 class="anchored" data-anchor-id="open-decisions-instructor-input">9. Open decisions (instructor input)</h2>
 <ul>
 <li>Course GitHub org name for 2026 (e.g.&nbsp;<code>course-fish546-2026</code>) + Pages URL.</li>
 <li>Meeting times / room / Zoom for 2026.</li>

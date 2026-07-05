@@ -7,6 +7,8 @@ format:
     code-copy: true
 ---
 
+{{< include ../_student-checklist.qmd >}}
+
 ## Goal
 
 Create and present a short Quarto slide deck describing your project question, data, workflow, current progress, and four-week plan.

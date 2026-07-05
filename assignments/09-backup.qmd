@@ -7,6 +7,8 @@ format:
     code-copy: true
 ---
 
+{{< include ../_student-checklist.qmd >}}
+
 ## Goal
 
 Prepare your repository for final submission by auditing organization, documentation, reproducibility, and archiving readiness.

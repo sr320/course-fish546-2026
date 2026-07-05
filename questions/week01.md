@@ -1,5 +1,7 @@
 # Week 01 Questions - Getting Started and BLAST
 
+{{< include ../_student-checklist.qmd >}}
+
 Answer these in your repository's `homework/` directory before Tuesday at 3:00pm.
 
 1. What does BLAST compare, and what information do percent identity, query coverage, and e-value each contribute?

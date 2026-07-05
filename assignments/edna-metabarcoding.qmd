@@ -7,6 +7,8 @@ format:
     code-copy: true
 ---
 
+{{< include ../_student-checklist.qmd >}}
+
 ## Goal
 
 Take a set of amplicon (metabarcoding) reads from raw FASTQ to an analysis-ready **sample × taxon** table, and produce one figure summarizing the community. You'll run the compute-heavy steps on **Klone** (the [Hyak tutorial](../tutorials/03-hyak.html) prepared you for this) and do exploration/plots on **Raven** or your laptop.

@@ -11,15 +11,15 @@ website:
       - href: schedule.qmd
         text: Schedule
       - href: setup.qmd
-        text: Before Class
+        text: Setup
       - href: support.qmd
-        text: Self-Directed Skills
+        text: Skills
       - href: turn-in.qmd
-        text: Turn In Work
+        text: Submit
       - href: rubric.qmd
         text: Rubric
       - href: https://github.com/course-fish546-2026
-        text: GitHub Org
+        text: GitHub
     right:
       - icon: github
         href: https://github.com/course-fish546-2026

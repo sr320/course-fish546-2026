@@ -7,6 +7,8 @@ format:
     code-copy: true
 ---
 
+{{< include ../_student-checklist.qmd >}}
+
 ## Goal
 
 Turn your project outputs into a clear biological argument and prepare the final compendium.

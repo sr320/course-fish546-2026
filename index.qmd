@@ -9,8 +9,9 @@ This course teaches graduate students how to move from biological sequence data 
 
 ------------------------------------------------------------------------
 
-::: {.callout-important}
+::: callout-important
 ## Do this before Week 1
+
 Complete the **three self-directed setup tutorials** on the [Before Class](setup.qmd) page — one for each computing platform you will use (your own computer, Raven, and Hyak). Then open your **Setup Check** issue. You cannot keep up in Week 1 without a working setup on all three.
 :::
 
@@ -29,7 +30,7 @@ This class is driven in part by student needs and is flexible in content. It is 
 You will work across three computing tiers. Each has a dedicated [setup tutorial](setup.qmd), and the operational details live on the [Self-Directed Skills](support.qmd) page.
 
 | Tier | Platform | Access |
-|------|----------|--------|
+|------------------|------------------------------|------------------------|
 | Your computer | Local shell + Git/GitHub | your laptop/desktop |
 | Raven | RStudio Server | <http://raven.fish.washington.edu:8787> |
 | Hyak / Klone | HPC (SLURM + containers) | `ssh <UWNetID>@klone.hyak.uw.edu` · [On-Demand](https://ondemand.hyak.uw.edu) |
@@ -45,7 +46,7 @@ Course GitHub Organization: <https://github.com/course-fish546-2026>
 Each week has a bioinformatics assignment, expected research-project progress, and a question set. You will give a mid-quarter project update and a final compendium presentation. Question sets are based on the week's reading/material and are due by 3:00pm Tuesday - review the [weekly topic](schedule.qmd) before class.
 
 | *Assignments* | Grade % | *comment* |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | Weekly Question Set | 25% | due Tuesday 3:00pm |
 | Weekly Class Assignment | 35% | due Friday 5:00pm |
 | Weekly Research Project Progress | 20% | assessed via your **weekly-progress issue** + project board |
@@ -58,33 +59,27 @@ Each week has a bioinformatics assignment, expected research-project progress, a
 - **Class assignments** → files in your repo's `assignment/` directory, submitted with an assignment submission issue that points to a commit SHA and manifest.
 - **Project progress** → assessed from your **weekly-progress GitHub issue**, automatic progress report, and your card on the course project board (goals set vs. met, evidence linked, blockers addressed, best practices applied).
 
-See [Turn In Work](turn-in.qmd) for the submission contract and automatic assessment report format.
-See [Project and Compendium Rubric](rubric.qmd) for the project-progress, presentation, and final-compendium criteria.
+See [Turn In Work](turn-in.qmd) for the submission contract and automatic assessment report format. See [Project and Compendium Rubric](rubric.qmd) for the project-progress, presentation, and final-compendium criteria.
 
 **Late policy:** 40% deduction; not accepted more than 5 days past due.
 
 ## Core competencies
 
-Skills in this course are anchored to the **[Roberts Lab Handbook](https://robertslab.github.io/resources/)** — its computing best practices, data management, and platform guides (Raven, Klone) are the reference standard for how you are expected to work.
+Skills in this course are anchored to the [**Roberts Lab Handbook**](https://robertslab.github.io/resources/) — its computing best practices, data management, and platform guides (Raven, Klone) are the reference standard for how you are expected to work.
 
 ## Weekly arc
 
 The course moves from sequence identification and raw sequencing data toward multi-assay environmental interpretation:
 
-1. Sequence databases and BLAST.
-2. Raw reads, FASTQ, quality control, and trimming.
-3. Mapping, alignment, assembly, and quantification.
-4. RNA-seq and differential expression.
-5. Genome annotation and genomic ranges.
-6. Variants and population signals.
-7. DNA methylation and regulatory genomics.
-8. eDNA and metabarcoding.
-9. Project synthesis and biological interpretation.
+1.  Sequence databases and BLAST.
+2.  Raw reads, FASTQ, quality control, and trimming.
+3.  Mapping, alignment, assembly, and quantification.
+4.  RNA-seq and differential expression.
+5.  Genome annotation and genomic ranges.
+6.  Variants and population signals.
+7.  DNA methylation and regulatory genomics.
+8.  eDNA and metabarcoding.
+9.  Project synthesis and biological interpretation.
 10. Final compendium.
 
-## Useful resources
-
-- [Roberts Lab Handbook](https://robertslab.github.io/resources/) — computing, data management, and platform guides.
-- [MarineOmics Portal](https://marineomics.github.io) — genomic tutorials.
-- [sandbox.bio](https://sandbox.bio) — interactive bioinformatics tutorials.
-- [Happy Git with R](https://happygitwithr.com/) — Git + GitHub + RStudio.
+## 

@@ -264,19 +264,23 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../setup.html"> 
-<span class="menu-text">Before Class</span></a>
+<span class="menu-text">Setup</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../support.html"> 
-<span class="menu-text">Self-Directed Skills</span></a>
+<span class="menu-text">Skills</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../edna.html"> 
-<span class="menu-text">eDNA</span></a>
+    <a class="nav-link" href="../turn-in.html"> 
+<span class="menu-text">Submit</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../rubric.html"> 
+<span class="menu-text">Rubric</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://github.com/course-fish546-2026"> 
-<span class="menu-text">GitHub Org</span></a>
+<span class="menu-text">GitHub</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -305,7 +309,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#purpose" id="toc-purpose" class="nav-link active" data-scroll-target="#purpose">Purpose</a></li>
   <li><a href="#by-the-end-of-this-week" id="toc-by-the-end-of-this-week" class="nav-link" data-scroll-target="#by-the-end-of-this-week">By the end of this week</a></li>
   <li><a href="#biological-sequence-files" id="toc-biological-sequence-files" class="nav-link" data-scroll-target="#biological-sequence-files">Biological sequence files</a></li>
-  <li><a href="#blast-as-a-first-bioinformatics-workflow" id="toc-blast-as-a-first-bioinformatics-workflow" class="nav-link" data-scroll-target="#blast-as-a-first-bioinformatics-workflow">BLAST as a first bioinformatics workflow</a></li>
+  <li><a href="#blast-as-a-first-bioinformatics-workflow" id="toc-blast-as-a-first-bioinformatics-workflow" class="nav-link" data-scroll-target="#blast-as-a-first-bioinformatics-workflow">BLAST as a first bioinformatics workflow</a>
+  <ul class="collapse">
+  <li><a href="#aquatic-and-fisheries-examples" id="toc-aquatic-and-fisheries-examples" class="nav-link" data-scroll-target="#aquatic-and-fisheries-examples">Aquatic and fisheries examples</a></li>
+  <li><a href="#database-choice-is-a-biological-decision" id="toc-database-choice-is-a-biological-decision" class="nav-link" data-scroll-target="#database-choice-is-a-biological-decision">Database choice is a biological decision</a></li>
+  <li><a href="#a-misleading-top-hit-example" id="toc-a-misleading-top-hit-example" class="nav-link" data-scroll-target="#a-misleading-top-hit-example">A misleading top-hit example</a></li>
+  <li><a href="#blast-interpretation-checklist" id="toc-blast-interpretation-checklist" class="nav-link" data-scroll-target="#blast-interpretation-checklist">BLAST interpretation checklist</a></li>
+  </ul></li>
   <li><a href="#github-issues-as-the-course-notebook" id="toc-github-issues-as-the-course-notebook" class="nav-link" data-scroll-target="#github-issues-as-the-course-notebook">GitHub Issues as the course notebook</a></li>
   <li><a href="#project-checkpoint" id="toc-project-checkpoint" class="nav-link" data-scroll-target="#project-checkpoint">Project checkpoint</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
@@ -368,6 +378,79 @@ ATGCTAGCTAGCTACGATCG</code></pre>
 <li>Which reference sequence should I use next?</li>
 </ul>
 <p>BLAST results require judgment. A low e-value helps, but interpretation also depends on query coverage, percent identity, database choice, and whether the top hits make biological sense.</p>
+<section id="aquatic-and-fisheries-examples" class="level3">
+<h3 class="anchored" data-anchor-id="aquatic-and-fisheries-examples">Aquatic and fisheries examples</h3>
+<p>BLAST is often the first check in aquatic genomics because many projects begin with sequences from non-model species, mixed communities, or incomplete reference resources.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>Query</th>
+<th>Useful question</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fish tissue ID</td>
+<td>Mitochondrial COI barcode</td>
+<td>Does this sample match the expected species or a close congener?</td>
+</tr>
+<tr class="even">
+<td>eDNA monitoring</td>
+<td>12S or 16S amplicon sequence</td>
+<td>Does the marker support a fish, invertebrate, microbial, or contaminant assignment?</td>
+</tr>
+<tr class="odd">
+<td>Shellfish stress transcriptomics</td>
+<td>Transcript or predicted protein</td>
+<td>What gene family or pathway might this differentially expressed sequence represent?</td>
+</tr>
+<tr class="even">
+<td>Disease or parasite screening</td>
+<td>Unknown contig from a metagenomic assembly</td>
+<td>Does the sequence resemble host, pathogen, symbiont, or lab contamination?</td>
+</tr>
+<tr class="odd">
+<td>Conservation genomics</td>
+<td>Flanking sequence near a marker or variant</td>
+<td>Is the sequence in a known gene, repeat, mitochondrial region, or poorly annotated region?</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="database-choice-is-a-biological-decision" class="level3">
+<h3 class="anchored" data-anchor-id="database-choice-is-a-biological-decision">Database choice is a biological decision</h3>
+<p>There is no single best BLAST database. The right choice depends on the marker, organism, and question.</p>
+<ul>
+<li>Use nucleotide databases such as NCBI <code>nt</code> when you have DNA and need broad taxonomic context.</li>
+<li>Use curated resources such as RefSeq when you want fewer redundant or poorly annotated records.</li>
+<li>Use barcode or marker-focused resources, such as BOLD for COI or a curated 12S database, when the marker has strong taxonomic conventions.</li>
+<li>Use protein databases with <code>blastx</code> when a transcript or contig may encode a protein but the nucleotide sequence is too divergent for a clean nucleotide hit.</li>
+<li>Record the database name and search date because databases change.</li>
+</ul>
+</section>
+<section id="a-misleading-top-hit-example" class="level3">
+<h3 class="anchored" data-anchor-id="a-misleading-top-hit-example">A misleading top-hit example</h3>
+<p>Imagine a short 12S eDNA sequence from a marine water sample. The top BLAST hit is “Atlantic salmon” with 100% identity, but the query covers only 72 bp, the same sequence also matches several salmonids, and salmon DNA is common in local hatchery, aquaculture, or food-processing contexts. The safest interpretation is not “Atlantic salmon detected.” A better interpretation is “this short marker supports a salmonid-like assignment; species-level confidence is limited by marker length, shared haplotypes, database coverage, and local contamination risk.”</p>
+</section>
+<section id="blast-interpretation-checklist" class="level3">
+<h3 class="anchored" data-anchor-id="blast-interpretation-checklist">BLAST interpretation checklist</h3>
+<p>For every BLAST result you use as evidence, record:</p>
+<ul>
+<li>Query file and sequence length.</li>
+<li>BLAST program used, such as <code>blastn</code>, <code>blastx</code>, or web BLAST.</li>
+<li>Database searched and search date.</li>
+<li>Top hit accession, description, and organism.</li>
+<li>Percent identity, query coverage, alignment length, and e-value.</li>
+<li>Whether other top hits suggest the same biological interpretation.</li>
+<li>A caveat that explains what the search can and cannot support.</li>
+</ul>
+</section>
 </section>
 <section id="github-issues-as-the-course-notebook" class="level2">
 <h2 class="anchored" data-anchor-id="github-issues-as-the-course-notebook">GitHub Issues as the course notebook</h2>
@@ -388,6 +471,15 @@ ATGCTAGCTAGCTACGATCG</code></pre>
 <li>The likely project track.</li>
 <li>The compute platform needed for the heavy work.</li>
 <li>A draft endpoint: the figure, table, or result that would make the project feel complete.</li>
+</ul>
+<p>Treat this first proposal as provisional. You are choosing a plausible starting point, not signing a contract with your Week 1 self.</p>
+<p>Examples of strong draft endpoints:</p>
+<ul>
+<li>RNA-seq / differential expression: a figure showing sample relationships plus a table of genes or pathways associated with temperature, salinity, disease, treatment, or life stage.</li>
+<li>eDNA / metabarcoding: an occurrence or relative-abundance figure comparing taxa among sites, dates, depths, or treatments, with contamination caveats.</li>
+<li>DNA methylation / epigenetics: a genomic-region summary or browser view connecting methylation differences to annotated genes or regulatory context.</li>
+<li>Variants / population signals: a filtered variant summary, PCA, relatedness plot, or population differentiation table tied to a fisheries or conservation question.</li>
+<li>Annotation / sequence discovery: an annotated set of genes, contigs, markers, or BLAST-supported candidates with clear evidence and limits.</li>
 </ul>
 </section>
 <section id="references" class="level2">

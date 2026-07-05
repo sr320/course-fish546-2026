@@ -3,6 +3,8 @@ title: "Week 10 Questions"
 subtitle: "Final compendium and presentation"
 ---
 
+{{< include ../_student-checklist.qmd >}}
+
 Answer these in your repository's `homework/` directory before the final class meeting.
 
 1. What is the strongest result from your project?

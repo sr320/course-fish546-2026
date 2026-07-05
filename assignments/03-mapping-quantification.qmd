@@ -7,6 +7,8 @@ format:
     code-copy: true
 ---
 
+{{< include ../_student-checklist.qmd >}}
+
 ## Goal
 
 Run one small mapping, assembly, or quantification workflow slice and document the intermediate product.

@@ -1,2 +1,29 @@
 /* FISH 546 (2026) — light custom styles */
 .navbar-title { font-weight: 600; }
+
+.student-checklist {
+  margin-block: 1rem;
+}
+
+.schedule-table {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.schedule-table table {
+  min-width: 58rem;
+}
+
+@media (max-width: 700px) {
+  main table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  main th,
+  main td {
+    min-width: 8rem;
+  }
+}

@@ -3,6 +3,8 @@ title: "Week 02 Questions"
 subtitle: "Raw reads, FASTQ, QC, and trimming"
 ---
 
+{{< include ../_student-checklist.qmd >}}
+
 Answer these in your repository's `homework/` directory before Tuesday at 3:00pm.
 
 1. What information is stored in a FASTQ record?

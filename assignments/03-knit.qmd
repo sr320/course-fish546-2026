@@ -7,6 +7,8 @@ format:
     code-copy: true
 ---
 
+{{< include ../_student-checklist.qmd >}}
+
 ## Goal
 
 Turn an analysis into a readable rendered document that combines code, output, figures, and explanation.

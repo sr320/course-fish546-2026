@@ -7,9 +7,20 @@ format:
     code-copy: true
 ---
 
+{{< include ../_student-checklist.qmd >}}
+
 ## Goal
 
 Use BLAST to identify or interpret an unknown sequence, then document the result in a reproducible way.
+
+## Provided query
+
+If you do not yet have a project sequence, use the practice fish COI query in [provided-query.fasta](provided-query.fasta). It is included so everyone can complete the workflow even before project data are settled.
+
+```text
+>week01_unknown_fish_coi_practice
+CCTATACCTAATCTTCGGTGCATGAGCCGGAATAGTAGGGACAGCCCTAAGCCTCCTCATTCGAGCAGAATTAGGCCAACCAGGGGCCCTTCTAGGTGACGACCAAATTTATAATGTAATCGTAACAGCACATGCCTTCGTAATAATTTTCTTTATAGTAATACCAATTATAATTGGAGGATTCGGAAATTGACTTGTACCTCTAATACTAGGGGCCCCTGACATAGCATTCCCCCGAATAAATAATATAAGCTTCTGACTTCTCCCCCCATCCTTCCTTCTCCTCCTAGCATCCTCTGGTGTAGAAGCAGGGGCCGGAACAGGATGAACAGTATACCCTCCTCTAGCCGGAAACCTAGCCCACGCAGGAGCATCCGTAGACCTAACTATCTTCTCCCTACACCTAGCAGGTGTCTCCTCAATCCTAGGGGCCATTAATTTTATTACAACAATTATCAATATGAAACCCCCAGCAATATCACAGTACC
+```
 
 ## Tasks
 
@@ -25,10 +36,39 @@ Use BLAST to identify or interpret an unknown sequence, then document the result
    - E-value.
    - Whether the result makes biological sense.
 
+## Interpretation checklist
+
+Your report should make the search auditable. Include:
+
+- Query file and sequence length.
+- BLAST program used, such as `blastn`, `blastx`, or NCBI web BLAST.
+- Database searched and date searched.
+- Top hit accession, description, and organism.
+- Percent identity, query coverage, alignment length, and e-value.
+- Whether the next few hits support the same interpretation.
+- One caveat, such as short marker length, close congeners, incomplete references, contamination, or database bias.
+
+## Database choice
+
+Choose a database that matches your biological question:
+
+- For broad DNA identification, start with NCBI `nt`.
+- For COI barcodes, compare what you learn from NCBI with what you would expect from a barcode-focused database such as BOLD.
+- For transcripts or contigs that may encode proteins, consider whether `blastx` against a protein database would be more informative than nucleotide BLAST.
+- For eDNA-style markers, note whether the marker is long and variable enough for species-level claims.
+
 ## What to submit
 
 Submit a rendered Quarto or Markdown report in `assignment/01-blast/` with the query, result summary, and interpretation.
 
 ## Project connection
 
-Open your project-proposal issue this week. Include a draft endpoint and identify whether sequence similarity, annotation, or database choice will matter for your project.
+Open your project-proposal issue this week. The proposal is provisional. Include a draft endpoint and identify whether sequence similarity, annotation, or database choice will matter for your project.
+
+Possible endpoints include:
+
+- RNA-seq: a differential-expression result linked to treatment, environment, tissue, or life stage.
+- eDNA / metabarcoding: a taxon-by-site or taxon-by-time summary with contamination caveats.
+- DNA methylation: a methylation difference connected to genome annotation or regulatory context.
+- Variants: a filtered variant summary, PCA, or population comparison.
+- Annotation / discovery: a set of candidate genes, contigs, or markers supported by sequence similarity evidence.

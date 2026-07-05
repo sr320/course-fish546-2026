@@ -264,19 +264,23 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../setup.html"> 
-<span class="menu-text">Before Class</span></a>
+<span class="menu-text">Setup</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../support.html"> 
-<span class="menu-text">Self-Directed Skills</span></a>
+<span class="menu-text">Skills</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../edna.html"> 
-<span class="menu-text">eDNA</span></a>
+    <a class="nav-link" href="../turn-in.html"> 
+<span class="menu-text">Submit</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../rubric.html"> 
+<span class="menu-text">Rubric</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://github.com/course-fish546-2026"> 
-<span class="menu-text">GitHub Org</span></a>
+<span class="menu-text">GitHub</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -303,7 +307,10 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#goal" id="toc-goal" class="nav-link active" data-scroll-target="#goal">Goal</a></li>
+  <li><a href="#provided-query" id="toc-provided-query" class="nav-link" data-scroll-target="#provided-query">Provided query</a></li>
   <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks">Tasks</a></li>
+  <li><a href="#interpretation-checklist" id="toc-interpretation-checklist" class="nav-link" data-scroll-target="#interpretation-checklist">Interpretation checklist</a></li>
+  <li><a href="#database-choice" id="toc-database-choice" class="nav-link" data-scroll-target="#database-choice">Database choice</a></li>
   <li><a href="#what-to-submit" id="toc-what-to-submit" class="nav-link" data-scroll-target="#what-to-submit">What to submit</a></li>
   <li><a href="#project-connection" id="toc-project-connection" class="nav-link" data-scroll-target="#project-connection">Project connection</a></li>
   </ul>
@@ -333,9 +340,33 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="student-checklist callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Due this week
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Questions: <code>homework/</code>, Tuesday 3:00pm.</li>
+<li>Assignment: <code>assignment/</code>, Friday 5:00pm.</li>
+<li>Project: update your weekly progress issue.</li>
+</ul>
+<p>Submit by commit SHA. Details: <a href="../turn-in.html">Submit</a> · <a href="../rubric.html">Rubric</a></p>
+</div>
+</div>
 <section id="goal" class="level2">
 <h2 class="anchored" data-anchor-id="goal">Goal</h2>
 <p>Use BLAST to identify or interpret an unknown sequence, then document the result in a reproducible way.</p>
+</section>
+<section id="provided-query" class="level2">
+<h2 class="anchored" data-anchor-id="provided-query">Provided query</h2>
+<p>If you do not yet have a project sequence, use the practice fish COI query in <a href="provided-query.fasta">provided-query.fasta</a>. It is included so everyone can complete the workflow even before project data are settled.</p>
+<pre class="text"><code>&gt;week01_unknown_fish_coi_practice
+CCTATACCTAATCTTCGGTGCATGAGCCGGAATAGTAGGGACAGCCCTAAGCCTCCTCATTCGAGCAGAATTAGGCCAACCAGGGGCCCTTCTAGGTGACGACCAAATTTATAATGTAATCGTAACAGCACATGCCTTCGTAATAATTTTCTTTATAGTAATACCAATTATAATTGGAGGATTCGGAAATTGACTTGTACCTCTAATACTAGGGGCCCCTGACATAGCATTCCCCCGAATAAATAATATAAGCTTCTGACTTCTCCCCCCATCCTTCCTTCTCCTCCTAGCATCCTCTGGTGTAGAAGCAGGGGCCGGAACAGGATGAACAGTATACCCTCCTCTAGCCGGAAACCTAGCCCACGCAGGAGCATCCGTAGACCTAACTATCTTCTCCCTACACCTAGCAGGTGTCTCCTCAATCCTAGGGGCCATTAATTTTATTACAACAATTATCAATATGAAACCCCCAGCAATATCACAGTACC</code></pre>
 </section>
 <section id="tasks" class="level2">
 <h2 class="anchored" data-anchor-id="tasks">Tasks</h2>
@@ -355,13 +386,44 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ol>
 </section>
+<section id="interpretation-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation-checklist">Interpretation checklist</h2>
+<p>Your report should make the search auditable. Include:</p>
+<ul>
+<li>Query file and sequence length.</li>
+<li>BLAST program used, such as <code>blastn</code>, <code>blastx</code>, or NCBI web BLAST.</li>
+<li>Database searched and date searched.</li>
+<li>Top hit accession, description, and organism.</li>
+<li>Percent identity, query coverage, alignment length, and e-value.</li>
+<li>Whether the next few hits support the same interpretation.</li>
+<li>One caveat, such as short marker length, close congeners, incomplete references, contamination, or database bias.</li>
+</ul>
+</section>
+<section id="database-choice" class="level2">
+<h2 class="anchored" data-anchor-id="database-choice">Database choice</h2>
+<p>Choose a database that matches your biological question:</p>
+<ul>
+<li>For broad DNA identification, start with NCBI <code>nt</code>.</li>
+<li>For COI barcodes, compare what you learn from NCBI with what you would expect from a barcode-focused database such as BOLD.</li>
+<li>For transcripts or contigs that may encode proteins, consider whether <code>blastx</code> against a protein database would be more informative than nucleotide BLAST.</li>
+<li>For eDNA-style markers, note whether the marker is long and variable enough for species-level claims.</li>
+</ul>
+</section>
 <section id="what-to-submit" class="level2">
 <h2 class="anchored" data-anchor-id="what-to-submit">What to submit</h2>
 <p>Submit a rendered Quarto or Markdown report in <code>assignment/01-blast/</code> with the query, result summary, and interpretation.</p>
 </section>
 <section id="project-connection" class="level2">
 <h2 class="anchored" data-anchor-id="project-connection">Project connection</h2>
-<p>Open your project-proposal issue this week. Include a draft endpoint and identify whether sequence similarity, annotation, or database choice will matter for your project.</p>
+<p>Open your project-proposal issue this week. The proposal is provisional. Include a draft endpoint and identify whether sequence similarity, annotation, or database choice will matter for your project.</p>
+<p>Possible endpoints include:</p>
+<ul>
+<li>RNA-seq: a differential-expression result linked to treatment, environment, tissue, or life stage.</li>
+<li>eDNA / metabarcoding: a taxon-by-site or taxon-by-time summary with contamination caveats.</li>
+<li>DNA methylation: a methylation difference connected to genome annotation or regulatory context.</li>
+<li>Variants: a filtered variant summary, PCA, or population comparison.</li>
+<li>Annotation / discovery: a set of candidate genes, contigs, or markers supported by sequence similarity evidence.</li>
+</ul>
 
 
 </section>

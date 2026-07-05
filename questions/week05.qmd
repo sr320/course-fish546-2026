@@ -3,6 +3,8 @@ title: "Week 05 Questions"
 subtitle: "Genome annotation and genomic ranges"
 ---
 
+{{< include ../_student-checklist.qmd >}}
+
 Answer these in your repository's `homework/` directory before Tuesday at 3:00pm.
 
 1. What is a genomic range?

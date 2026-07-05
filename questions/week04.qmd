@@ -3,6 +3,8 @@ title: "Week 04 Questions"
 subtitle: "RNA-seq and differential expression"
 ---
 
+{{< include ../_student-checklist.qmd >}}
+
 Answer these in your repository's `homework/` directory before Tuesday at 3:00pm.
 
 1. What are the major data products in an RNA-seq workflow, from FASTQ files to differential-expression results?

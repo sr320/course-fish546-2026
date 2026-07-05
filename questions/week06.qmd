@@ -3,6 +3,8 @@ title: "Week 06 Questions"
 subtitle: "Variants and population signals"
 ---
 
+{{< include ../_student-checklist.qmd >}}
+
 Answer these in your repository's `homework/` directory before Tuesday at 3:00pm.
 
 1. What does a variant call represent?

@@ -7,6 +7,8 @@ format:
     code-copy: true
 ---
 
+{{< include ../_student-checklist.qmd >}}
+
 ## Goal
 
 Submit a final project compendium that documents your research question, data, workflow, results, caveats, and reproducible artifacts.

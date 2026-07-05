@@ -3,6 +3,8 @@ title: "Week 08 Questions"
 subtitle: "eDNA and metabarcoding"
 ---
 
+{{< include ../_student-checklist.qmd >}}
+
 Answer these in your repository's `homework/` directory before Tuesday at 3:00pm.
 
 1. What is environmental DNA, and why can it be useful for environmental monitoring?

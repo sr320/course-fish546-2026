@@ -7,6 +7,8 @@ format:
     code-copy: true
 ---
 
+{{< include ../_student-checklist.qmd >}}
+
 ## Goal
 
 Move from a count matrix and sample metadata table to a differential-expression result and a cautious biological interpretation.

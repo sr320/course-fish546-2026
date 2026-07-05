@@ -43,6 +43,44 @@ BLAST compares a query sequence against a database and reports similar sequences
 
 BLAST results require judgment. A low e-value helps, but interpretation also depends on query coverage, percent identity, database choice, and whether the top hits make biological sense.
 
+### Aquatic and fisheries examples
+
+BLAST is often the first check in aquatic genomics because many projects begin with sequences from non-model species, mixed communities, or incomplete reference resources.
+
+| Scenario | Query | Useful question |
+|---|---|---|
+| Fish tissue ID | Mitochondrial COI barcode | Does this sample match the expected species or a close congener? |
+| eDNA monitoring | 12S or 16S amplicon sequence | Does the marker support a fish, invertebrate, microbial, or contaminant assignment? |
+| Shellfish stress transcriptomics | Transcript or predicted protein | What gene family or pathway might this differentially expressed sequence represent? |
+| Disease or parasite screening | Unknown contig from a metagenomic assembly | Does the sequence resemble host, pathogen, symbiont, or lab contamination? |
+| Conservation genomics | Flanking sequence near a marker or variant | Is the sequence in a known gene, repeat, mitochondrial region, or poorly annotated region? |
+
+### Database choice is a biological decision
+
+There is no single best BLAST database. The right choice depends on the marker, organism, and question.
+
+- Use nucleotide databases such as NCBI `nt` when you have DNA and need broad taxonomic context.
+- Use curated resources such as RefSeq when you want fewer redundant or poorly annotated records.
+- Use barcode or marker-focused resources, such as BOLD for COI or a curated 12S database, when the marker has strong taxonomic conventions.
+- Use protein databases with `blastx` when a transcript or contig may encode a protein but the nucleotide sequence is too divergent for a clean nucleotide hit.
+- Record the database name and search date because databases change.
+
+### A misleading top-hit example
+
+Imagine a short 12S eDNA sequence from a marine water sample. The top BLAST hit is "Atlantic salmon" with 100% identity, but the query covers only 72 bp, the same sequence also matches several salmonids, and salmon DNA is common in local hatchery, aquaculture, or food-processing contexts. The safest interpretation is not "Atlantic salmon detected." A better interpretation is "this short marker supports a salmonid-like assignment; species-level confidence is limited by marker length, shared haplotypes, database coverage, and local contamination risk."
+
+### BLAST interpretation checklist
+
+For every BLAST result you use as evidence, record:
+
+- Query file and sequence length.
+- BLAST program used, such as `blastn`, `blastx`, or web BLAST.
+- Database searched and search date.
+- Top hit accession, description, and organism.
+- Percent identity, query coverage, alignment length, and e-value.
+- Whether other top hits suggest the same biological interpretation.
+- A caveat that explains what the search can and cannot support.
+
 ## GitHub Issues as the course notebook
 
 This course uses Issues for structured work:
@@ -61,6 +99,16 @@ Open your project-proposal issue. At this stage, the proposal can be rough, but 
 - The likely project track.
 - The compute platform needed for the heavy work.
 - A draft endpoint: the figure, table, or result that would make the project feel complete.
+
+Treat this first proposal as provisional. You are choosing a plausible starting point, not signing a contract with your Week 1 self.
+
+Examples of strong draft endpoints:
+
+- RNA-seq / differential expression: a figure showing sample relationships plus a table of genes or pathways associated with temperature, salinity, disease, treatment, or life stage.
+- eDNA / metabarcoding: an occurrence or relative-abundance figure comparing taxa among sites, dates, depths, or treatments, with contamination caveats.
+- DNA methylation / epigenetics: a genomic-region summary or browser view connecting methylation differences to annotated genes or regulatory context.
+- Variants / population signals: a filtered variant summary, PCA, relatedness plot, or population differentiation table tied to a fisheries or conservation question.
+- Annotation / sequence discovery: an annotated set of genes, contigs, markers, or BLAST-supported candidates with clear evidence and limits.
 
 ## References
 
