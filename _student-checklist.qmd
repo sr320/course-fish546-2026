@@ -1,9 +1,0 @@
-::: {.callout-tip .student-checklist appearance="simple"}
-## Due this week
-
-- Questions: due Tuesday 3:00pm.
-- Assignment: due Friday 5:00pm.
-- Project: update your weekly progress issue.
-
-Submit by pull request to the [assignments repo](https://github.com/sr320/fish546-2026-assignments). Details: [Submit](../turn-in.qmd) · [Rubric](../rubric.qmd)
-:::

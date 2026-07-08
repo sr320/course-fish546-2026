@@ -46,7 +46,7 @@ The core pipeline, and where each step runs:
 4. **Build the table** — a sample × taxon abundance/occurrence matrix: the analysis-ready product. *(Raven / laptop)*
 
 ```bash
-# Sketch of the heavy step as a Klone job — see assignments/edna-metabarcoding.qmd
+# Sketch of the heavy step as a Klone job — see the eDNA metabarcoding assignment
 module load apptainer
 apptainer exec --home $PWD --bind /gscratch/ \
   /gscratch/srlab/containers/srlab-bioinformatics-container-<hash>.sif \
@@ -70,8 +70,8 @@ Once you have the table:
 
 ## This week
 
-- **Assignment:** [eDNA Metabarcoding pipeline](../assignments/edna-metabarcoding.qmd)
-- **Question set:** [Week 08](../questions/week08.qmd)
+- **Assignment:** [eDNA Metabarcoding pipeline](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/edna-metabarcoding)
+- **Question set:** [Week 08](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week08.md)
 - **Topic hub:** [eDNA](../edna.qmd)
 
 ## References & resources
