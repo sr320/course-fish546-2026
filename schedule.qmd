@@ -10,31 +10,268 @@ format:
     code-overflow: wrap
 ---
 
-::: {.callout-note appearance="simple"}
+::: {.schedule-hero}
+::: {.schedule-hero-copy}
 Dates are placeholders for 2026. The course moves from sequence identification to raw reads, analysis workflows, interpretation, and final synthesis.
 :::
 
-::: {.callout-tip appearance="simple"}
-## Weekly rhythm
-
-Questions Tuesday. Assignment Friday. Project progress every week. Questions and assignments live in the [**assignments repository**](https://github.com/sr320/fish546-2026-assignments) — clone it, work in your folder, and open a pull request ([how to turn in](turn-in.qmd)). Use [Skills](support.qmd) when an assignment asks for GitHub, Quarto, Raven, Hyak, containers, or archiving.
+::: {.schedule-rhythm aria-label="Weekly rhythm"}
+::: {.rhythm-item}
+<span class="rhythm-kicker">Tuesday</span>
+<span class="rhythm-title">Questions due</span>
 :::
 
-::: {.schedule-table}
-| Date | Questions | Bioinformatics Topic | Assignment | Project Status |
-|---------------|---------------|---------------|---------------|---------------|
-| **before class** |  | [Setup: your computer, Raven, Hyak](setup.qmd) | Complete 3 tutorials → open **Setup Check** issue | — |
-| week 00 |  | [Bioinformatics habits and data provenance](lectures/00-before.qmd) | [Repository and data setup](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/00-bash) | Establish repos |
-| week 01 | [week 01](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week01.md) | [Sequence databases and BLAST](lectures/01-start-up.qmd) | [NCBI BLAST](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/01-blast) | Open **project-proposal** issue |
-| week 02 | [week 02](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week02.md) | [Raw reads, FASTQ, QC, and trimming](lectures/02-raw-reads-qc.qmd) | [FASTQ QC](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/02-fastq-qc) | Explore project data, QC, add hashes |
-| week 03 | [week 03](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week03.md) | [Mapping, assembly, and quantification](lectures/03-mapping-quantification.qmd) | [Mapping or quantification workflow](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/03-mapping-quantification) | ID endpoint in README; start workflow |
-| week 04 | [week 04](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week04.md) | [RNA-seq and differential expression](lectures/04-rna-seq-dge.qmd) | [Differential gene expression](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/04-dge) | Complete sliced workflow → endpoint |
-| week 05 | [week 05](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week05.md) | [Genome annotation and genomic ranges](lectures/05-annotation-ranges.qmd) | [Annotation and ranges](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/05-annotation-ranges) | **Mid-quarter project update** |
-| week 06 | [week 06](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week06.md) | [Variants and population signals](lectures/06-variants.qmd) | [VCF and variant summary](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/06-variants) | README w/ results; 4-week plan; issues resolved |
-| week 07 | [week 07](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week07.md) | [Epigenetics and DNA methylation](lectures/07-methylation.qmd) | [Methylation, motifs, IGV](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/07-methylation) | Launch project report; all sections noted |
-| week 08 | [week 08](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week08.md) | [eDNA and metabarcoding](lectures/edna.qmd) | [eDNA metabarcoding](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/08-edna-metabarcoding) | Mock ultimate figure |
-| week 09 | [week 09](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week09.md) | [Project synthesis and biological interpretation](lectures/09-synthesis.qmd) | [Project synthesis](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/09-synthesis) | Clear repo organization |
-| week 10 | [week 10](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week10.md) | [Final compendium and presentations](lectures/10-lastmile.qmd) | [Final release](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/10-compendium) | **Compendium** |
+::: {.rhythm-item}
+<span class="rhythm-kicker">Friday</span>
+<span class="rhythm-title">Assignment due</span>
+:::
+
+::: {.rhythm-item}
+<span class="rhythm-kicker">Weekly</span>
+<span class="rhythm-title">Project progress issue</span>
+:::
+:::
+:::
+
+::: {.callout-tip appearance="simple"}
+## How to use this page
+
+Start with the current week, open the lecture topic, then work through the question set, assignment, and project checkpoint. Questions and assignments live in the [**assignments repository**](https://github.com/sr320/fish546-2026-assignments) — clone it, work in your folder, and open a pull request ([how to turn in](turn-in.qmd)). Use [Skills](support.qmd) when an assignment asks for GitHub, Quarto, Raven, Hyak, containers, or archiving.
+:::
+
+::: {.schedule-grid}
+::: {.schedule-card .schedule-card-feature}
+<span class="week-label">Before class</span>
+
+### Get set up
+
+[Setup: your computer, Raven, Hyak](setup.qmd)
+
+::: {.schedule-actions}
+<span class="schedule-chip">Complete 3 tutorials</span>
+<span class="schedule-chip">Open **Setup Check** issue</span>
+:::
+:::
+
+::: {.schedule-card}
+<span class="week-label">Week 00</span>
+
+### Bioinformatics habits and data provenance
+
+::: {.schedule-links}
+<span>Questions</span>
+<span class="schedule-muted">none</span>
+
+<span>Topic</span>
+[Bioinformatics habits and data provenance](lectures/00-before.qmd)
+
+<span>Assignment</span>
+[Repository and data setup](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/00-bash)
+
+<span>Project</span>
+Establish repos
+:::
+:::
+
+::: {.schedule-card}
+<span class="week-label">Week 01</span>
+
+### Sequence databases and BLAST
+
+::: {.schedule-links}
+<span>Questions</span>
+[Week 01](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week01.md)
+
+<span>Topic</span>
+[Sequence databases and BLAST](lectures/01-start-up.qmd)
+
+<span>Assignment</span>
+[NCBI BLAST](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/01-blast)
+
+<span>Project</span>
+Open **project-proposal** issue
+:::
+:::
+
+::: {.schedule-card}
+<span class="week-label">Week 02</span>
+
+### Raw reads, FASTQ, QC, and trimming
+
+::: {.schedule-links}
+<span>Questions</span>
+[Week 02](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week02.md)
+
+<span>Topic</span>
+[Raw reads, FASTQ, QC, and trimming](lectures/02-raw-reads-qc.qmd)
+
+<span>Assignment</span>
+[FASTQ QC](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/02-fastq-qc)
+
+<span>Project</span>
+Explore project data, QC, add hashes
+:::
+:::
+
+::: {.schedule-card}
+<span class="week-label">Week 03</span>
+
+### Mapping, assembly, and quantification
+
+::: {.schedule-links}
+<span>Questions</span>
+[Week 03](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week03.md)
+
+<span>Topic</span>
+[Mapping, assembly, and quantification](lectures/03-mapping-quantification.qmd)
+
+<span>Assignment</span>
+[Mapping or quantification workflow](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/03-mapping-quantification)
+
+<span>Project</span>
+ID endpoint in README; start workflow
+:::
+:::
+
+::: {.schedule-card}
+<span class="week-label">Week 04</span>
+
+### RNA-seq and differential expression
+
+::: {.schedule-links}
+<span>Questions</span>
+[Week 04](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week04.md)
+
+<span>Topic</span>
+[RNA-seq and differential expression](lectures/04-rna-seq-dge.qmd)
+
+<span>Assignment</span>
+[Differential gene expression](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/04-dge)
+
+<span>Project</span>
+Complete sliced workflow -> endpoint
+:::
+:::
+
+::: {.schedule-card .schedule-card-milestone}
+<span class="week-label">Week 05</span>
+
+### Genome annotation and genomic ranges
+
+::: {.schedule-links}
+<span>Questions</span>
+[Week 05](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week05.md)
+
+<span>Topic</span>
+[Genome annotation and genomic ranges](lectures/05-annotation-ranges.qmd)
+
+<span>Assignment</span>
+[Annotation and ranges](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/05-annotation-ranges)
+
+<span>Project</span>
+**Mid-quarter project update**
+:::
+:::
+
+::: {.schedule-card}
+<span class="week-label">Week 06</span>
+
+### Variants and population signals
+
+::: {.schedule-links}
+<span>Questions</span>
+[Week 06](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week06.md)
+
+<span>Topic</span>
+[Variants and population signals](lectures/06-variants.qmd)
+
+<span>Assignment</span>
+[VCF and variant summary](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/06-variants)
+
+<span>Project</span>
+README w/ results; 4-week plan; issues resolved
+:::
+:::
+
+::: {.schedule-card}
+<span class="week-label">Week 07</span>
+
+### Epigenetics and DNA methylation
+
+::: {.schedule-links}
+<span>Questions</span>
+[Week 07](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week07.md)
+
+<span>Topic</span>
+[Epigenetics and DNA methylation](lectures/07-methylation.qmd)
+
+<span>Assignment</span>
+[Methylation, motifs, IGV](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/07-methylation)
+
+<span>Project</span>
+Launch project report; all sections noted
+:::
+:::
+
+::: {.schedule-card}
+<span class="week-label">Week 08</span>
+
+### eDNA and metabarcoding
+
+::: {.schedule-links}
+<span>Questions</span>
+[Week 08](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week08.md)
+
+<span>Topic</span>
+[eDNA and metabarcoding](lectures/edna.qmd)
+
+<span>Assignment</span>
+[eDNA metabarcoding](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/08-edna-metabarcoding)
+
+<span>Project</span>
+Mock ultimate figure
+:::
+:::
+
+::: {.schedule-card}
+<span class="week-label">Week 09</span>
+
+### Project synthesis and biological interpretation
+
+::: {.schedule-links}
+<span>Questions</span>
+[Week 09](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week09.md)
+
+<span>Topic</span>
+[Project synthesis and biological interpretation](lectures/09-synthesis.qmd)
+
+<span>Assignment</span>
+[Project synthesis](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/09-synthesis)
+
+<span>Project</span>
+Clear repo organization
+:::
+:::
+
+::: {.schedule-card .schedule-card-milestone}
+<span class="week-label">Week 10</span>
+
+### Final compendium and presentations
+
+::: {.schedule-links}
+<span>Questions</span>
+[Week 10](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week10.md)
+
+<span>Topic</span>
+[Final compendium and presentations](lectures/10-lastmile.qmd)
+
+<span>Assignment</span>
+[Final release](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/10-compendium)
+
+<span>Project</span>
+**Compendium**
+:::
+:::
 :::
 
 ------------------------------------------------------------------------

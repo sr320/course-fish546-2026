@@ -162,13 +162,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
+<div class="schedule-hero">
+<div class="schedule-hero-copy">
 <p>Dates are placeholders for 2026. The course moves from sequence identification to raw reads, analysis workflows, interpretation, and final synthesis.</p>
+</div>
+<div class="schedule-rhythm" aria-label="Weekly rhythm">
+<div class="rhythm-item">
+<p><span class="rhythm-kicker">Tuesday</span> <span class="rhythm-title">Questions due</span></p>
+</div>
+<div class="rhythm-item">
+<p><span class="rhythm-kicker">Friday</span> <span class="rhythm-title">Assignment due</span></p>
+</div>
+<div class="rhythm-item">
+<p><span class="rhythm-kicker">Weekly</span> <span class="rhythm-title">Project progress issue</span></p>
 </div>
 </div>
 </div>
@@ -178,111 +184,156 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Weekly rhythm
+How to use this page
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Questions Tuesday. Assignment Friday. Project progress every week. Questions and assignments live in the <a href="https://github.com/sr320/fish546-2026-assignments"><strong>assignments repository</strong></a> — clone it, work in your folder, and open a pull request (<a href="./turn-in.html">how to turn in</a>). Use <a href="./support.html">Skills</a> when an assignment asks for GitHub, Quarto, Raven, Hyak, containers, or archiving.</p>
+<p>Start with the current week, open the lecture topic, then work through the question set, assignment, and project checkpoint. Questions and assignments live in the <a href="https://github.com/sr320/fish546-2026-assignments"><strong>assignments repository</strong></a> — clone it, work in your folder, and open a pull request (<a href="./turn-in.html">how to turn in</a>). Use <a href="./support.html">Skills</a> when an assignment asks for GitHub, Quarto, Raven, Hyak, containers, or archiving.</p>
 </div>
 </div>
-<div class="schedule-table">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Questions</th>
-<th>Bioinformatics Topic</th>
-<th>Assignment</th>
-<th>Project Status</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>before class</strong></td>
-<td></td>
-<td><a href="./setup.html">Setup: your computer, Raven, Hyak</a></td>
-<td>Complete 3 tutorials → open <strong>Setup Check</strong> issue</td>
-<td>—</td>
-</tr>
-<tr class="even">
-<td>week 00</td>
-<td></td>
-<td><a href="./lectures/00-before.html">Bioinformatics habits and data provenance</a></td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/00-bash">Repository and data setup</a></td>
-<td>Establish repos</td>
-</tr>
-<tr class="odd">
-<td>week 01</td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week01.md">week 01</a></td>
-<td><a href="./lectures/01-start-up.html">Sequence databases and BLAST</a></td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/01-blast">NCBI BLAST</a></td>
-<td>Open <strong>project-proposal</strong> issue</td>
-</tr>
-<tr class="even">
-<td>week 02</td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week02.md">week 02</a></td>
-<td><a href="./lectures/02-raw-reads-qc.html">Raw reads, FASTQ, QC, and trimming</a></td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/02-fastq-qc">FASTQ QC</a></td>
-<td>Explore project data, QC, add hashes</td>
-</tr>
-<tr class="odd">
-<td>week 03</td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week03.md">week 03</a></td>
-<td><a href="./lectures/03-mapping-quantification.html">Mapping, assembly, and quantification</a></td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/03-mapping-quantification">Mapping or quantification workflow</a></td>
-<td>ID endpoint in README; start workflow</td>
-</tr>
-<tr class="even">
-<td>week 04</td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week04.md">week 04</a></td>
-<td><a href="./lectures/04-rna-seq-dge.html">RNA-seq and differential expression</a></td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/04-dge">Differential gene expression</a></td>
-<td>Complete sliced workflow → endpoint</td>
-</tr>
-<tr class="odd">
-<td>week 05</td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week05.md">week 05</a></td>
-<td><a href="./lectures/05-annotation-ranges.html">Genome annotation and genomic ranges</a></td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/05-annotation-ranges">Annotation and ranges</a></td>
-<td><strong>Mid-quarter project update</strong></td>
-</tr>
-<tr class="even">
-<td>week 06</td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week06.md">week 06</a></td>
-<td><a href="./lectures/06-variants.html">Variants and population signals</a></td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/06-variants">VCF and variant summary</a></td>
-<td>README w/ results; 4-week plan; issues resolved</td>
-</tr>
-<tr class="odd">
-<td>week 07</td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week07.md">week 07</a></td>
-<td><a href="./lectures/07-methylation.html">Epigenetics and DNA methylation</a></td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/07-methylation">Methylation, motifs, IGV</a></td>
-<td>Launch project report; all sections noted</td>
-</tr>
-<tr class="even">
-<td>week 08</td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week08.md">week 08</a></td>
-<td><a href="./lectures/edna.html">eDNA and metabarcoding</a></td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/08-edna-metabarcoding">eDNA metabarcoding</a></td>
-<td>Mock ultimate figure</td>
-</tr>
-<tr class="odd">
-<td>week 09</td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week09.md">week 09</a></td>
-<td><a href="./lectures/09-synthesis.html">Project synthesis and biological interpretation</a></td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/09-synthesis">Project synthesis</a></td>
-<td>Clear repo organization</td>
-</tr>
-<tr class="even">
-<td>week 10</td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week10.md">week 10</a></td>
-<td><a href="./lectures/10-lastmile.html">Final compendium and presentations</a></td>
-<td><a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/10-compendium">Final release</a></td>
-<td><strong>Compendium</strong></td>
-</tr>
-</tbody>
-</table>
+<div class="schedule-grid">
+<div class="schedule-card schedule-card-feature">
+<p><span class="week-label">Before class</span></p>
+<section id="get-set-up" class="level3">
+<h3 class="anchored" data-anchor-id="get-set-up">Get set up</h3>
+<p><a href="./setup.html">Setup: your computer, Raven, Hyak</a></p>
+<div class="schedule-actions">
+<p><span class="schedule-chip">Complete 3 tutorials</span> <span class="schedule-chip">Open <strong>Setup Check</strong> issue</span></p>
+</div>
+</section>
+</div>
+<div class="schedule-card">
+<p><span class="week-label">Week 00</span></p>
+<section id="bioinformatics-habits-and-data-provenance" class="level3">
+<h3 class="anchored" data-anchor-id="bioinformatics-habits-and-data-provenance">Bioinformatics habits and data provenance</h3>
+<div class="schedule-links">
+<p><span>Questions</span> <span class="schedule-muted">none</span></p>
+<p><span>Topic</span> <a href="./lectures/00-before.html">Bioinformatics habits and data provenance</a></p>
+<p><span>Assignment</span> <a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/00-bash">Repository and data setup</a></p>
+<p><span>Project</span> Establish repos</p>
+</div>
+</section>
+</div>
+<div class="schedule-card">
+<p><span class="week-label">Week 01</span></p>
+<section id="sequence-databases-and-blast" class="level3">
+<h3 class="anchored" data-anchor-id="sequence-databases-and-blast">Sequence databases and BLAST</h3>
+<div class="schedule-links">
+<p><span>Questions</span> <a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week01.md">Week 01</a></p>
+<p><span>Topic</span> <a href="./lectures/01-start-up.html">Sequence databases and BLAST</a></p>
+<p><span>Assignment</span> <a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/01-blast">NCBI BLAST</a></p>
+<p><span>Project</span> Open <strong>project-proposal</strong> issue</p>
+</div>
+</section>
+</div>
+<div class="schedule-card">
+<p><span class="week-label">Week 02</span></p>
+<section id="raw-reads-fastq-qc-and-trimming" class="level3">
+<h3 class="anchored" data-anchor-id="raw-reads-fastq-qc-and-trimming">Raw reads, FASTQ, QC, and trimming</h3>
+<div class="schedule-links">
+<p><span>Questions</span> <a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week02.md">Week 02</a></p>
+<p><span>Topic</span> <a href="./lectures/02-raw-reads-qc.html">Raw reads, FASTQ, QC, and trimming</a></p>
+<p><span>Assignment</span> <a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/02-fastq-qc">FASTQ QC</a></p>
+<p><span>Project</span> Explore project data, QC, add hashes</p>
+</div>
+</section>
+</div>
+<div class="schedule-card">
+<p><span class="week-label">Week 03</span></p>
+<section id="mapping-assembly-and-quantification" class="level3">
+<h3 class="anchored" data-anchor-id="mapping-assembly-and-quantification">Mapping, assembly, and quantification</h3>
+<div class="schedule-links">
+<p><span>Questions</span> <a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week03.md">Week 03</a></p>
+<p><span>Topic</span> <a href="./lectures/03-mapping-quantification.html">Mapping, assembly, and quantification</a></p>
+<p><span>Assignment</span> <a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/03-mapping-quantification">Mapping or quantification workflow</a></p>
+<p><span>Project</span> ID endpoint in README; start workflow</p>
+</div>
+</section>
+</div>
+<div class="schedule-card">
+<p><span class="week-label">Week 04</span></p>
+<section id="rna-seq-and-differential-expression" class="level3">
+<h3 class="anchored" data-anchor-id="rna-seq-and-differential-expression">RNA-seq and differential expression</h3>
+<div class="schedule-links">
+<p><span>Questions</span> <a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week04.md">Week 04</a></p>
+<p><span>Topic</span> <a href="./lectures/04-rna-seq-dge.html">RNA-seq and differential expression</a></p>
+<p><span>Assignment</span> <a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/04-dge">Differential gene expression</a></p>
+<p><span>Project</span> Complete sliced workflow -&gt; endpoint</p>
+</div>
+</section>
+</div>
+<div class="schedule-card schedule-card-milestone">
+<p><span class="week-label">Week 05</span></p>
+<section id="genome-annotation-and-genomic-ranges" class="level3">
+<h3 class="anchored" data-anchor-id="genome-annotation-and-genomic-ranges">Genome annotation and genomic ranges</h3>
+<div class="schedule-links">
+<p><span>Questions</span> <a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week05.md">Week 05</a></p>
+<p><span>Topic</span> <a href="./lectures/05-annotation-ranges.html">Genome annotation and genomic ranges</a></p>
+<p><span>Assignment</span> <a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/05-annotation-ranges">Annotation and ranges</a></p>
+<p><span>Project</span> <strong>Mid-quarter project update</strong></p>
+</div>
+</section>
+</div>
+<div class="schedule-card">
+<p><span class="week-label">Week 06</span></p>
+<section id="variants-and-population-signals" class="level3">
+<h3 class="anchored" data-anchor-id="variants-and-population-signals">Variants and population signals</h3>
+<div class="schedule-links">
+<p><span>Questions</span> <a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week06.md">Week 06</a></p>
+<p><span>Topic</span> <a href="./lectures/06-variants.html">Variants and population signals</a></p>
+<p><span>Assignment</span> <a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/06-variants">VCF and variant summary</a></p>
+<p><span>Project</span> README w/ results; 4-week plan; issues resolved</p>
+</div>
+</section>
+</div>
+<div class="schedule-card">
+<p><span class="week-label">Week 07</span></p>
+<section id="epigenetics-and-dna-methylation" class="level3">
+<h3 class="anchored" data-anchor-id="epigenetics-and-dna-methylation">Epigenetics and DNA methylation</h3>
+<div class="schedule-links">
+<p><span>Questions</span> <a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week07.md">Week 07</a></p>
+<p><span>Topic</span> <a href="./lectures/07-methylation.html">Epigenetics and DNA methylation</a></p>
+<p><span>Assignment</span> <a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/07-methylation">Methylation, motifs, IGV</a></p>
+<p><span>Project</span> Launch project report; all sections noted</p>
+</div>
+</section>
+</div>
+<div class="schedule-card">
+<p><span class="week-label">Week 08</span></p>
+<section id="edna-and-metabarcoding" class="level3">
+<h3 class="anchored" data-anchor-id="edna-and-metabarcoding">eDNA and metabarcoding</h3>
+<div class="schedule-links">
+<p><span>Questions</span> <a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week08.md">Week 08</a></p>
+<p><span>Topic</span> <a href="./lectures/edna.html">eDNA and metabarcoding</a></p>
+<p><span>Assignment</span> <a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/08-edna-metabarcoding">eDNA metabarcoding</a></p>
+<p><span>Project</span> Mock ultimate figure</p>
+</div>
+</section>
+</div>
+<div class="schedule-card">
+<p><span class="week-label">Week 09</span></p>
+<section id="project-synthesis-and-biological-interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="project-synthesis-and-biological-interpretation">Project synthesis and biological interpretation</h3>
+<div class="schedule-links">
+<p><span>Questions</span> <a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week09.md">Week 09</a></p>
+<p><span>Topic</span> <a href="./lectures/09-synthesis.html">Project synthesis and biological interpretation</a></p>
+<p><span>Assignment</span> <a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/09-synthesis">Project synthesis</a></p>
+<p><span>Project</span> Clear repo organization</p>
+</div>
+</section>
+</div>
+<div class="schedule-card schedule-card-milestone">
+<p><span class="week-label">Week 10</span></p>
+<section id="final-compendium-and-presentations" class="level3">
+<h3 class="anchored" data-anchor-id="final-compendium-and-presentations">Final compendium and presentations</h3>
+<div class="schedule-links">
+<p><span>Questions</span> <a href="https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week10.md">Week 10</a></p>
+<p><span>Topic</span> <a href="./lectures/10-lastmile.html">Final compendium and presentations</a></p>
+<p><span>Assignment</span> <a href="https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/10-compendium">Final release</a></p>
+<p><span>Project</span> <strong>Compendium</strong></p>
+</div>
+</section>
+</div>
 </div>
 <hr>
 <p><img src="https://img.shields.io/github/commit-activity/w/course-fish546-2026/course-fish546-2026" alt="GitHub commit activity"></p>
