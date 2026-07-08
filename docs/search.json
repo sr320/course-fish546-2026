@@ -4,42 +4,42 @@
     "href": "questions/week02.html",
     "title": "Week 02 Questions",
     "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat information is stored in a FASTQ record?\nWhat does a per-base quality plot tell you, and what does it not tell you?\nWhen is trimming useful, and when might it remove useful information?\nWhat QC result would make you pause before continuing a workflow?\nFor your project, name the raw input format, the first QC step, and the first downstream analysis step."
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat information is stored in a FASTQ record?\nWhat does a per-base quality plot tell you, and what does it not tell you?\nWhen is trimming useful, and when might it remove useful information?\nWhat QC result would make you pause before continuing a workflow?\nFor your project, name the raw input format, the first QC step, and the first downstream analysis step."
   },
   {
     "objectID": "questions/week10.html",
     "href": "questions/week10.html",
     "title": "Week 10 Questions",
     "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before the final class meeting.\n\nWhat is the strongest result from your project?\nWhat is the most important limitation or caveat?\nWhat would you do next if you had four more weeks?\nWhat part of your workflow is most reproducible, and what part is least reproducible?\nWhat did you learn about managing computational research that you expect to reuse?"
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before the final class meeting.\n\nWhat is the strongest result from your project?\nWhat is the most important limitation or caveat?\nWhat would you do next if you had four more weeks?\nWhat part of your workflow is most reproducible, and what part is least reproducible?\nWhat did you learn about managing computational research that you expect to reuse?"
   },
   {
     "objectID": "questions/week05.html",
     "href": "questions/week05.html",
     "title": "Week 05 Questions",
     "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat is a genomic range?\nWhy do genome build and coordinate convention matter?\nWhat can annotation add to a list of genes, coordinates, variants, or features?\nWhat does an overlap between two genomic features show, and what does it not show?\nWhat is the clearest current result, diagnostic, or proof-of-work you can show in your mid-quarter project update?"
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat is a genomic range?\nWhy do genome build and coordinate convention matter?\nWhat can annotation add to a list of genes, coordinates, variants, or features?\nWhat does an overlap between two genomic features show, and what does it not show?\nWhat is the clearest current result, diagnostic, or proof-of-work you can show in your mid-quarter project update?"
   },
   {
     "objectID": "questions/week06.html",
     "href": "questions/week06.html",
     "title": "Week 06 Questions",
     "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat does a variant call represent?\nWhat information is stored in a VCF header, and why should you read it?\nHow can read depth, genotype quality, or filtering thresholds affect biological interpretation?\nWhat kinds of environmental or population questions can variant data support?\nWhat is your strongest current project output, and what is the riskiest step remaining?"
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat does a variant call represent?\nWhat information is stored in a VCF header, and why should you read it?\nHow can read depth, genotype quality, or filtering thresholds affect biological interpretation?\nWhat kinds of environmental or population questions can variant data support?\nWhat is your strongest current project output, and what is the riskiest step remaining?"
   },
   {
     "objectID": "questions/week08.html",
     "href": "questions/week08.html",
     "title": "Week 08 Questions",
     "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat is environmental DNA, and why can it be useful for environmental monitoring?\nHow does marker choice affect what organisms can be detected?\nWhat is the difference between an ASV and an OTU?\nWhy are negative controls important in eDNA metabarcoding?\nWhat caveat would you include before making a strong ecological claim from read counts?"
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat is environmental DNA, and why can it be useful for environmental monitoring?\nHow does marker choice affect what organisms can be detected?\nWhat is the difference between an ASV and an OTU?\nWhy are negative controls important in eDNA metabarcoding?\nWhat caveat would you include before making a strong ecological claim from read counts?"
   },
   {
     "objectID": "schedule.html",
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Dates are placeholders for 2026. The course moves from sequence identification to raw reads, analysis workflows, interpretation, and final synthesis.\n\n\n\n\n\n\n\n\n\nTipWeekly rhythm\n\n\n\nQuestions Tuesday. Assignment Friday. Project progress every week. Use Skills when an assignment asks for GitHub, Quarto, Raven, Hyak, containers, or archiving.\n\n\n\n\n\n\nDate\nQuestions\nBioinformatics Topic\nAssignment\nProject Status\n\n\n\n\nbefore class\n\nSetup: your computer, Raven, Hyak\nComplete 3 tutorials → open Setup Check issue\n—\n\n\nweek 00\n\nBioinformatics habits and data provenance\nRepository and data setup\nEstablish repos\n\n\nweek 01\nweek 01\nSequence databases and BLAST\nNCBI BLAST\nOpen project-proposal issue\n\n\nweek 02\nweek 02\nRaw reads, FASTQ, QC, and trimming\nFASTQ QC\nExplore project data, QC, add hashes\n\n\nweek 03\nweek 03\nMapping, assembly, and quantification\nMapping or quantification workflow\nID endpoint in README; start workflow\n\n\nweek 04\nweek 04\nRNA-seq and differential expression\nDifferential gene expression\nComplete sliced workflow → endpoint\n\n\nweek 05\nweek 05\nGenome annotation and genomic ranges\nAnnotation and ranges\nMid-quarter project update\n\n\nweek 06\nweek 06\nVariants and population signals\nVCF and variant summary\nREADME w/ results; 4-week plan; issues resolved\n\n\nweek 07\nweek 07\nEpigenetics and DNA methylation\nMethylation, motifs, IGV\nLaunch project report; all sections noted\n\n\nweek 08\nweek 08\neDNA and metabarcoding\neDNA metabarcoding\nMock ultimate figure\n\n\nweek 09\nweek 09\nProject synthesis and biological interpretation\nProject synthesis\nClear repo organization\n\n\nweek 10\nweek 10\nFinal compendium and presentations\nFinal release\nCompendium"
+    "text": "Dates are placeholders for 2026. The course moves from sequence identification to raw reads, analysis workflows, interpretation, and final synthesis.\n\n\n\n\n\n\n\n\n\nWeekly rhythm\n\n\n\nQuestions Tuesday. Assignment Friday. Project progress every week. Questions and assignments live in the assignments repository — clone it, work in your folder, and open a pull request (how to turn in). Use Skills when an assignment asks for GitHub, Quarto, Raven, Hyak, containers, or archiving.\n\n\n\n\n\n\nDate\nQuestions\nBioinformatics Topic\nAssignment\nProject Status\n\n\n\n\nbefore class\n\nSetup: your computer, Raven, Hyak\nComplete 3 tutorials → open Setup Check issue\n—\n\n\nweek 00\n\nBioinformatics habits and data provenance\nRepository and data setup\nEstablish repos\n\n\nweek 01\nweek 01\nSequence databases and BLAST\nNCBI BLAST\nOpen project-proposal issue\n\n\nweek 02\nweek 02\nRaw reads, FASTQ, QC, and trimming\nFASTQ QC\nExplore project data, QC, add hashes\n\n\nweek 03\nweek 03\nMapping, assembly, and quantification\nMapping or quantification workflow\nID endpoint in README; start workflow\n\n\nweek 04\nweek 04\nRNA-seq and differential expression\nDifferential gene expression\nComplete sliced workflow → endpoint\n\n\nweek 05\nweek 05\nGenome annotation and genomic ranges\nAnnotation and ranges\nMid-quarter project update\n\n\nweek 06\nweek 06\nVariants and population signals\nVCF and variant summary\nREADME w/ results; 4-week plan; issues resolved\n\n\nweek 07\nweek 07\nEpigenetics and DNA methylation\nMethylation, motifs, IGV\nLaunch project report; all sections noted\n\n\nweek 08\nweek 08\neDNA and metabarcoding\neDNA metabarcoding\nMock ultimate figure\n\n\nweek 09\nweek 09\nProject synthesis and biological interpretation\nProject synthesis\nClear repo organization\n\n\nweek 10\nweek 10\nFinal compendium and presentations\nFinal release\nCompendium"
   },
   {
     "objectID": "edna.html",
@@ -560,6 +560,769 @@
     "text": "FISH 546 — Bioinformatics for Environmental Sciences — University of Washington, School of Aquatic and Fishery Sciences. Taught by Steven Roberts (Roberts Lab).\nThis site is built with Quarto and published via GitHub Pages. Source: https://github.com/course-fish546-2026."
   },
   {
+    "objectID": "ASSIGNMENTS-REPO-PLAN.html",
+    "href": "ASSIGNMENTS-REPO-PLAN.html",
+    "title": "Plan: Move Assessments & Assignments to a Pull-Request Repo",
+    "section": "",
+    "text": "Goal. Replace the Issue-Form + external-student-repo + commit-SHA submission system with a single, dedicated assignments repo that students clone/fork, work in, and submit to by pull request. Each PR is automatically pre-checked by GitHub Actions and commented on, then the instructor merges (accept) or requests changes. This collapses five artifacts (issue form, parser, cross-repo checkout, bot token, label bot) into one legible loop: branch → work → PR → auto-check → review → merge.\nThe Quarto website stays as-is and becomes purely instructional (syllabus, schedule, lectures, tutorials, support). All doing and turning-in moves to the new repo.\n\n\n\n\n\n\n\n\n\n\n\nRepo\nRole\nContains\n\n\n\n\ncourse-fish546-2026 (this one)\nTeaching site (Quarto → Pages)\nindex, schedule, setup, support, lectures/, tutorials/, edna hub. Links out to the assignments repo.\n\n\nfish546-2026-assignments (new)\nWork + submission + autograding\nassignment/question prompts, per-student work folders, autograder, PR templates, workflows.\n\n\n\nThe website links to each week’s assignment in the new repo instead of hosting the prompt itself. assignments/*.qmd and questions/*.qmd prompt text moves (or is mirrored) into the new repo as plain Markdown task files.\n\n\n\n\nfish546-2026-assignments/\n├── README.md                     # how to submit (the whole workflow on one page)\n├── assignments/                  # PROMPTS (read-only for students)\n│   ├── 01-blast/README.md\n│   ├── 02-fastq-qc/README.md\n│   └── …\n├── questions/                    # weekly question-set PROMPTS\n│   ├── week01.md … week10.md\n├── submissions/                  # STUDENT WORK — one folder per student\n│   └── &lt;github-username&gt;/\n│       ├── week01/\n│       │   ├── answers.md\n│       │   ├── analysis.html         # student-rendered (CI does NOT render)\n│       │   ├── output/…\n│       │   └── submission.yml        # manifest (reused from current design)\n│       └── week02/…\n├── templates/\n│   └── submission.yml                # manifest template students copy\n├── autograder/                       # the reusable checks (ported from scripts/)\n│   ├── check_submission.py\n│   └── requirements.txt\n├── .github/\n│   ├── PULL_REQUEST_TEMPLATE.md\n│   └── workflows/\n│       ├── autograde.yml             # runs on PR, produces report artifact\n│       └── autograde-comment.yml     # workflow_run: posts comment + status\n└── CODEOWNERS                        # optional: route review\nPer-student folders are the key design choice. Every student writes only under submissions/&lt;their-username&gt;/. This means PRs never conflict with each other, the autograder knows exactly which files to check (the PR diff), and the instructor can see one folder = one student’s whole term.\n\n\n\n\nTwo options; collaborator + branch is recommended over fork because it gives the autograder a full-permission token (comments/labels “just work”, no workflow_run relay, no fork-sync pain).\nRecommended — students are collaborators on the one repo: 1. Clone the assignments repo (once). 2. git switch -c wk02-&lt;username&gt;; do the work under submissions/&lt;username&gt;/week02/; commit + push the branch. 3. Open a PR into main. The PR template auto-fills the checklist. 4. Autograder runs on the PR, posts a comment, sets a check status. 5. Fix flagged items, push again (PR re-checks). Instructor reviews science, merges.\nAlternative — fork model (if you don’t want ~25 collaborators): students fork, PR from fork. Same UX for students, but autograding must use the pull_request (build report) + workflow_run (post comment) two-stage pattern because fork PRs get a read-only token with no secrets.\nEither way: one repo the student pulls from, PRs into, and gets auto-assessed — exactly the requested model.\n\n\n\n\nReuse the logic already in scripts/assess_submission.py: required files exist, manifest type/week match, source + rendered present, outputs non-empty, questions_answered &gt;= 5, project_connection set, and no data/raw/ files committed. Port it to autograder/check_submission.py, but change the input from “checkout external repo at SHA” to “inspect the files the PR changed.”\nWhat the workflow does on each PR: 1. Compute the diff (git diff --name-only origin/main...HEAD). 2. Ownership check: every changed path must start with submissions/&lt;pr-author&gt;/ — reject cross-folder edits (protects other students; also catches accidental edits to prompts). 3. Locate the touched submission.yml, run the structural checks against the files in the working tree. 4. Emit a Markdown report + a pass|warn|fail status. 5. Post the report as a PR comment; set a commit check (green/red) so the PR list shows status at a glance; apply auto:pass|warn|fail labels.\nSecurity posture (unchanged from current design): CI does not execute or render student code. Students commit their own rendered .html; CI only verifies structure/evidence. This keeps untrusted code out of the runner and matches what turn-in.qmd already promises. Human review still owns biological reasoning, interpretation, caveats, and writing.\nThe pass|warn|fail split maps cleanly onto the existing auto:* labels and the “automatic checks vs. instructor review” distinction the course already teaches.\n\n\n\n\nMigrates to the new repo: - Assignment prompts (assignments/*.qmd → assignments/&lt;slug&gt;/README.md). - Question-set prompts (questions/week*.qmd → questions/weekNN.md). - Manifest schema + submission.yml examples (from turn-in.qmd). - The checking logic in scripts/assess_submission.py.\nRetires (folded into the PR loop): - .github/ISSUE_TEMPLATE/50-question-set-submission.yml and 60-assignment-submission.yml → replaced by the PR template. - scripts/parse_submission_issue.py → no issue to parse; the PR is the submission and the diff is the manifest pointer. - .github/workflows/submission-assessment.yml → replaced by autograde.yml. - COURSE_BOT_TOKEN cross-repo checkout → gone (work lives in-repo).\nStays on the website / lightweight in the org: - Help requests + blocker/bug issue forms (30-*, 40-*) — still useful; keep as Issues (they aren’t submissions). - Weekly research-progress: decide (see §7) whether to keep it as an Issue Form or convert to a submissions/&lt;username&gt;/progress/weekNN.md PR. Recommend keeping progress as an Issue — it’s a narrative checkpoint, not a file packet, and the current progress workflow already fits Issues.\n\n\n\n\n\nThe PR list replaces the project board. Open PRs = outstanding submissions; auto:* labels + check marks = triage at a glance; filter by label week-02 or by author.\nOne folder per student under submissions/ = the whole term’s paper trail in one place, browsable and git blame-able.\nMerging is the accept action; “request changes” is the rework loop. No separate label dance to track state — PR state (open/changes-requested/merged) carries it.\n\n\n\n\n\n\nCreate fish546-2026-assignments (in the same org). Decide public vs. private (private = FERPA-safer; public = simplest).\nScaffold the layout in §2; write the one-page README.md submission guide and the PR template.\nPort assess_submission.py → autograder/check_submission.py; switch its input to the PR diff; add the ownership check.\nWrite autograde.yml (+ autograde-comment.yml only if using forks).\nMigrate assignment + question prompts; keep submission.yml schema.\nSeed submissions/&lt;username&gt;/ folders (script from the roster) and add students as collaborators (branch model) or send fork instructions.\nDry run: one fake student, one PR, confirm the comment + check + labels.\nPoint the website at it: update turn-in.qmd, schedule.qmd, and the per-week assignment links to the new repo; add a short “how to submit” note.\nRetire the issue-form submission templates + the cross-repo workflow + the bot token.\n\n\n\n\n\n\nCollaborators-on-one-repo vs. forks. Recommend collaborators+branch for simpler autograding; forks if you’d rather not add ~25 collaborators.\nPublic vs. private repo (student privacy / FERPA vs. simplicity).\nWeekly progress: keep as an Issue (recommended) or fold into PRs.\nWhere prompts live: single source of truth in the new repo (recommended), or authored in the Quarto site and mirrored.\nDeadlines: enforce via the commit timestamp on the PR head, or trust the PR-open time. (The old design froze a SHA; a PR head SHA does the same.) ```"
+  },
+  {
+    "objectID": "ASSIGNMENTS-REPO-PLAN.html#two-repos-clean-split",
+    "href": "ASSIGNMENTS-REPO-PLAN.html#two-repos-clean-split",
+    "title": "Plan: Move Assessments & Assignments to a Pull-Request Repo",
+    "section": "",
+    "text": "Repo\nRole\nContains\n\n\n\n\ncourse-fish546-2026 (this one)\nTeaching site (Quarto → Pages)\nindex, schedule, setup, support, lectures/, tutorials/, edna hub. Links out to the assignments repo.\n\n\nfish546-2026-assignments (new)\nWork + submission + autograding\nassignment/question prompts, per-student work folders, autograder, PR templates, workflows.\n\n\n\nThe website links to each week’s assignment in the new repo instead of hosting the prompt itself. assignments/*.qmd and questions/*.qmd prompt text moves (or is mirrored) into the new repo as plain Markdown task files."
+  },
+  {
+    "objectID": "ASSIGNMENTS-REPO-PLAN.html#new-repo-layout",
+    "href": "ASSIGNMENTS-REPO-PLAN.html#new-repo-layout",
+    "title": "Plan: Move Assessments & Assignments to a Pull-Request Repo",
+    "section": "",
+    "text": "fish546-2026-assignments/\n├── README.md                     # how to submit (the whole workflow on one page)\n├── assignments/                  # PROMPTS (read-only for students)\n│   ├── 01-blast/README.md\n│   ├── 02-fastq-qc/README.md\n│   └── …\n├── questions/                    # weekly question-set PROMPTS\n│   ├── week01.md … week10.md\n├── submissions/                  # STUDENT WORK — one folder per student\n│   └── &lt;github-username&gt;/\n│       ├── week01/\n│       │   ├── answers.md\n│       │   ├── analysis.html         # student-rendered (CI does NOT render)\n│       │   ├── output/…\n│       │   └── submission.yml        # manifest (reused from current design)\n│       └── week02/…\n├── templates/\n│   └── submission.yml                # manifest template students copy\n├── autograder/                       # the reusable checks (ported from scripts/)\n│   ├── check_submission.py\n│   └── requirements.txt\n├── .github/\n│   ├── PULL_REQUEST_TEMPLATE.md\n│   └── workflows/\n│       ├── autograde.yml             # runs on PR, produces report artifact\n│       └── autograde-comment.yml     # workflow_run: posts comment + status\n└── CODEOWNERS                        # optional: route review\nPer-student folders are the key design choice. Every student writes only under submissions/&lt;their-username&gt;/. This means PRs never conflict with each other, the autograder knows exactly which files to check (the PR diff), and the instructor can see one folder = one student’s whole term."
+  },
+  {
+    "objectID": "ASSIGNMENTS-REPO-PLAN.html#student-workflow-branch-model-recommended",
+    "href": "ASSIGNMENTS-REPO-PLAN.html#student-workflow-branch-model-recommended",
+    "title": "Plan: Move Assessments & Assignments to a Pull-Request Repo",
+    "section": "",
+    "text": "Two options; collaborator + branch is recommended over fork because it gives the autograder a full-permission token (comments/labels “just work”, no workflow_run relay, no fork-sync pain).\nRecommended — students are collaborators on the one repo: 1. Clone the assignments repo (once). 2. git switch -c wk02-&lt;username&gt;; do the work under submissions/&lt;username&gt;/week02/; commit + push the branch. 3. Open a PR into main. The PR template auto-fills the checklist. 4. Autograder runs on the PR, posts a comment, sets a check status. 5. Fix flagged items, push again (PR re-checks). Instructor reviews science, merges.\nAlternative — fork model (if you don’t want ~25 collaborators): students fork, PR from fork. Same UX for students, but autograding must use the pull_request (build report) + workflow_run (post comment) two-stage pattern because fork PRs get a read-only token with no secrets.\nEither way: one repo the student pulls from, PRs into, and gets auto-assessed — exactly the requested model."
+  },
+  {
+    "objectID": "ASSIGNMENTS-REPO-PLAN.html#autograding-design",
+    "href": "ASSIGNMENTS-REPO-PLAN.html#autograding-design",
+    "title": "Plan: Move Assessments & Assignments to a Pull-Request Repo",
+    "section": "",
+    "text": "Reuse the logic already in scripts/assess_submission.py: required files exist, manifest type/week match, source + rendered present, outputs non-empty, questions_answered &gt;= 5, project_connection set, and no data/raw/ files committed. Port it to autograder/check_submission.py, but change the input from “checkout external repo at SHA” to “inspect the files the PR changed.”\nWhat the workflow does on each PR: 1. Compute the diff (git diff --name-only origin/main...HEAD). 2. Ownership check: every changed path must start with submissions/&lt;pr-author&gt;/ — reject cross-folder edits (protects other students; also catches accidental edits to prompts). 3. Locate the touched submission.yml, run the structural checks against the files in the working tree. 4. Emit a Markdown report + a pass|warn|fail status. 5. Post the report as a PR comment; set a commit check (green/red) so the PR list shows status at a glance; apply auto:pass|warn|fail labels.\nSecurity posture (unchanged from current design): CI does not execute or render student code. Students commit their own rendered .html; CI only verifies structure/evidence. This keeps untrusted code out of the runner and matches what turn-in.qmd already promises. Human review still owns biological reasoning, interpretation, caveats, and writing.\nThe pass|warn|fail split maps cleanly onto the existing auto:* labels and the “automatic checks vs. instructor review” distinction the course already teaches."
+  },
+  {
+    "objectID": "ASSIGNMENTS-REPO-PLAN.html#what-migrates-what-retires",
+    "href": "ASSIGNMENTS-REPO-PLAN.html#what-migrates-what-retires",
+    "title": "Plan: Move Assessments & Assignments to a Pull-Request Repo",
+    "section": "",
+    "text": "Migrates to the new repo: - Assignment prompts (assignments/*.qmd → assignments/&lt;slug&gt;/README.md). - Question-set prompts (questions/week*.qmd → questions/weekNN.md). - Manifest schema + submission.yml examples (from turn-in.qmd). - The checking logic in scripts/assess_submission.py.\nRetires (folded into the PR loop): - .github/ISSUE_TEMPLATE/50-question-set-submission.yml and 60-assignment-submission.yml → replaced by the PR template. - scripts/parse_submission_issue.py → no issue to parse; the PR is the submission and the diff is the manifest pointer. - .github/workflows/submission-assessment.yml → replaced by autograde.yml. - COURSE_BOT_TOKEN cross-repo checkout → gone (work lives in-repo).\nStays on the website / lightweight in the org: - Help requests + blocker/bug issue forms (30-*, 40-*) — still useful; keep as Issues (they aren’t submissions). - Weekly research-progress: decide (see §7) whether to keep it as an Issue Form or convert to a submissions/&lt;username&gt;/progress/weekNN.md PR. Recommend keeping progress as an Issue — it’s a narrative checkpoint, not a file packet, and the current progress workflow already fits Issues."
+  },
+  {
+    "objectID": "ASSIGNMENTS-REPO-PLAN.html#instructor-experience",
+    "href": "ASSIGNMENTS-REPO-PLAN.html#instructor-experience",
+    "title": "Plan: Move Assessments & Assignments to a Pull-Request Repo",
+    "section": "",
+    "text": "The PR list replaces the project board. Open PRs = outstanding submissions; auto:* labels + check marks = triage at a glance; filter by label week-02 or by author.\nOne folder per student under submissions/ = the whole term’s paper trail in one place, browsable and git blame-able.\nMerging is the accept action; “request changes” is the rework loop. No separate label dance to track state — PR state (open/changes-requested/merged) carries it."
+  },
+  {
+    "objectID": "ASSIGNMENTS-REPO-PLAN.html#build-sequence",
+    "href": "ASSIGNMENTS-REPO-PLAN.html#build-sequence",
+    "title": "Plan: Move Assessments & Assignments to a Pull-Request Repo",
+    "section": "",
+    "text": "Create fish546-2026-assignments (in the same org). Decide public vs. private (private = FERPA-safer; public = simplest).\nScaffold the layout in §2; write the one-page README.md submission guide and the PR template.\nPort assess_submission.py → autograder/check_submission.py; switch its input to the PR diff; add the ownership check.\nWrite autograde.yml (+ autograde-comment.yml only if using forks).\nMigrate assignment + question prompts; keep submission.yml schema.\nSeed submissions/&lt;username&gt;/ folders (script from the roster) and add students as collaborators (branch model) or send fork instructions.\nDry run: one fake student, one PR, confirm the comment + check + labels.\nPoint the website at it: update turn-in.qmd, schedule.qmd, and the per-week assignment links to the new repo; add a short “how to submit” note.\nRetire the issue-form submission templates + the cross-repo workflow + the bot token."
+  },
+  {
+    "objectID": "ASSIGNMENTS-REPO-PLAN.html#open-decisions-need-instructor-input",
+    "href": "ASSIGNMENTS-REPO-PLAN.html#open-decisions-need-instructor-input",
+    "title": "Plan: Move Assessments & Assignments to a Pull-Request Repo",
+    "section": "",
+    "text": "Collaborators-on-one-repo vs. forks. Recommend collaborators+branch for simpler autograding; forks if you’d rather not add ~25 collaborators.\nPublic vs. private repo (student privacy / FERPA vs. simplicity).\nWeekly progress: keep as an Issue (recommended) or fold into PRs.\nWhere prompts live: single source of truth in the new repo (recommended), or authored in the Quarto site and mirrored.\nDeadlines: enforce via the commit timestamp on the PR head, or trust the PR-open time. (The old design froze a SHA; a PR head SHA does the same.) ```"
+  },
+  {
+    "objectID": "assignments/03-mapping-quantification.html",
+    "href": "assignments/03-mapping-quantification.html",
+    "title": "Assignment 03 - Mapping or Quantification Workflow",
+    "section": "",
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric"
+  },
+  {
+    "objectID": "assignments/03-mapping-quantification.html#goal",
+    "href": "assignments/03-mapping-quantification.html#goal",
+    "title": "Assignment 03 - Mapping or Quantification Workflow",
+    "section": "Goal",
+    "text": "Goal\nRun one small mapping, assembly, or quantification workflow slice and document the intermediate product."
+  },
+  {
+    "objectID": "assignments/03-mapping-quantification.html#tasks",
+    "href": "assignments/03-mapping-quantification.html#tasks",
+    "title": "Assignment 03 - Mapping or Quantification Workflow",
+    "section": "Tasks",
+    "text": "Tasks\n\nChoose one small dataset from class or your project.\nIdentify the reference, database, or assembly strategy.\nRun a small workflow step, such as:\n\nMap reads to a reference.\nQuantify reads against transcripts or features.\nAssemble a small subset.\nSummarize mapping or assignment output.\n\nSave the command, log, and output summary.\nExplain what the intermediate product means and what it cannot yet prove."
+  },
+  {
+    "objectID": "assignments/03-mapping-quantification.html#what-to-submit",
+    "href": "assignments/03-mapping-quantification.html#what-to-submit",
+    "title": "Assignment 03 - Mapping or Quantification Workflow",
+    "section": "What to submit",
+    "text": "What to submit\nIn assignment/03-mapping-quantification/, include:\n\nA rendered report.\nCommands or scripts.\nA log or summary file.\nA small output table or diagnostic.\nA paragraph connecting the output to the next workflow step."
+  },
+  {
+    "objectID": "assignments/03-mapping-quantification.html#assessment",
+    "href": "assignments/03-mapping-quantification.html#assessment",
+    "title": "Assignment 03 - Mapping or Quantification Workflow",
+    "section": "Assessment",
+    "text": "Assessment\nThe analysis should show that you understand the transformation from reads to an intermediate data product."
+  },
+  {
+    "objectID": "assignments/09-backup.html",
+    "href": "assignments/09-backup.html",
+    "title": "Assignment 09 - Backup and Repository Audit",
+    "section": "",
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric"
+  },
+  {
+    "objectID": "assignments/09-backup.html#goal",
+    "href": "assignments/09-backup.html#goal",
+    "title": "Assignment 09 - Backup and Repository Audit",
+    "section": "Goal",
+    "text": "Goal\nPrepare your repository for final submission by auditing organization, documentation, reproducibility, and archiving readiness."
+  },
+  {
+    "objectID": "assignments/09-backup.html#tasks",
+    "href": "assignments/09-backup.html#tasks",
+    "title": "Assignment 09 - Backup and Repository Audit",
+    "section": "Tasks",
+    "text": "Tasks\n\nUpdate the top-level README.md.\nConfirm each major directory has a README or is self-explanatory.\nRemove or ignore files that should not be committed.\nConfirm raw data are either excluded or intentionally tracked.\nAdd a workflow section explaining how to reproduce the main result.\nList software, platforms, containers, and major package versions.\nClose or update stale Issues."
+  },
+  {
+    "objectID": "assignments/09-backup.html#what-to-submit",
+    "href": "assignments/09-backup.html#what-to-submit",
+    "title": "Assignment 09 - Backup and Repository Audit",
+    "section": "What to submit",
+    "text": "What to submit\nIn assignment/09-backup/, include an audit report with:\n\nRepository map.\nData availability note.\nReproducibility checklist.\nBackup/archive plan.\nRemaining risks before final submission."
+  },
+  {
+    "objectID": "assignments/09-backup.html#assessment",
+    "href": "assignments/09-backup.html#assessment",
+    "title": "Assignment 09 - Backup and Repository Audit",
+    "section": "Assessment",
+    "text": "Assessment\nThis assignment is about project readiness. A clear audit that identifies remaining problems is better than pretending the project has no problems."
+  },
+  {
+    "objectID": "assignments/06-variants.html",
+    "href": "assignments/06-variants.html",
+    "title": "Assignment 06 - VCF and Variant Summary",
+    "section": "",
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric"
+  },
+  {
+    "objectID": "assignments/06-variants.html#goal",
+    "href": "assignments/06-variants.html#goal",
+    "title": "Assignment 06 - VCF and Variant Summary",
+    "section": "Goal",
+    "text": "Goal\nInspect a small VCF file and summarize variant information in a way that could support a biological question."
+  },
+  {
+    "objectID": "assignments/06-variants.html#tasks",
+    "href": "assignments/06-variants.html#tasks",
+    "title": "Assignment 06 - VCF and Variant Summary",
+    "section": "Tasks",
+    "text": "Tasks\n\nRead the VCF header and identify key fields.\nCount variants before and after one simple filter.\nSummarize variants by scaffold, sample, region, or annotation.\nInspect quality, depth, or genotype fields.\nProduce one table or figure.\nWrite a paragraph explaining how filtering affects interpretation."
+  },
+  {
+    "objectID": "assignments/06-variants.html#what-to-submit",
+    "href": "assignments/06-variants.html#what-to-submit",
+    "title": "Assignment 06 - VCF and Variant Summary",
+    "section": "What to submit",
+    "text": "What to submit\nIn assignment/06-variants/, include:\n\nA rendered report.\nCommands or code.\nVariant summary table.\nOne figure or focused table.\nA caveats paragraph."
+  },
+  {
+    "objectID": "assignments/06-variants.html#assessment",
+    "href": "assignments/06-variants.html#assessment",
+    "title": "Assignment 06 - VCF and Variant Summary",
+    "section": "Assessment",
+    "text": "Assessment\nThe goal is not a full variant-calling pipeline. The goal is to understand what variant calls contain and how filtering choices shape conclusions."
+  },
+  {
+    "objectID": "assignments/03-knit.html",
+    "href": "assignments/03-knit.html",
+    "title": "Assignment 03 - Explain and Knit",
+    "section": "",
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric"
+  },
+  {
+    "objectID": "assignments/03-knit.html#goal",
+    "href": "assignments/03-knit.html#goal",
+    "title": "Assignment 03 - Explain and Knit",
+    "section": "Goal",
+    "text": "Goal\nTurn an analysis into a readable rendered document that combines code, output, figures, and explanation."
+  },
+  {
+    "objectID": "assignments/03-knit.html#tasks",
+    "href": "assignments/03-knit.html#tasks",
+    "title": "Assignment 03 - Explain and Knit",
+    "section": "Tasks",
+    "text": "Tasks\n\nCreate assignment/03-knit/analysis.qmd.\nUse a small dataset from a previous assignment or your project.\nInclude:\n\nA short introduction.\nAt least two code chunks.\nOne saved table or output file.\nOne figure.\nA short interpretation.\n\nRender the document to HTML.\nCommit both the source .qmd and rendered .html."
+  },
+  {
+    "objectID": "assignments/03-knit.html#what-to-submit",
+    "href": "assignments/03-knit.html#what-to-submit",
+    "title": "Assignment 03 - Explain and Knit",
+    "section": "What to submit",
+    "text": "What to submit\nSubmit the assignment/03-knit/ directory with:\n\nanalysis.qmd.\nRendered analysis.html.\nAny small supporting output files."
+  },
+  {
+    "objectID": "assignments/03-knit.html#assessment",
+    "href": "assignments/03-knit.html#assessment",
+    "title": "Assignment 03 - Explain and Knit",
+    "section": "Assessment",
+    "text": "Assessment\nYour document should be readable from top to bottom. The reader should understand what ran, what it produced, and what the result means."
+  },
+  {
+    "objectID": "assignments/10-compendium.html",
+    "href": "assignments/10-compendium.html",
+    "title": "Assignment 10 - Final Research Compendium",
+    "section": "",
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric"
+  },
+  {
+    "objectID": "assignments/10-compendium.html#goal",
+    "href": "assignments/10-compendium.html#goal",
+    "title": "Assignment 10 - Final Research Compendium",
+    "section": "Goal",
+    "text": "Goal\nSubmit a final project compendium that documents your research question, data, workflow, results, caveats, and reproducible artifacts."
+  },
+  {
+    "objectID": "assignments/10-compendium.html#required-components",
+    "href": "assignments/10-compendium.html#required-components",
+    "title": "Assignment 10 - Final Research Compendium",
+    "section": "Required components",
+    "text": "Required components\nYour repository should include:\n\nTop-level README.md with project overview and reproduction notes.\nFinal rendered report in docs/ or assignment/10-compendium/.\nSource .qmd or scripts used to generate final results.\nKey figures in output/.\nKey small processed tables where appropriate.\nData availability statement.\nSoftware/platform statement.\nLink to your project issue and relevant weekly-progress issues."
+  },
+  {
+    "objectID": "assignments/10-compendium.html#final-report-structure",
+    "href": "assignments/10-compendium.html#final-report-structure",
+    "title": "Assignment 10 - Final Research Compendium",
+    "section": "Final report structure",
+    "text": "Final report structure\nUse this structure unless your project needs something different:\n\nResearch question.\nBackground and data.\nMethods/workflow.\nResults.\nCaveats and limitations.\nNext steps.\nReproducibility notes."
+  },
+  {
+    "objectID": "assignments/10-compendium.html#what-to-submit",
+    "href": "assignments/10-compendium.html#what-to-submit",
+    "title": "Assignment 10 - Final Research Compendium",
+    "section": "What to submit",
+    "text": "What to submit\nSubmit the final compendium through your repository and link it from your final weekly-progress issue."
+  },
+  {
+    "objectID": "assignments/10-compendium.html#assessment",
+    "href": "assignments/10-compendium.html#assessment",
+    "title": "Assignment 10 - Final Research Compendium",
+    "section": "Assessment",
+    "text": "Assessment\nThe final project is assessed on clarity, reproducibility, technical progress, interpretation, and honest treatment of limitations. See the Project and Compendium Rubric for detailed criteria."
+  },
+  {
+    "objectID": "assignments/00-bash.html",
+    "href": "assignments/00-bash.html",
+    "title": "Assignment 00 - Bash and Repository Setup",
+    "section": "",
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric"
+  },
+  {
+    "objectID": "assignments/00-bash.html#goal",
+    "href": "assignments/00-bash.html#goal",
+    "title": "Assignment 00 - Bash and Repository Setup",
+    "section": "Goal",
+    "text": "Goal\nBuild the basic repository structure you will use all quarter and practice the shell/Git loop."
+  },
+  {
+    "objectID": "assignments/00-bash.html#tasks",
+    "href": "assignments/00-bash.html#tasks",
+    "title": "Assignment 00 - Bash and Repository Setup",
+    "section": "Tasks",
+    "text": "Tasks\n\nCreate the standard directory layout in your course repository:\n\nmkdir -p code data/raw data/processed output docs notebooks assignment homework\ntouch code/README.md data/README.md output/README.md docs/README.md\n\nEdit each README so it explains what belongs in that directory.\nAdd data/raw/ to .gitignore.\nUse the shell to create a file named output/week00-file-list.txt containing a recursive listing of your repository.\nCommit and push the changes."
+  },
+  {
+    "objectID": "assignments/00-bash.html#what-to-submit",
+    "href": "assignments/00-bash.html#what-to-submit",
+    "title": "Assignment 00 - Bash and Repository Setup",
+    "section": "What to submit",
+    "text": "What to submit\nIn assignment/00-bash/, include:\n\nA short README.md describing what you did.\nweek00-file-list.txt.\nA link to the commit that created your project structure."
+  },
+  {
+    "objectID": "assignments/00-bash.html#assessment",
+    "href": "assignments/00-bash.html#assessment",
+    "title": "Assignment 00 - Bash and Repository Setup",
+    "section": "Assessment",
+    "text": "Assessment\nCredit is based on correct structure, clear README files, successful commit/push, and evidence that you used the shell intentionally."
+  },
+  {
+    "objectID": "assignments/02-fastq-qc.html",
+    "href": "assignments/02-fastq-qc.html",
+    "title": "Assignment 02 - FASTQ Quality Control",
+    "section": "",
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric"
+  },
+  {
+    "objectID": "assignments/02-fastq-qc.html#goal",
+    "href": "assignments/02-fastq-qc.html#goal",
+    "title": "Assignment 02 - FASTQ Quality Control",
+    "section": "Goal",
+    "text": "Goal\nInspect raw sequencing reads and decide whether the data are ready for downstream analysis."
+  },
+  {
+    "objectID": "assignments/02-fastq-qc.html#tasks",
+    "href": "assignments/02-fastq-qc.html#tasks",
+    "title": "Assignment 02 - FASTQ Quality Control",
+    "section": "Tasks",
+    "text": "Tasks\n\nUse a small provided FASTQ dataset or a project-relevant read file.\nRecord the file source, date, sample names, and checksums.\nCount reads for each sample.\nGenerate or inspect FastQC/MultiQC-style quality summaries.\nIdentify adapters, primers, low-quality tails, or other concerns.\nIf trimming is appropriate, run a small trimming step and compare before/after summaries."
+  },
+  {
+    "objectID": "assignments/02-fastq-qc.html#what-to-submit",
+    "href": "assignments/02-fastq-qc.html#what-to-submit",
+    "title": "Assignment 02 - FASTQ Quality Control",
+    "section": "What to submit",
+    "text": "What to submit\nIn assignment/02-fastq-qc/, include:\n\nA rendered report.\nCommands or code used for read counts and QC.\nA small table summarizing samples and read counts.\nBefore/after QC evidence if trimming was performed.\nA short decision paragraph: proceed, trim more, exclude, or investigate."
+  },
+  {
+    "objectID": "assignments/02-fastq-qc.html#assessment",
+    "href": "assignments/02-fastq-qc.html#assessment",
+    "title": "Assignment 02 - FASTQ Quality Control",
+    "section": "Assessment",
+    "text": "Assessment\nCredit is based on data provenance, appropriate QC interpretation, and clear reasoning about next steps."
+  },
+  {
+    "objectID": "assignments/05-annotation-ranges.html",
+    "href": "assignments/05-annotation-ranges.html",
+    "title": "Assignment 05 - Annotation and Genomic Ranges",
+    "section": "",
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric"
+  },
+  {
+    "objectID": "assignments/05-annotation-ranges.html#goal",
+    "href": "assignments/05-annotation-ranges.html#goal",
+    "title": "Assignment 05 - Annotation and Genomic Ranges",
+    "section": "Goal",
+    "text": "Goal\nConnect bioinformatics results to genomic context using annotation and interval logic."
+  },
+  {
+    "objectID": "assignments/05-annotation-ranges.html#tasks",
+    "href": "assignments/05-annotation-ranges.html#tasks",
+    "title": "Assignment 05 - Annotation and Genomic Ranges",
+    "section": "Tasks",
+    "text": "Tasks\n\nUse a provided feature table or one from your project.\nIdentify the genome build, coordinate system, and annotation source.\nPerform one annotation or overlap operation.\nSave a small annotated output table.\nSummarize the result with a table or figure.\nPrepare a short mid-quarter project update with one current result or diagnostic."
+  },
+  {
+    "objectID": "assignments/05-annotation-ranges.html#what-to-submit",
+    "href": "assignments/05-annotation-ranges.html#what-to-submit",
+    "title": "Assignment 05 - Annotation and Genomic Ranges",
+    "section": "What to submit",
+    "text": "What to submit\nIn assignment/05-annotation-ranges/, include:\n\nCommands or code.\nInput-file descriptions.\nAnnotated output table.\nSummary figure or table.\nLink to your mid-quarter project update."
+  },
+  {
+    "objectID": "assignments/05-annotation-ranges.html#assessment",
+    "href": "assignments/05-annotation-ranges.html#assessment",
+    "title": "Assignment 05 - Annotation and Genomic Ranges",
+    "section": "Assessment",
+    "text": "Assessment\nCredit depends on coordinate hygiene, correct use of annotation, and restraint in interpretation."
+  },
+  {
+    "objectID": "assignments/edna-metabarcoding.html",
+    "href": "assignments/edna-metabarcoding.html",
+    "title": "Assignment · eDNA Metabarcoding",
+    "section": "",
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric"
+  },
+  {
+    "objectID": "assignments/edna-metabarcoding.html#goal",
+    "href": "assignments/edna-metabarcoding.html#goal",
+    "title": "Assignment · eDNA Metabarcoding",
+    "section": "Goal",
+    "text": "Goal\nTake a set of amplicon (metabarcoding) reads from raw FASTQ to an analysis-ready sample × taxon table, and produce one figure summarizing the community. You’ll run the compute-heavy steps on Klone (the Hyak tutorial prepared you for this) and do exploration/plots on Raven or your laptop."
+  },
+  {
+    "objectID": "assignments/edna-metabarcoding.html#setup",
+    "href": "assignments/edna-metabarcoding.html#setup",
+    "title": "Assignment · eDNA Metabarcoding",
+    "section": "Setup",
+    "text": "Setup\n\nWork in your course repo using the standard code / data / output layout.\nA demonstration dataset (a small 12S or COI amplicon set) will be provided; note its marker and the reference database to assign against.\nKeep raw reads in data/raw/ and do not commit them — add them to .gitignore and record checksums (md5sum)."
+  },
+  {
+    "objectID": "assignments/edna-metabarcoding.html#steps",
+    "href": "assignments/edna-metabarcoding.html#steps",
+    "title": "Assignment · eDNA Metabarcoding",
+    "section": "Steps",
+    "text": "Steps\n\nInspect & QC. Count reads, look at quality profiles, and trim primers/adapters (e.g. cutadapt). Record the exact primer sequences.\nDenoise to ASVs with DADA2 (filter/trim → learn errors → denoise → merge pairs → remove chimeras). Report how many reads survive each step — this table is part of your submission.\nAssign taxonomy against the reference database for your marker. Note the database name and version.\nBuild the table. Produce a sample × taxon abundance matrix (output/asv-table.csv).\nOne figure. A community summary — a stacked-bar composition plot or a richness-by-sample plot — saved to output/.\nControls. Report what your negative/blank controls contained. What does that imply about false positives?"
+  },
+  {
+    "objectID": "assignments/edna-metabarcoding.html#what-to-submit",
+    "href": "assignments/edna-metabarcoding.html#what-to-submit",
+    "title": "Assignment · eDNA Metabarcoding",
+    "section": "What to submit",
+    "text": "What to submit\nIn your repo’s assignment/06-edna/ directory:\n\nA rendered Quarto/R document (.qmd → .html) walking through steps 1–6 with code and commentary.\nThe SLURM script(s) you used on Klone, plus the tail of the relevant slurm-*.out.\noutput/asv-table.csv and your figure.\nA short caveats paragraph: given your controls and marker, how confident are you in the detections?"
+  },
+  {
+    "objectID": "assignments/edna-metabarcoding.html#assessment",
+    "href": "assignments/edna-metabarcoding.html#assessment",
+    "title": "Assignment · eDNA Metabarcoding",
+    "section": "Assessment",
+    "text": "Assessment\nYou’re assessed on reproducibility as much as results: can someone clone your repo and follow exactly what you did — primers, parameters, database version, which steps ran on Klone? See the handbook’s Data Management and Computing Best Practices for the standard."
+  },
+  {
+    "objectID": "assignments/edna-metabarcoding.html#hints",
+    "href": "assignments/edna-metabarcoding.html#hints",
+    "title": "Assignment · eDNA Metabarcoding",
+    "section": "Hints",
+    "text": "Hints\n\nDenoising is the slow step — request modest --mem/--time first and scale up only if a job is killed.\nRun everything inside the lab Apptainer container; don’t install tools on the login node.\nStuck? Open a Help Request issue (platform = Hyak) with your command, the error, and your job ID."
+  },
+  {
+    "objectID": "turn-in.html",
+    "href": "turn-in.html",
+    "title": "Turn In Work",
+    "section": "",
+    "text": "You turn in question sets and assignments in one place: the assignments repository. You are a collaborator on it, so you clone it, do your work in your own folder, push a branch, and open a pull request. A bot pre-checks the pull request and comments with a report; the instructor reviews the science and merges.\nEveryone uses the same loop:\n\nClone the assignments repo (once) and make your folder: submissions/&lt;your-username&gt;/.\nStart a branch and do the week’s work under submissions/&lt;your-username&gt;/weekNN/.\nCommit your files, including a rendered report and a submission.yml manifest.\nPush the branch and open a pull request into main.\nRead the automatic pre-check comment and fix anything it flags.\n\nThe pull request is the receipt. The branch freezes the submitted version. The manifest tells the checker what evidence belongs to the submission."
+  },
+  {
+    "objectID": "turn-in.html#the-idea",
+    "href": "turn-in.html#the-idea",
+    "title": "Turn In Work",
+    "section": "",
+    "text": "You turn in question sets and assignments in one place: the assignments repository. You are a collaborator on it, so you clone it, do your work in your own folder, push a branch, and open a pull request. A bot pre-checks the pull request and comments with a report; the instructor reviews the science and merges.\nEveryone uses the same loop:\n\nClone the assignments repo (once) and make your folder: submissions/&lt;your-username&gt;/.\nStart a branch and do the week’s work under submissions/&lt;your-username&gt;/weekNN/.\nCommit your files, including a rendered report and a submission.yml manifest.\nPush the branch and open a pull request into main.\nRead the automatic pre-check comment and fix anything it flags.\n\nThe pull request is the receipt. The branch freezes the submitted version. The manifest tells the checker what evidence belongs to the submission."
+  },
+  {
+    "objectID": "turn-in.html#where-your-work-lives",
+    "href": "turn-in.html#where-your-work-lives",
+    "title": "Turn In Work",
+    "section": "Where your work lives",
+    "text": "Where your work lives\nAll of your work for the whole term lives under one folder, one subfolder per week:\nsubmissions/\n  &lt;your-username&gt;/\n    week02/\n      analysis.qmd            # or answers.md for a question set\n      analysis.html           # you render this yourself\n      output/read-counts.csv\n      output/qc-summary.png\n      submission.yml          # the manifest\nOnly edit files inside submissions/&lt;your-username&gt;/. The bot fails any pull request that touches another student’s folder or the assignment prompts."
+  },
+  {
+    "objectID": "turn-in.html#what-gets-checked-automatically",
+    "href": "turn-in.html#what-gets-checked-automatically",
+    "title": "Turn In Work",
+    "section": "What gets checked automatically",
+    "text": "What gets checked automatically\nThe automatic check is not meant to replace instructor judgment. It checks the things software is good at checking:\n\nYour pull request only touches your own folder.\nA submission.yml manifest is present in the week folder you changed.\nThe manifest identifies the week, type, title, and submitted files.\nThe source file and rendered report exist and are non-empty.\nOutput tables and figures listed in the manifest exist and are non-empty.\nRaw data are not committed under any data/raw/ directory.\n\nThe instructor still evaluates interpretation, biological reasoning, caveats, and scientific quality. The bot does not run or render your code — you commit your own rendered .html."
+  },
+  {
+    "objectID": "turn-in.html#the-manifest",
+    "href": "turn-in.html#the-manifest",
+    "title": "Turn In Work",
+    "section": "The manifest",
+    "text": "The manifest\nCopy templates/submission.yml into your week folder and fill it in. All paths are relative to the folder that holds submission.yml (your week folder).\nQuestion set example:\ntype: question-set\nweek: \"02\"\ntitle: \"Raw reads, FASTQ, QC, and trimming\"\nsource: answers.md\nrendered: answers.html\nquestions_answered: 5\nproject_connection: true\nAssignment example:\ntype: assignment\nweek: \"02\"\ntitle: \"FASTQ Quality Control\"\nsource: analysis.qmd\nrendered: analysis.html\noutputs:\n  - output/read-counts.csv\n  - output/qc-summary.png\nuses_raw_data: true\nraw_data_committed: false\nproject_connection: true"
+  },
+  {
+    "objectID": "turn-in.html#the-automatic-report",
+    "href": "turn-in.html#the-automatic-report",
+    "title": "Turn In Work",
+    "section": "The automatic report",
+    "text": "The automatic report\nAfter you open or update the pull request, GitHub Actions posts a report as a comment (updated in place each time you push) like:\nAutomatic pre-check: warn\n\nPassed\n- All changed files are under your folder `submissions/&lt;you&gt;/`.\n- Manifest type is `assignment`.\n- Rendered file found.\n- Output file found.\n\nWarnings\n- Manifest does not confirm a project connection.\n\nNeeds human review\n- Biological interpretation and caveats.\nThe pull request also gets a label: auto:pass, auto:warn, or auto:fail, and the pull-request check turns red on fail. If it fails, fix the flagged items, commit, and push to the same branch — the pre-check runs again automatically."
+  },
+  {
+    "objectID": "turn-in.html#why-this-is-better-than-uploads-or-issues",
+    "href": "turn-in.html#why-this-is-better-than-uploads-or-issues",
+    "title": "Turn In Work",
+    "section": "Why this is better than uploads or issues",
+    "text": "Why this is better than uploads or issues\nThis system assesses the same habits the course is trying to teach:\n\nVersion-controlled work.\nReproducible project structure.\nClear evidence trails.\nPrecise submission versions (the branch and its commits).\nFast feedback before grading.\nHuman review reserved for scientific judgment.\n\nIt also lets the instructor see cohort-level progress: open pull requests are outstanding submissions, and auto:* labels triage them at a glance."
+  },
+  {
+    "objectID": "turn-in.html#weekly-research-progress",
+    "href": "turn-in.html#weekly-research-progress",
+    "title": "Turn In Work",
+    "section": "Weekly research progress",
+    "text": "Weekly research progress\nWeekly project progress is not a pull request. It is a structured project-management checkpoint, submitted through a Weekly Research Progress issue on the course repository.\nEach progress issue asks for:\n\nWeek number.\nCourse repository URL.\nProject issue URL.\nCurrent commit SHA or GitHub compare URL.\nWhat you accomplished this week.\nEvidence links to commits, outputs, reports, figures, Issues, or PRs.\nWhether last week’s goals were met.\nGoals for next week.\nSelf-rating: On track, Some risk, or Blocked.\nBlockers or help needs.\n\nThe automatic progress check comments on the issue and applies labels:\n\n\n\n\n\n\n\nLabel\nMeaning\n\n\n\n\nprogress:on-track\nThe weekly record is complete and the student reports forward motion.\n\n\nprogress:watch\nThe record is incomplete, thin, risky, or needs instructor attention.\n\n\nprogress:blocked\nThe student reports being blocked and should have a linked Help Request or Blocker/Bug issue.\n\n\n\nThe progress checker looks for completeness and evidence, not whether the science is “good enough.” The instructor uses the report to review trajectory, intervene early, and assess weekly project-progress credit."
+  },
+  {
+    "objectID": "assignments/04-DGE.html",
+    "href": "assignments/04-DGE.html",
+    "title": "Assignment 04 - Differential Gene Expression",
+    "section": "",
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric"
+  },
+  {
+    "objectID": "assignments/04-DGE.html#goal",
+    "href": "assignments/04-DGE.html#goal",
+    "title": "Assignment 04 - Differential Gene Expression",
+    "section": "Goal",
+    "text": "Goal\nMove from a count matrix and sample metadata table to a differential-expression result and a cautious biological interpretation."
+  },
+  {
+    "objectID": "assignments/04-DGE.html#tasks",
+    "href": "assignments/04-DGE.html#tasks",
+    "title": "Assignment 04 - Differential Gene Expression",
+    "section": "Tasks",
+    "text": "Tasks\n\nRecord data provenance and sample metadata.\nLoad the count matrix and metadata.\nCheck sample structure with a diagnostic plot.\nRun a simple differential-expression workflow using the provided scaffold.\nSave:\n\nA results table.\nA diagnostic plot.\nOne focused figure or table for interpretation.\n\nWrite a caveats paragraph about design, sample size, and biological interpretation."
+  },
+  {
+    "objectID": "assignments/04-DGE.html#what-to-submit",
+    "href": "assignments/04-DGE.html#what-to-submit",
+    "title": "Assignment 04 - Differential Gene Expression",
+    "section": "What to submit",
+    "text": "What to submit\nIn assignment/04-DGE/, include:\n\nA rendered report.\nSource .qmd or script.\noutput/dge-results.csv or equivalent.\nAt least one figure.\nA short interpretation linked to annotation or biological context."
+  },
+  {
+    "objectID": "assignments/04-DGE.html#assessment",
+    "href": "assignments/04-DGE.html#assessment",
+    "title": "Assignment 04 - Differential Gene Expression",
+    "section": "Assessment",
+    "text": "Assessment\nA small, reproducible, well-interpreted analysis is better than an elaborate analysis that cannot be rerun."
+  },
+  {
+    "objectID": "assignments/01-blast.html",
+    "href": "assignments/01-blast.html",
+    "title": "Assignment 01 - NCBI BLAST",
+    "section": "",
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric"
+  },
+  {
+    "objectID": "assignments/01-blast.html#goal",
+    "href": "assignments/01-blast.html#goal",
+    "title": "Assignment 01 - NCBI BLAST",
+    "section": "Goal",
+    "text": "Goal\nUse BLAST to identify or interpret an unknown sequence, then document the result in a reproducible way."
+  },
+  {
+    "objectID": "assignments/01-blast.html#provided-query",
+    "href": "assignments/01-blast.html#provided-query",
+    "title": "Assignment 01 - NCBI BLAST",
+    "section": "Provided query",
+    "text": "Provided query\nIf you do not yet have a project sequence, use the practice fish COI query in provided-query.fasta. It is included so everyone can complete the workflow even before project data are settled.\n&gt;week01_unknown_fish_coi_practice\nCCTATACCTAATCTTCGGTGCATGAGCCGGAATAGTAGGGACAGCCCTAAGCCTCCTCATTCGAGCAGAATTAGGCCAACCAGGGGCCCTTCTAGGTGACGACCAAATTTATAATGTAATCGTAACAGCACATGCCTTCGTAATAATTTTCTTTATAGTAATACCAATTATAATTGGAGGATTCGGAAATTGACTTGTACCTCTAATACTAGGGGCCCCTGACATAGCATTCCCCCGAATAAATAATATAAGCTTCTGACTTCTCCCCCCATCCTTCCTTCTCCTCCTAGCATCCTCTGGTGTAGAAGCAGGGGCCGGAACAGGATGAACAGTATACCCTCCTCTAGCCGGAAACCTAGCCCACGCAGGAGCATCCGTAGACCTAACTATCTTCTCCCTACACCTAGCAGGTGTCTCCTCAATCCTAGGGGCCATTAATTTTATTACAACAATTATCAATATGAAACCCCCAGCAATATCACAGTACC"
+  },
+  {
+    "objectID": "assignments/01-blast.html#tasks",
+    "href": "assignments/01-blast.html#tasks",
+    "title": "Assignment 01 - NCBI BLAST",
+    "section": "Tasks",
+    "text": "Tasks\n\nChoose a provided sequence or a sequence relevant to your project.\nSave the query as assignment/01-blast/query.fasta.\nRun a BLAST search using NCBI web BLAST or command-line BLAST if available.\nSave the top-hit table or downloaded results in assignment/01-blast/output/.\nWrite a short interpretation that includes:\n\nDatabase searched.\nTop hit.\nPercent identity.\nQuery coverage.\nE-value.\nWhether the result makes biological sense."
+  },
+  {
+    "objectID": "assignments/01-blast.html#interpretation-checklist",
+    "href": "assignments/01-blast.html#interpretation-checklist",
+    "title": "Assignment 01 - NCBI BLAST",
+    "section": "Interpretation checklist",
+    "text": "Interpretation checklist\nYour report should make the search auditable. Include:\n\nQuery file and sequence length.\nBLAST program used, such as blastn, blastx, or NCBI web BLAST.\nDatabase searched and date searched.\nTop hit accession, description, and organism.\nPercent identity, query coverage, alignment length, and e-value.\nWhether the next few hits support the same interpretation.\nOne caveat, such as short marker length, close congeners, incomplete references, contamination, or database bias."
+  },
+  {
+    "objectID": "assignments/01-blast.html#database-choice",
+    "href": "assignments/01-blast.html#database-choice",
+    "title": "Assignment 01 - NCBI BLAST",
+    "section": "Database choice",
+    "text": "Database choice\nChoose a database that matches your biological question:\n\nFor broad DNA identification, start with NCBI nt.\nFor COI barcodes, compare what you learn from NCBI with what you would expect from a barcode-focused database such as BOLD.\nFor transcripts or contigs that may encode proteins, consider whether blastx against a protein database would be more informative than nucleotide BLAST.\nFor eDNA-style markers, note whether the marker is long and variable enough for species-level claims."
+  },
+  {
+    "objectID": "assignments/01-blast.html#what-to-submit",
+    "href": "assignments/01-blast.html#what-to-submit",
+    "title": "Assignment 01 - NCBI BLAST",
+    "section": "What to submit",
+    "text": "What to submit\nSubmit a rendered Quarto or Markdown report in assignment/01-blast/ with the query, result summary, and interpretation."
+  },
+  {
+    "objectID": "assignments/01-blast.html#project-connection",
+    "href": "assignments/01-blast.html#project-connection",
+    "title": "Assignment 01 - NCBI BLAST",
+    "section": "Project connection",
+    "text": "Project connection\nOpen your project-proposal issue this week. The proposal is provisional. Include a draft endpoint and identify whether sequence similarity, annotation, or database choice will matter for your project.\nPossible endpoints include:\n\nRNA-seq: a differential-expression result linked to treatment, environment, tissue, or life stage.\neDNA / metabarcoding: a taxon-by-site or taxon-by-time summary with contamination caveats.\nDNA methylation: a methylation difference connected to genome annotation or regulatory context.\nVariants: a filtered variant summary, PCA, or population comparison.\nAnnotation / discovery: a set of candidate genes, contigs, or markers supported by sequence similarity evidence."
+  },
+  {
+    "objectID": "assignments/08-bedtools.html",
+    "href": "assignments/08-bedtools.html",
+    "title": "Assignment 08 - BEDtools and Genomic Ranges",
+    "section": "",
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric"
+  },
+  {
+    "objectID": "assignments/08-bedtools.html#goal",
+    "href": "assignments/08-bedtools.html#goal",
+    "title": "Assignment 08 - BEDtools and Genomic Ranges",
+    "section": "Goal",
+    "text": "Goal\nUse genomic interval logic to ask whether one set of features overlaps another."
+  },
+  {
+    "objectID": "assignments/08-bedtools.html#tasks",
+    "href": "assignments/08-bedtools.html#tasks",
+    "title": "Assignment 08 - BEDtools and Genomic Ranges",
+    "section": "Tasks",
+    "text": "Tasks\n\nUse provided BED/GFF/VCF-style files or a project-relevant interval file.\nConfirm genome build and chromosome/scaffold naming.\nUse BEDtools or an equivalent R/Bioconductor workflow to perform at least one overlap operation.\nSave the overlap result as a small table.\nSummarize the result with a count table or figure.\nDraft your project’s ultimate figure, even if some values are placeholders."
+  },
+  {
+    "objectID": "assignments/08-bedtools.html#what-to-submit",
+    "href": "assignments/08-bedtools.html#what-to-submit",
+    "title": "Assignment 08 - BEDtools and Genomic Ranges",
+    "section": "What to submit",
+    "text": "What to submit\nIn assignment/08-bedtools/, include:\n\nCommands or code used for the interval operation.\nInput-file descriptions.\nOutput overlap table.\nSummary figure or table.\nMock ultimate figure for your project."
+  },
+  {
+    "objectID": "assignments/08-bedtools.html#assessment",
+    "href": "assignments/08-bedtools.html#assessment",
+    "title": "Assignment 08 - BEDtools and Genomic Ranges",
+    "section": "Assessment",
+    "text": "Assessment\nThe analysis should show that your files are compatible and that the overlap result is interpreted carefully."
+  },
+  {
+    "objectID": "assignments/05-slidedeck.html",
+    "href": "assignments/05-slidedeck.html",
+    "title": "Assignment 05 - Project Slidedeck",
+    "section": "",
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric"
+  },
+  {
+    "objectID": "assignments/05-slidedeck.html#goal",
+    "href": "assignments/05-slidedeck.html#goal",
+    "title": "Assignment 05 - Project Slidedeck",
+    "section": "Goal",
+    "text": "Goal\nCreate and present a short Quarto slide deck describing your project question, data, workflow, current progress, and four-week plan."
+  },
+  {
+    "objectID": "assignments/05-slidedeck.html#required-slides",
+    "href": "assignments/05-slidedeck.html#required-slides",
+    "title": "Assignment 05 - Project Slidedeck",
+    "section": "Required slides",
+    "text": "Required slides\nYour deck should include:\n\nTitle, name, and research question.\nData source and biological context.\nWorkflow diagram or bullet workflow.\nCurrent result, diagnostic, or proof-of-work.\nMain risk or blocker.\nFour-week plan leading to the final compendium."
+  },
+  {
+    "objectID": "assignments/05-slidedeck.html#what-to-submit",
+    "href": "assignments/05-slidedeck.html#what-to-submit",
+    "title": "Assignment 05 - Project Slidedeck",
+    "section": "What to submit",
+    "text": "What to submit\nIn assignment/05-slidedeck/, include:\n\nThe Quarto source file.\nThe rendered slides.\nAny figures used in the deck.\nA short note in your weekly-progress issue linking to the deck."
+  },
+  {
+    "objectID": "assignments/05-slidedeck.html#assessment",
+    "href": "assignments/05-slidedeck.html#assessment",
+    "title": "Assignment 05 - Project Slidedeck",
+    "section": "Assessment",
+    "text": "Assessment\nThe presentation should be clear, honest, and specific. You are not expected to be finished. You are expected to know what “finished” would look like."
+  },
+  {
+    "objectID": "assignments/07-CG.html",
+    "href": "assignments/07-CG.html",
+    "title": "Assignment 07 - Methylation, Motifs, and IGV",
+    "section": "",
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric"
+  },
+  {
+    "objectID": "assignments/07-CG.html#goal",
+    "href": "assignments/07-CG.html#goal",
+    "title": "Assignment 07 - Methylation, Motifs, and IGV",
+    "section": "Goal",
+    "text": "Goal\nInterpret a small methylation or genomic-feature dataset in context using coordinates, annotation, and visual inspection."
+  },
+  {
+    "objectID": "assignments/07-CG.html#tasks",
+    "href": "assignments/07-CG.html#tasks",
+    "title": "Assignment 07 - Methylation, Motifs, and IGV",
+    "section": "Tasks",
+    "text": "Tasks\n\nStart with a provided table of loci, regions, or features.\nIdentify the genome build and coordinate convention.\nAnnotate or summarize nearby genomic features.\nInspect at least one region in IGV or an equivalent genome-browser view.\nProduce one table and one figure or screenshot-style evidence panel.\nWrite a paragraph explaining what the result does and does not show."
+  },
+  {
+    "objectID": "assignments/07-CG.html#what-to-submit",
+    "href": "assignments/07-CG.html#what-to-submit",
+    "title": "Assignment 07 - Methylation, Motifs, and IGV",
+    "section": "What to submit",
+    "text": "What to submit\nIn assignment/07-CG/, include:\n\nA rendered report.\nAny script used to process the data.\nA small annotated output table.\nOne figure or inspection image.\nA caveats paragraph."
+  },
+  {
+    "objectID": "assignments/07-CG.html#assessment",
+    "href": "assignments/07-CG.html#assessment",
+    "title": "Assignment 07 - Methylation, Motifs, and IGV",
+    "section": "Assessment",
+    "text": "Assessment\nCredit depends on coordinate hygiene, clear interpretation, and appropriate caution. Do not overstate what a single locus or region proves."
+  },
+  {
+    "objectID": "assignments/02-DGE.html",
+    "href": "assignments/02-DGE.html",
+    "title": "Assignment 02 - Differential Gene Expression",
+    "section": "",
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric"
+  },
+  {
+    "objectID": "assignments/02-DGE.html#goal",
+    "href": "assignments/02-DGE.html#goal",
+    "title": "Assignment 02 - Differential Gene Expression",
+    "section": "Goal",
+    "text": "Goal\nMove from a small count matrix and sample metadata table to a differential-expression result and diagnostic figure."
+  },
+  {
+    "objectID": "assignments/02-DGE.html#setup",
+    "href": "assignments/02-DGE.html#setup",
+    "title": "Assignment 02 - Differential Gene Expression",
+    "section": "Setup",
+    "text": "Setup\nA demonstration RNA-seq count matrix and metadata file will be provided. Work in your course repository and keep raw files in data/raw/ or link to their external location."
+  },
+  {
+    "objectID": "assignments/02-DGE.html#tasks",
+    "href": "assignments/02-DGE.html#tasks",
+    "title": "Assignment 02 - Differential Gene Expression",
+    "section": "Tasks",
+    "text": "Tasks\n\nRecord data provenance:\n\nSource.\nDate downloaded or received.\nChecksums if files are local.\n\nInspect the sample metadata and identify the comparison.\nLoad the count matrix and metadata in R.\nRun a simple differential-expression workflow using the provided scaffold.\nSave:\n\nA results table.\nA diagnostic plot.\nOne figure that highlights the strongest interpretable result.\n\nWrite a caveats paragraph about design, sample size, and interpretation."
+  },
+  {
+    "objectID": "assignments/02-DGE.html#what-to-submit",
+    "href": "assignments/02-DGE.html#what-to-submit",
+    "title": "Assignment 02 - Differential Gene Expression",
+    "section": "What to submit",
+    "text": "What to submit\nIn assignment/02-DGE/, include:\n\nA rendered .html report from Quarto or R Markdown.\nThe R script or .qmd source.\noutput/dge-results.csv.\nAt least one figure in output/."
+  },
+  {
+    "objectID": "assignments/02-DGE.html#assessment",
+    "href": "assignments/02-DGE.html#assessment",
+    "title": "Assignment 02 - Differential Gene Expression",
+    "section": "Assessment",
+    "text": "Assessment\nThe main criterion is whether your work is reproducible and interpreted cautiously. A small, clear analysis is better than an elaborate analysis that cannot be rerun."
+  },
+  {
+    "objectID": "assignments/09-synthesis.html",
+    "href": "assignments/09-synthesis.html",
+    "title": "Assignment 09 - Project Synthesis",
+    "section": "",
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric"
+  },
+  {
+    "objectID": "assignments/09-synthesis.html#goal",
+    "href": "assignments/09-synthesis.html#goal",
+    "title": "Assignment 09 - Project Synthesis",
+    "section": "Goal",
+    "text": "Goal\nTurn your project outputs into a clear biological argument and prepare the final compendium."
+  },
+  {
+    "objectID": "assignments/09-synthesis.html#tasks",
+    "href": "assignments/09-synthesis.html#tasks",
+    "title": "Assignment 09 - Project Synthesis",
+    "section": "Tasks",
+    "text": "Tasks\n\nIdentify your main project claim in one sentence.\nSelect the figure or table that best supports that claim.\nWrite a caption that explains the evidence without overstating it.\nWrite a limitations paragraph.\nCheck that the output can be regenerated from documented code or commands.\nUpdate your repository organization and README."
+  },
+  {
+    "objectID": "assignments/09-synthesis.html#what-to-submit",
+    "href": "assignments/09-synthesis.html#what-to-submit",
+    "title": "Assignment 09 - Project Synthesis",
+    "section": "What to submit",
+    "text": "What to submit\nIn assignment/09-synthesis/, include:\n\nDraft final figure or table.\nDraft caption.\nMain claim.\nLimitations paragraph.\nReproducibility checklist.\nRemaining tasks before final submission."
+  },
+  {
+    "objectID": "assignments/09-synthesis.html#assessment",
+    "href": "assignments/09-synthesis.html#assessment",
+    "title": "Assignment 09 - Project Synthesis",
+    "section": "Assessment",
+    "text": "Assessment\nThis assignment is about scientific synthesis. Strong submissions make a clear claim, show the evidence, and name the limits of the analysis."
+  },
+  {
+    "objectID": "assignments/04-hyak.html",
+    "href": "assignments/04-hyak.html",
+    "title": "Assignment 04 - Hyak Workflow Slice",
+    "section": "",
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric"
+  },
+  {
+    "objectID": "assignments/04-hyak.html#goal",
+    "href": "assignments/04-hyak.html#goal",
+    "title": "Assignment 04 - Hyak Workflow Slice",
+    "section": "Goal",
+    "text": "Goal\nRun one small but real workflow step on Hyak/Klone using SLURM and record enough information for someone else to inspect it."
+  },
+  {
+    "objectID": "assignments/04-hyak.html#tasks",
+    "href": "assignments/04-hyak.html#tasks",
+    "title": "Assignment 04 - Hyak Workflow Slice",
+    "section": "Tasks",
+    "text": "Tasks\n\nChoose a small command from an assignment or project workflow.\nWrite a SLURM script named assignment/04-hyak/run-job.sh.\nThe script must include:\n\nJob name.\nTime request.\nMemory request.\nAccount/partition information as appropriate.\nModule or container setup.\nCommands that write output to output/.\n\nSubmit the job with sbatch.\nSave the relevant tail of slurm-*.out.\nWrite a short explanation of what ran and where the output went."
+  },
+  {
+    "objectID": "assignments/04-hyak.html#what-to-submit",
+    "href": "assignments/04-hyak.html#what-to-submit",
+    "title": "Assignment 04 - Hyak Workflow Slice",
+    "section": "What to submit",
+    "text": "What to submit\nIn assignment/04-hyak/, include:\n\nrun-job.sh.\nA text file with job ID and slurm-*.out tail.\nAny small output generated by the job.\nA short README."
+  },
+  {
+    "objectID": "assignments/04-hyak.html#assessment",
+    "href": "assignments/04-hyak.html#assessment",
+    "title": "Assignment 04 - Hyak Workflow Slice",
+    "section": "Assessment",
+    "text": "Assessment\nThe goal is a clean remote-computing record: job script, job output, and a clear explanation. The command itself can be small."
+  },
+  {
     "objectID": "support.html",
     "href": "support.html",
     "title": "Self-Directed Skills",
@@ -623,718 +1386,18 @@
     "text": "Fast troubleshooting checklist\nWhen something breaks:\n\nConfirm which platform you are on.\nConfirm the working directory.\nConfirm the input file exists.\nCopy the exact command and error.\nCheck whether the problem is path, permissions, software, memory/time, or data format.\nOpen a Help Request issue if you are still stuck."
   },
   {
-    "objectID": "assignments/04-hyak.html",
-    "href": "assignments/04-hyak.html",
-    "title": "Assignment 04 - Hyak Workflow Slice",
-    "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric"
-  },
-  {
-    "objectID": "assignments/04-hyak.html#goal",
-    "href": "assignments/04-hyak.html#goal",
-    "title": "Assignment 04 - Hyak Workflow Slice",
-    "section": "Goal",
-    "text": "Goal\nRun one small but real workflow step on Hyak/Klone using SLURM and record enough information for someone else to inspect it."
-  },
-  {
-    "objectID": "assignments/04-hyak.html#tasks",
-    "href": "assignments/04-hyak.html#tasks",
-    "title": "Assignment 04 - Hyak Workflow Slice",
-    "section": "Tasks",
-    "text": "Tasks\n\nChoose a small command from an assignment or project workflow.\nWrite a SLURM script named assignment/04-hyak/run-job.sh.\nThe script must include:\n\nJob name.\nTime request.\nMemory request.\nAccount/partition information as appropriate.\nModule or container setup.\nCommands that write output to output/.\n\nSubmit the job with sbatch.\nSave the relevant tail of slurm-*.out.\nWrite a short explanation of what ran and where the output went."
-  },
-  {
-    "objectID": "assignments/04-hyak.html#what-to-submit",
-    "href": "assignments/04-hyak.html#what-to-submit",
-    "title": "Assignment 04 - Hyak Workflow Slice",
-    "section": "What to submit",
-    "text": "What to submit\nIn assignment/04-hyak/, include:\n\nrun-job.sh.\nA text file with job ID and slurm-*.out tail.\nAny small output generated by the job.\nA short README."
-  },
-  {
-    "objectID": "assignments/04-hyak.html#assessment",
-    "href": "assignments/04-hyak.html#assessment",
-    "title": "Assignment 04 - Hyak Workflow Slice",
-    "section": "Assessment",
-    "text": "Assessment\nThe goal is a clean remote-computing record: job script, job output, and a clear explanation. The command itself can be small."
-  },
-  {
-    "objectID": "assignments/09-synthesis.html",
-    "href": "assignments/09-synthesis.html",
-    "title": "Assignment 09 - Project Synthesis",
-    "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric"
-  },
-  {
-    "objectID": "assignments/09-synthesis.html#goal",
-    "href": "assignments/09-synthesis.html#goal",
-    "title": "Assignment 09 - Project Synthesis",
-    "section": "Goal",
-    "text": "Goal\nTurn your project outputs into a clear biological argument and prepare the final compendium."
-  },
-  {
-    "objectID": "assignments/09-synthesis.html#tasks",
-    "href": "assignments/09-synthesis.html#tasks",
-    "title": "Assignment 09 - Project Synthesis",
-    "section": "Tasks",
-    "text": "Tasks\n\nIdentify your main project claim in one sentence.\nSelect the figure or table that best supports that claim.\nWrite a caption that explains the evidence without overstating it.\nWrite a limitations paragraph.\nCheck that the output can be regenerated from documented code or commands.\nUpdate your repository organization and README."
-  },
-  {
-    "objectID": "assignments/09-synthesis.html#what-to-submit",
-    "href": "assignments/09-synthesis.html#what-to-submit",
-    "title": "Assignment 09 - Project Synthesis",
-    "section": "What to submit",
-    "text": "What to submit\nIn assignment/09-synthesis/, include:\n\nDraft final figure or table.\nDraft caption.\nMain claim.\nLimitations paragraph.\nReproducibility checklist.\nRemaining tasks before final submission."
-  },
-  {
-    "objectID": "assignments/09-synthesis.html#assessment",
-    "href": "assignments/09-synthesis.html#assessment",
-    "title": "Assignment 09 - Project Synthesis",
-    "section": "Assessment",
-    "text": "Assessment\nThis assignment is about scientific synthesis. Strong submissions make a clear claim, show the evidence, and name the limits of the analysis."
-  },
-  {
-    "objectID": "assignments/02-DGE.html",
-    "href": "assignments/02-DGE.html",
-    "title": "Assignment 02 - Differential Gene Expression",
-    "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric"
-  },
-  {
-    "objectID": "assignments/02-DGE.html#goal",
-    "href": "assignments/02-DGE.html#goal",
-    "title": "Assignment 02 - Differential Gene Expression",
-    "section": "Goal",
-    "text": "Goal\nMove from a small count matrix and sample metadata table to a differential-expression result and diagnostic figure."
-  },
-  {
-    "objectID": "assignments/02-DGE.html#setup",
-    "href": "assignments/02-DGE.html#setup",
-    "title": "Assignment 02 - Differential Gene Expression",
-    "section": "Setup",
-    "text": "Setup\nA demonstration RNA-seq count matrix and metadata file will be provided. Work in your course repository and keep raw files in data/raw/ or link to their external location."
-  },
-  {
-    "objectID": "assignments/02-DGE.html#tasks",
-    "href": "assignments/02-DGE.html#tasks",
-    "title": "Assignment 02 - Differential Gene Expression",
-    "section": "Tasks",
-    "text": "Tasks\n\nRecord data provenance:\n\nSource.\nDate downloaded or received.\nChecksums if files are local.\n\nInspect the sample metadata and identify the comparison.\nLoad the count matrix and metadata in R.\nRun a simple differential-expression workflow using the provided scaffold.\nSave:\n\nA results table.\nA diagnostic plot.\nOne figure that highlights the strongest interpretable result.\n\nWrite a caveats paragraph about design, sample size, and interpretation."
-  },
-  {
-    "objectID": "assignments/02-DGE.html#what-to-submit",
-    "href": "assignments/02-DGE.html#what-to-submit",
-    "title": "Assignment 02 - Differential Gene Expression",
-    "section": "What to submit",
-    "text": "What to submit\nIn assignment/02-DGE/, include:\n\nA rendered .html report from Quarto or R Markdown.\nThe R script or .qmd source.\noutput/dge-results.csv.\nAt least one figure in output/."
-  },
-  {
-    "objectID": "assignments/02-DGE.html#assessment",
-    "href": "assignments/02-DGE.html#assessment",
-    "title": "Assignment 02 - Differential Gene Expression",
-    "section": "Assessment",
-    "text": "Assessment\nThe main criterion is whether your work is reproducible and interpreted cautiously. A small, clear analysis is better than an elaborate analysis that cannot be rerun."
-  },
-  {
-    "objectID": "assignments/07-CG.html",
-    "href": "assignments/07-CG.html",
-    "title": "Assignment 07 - Methylation, Motifs, and IGV",
-    "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric"
-  },
-  {
-    "objectID": "assignments/07-CG.html#goal",
-    "href": "assignments/07-CG.html#goal",
-    "title": "Assignment 07 - Methylation, Motifs, and IGV",
-    "section": "Goal",
-    "text": "Goal\nInterpret a small methylation or genomic-feature dataset in context using coordinates, annotation, and visual inspection."
-  },
-  {
-    "objectID": "assignments/07-CG.html#tasks",
-    "href": "assignments/07-CG.html#tasks",
-    "title": "Assignment 07 - Methylation, Motifs, and IGV",
-    "section": "Tasks",
-    "text": "Tasks\n\nStart with a provided table of loci, regions, or features.\nIdentify the genome build and coordinate convention.\nAnnotate or summarize nearby genomic features.\nInspect at least one region in IGV or an equivalent genome-browser view.\nProduce one table and one figure or screenshot-style evidence panel.\nWrite a paragraph explaining what the result does and does not show."
-  },
-  {
-    "objectID": "assignments/07-CG.html#what-to-submit",
-    "href": "assignments/07-CG.html#what-to-submit",
-    "title": "Assignment 07 - Methylation, Motifs, and IGV",
-    "section": "What to submit",
-    "text": "What to submit\nIn assignment/07-CG/, include:\n\nA rendered report.\nAny script used to process the data.\nA small annotated output table.\nOne figure or inspection image.\nA caveats paragraph."
-  },
-  {
-    "objectID": "assignments/07-CG.html#assessment",
-    "href": "assignments/07-CG.html#assessment",
-    "title": "Assignment 07 - Methylation, Motifs, and IGV",
-    "section": "Assessment",
-    "text": "Assessment\nCredit depends on coordinate hygiene, clear interpretation, and appropriate caution. Do not overstate what a single locus or region proves."
-  },
-  {
-    "objectID": "assignments/05-slidedeck.html",
-    "href": "assignments/05-slidedeck.html",
-    "title": "Assignment 05 - Project Slidedeck",
-    "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric"
-  },
-  {
-    "objectID": "assignments/05-slidedeck.html#goal",
-    "href": "assignments/05-slidedeck.html#goal",
-    "title": "Assignment 05 - Project Slidedeck",
-    "section": "Goal",
-    "text": "Goal\nCreate and present a short Quarto slide deck describing your project question, data, workflow, current progress, and four-week plan."
-  },
-  {
-    "objectID": "assignments/05-slidedeck.html#required-slides",
-    "href": "assignments/05-slidedeck.html#required-slides",
-    "title": "Assignment 05 - Project Slidedeck",
-    "section": "Required slides",
-    "text": "Required slides\nYour deck should include:\n\nTitle, name, and research question.\nData source and biological context.\nWorkflow diagram or bullet workflow.\nCurrent result, diagnostic, or proof-of-work.\nMain risk or blocker.\nFour-week plan leading to the final compendium."
-  },
-  {
-    "objectID": "assignments/05-slidedeck.html#what-to-submit",
-    "href": "assignments/05-slidedeck.html#what-to-submit",
-    "title": "Assignment 05 - Project Slidedeck",
-    "section": "What to submit",
-    "text": "What to submit\nIn assignment/05-slidedeck/, include:\n\nThe Quarto source file.\nThe rendered slides.\nAny figures used in the deck.\nA short note in your weekly-progress issue linking to the deck."
-  },
-  {
-    "objectID": "assignments/05-slidedeck.html#assessment",
-    "href": "assignments/05-slidedeck.html#assessment",
-    "title": "Assignment 05 - Project Slidedeck",
-    "section": "Assessment",
-    "text": "Assessment\nThe presentation should be clear, honest, and specific. You are not expected to be finished. You are expected to know what “finished” would look like."
-  },
-  {
-    "objectID": "assignments/08-bedtools.html",
-    "href": "assignments/08-bedtools.html",
-    "title": "Assignment 08 - BEDtools and Genomic Ranges",
-    "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric"
-  },
-  {
-    "objectID": "assignments/08-bedtools.html#goal",
-    "href": "assignments/08-bedtools.html#goal",
-    "title": "Assignment 08 - BEDtools and Genomic Ranges",
-    "section": "Goal",
-    "text": "Goal\nUse genomic interval logic to ask whether one set of features overlaps another."
-  },
-  {
-    "objectID": "assignments/08-bedtools.html#tasks",
-    "href": "assignments/08-bedtools.html#tasks",
-    "title": "Assignment 08 - BEDtools and Genomic Ranges",
-    "section": "Tasks",
-    "text": "Tasks\n\nUse provided BED/GFF/VCF-style files or a project-relevant interval file.\nConfirm genome build and chromosome/scaffold naming.\nUse BEDtools or an equivalent R/Bioconductor workflow to perform at least one overlap operation.\nSave the overlap result as a small table.\nSummarize the result with a count table or figure.\nDraft your project’s ultimate figure, even if some values are placeholders."
-  },
-  {
-    "objectID": "assignments/08-bedtools.html#what-to-submit",
-    "href": "assignments/08-bedtools.html#what-to-submit",
-    "title": "Assignment 08 - BEDtools and Genomic Ranges",
-    "section": "What to submit",
-    "text": "What to submit\nIn assignment/08-bedtools/, include:\n\nCommands or code used for the interval operation.\nInput-file descriptions.\nOutput overlap table.\nSummary figure or table.\nMock ultimate figure for your project."
-  },
-  {
-    "objectID": "assignments/08-bedtools.html#assessment",
-    "href": "assignments/08-bedtools.html#assessment",
-    "title": "Assignment 08 - BEDtools and Genomic Ranges",
-    "section": "Assessment",
-    "text": "Assessment\nThe analysis should show that your files are compatible and that the overlap result is interpreted carefully."
-  },
-  {
-    "objectID": "assignments/01-blast.html",
-    "href": "assignments/01-blast.html",
-    "title": "Assignment 01 - NCBI BLAST",
-    "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric"
-  },
-  {
-    "objectID": "assignments/01-blast.html#goal",
-    "href": "assignments/01-blast.html#goal",
-    "title": "Assignment 01 - NCBI BLAST",
-    "section": "Goal",
-    "text": "Goal\nUse BLAST to identify or interpret an unknown sequence, then document the result in a reproducible way."
-  },
-  {
-    "objectID": "assignments/01-blast.html#provided-query",
-    "href": "assignments/01-blast.html#provided-query",
-    "title": "Assignment 01 - NCBI BLAST",
-    "section": "Provided query",
-    "text": "Provided query\nIf you do not yet have a project sequence, use the practice fish COI query in provided-query.fasta. It is included so everyone can complete the workflow even before project data are settled.\n&gt;week01_unknown_fish_coi_practice\nCCTATACCTAATCTTCGGTGCATGAGCCGGAATAGTAGGGACAGCCCTAAGCCTCCTCATTCGAGCAGAATTAGGCCAACCAGGGGCCCTTCTAGGTGACGACCAAATTTATAATGTAATCGTAACAGCACATGCCTTCGTAATAATTTTCTTTATAGTAATACCAATTATAATTGGAGGATTCGGAAATTGACTTGTACCTCTAATACTAGGGGCCCCTGACATAGCATTCCCCCGAATAAATAATATAAGCTTCTGACTTCTCCCCCCATCCTTCCTTCTCCTCCTAGCATCCTCTGGTGTAGAAGCAGGGGCCGGAACAGGATGAACAGTATACCCTCCTCTAGCCGGAAACCTAGCCCACGCAGGAGCATCCGTAGACCTAACTATCTTCTCCCTACACCTAGCAGGTGTCTCCTCAATCCTAGGGGCCATTAATTTTATTACAACAATTATCAATATGAAACCCCCAGCAATATCACAGTACC"
-  },
-  {
-    "objectID": "assignments/01-blast.html#tasks",
-    "href": "assignments/01-blast.html#tasks",
-    "title": "Assignment 01 - NCBI BLAST",
-    "section": "Tasks",
-    "text": "Tasks\n\nChoose a provided sequence or a sequence relevant to your project.\nSave the query as assignment/01-blast/query.fasta.\nRun a BLAST search using NCBI web BLAST or command-line BLAST if available.\nSave the top-hit table or downloaded results in assignment/01-blast/output/.\nWrite a short interpretation that includes:\n\nDatabase searched.\nTop hit.\nPercent identity.\nQuery coverage.\nE-value.\nWhether the result makes biological sense."
-  },
-  {
-    "objectID": "assignments/01-blast.html#interpretation-checklist",
-    "href": "assignments/01-blast.html#interpretation-checklist",
-    "title": "Assignment 01 - NCBI BLAST",
-    "section": "Interpretation checklist",
-    "text": "Interpretation checklist\nYour report should make the search auditable. Include:\n\nQuery file and sequence length.\nBLAST program used, such as blastn, blastx, or NCBI web BLAST.\nDatabase searched and date searched.\nTop hit accession, description, and organism.\nPercent identity, query coverage, alignment length, and e-value.\nWhether the next few hits support the same interpretation.\nOne caveat, such as short marker length, close congeners, incomplete references, contamination, or database bias."
-  },
-  {
-    "objectID": "assignments/01-blast.html#database-choice",
-    "href": "assignments/01-blast.html#database-choice",
-    "title": "Assignment 01 - NCBI BLAST",
-    "section": "Database choice",
-    "text": "Database choice\nChoose a database that matches your biological question:\n\nFor broad DNA identification, start with NCBI nt.\nFor COI barcodes, compare what you learn from NCBI with what you would expect from a barcode-focused database such as BOLD.\nFor transcripts or contigs that may encode proteins, consider whether blastx against a protein database would be more informative than nucleotide BLAST.\nFor eDNA-style markers, note whether the marker is long and variable enough for species-level claims."
-  },
-  {
-    "objectID": "assignments/01-blast.html#what-to-submit",
-    "href": "assignments/01-blast.html#what-to-submit",
-    "title": "Assignment 01 - NCBI BLAST",
-    "section": "What to submit",
-    "text": "What to submit\nSubmit a rendered Quarto or Markdown report in assignment/01-blast/ with the query, result summary, and interpretation."
-  },
-  {
-    "objectID": "assignments/01-blast.html#project-connection",
-    "href": "assignments/01-blast.html#project-connection",
-    "title": "Assignment 01 - NCBI BLAST",
-    "section": "Project connection",
-    "text": "Project connection\nOpen your project-proposal issue this week. The proposal is provisional. Include a draft endpoint and identify whether sequence similarity, annotation, or database choice will matter for your project.\nPossible endpoints include:\n\nRNA-seq: a differential-expression result linked to treatment, environment, tissue, or life stage.\neDNA / metabarcoding: a taxon-by-site or taxon-by-time summary with contamination caveats.\nDNA methylation: a methylation difference connected to genome annotation or regulatory context.\nVariants: a filtered variant summary, PCA, or population comparison.\nAnnotation / discovery: a set of candidate genes, contigs, or markers supported by sequence similarity evidence."
-  },
-  {
-    "objectID": "assignments/04-DGE.html",
-    "href": "assignments/04-DGE.html",
-    "title": "Assignment 04 - Differential Gene Expression",
-    "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric"
-  },
-  {
-    "objectID": "assignments/04-DGE.html#goal",
-    "href": "assignments/04-DGE.html#goal",
-    "title": "Assignment 04 - Differential Gene Expression",
-    "section": "Goal",
-    "text": "Goal\nMove from a count matrix and sample metadata table to a differential-expression result and a cautious biological interpretation."
-  },
-  {
-    "objectID": "assignments/04-DGE.html#tasks",
-    "href": "assignments/04-DGE.html#tasks",
-    "title": "Assignment 04 - Differential Gene Expression",
-    "section": "Tasks",
-    "text": "Tasks\n\nRecord data provenance and sample metadata.\nLoad the count matrix and metadata.\nCheck sample structure with a diagnostic plot.\nRun a simple differential-expression workflow using the provided scaffold.\nSave:\n\nA results table.\nA diagnostic plot.\nOne focused figure or table for interpretation.\n\nWrite a caveats paragraph about design, sample size, and biological interpretation."
-  },
-  {
-    "objectID": "assignments/04-DGE.html#what-to-submit",
-    "href": "assignments/04-DGE.html#what-to-submit",
-    "title": "Assignment 04 - Differential Gene Expression",
-    "section": "What to submit",
-    "text": "What to submit\nIn assignment/04-DGE/, include:\n\nA rendered report.\nSource .qmd or script.\noutput/dge-results.csv or equivalent.\nAt least one figure.\nA short interpretation linked to annotation or biological context."
-  },
-  {
-    "objectID": "assignments/04-DGE.html#assessment",
-    "href": "assignments/04-DGE.html#assessment",
-    "title": "Assignment 04 - Differential Gene Expression",
-    "section": "Assessment",
-    "text": "Assessment\nA small, reproducible, well-interpreted analysis is better than an elaborate analysis that cannot be rerun."
-  },
-  {
-    "objectID": "turn-in.html",
-    "href": "turn-in.html",
-    "title": "Turn In Work",
-    "section": "",
-    "text": "You turn in work by opening a GitHub Issue that points to an exact commit in your course repository. The commit contains your answer files, output files, and a small submission.yml manifest. GitHub Actions reads the issue, checks the files, and comments with an automatic assessment report.\nThis gives everyone the same workflow:\n\nDo the work in your repository.\nCommit and push.\nOpen the correct submission issue.\nPaste the repository URL, commit SHA, and path to your manifest.\nRead the automatic report and fix anything flagged before the deadline.\n\nThe Issue is the receipt. The commit SHA freezes the submitted version. The manifest tells the grader what evidence belongs to the submission."
-  },
-  {
-    "objectID": "turn-in.html#the-idea",
-    "href": "turn-in.html#the-idea",
-    "title": "Turn In Work",
-    "section": "",
-    "text": "You turn in work by opening a GitHub Issue that points to an exact commit in your course repository. The commit contains your answer files, output files, and a small submission.yml manifest. GitHub Actions reads the issue, checks the files, and comments with an automatic assessment report.\nThis gives everyone the same workflow:\n\nDo the work in your repository.\nCommit and push.\nOpen the correct submission issue.\nPaste the repository URL, commit SHA, and path to your manifest.\nRead the automatic report and fix anything flagged before the deadline.\n\nThe Issue is the receipt. The commit SHA freezes the submitted version. The manifest tells the grader what evidence belongs to the submission."
-  },
-  {
-    "objectID": "turn-in.html#what-gets-assessed-automatically",
-    "href": "turn-in.html#what-gets-assessed-automatically",
-    "title": "Turn In Work",
-    "section": "What gets assessed automatically",
-    "text": "What gets assessed automatically\nThe automatic check is not meant to replace instructor judgment. It checks the things software is good at checking:\n\nRequired files exist.\nFiles are in the expected week directory.\nRendered reports are present when required.\nOutput tables and figures are non-empty.\nA submission.yml file identifies the week, type, title, and submitted files.\nRaw data are not accidentally committed from data/raw/.\nThe submission issue links to a specific commit.\nThe repository has recent commits before the deadline.\n\nThe instructor still evaluates interpretation, biological reasoning, caveats, and scientific quality."
-  },
-  {
-    "objectID": "turn-in.html#question-set-submissions",
-    "href": "turn-in.html#question-set-submissions",
-    "title": "Turn In Work",
-    "section": "Question set submissions",
-    "text": "Question set submissions\nQuestion sets should live in homework/.\nExample:\nhomework/\n  week02.qmd\n  week02.html\n  week02-submission.yml\nExample week02-submission.yml:\ntype: question-set\nweek: \"02\"\ntitle: \"Raw reads, FASTQ, QC, and trimming\"\nsource: \"homework/week02.qmd\"\nrendered: \"homework/week02.html\"\nquestions_answered: 5\nproject_connection: true"
-  },
-  {
-    "objectID": "turn-in.html#assignment-submissions",
-    "href": "turn-in.html#assignment-submissions",
-    "title": "Turn In Work",
-    "section": "Assignment submissions",
-    "text": "Assignment submissions\nAssignments should live in assignment/.\nExample:\nassignment/\n  02-fastq-qc/\n    analysis.qmd\n    analysis.html\n    output/read-counts.csv\n    output/qc-summary.png\n    submission.yml\nExample submission.yml:\ntype: assignment\nweek: \"02\"\ntitle: \"FASTQ Quality Control\"\nsource: \"assignment/02-fastq-qc/analysis.qmd\"\nrendered: \"assignment/02-fastq-qc/analysis.html\"\noutputs:\n  - \"assignment/02-fastq-qc/output/read-counts.csv\"\n  - \"assignment/02-fastq-qc/output/qc-summary.png\"\nuses_raw_data: true\nraw_data_committed: false\nproject_connection: true"
-  },
-  {
-    "objectID": "turn-in.html#automatic-report",
-    "href": "turn-in.html#automatic-report",
-    "title": "Turn In Work",
-    "section": "Automatic report",
-    "text": "Automatic report\nAfter the issue is opened or edited, GitHub Actions posts a report like:\nAutomatic assessment: warning\n\nPassed\n- Manifest found.\n- Rendered report found.\n- Output table found.\n\nWarnings\n- No project_connection field found.\n\nNeeds human review\n- Biological interpretation and caveats.\nIf the report says fail, fix the flagged items, push a new commit, and edit the submission issue with the new commit SHA."
-  },
-  {
-    "objectID": "turn-in.html#why-this-is-better-than-uploads",
-    "href": "turn-in.html#why-this-is-better-than-uploads",
-    "title": "Turn In Work",
-    "section": "Why this is better than uploads",
-    "text": "Why this is better than uploads\nThis system assesses the same habits the course is trying to teach:\n\nVersion-controlled work.\nReproducible project structure.\nClear evidence trails.\nPrecise submission versions.\nFast feedback before grading.\nHuman review reserved for scientific judgment.\n\nIt also lets the instructor see cohort-level progress through labels such as auto:pass, auto:warn, auto:fail, question-set, and assignment."
-  },
-  {
-    "objectID": "turn-in.html#weekly-research-progress",
-    "href": "turn-in.html#weekly-research-progress",
-    "title": "Turn In Work",
-    "section": "Weekly research progress",
-    "text": "Weekly research progress\nWeekly project progress is assessed through a separate Weekly Research Progress issue. This is not a file submission. It is a structured project-management checkpoint.\nEach progress issue asks for:\n\nWeek number.\nCourse repository URL.\nProject issue URL.\nCurrent commit SHA or GitHub compare URL.\nWhat you accomplished this week.\nEvidence links to commits, outputs, reports, figures, Issues, or PRs.\nWhether last week’s goals were met.\nGoals for next week.\nSelf-rating: On track, Some risk, or Blocked.\nBlockers or help needs.\n\nThe automatic progress check comments on the issue and applies labels:\n\n\n\n\n\n\n\nLabel\nMeaning\n\n\n\n\nprogress:on-track\nThe weekly record is complete and the student reports forward motion.\n\n\nprogress:watch\nThe record is incomplete, thin, risky, or needs instructor attention.\n\n\nprogress:blocked\nThe student reports being blocked and should have a linked Help Request or Blocker/Bug issue.\n\n\n\nThe progress checker looks for completeness and evidence, not whether the science is “good enough.” The instructor uses the report to review trajectory, intervene early, and assess weekly project-progress credit."
-  },
-  {
-    "objectID": "assignments/edna-metabarcoding.html",
-    "href": "assignments/edna-metabarcoding.html",
-    "title": "Assignment · eDNA Metabarcoding",
-    "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric"
-  },
-  {
-    "objectID": "assignments/edna-metabarcoding.html#goal",
-    "href": "assignments/edna-metabarcoding.html#goal",
-    "title": "Assignment · eDNA Metabarcoding",
-    "section": "Goal",
-    "text": "Goal\nTake a set of amplicon (metabarcoding) reads from raw FASTQ to an analysis-ready sample × taxon table, and produce one figure summarizing the community. You’ll run the compute-heavy steps on Klone (the Hyak tutorial prepared you for this) and do exploration/plots on Raven or your laptop."
-  },
-  {
-    "objectID": "assignments/edna-metabarcoding.html#setup",
-    "href": "assignments/edna-metabarcoding.html#setup",
-    "title": "Assignment · eDNA Metabarcoding",
-    "section": "Setup",
-    "text": "Setup\n\nWork in your course repo using the standard code / data / output layout.\nA demonstration dataset (a small 12S or COI amplicon set) will be provided; note its marker and the reference database to assign against.\nKeep raw reads in data/raw/ and do not commit them — add them to .gitignore and record checksums (md5sum)."
-  },
-  {
-    "objectID": "assignments/edna-metabarcoding.html#steps",
-    "href": "assignments/edna-metabarcoding.html#steps",
-    "title": "Assignment · eDNA Metabarcoding",
-    "section": "Steps",
-    "text": "Steps\n\nInspect & QC. Count reads, look at quality profiles, and trim primers/adapters (e.g. cutadapt). Record the exact primer sequences.\nDenoise to ASVs with DADA2 (filter/trim → learn errors → denoise → merge pairs → remove chimeras). Report how many reads survive each step — this table is part of your submission.\nAssign taxonomy against the reference database for your marker. Note the database name and version.\nBuild the table. Produce a sample × taxon abundance matrix (output/asv-table.csv).\nOne figure. A community summary — a stacked-bar composition plot or a richness-by-sample plot — saved to output/.\nControls. Report what your negative/blank controls contained. What does that imply about false positives?"
-  },
-  {
-    "objectID": "assignments/edna-metabarcoding.html#what-to-submit",
-    "href": "assignments/edna-metabarcoding.html#what-to-submit",
-    "title": "Assignment · eDNA Metabarcoding",
-    "section": "What to submit",
-    "text": "What to submit\nIn your repo’s assignment/06-edna/ directory:\n\nA rendered Quarto/R document (.qmd → .html) walking through steps 1–6 with code and commentary.\nThe SLURM script(s) you used on Klone, plus the tail of the relevant slurm-*.out.\noutput/asv-table.csv and your figure.\nA short caveats paragraph: given your controls and marker, how confident are you in the detections?"
-  },
-  {
-    "objectID": "assignments/edna-metabarcoding.html#assessment",
-    "href": "assignments/edna-metabarcoding.html#assessment",
-    "title": "Assignment · eDNA Metabarcoding",
-    "section": "Assessment",
-    "text": "Assessment\nYou’re assessed on reproducibility as much as results: can someone clone your repo and follow exactly what you did — primers, parameters, database version, which steps ran on Klone? See the handbook’s Data Management and Computing Best Practices for the standard."
-  },
-  {
-    "objectID": "assignments/edna-metabarcoding.html#hints",
-    "href": "assignments/edna-metabarcoding.html#hints",
-    "title": "Assignment · eDNA Metabarcoding",
-    "section": "Hints",
-    "text": "Hints\n\nDenoising is the slow step — request modest --mem/--time first and scale up only if a job is killed.\nRun everything inside the lab Apptainer container; don’t install tools on the login node.\nStuck? Open a Help Request issue (platform = Hyak) with your command, the error, and your job ID."
-  },
-  {
-    "objectID": "assignments/05-annotation-ranges.html",
-    "href": "assignments/05-annotation-ranges.html",
-    "title": "Assignment 05 - Annotation and Genomic Ranges",
-    "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric"
-  },
-  {
-    "objectID": "assignments/05-annotation-ranges.html#goal",
-    "href": "assignments/05-annotation-ranges.html#goal",
-    "title": "Assignment 05 - Annotation and Genomic Ranges",
-    "section": "Goal",
-    "text": "Goal\nConnect bioinformatics results to genomic context using annotation and interval logic."
-  },
-  {
-    "objectID": "assignments/05-annotation-ranges.html#tasks",
-    "href": "assignments/05-annotation-ranges.html#tasks",
-    "title": "Assignment 05 - Annotation and Genomic Ranges",
-    "section": "Tasks",
-    "text": "Tasks\n\nUse a provided feature table or one from your project.\nIdentify the genome build, coordinate system, and annotation source.\nPerform one annotation or overlap operation.\nSave a small annotated output table.\nSummarize the result with a table or figure.\nPrepare a short mid-quarter project update with one current result or diagnostic."
-  },
-  {
-    "objectID": "assignments/05-annotation-ranges.html#what-to-submit",
-    "href": "assignments/05-annotation-ranges.html#what-to-submit",
-    "title": "Assignment 05 - Annotation and Genomic Ranges",
-    "section": "What to submit",
-    "text": "What to submit\nIn assignment/05-annotation-ranges/, include:\n\nCommands or code.\nInput-file descriptions.\nAnnotated output table.\nSummary figure or table.\nLink to your mid-quarter project update."
-  },
-  {
-    "objectID": "assignments/05-annotation-ranges.html#assessment",
-    "href": "assignments/05-annotation-ranges.html#assessment",
-    "title": "Assignment 05 - Annotation and Genomic Ranges",
-    "section": "Assessment",
-    "text": "Assessment\nCredit depends on coordinate hygiene, correct use of annotation, and restraint in interpretation."
-  },
-  {
-    "objectID": "assignments/02-fastq-qc.html",
-    "href": "assignments/02-fastq-qc.html",
-    "title": "Assignment 02 - FASTQ Quality Control",
-    "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric"
-  },
-  {
-    "objectID": "assignments/02-fastq-qc.html#goal",
-    "href": "assignments/02-fastq-qc.html#goal",
-    "title": "Assignment 02 - FASTQ Quality Control",
-    "section": "Goal",
-    "text": "Goal\nInspect raw sequencing reads and decide whether the data are ready for downstream analysis."
-  },
-  {
-    "objectID": "assignments/02-fastq-qc.html#tasks",
-    "href": "assignments/02-fastq-qc.html#tasks",
-    "title": "Assignment 02 - FASTQ Quality Control",
-    "section": "Tasks",
-    "text": "Tasks\n\nUse a small provided FASTQ dataset or a project-relevant read file.\nRecord the file source, date, sample names, and checksums.\nCount reads for each sample.\nGenerate or inspect FastQC/MultiQC-style quality summaries.\nIdentify adapters, primers, low-quality tails, or other concerns.\nIf trimming is appropriate, run a small trimming step and compare before/after summaries."
-  },
-  {
-    "objectID": "assignments/02-fastq-qc.html#what-to-submit",
-    "href": "assignments/02-fastq-qc.html#what-to-submit",
-    "title": "Assignment 02 - FASTQ Quality Control",
-    "section": "What to submit",
-    "text": "What to submit\nIn assignment/02-fastq-qc/, include:\n\nA rendered report.\nCommands or code used for read counts and QC.\nA small table summarizing samples and read counts.\nBefore/after QC evidence if trimming was performed.\nA short decision paragraph: proceed, trim more, exclude, or investigate."
-  },
-  {
-    "objectID": "assignments/02-fastq-qc.html#assessment",
-    "href": "assignments/02-fastq-qc.html#assessment",
-    "title": "Assignment 02 - FASTQ Quality Control",
-    "section": "Assessment",
-    "text": "Assessment\nCredit is based on data provenance, appropriate QC interpretation, and clear reasoning about next steps."
-  },
-  {
-    "objectID": "assignments/00-bash.html",
-    "href": "assignments/00-bash.html",
-    "title": "Assignment 00 - Bash and Repository Setup",
-    "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric"
-  },
-  {
-    "objectID": "assignments/00-bash.html#goal",
-    "href": "assignments/00-bash.html#goal",
-    "title": "Assignment 00 - Bash and Repository Setup",
-    "section": "Goal",
-    "text": "Goal\nBuild the basic repository structure you will use all quarter and practice the shell/Git loop."
-  },
-  {
-    "objectID": "assignments/00-bash.html#tasks",
-    "href": "assignments/00-bash.html#tasks",
-    "title": "Assignment 00 - Bash and Repository Setup",
-    "section": "Tasks",
-    "text": "Tasks\n\nCreate the standard directory layout in your course repository:\n\nmkdir -p code data/raw data/processed output docs notebooks assignment homework\ntouch code/README.md data/README.md output/README.md docs/README.md\n\nEdit each README so it explains what belongs in that directory.\nAdd data/raw/ to .gitignore.\nUse the shell to create a file named output/week00-file-list.txt containing a recursive listing of your repository.\nCommit and push the changes."
-  },
-  {
-    "objectID": "assignments/00-bash.html#what-to-submit",
-    "href": "assignments/00-bash.html#what-to-submit",
-    "title": "Assignment 00 - Bash and Repository Setup",
-    "section": "What to submit",
-    "text": "What to submit\nIn assignment/00-bash/, include:\n\nA short README.md describing what you did.\nweek00-file-list.txt.\nA link to the commit that created your project structure."
-  },
-  {
-    "objectID": "assignments/00-bash.html#assessment",
-    "href": "assignments/00-bash.html#assessment",
-    "title": "Assignment 00 - Bash and Repository Setup",
-    "section": "Assessment",
-    "text": "Assessment\nCredit is based on correct structure, clear README files, successful commit/push, and evidence that you used the shell intentionally."
-  },
-  {
-    "objectID": "assignments/10-compendium.html",
-    "href": "assignments/10-compendium.html",
-    "title": "Assignment 10 - Final Research Compendium",
-    "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric"
-  },
-  {
-    "objectID": "assignments/10-compendium.html#goal",
-    "href": "assignments/10-compendium.html#goal",
-    "title": "Assignment 10 - Final Research Compendium",
-    "section": "Goal",
-    "text": "Goal\nSubmit a final project compendium that documents your research question, data, workflow, results, caveats, and reproducible artifacts."
-  },
-  {
-    "objectID": "assignments/10-compendium.html#required-components",
-    "href": "assignments/10-compendium.html#required-components",
-    "title": "Assignment 10 - Final Research Compendium",
-    "section": "Required components",
-    "text": "Required components\nYour repository should include:\n\nTop-level README.md with project overview and reproduction notes.\nFinal rendered report in docs/ or assignment/10-compendium/.\nSource .qmd or scripts used to generate final results.\nKey figures in output/.\nKey small processed tables where appropriate.\nData availability statement.\nSoftware/platform statement.\nLink to your project issue and relevant weekly-progress issues."
-  },
-  {
-    "objectID": "assignments/10-compendium.html#final-report-structure",
-    "href": "assignments/10-compendium.html#final-report-structure",
-    "title": "Assignment 10 - Final Research Compendium",
-    "section": "Final report structure",
-    "text": "Final report structure\nUse this structure unless your project needs something different:\n\nResearch question.\nBackground and data.\nMethods/workflow.\nResults.\nCaveats and limitations.\nNext steps.\nReproducibility notes."
-  },
-  {
-    "objectID": "assignments/10-compendium.html#what-to-submit",
-    "href": "assignments/10-compendium.html#what-to-submit",
-    "title": "Assignment 10 - Final Research Compendium",
-    "section": "What to submit",
-    "text": "What to submit\nSubmit the final compendium through your repository and link it from your final weekly-progress issue."
-  },
-  {
-    "objectID": "assignments/10-compendium.html#assessment",
-    "href": "assignments/10-compendium.html#assessment",
-    "title": "Assignment 10 - Final Research Compendium",
-    "section": "Assessment",
-    "text": "Assessment\nThe final project is assessed on clarity, reproducibility, technical progress, interpretation, and honest treatment of limitations. See the Project and Compendium Rubric for detailed criteria."
-  },
-  {
-    "objectID": "assignments/03-knit.html",
-    "href": "assignments/03-knit.html",
-    "title": "Assignment 03 - Explain and Knit",
-    "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric"
-  },
-  {
-    "objectID": "assignments/03-knit.html#goal",
-    "href": "assignments/03-knit.html#goal",
-    "title": "Assignment 03 - Explain and Knit",
-    "section": "Goal",
-    "text": "Goal\nTurn an analysis into a readable rendered document that combines code, output, figures, and explanation."
-  },
-  {
-    "objectID": "assignments/03-knit.html#tasks",
-    "href": "assignments/03-knit.html#tasks",
-    "title": "Assignment 03 - Explain and Knit",
-    "section": "Tasks",
-    "text": "Tasks\n\nCreate assignment/03-knit/analysis.qmd.\nUse a small dataset from a previous assignment or your project.\nInclude:\n\nA short introduction.\nAt least two code chunks.\nOne saved table or output file.\nOne figure.\nA short interpretation.\n\nRender the document to HTML.\nCommit both the source .qmd and rendered .html."
-  },
-  {
-    "objectID": "assignments/03-knit.html#what-to-submit",
-    "href": "assignments/03-knit.html#what-to-submit",
-    "title": "Assignment 03 - Explain and Knit",
-    "section": "What to submit",
-    "text": "What to submit\nSubmit the assignment/03-knit/ directory with:\n\nanalysis.qmd.\nRendered analysis.html.\nAny small supporting output files."
-  },
-  {
-    "objectID": "assignments/03-knit.html#assessment",
-    "href": "assignments/03-knit.html#assessment",
-    "title": "Assignment 03 - Explain and Knit",
-    "section": "Assessment",
-    "text": "Assessment\nYour document should be readable from top to bottom. The reader should understand what ran, what it produced, and what the result means."
-  },
-  {
-    "objectID": "assignments/06-variants.html",
-    "href": "assignments/06-variants.html",
-    "title": "Assignment 06 - VCF and Variant Summary",
-    "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric"
-  },
-  {
-    "objectID": "assignments/06-variants.html#goal",
-    "href": "assignments/06-variants.html#goal",
-    "title": "Assignment 06 - VCF and Variant Summary",
-    "section": "Goal",
-    "text": "Goal\nInspect a small VCF file and summarize variant information in a way that could support a biological question."
-  },
-  {
-    "objectID": "assignments/06-variants.html#tasks",
-    "href": "assignments/06-variants.html#tasks",
-    "title": "Assignment 06 - VCF and Variant Summary",
-    "section": "Tasks",
-    "text": "Tasks\n\nRead the VCF header and identify key fields.\nCount variants before and after one simple filter.\nSummarize variants by scaffold, sample, region, or annotation.\nInspect quality, depth, or genotype fields.\nProduce one table or figure.\nWrite a paragraph explaining how filtering affects interpretation."
-  },
-  {
-    "objectID": "assignments/06-variants.html#what-to-submit",
-    "href": "assignments/06-variants.html#what-to-submit",
-    "title": "Assignment 06 - VCF and Variant Summary",
-    "section": "What to submit",
-    "text": "What to submit\nIn assignment/06-variants/, include:\n\nA rendered report.\nCommands or code.\nVariant summary table.\nOne figure or focused table.\nA caveats paragraph."
-  },
-  {
-    "objectID": "assignments/06-variants.html#assessment",
-    "href": "assignments/06-variants.html#assessment",
-    "title": "Assignment 06 - VCF and Variant Summary",
-    "section": "Assessment",
-    "text": "Assessment\nThe goal is not a full variant-calling pipeline. The goal is to understand what variant calls contain and how filtering choices shape conclusions."
-  },
-  {
-    "objectID": "assignments/09-backup.html",
-    "href": "assignments/09-backup.html",
-    "title": "Assignment 09 - Backup and Repository Audit",
-    "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric"
-  },
-  {
-    "objectID": "assignments/09-backup.html#goal",
-    "href": "assignments/09-backup.html#goal",
-    "title": "Assignment 09 - Backup and Repository Audit",
-    "section": "Goal",
-    "text": "Goal\nPrepare your repository for final submission by auditing organization, documentation, reproducibility, and archiving readiness."
-  },
-  {
-    "objectID": "assignments/09-backup.html#tasks",
-    "href": "assignments/09-backup.html#tasks",
-    "title": "Assignment 09 - Backup and Repository Audit",
-    "section": "Tasks",
-    "text": "Tasks\n\nUpdate the top-level README.md.\nConfirm each major directory has a README or is self-explanatory.\nRemove or ignore files that should not be committed.\nConfirm raw data are either excluded or intentionally tracked.\nAdd a workflow section explaining how to reproduce the main result.\nList software, platforms, containers, and major package versions.\nClose or update stale Issues."
-  },
-  {
-    "objectID": "assignments/09-backup.html#what-to-submit",
-    "href": "assignments/09-backup.html#what-to-submit",
-    "title": "Assignment 09 - Backup and Repository Audit",
-    "section": "What to submit",
-    "text": "What to submit\nIn assignment/09-backup/, include an audit report with:\n\nRepository map.\nData availability note.\nReproducibility checklist.\nBackup/archive plan.\nRemaining risks before final submission."
-  },
-  {
-    "objectID": "assignments/09-backup.html#assessment",
-    "href": "assignments/09-backup.html#assessment",
-    "title": "Assignment 09 - Backup and Repository Audit",
-    "section": "Assessment",
-    "text": "Assessment\nThis assignment is about project readiness. A clear audit that identifies remaining problems is better than pretending the project has no problems."
-  },
-  {
-    "objectID": "assignments/03-mapping-quantification.html",
-    "href": "assignments/03-mapping-quantification.html",
-    "title": "Assignment 03 - Mapping or Quantification Workflow",
-    "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric"
-  },
-  {
-    "objectID": "assignments/03-mapping-quantification.html#goal",
-    "href": "assignments/03-mapping-quantification.html#goal",
-    "title": "Assignment 03 - Mapping or Quantification Workflow",
-    "section": "Goal",
-    "text": "Goal\nRun one small mapping, assembly, or quantification workflow slice and document the intermediate product."
-  },
-  {
-    "objectID": "assignments/03-mapping-quantification.html#tasks",
-    "href": "assignments/03-mapping-quantification.html#tasks",
-    "title": "Assignment 03 - Mapping or Quantification Workflow",
-    "section": "Tasks",
-    "text": "Tasks\n\nChoose one small dataset from class or your project.\nIdentify the reference, database, or assembly strategy.\nRun a small workflow step, such as:\n\nMap reads to a reference.\nQuantify reads against transcripts or features.\nAssemble a small subset.\nSummarize mapping or assignment output.\n\nSave the command, log, and output summary.\nExplain what the intermediate product means and what it cannot yet prove."
-  },
-  {
-    "objectID": "assignments/03-mapping-quantification.html#what-to-submit",
-    "href": "assignments/03-mapping-quantification.html#what-to-submit",
-    "title": "Assignment 03 - Mapping or Quantification Workflow",
-    "section": "What to submit",
-    "text": "What to submit\nIn assignment/03-mapping-quantification/, include:\n\nA rendered report.\nCommands or scripts.\nA log or summary file.\nA small output table or diagnostic.\nA paragraph connecting the output to the next workflow step."
-  },
-  {
-    "objectID": "assignments/03-mapping-quantification.html#assessment",
-    "href": "assignments/03-mapping-quantification.html#assessment",
-    "title": "Assignment 03 - Mapping or Quantification Workflow",
-    "section": "Assessment",
-    "text": "Assessment\nThe analysis should show that you understand the transformation from reads to an intermediate data product."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Bioinformatics for Environmental Sciences",
     "section": "",
-    "text": "This course teaches graduate students how to move from biological sequence data to defensible environmental bioinformatics interpretation. Each student develops and completes a research project targeting a reproducible final compendium by the end of the quarter. The weekly topics emphasize bioinformatics data types and analyses; computing tools such as RStudio, Quarto, GitHub, Raven, Hyak, and archiving are handled through self-directed support modules and used throughout the quarter.\n\n\n\n\n\n\n\nImportantDo this before Week 1\n\n\n\nComplete the three self-directed setup tutorials on the Before Class page — one for each computing platform you will use (your own computer, Raven, and Hyak). Then open your Setup Check issue. You cannot keep up in Week 1 without a working setup on all three.\n\n\nBioinformatics is not only running tools. It is the practice of keeping data provenance clear, choosing appropriate analyses, checking intermediate products, and making biological claims that the evidence can support."
+    "text": "This course teaches graduate students how to move from biological sequence data to defensible environmental bioinformatics interpretation. Each student develops and completes a research project targeting a reproducible final compendium by the end of the quarter. The weekly topics emphasize bioinformatics data types and analyses; computing tools such as RStudio, Quarto, GitHub, Raven, Hyak, and archiving are handled through self-directed support modules and used throughout the quarter.\n\n\n\n\n\n\n\nDo this before Week 1\n\n\n\nComplete the three self-directed setup tutorials on the Before Class page — one for each computing platform you will use (your own computer, Raven, and Hyak). Then open your Setup Check issue. You cannot keep up in Week 1 without a working setup on all three.\n\n\nBioinformatics is not only running tools. It is the practice of keeping data provenance clear, choosing appropriate analyses, checking intermediate products, and making biological claims that the evidence can support."
   },
   {
     "objectID": "index.html#about",
     "href": "index.html#about",
     "title": "Bioinformatics for Environmental Sciences",
     "section": "",
-    "text": "This course teaches graduate students how to move from biological sequence data to defensible environmental bioinformatics interpretation. Each student develops and completes a research project targeting a reproducible final compendium by the end of the quarter. The weekly topics emphasize bioinformatics data types and analyses; computing tools such as RStudio, Quarto, GitHub, Raven, Hyak, and archiving are handled through self-directed support modules and used throughout the quarter.\n\n\n\n\n\n\n\nImportantDo this before Week 1\n\n\n\nComplete the three self-directed setup tutorials on the Before Class page — one for each computing platform you will use (your own computer, Raven, and Hyak). Then open your Setup Check issue. You cannot keep up in Week 1 without a working setup on all three.\n\n\nBioinformatics is not only running tools. It is the practice of keeping data provenance clear, choosing appropriate analyses, checking intermediate products, and making biological claims that the evidence can support."
+    "text": "This course teaches graduate students how to move from biological sequence data to defensible environmental bioinformatics interpretation. Each student develops and completes a research project targeting a reproducible final compendium by the end of the quarter. The weekly topics emphasize bioinformatics data types and analyses; computing tools such as RStudio, Quarto, GitHub, Raven, Hyak, and archiving are handled through self-directed support modules and used throughout the quarter.\n\n\n\n\n\n\n\nDo this before Week 1\n\n\n\nComplete the three self-directed setup tutorials on the Before Class page — one for each computing platform you will use (your own computer, Raven, and Hyak). Then open your Setup Check issue. You cannot keep up in Week 1 without a working setup on all three.\n\n\nBioinformatics is not only running tools. It is the practice of keeping data provenance clear, choosing appropriate analyses, checking intermediate products, and making biological claims that the evidence can support."
   },
   {
     "objectID": "index.html#format",
@@ -1369,7 +1432,7 @@
     "href": "index.html#submitting-work",
     "title": "Bioinformatics for Environmental Sciences",
     "section": "Submitting work",
-    "text": "Submitting work\n\nQuestion sets → files in your repo’s homework/ directory, submitted with a question-set submission issue that points to a commit SHA and manifest.\nClass assignments → files in your repo’s assignment/ directory, submitted with an assignment submission issue that points to a commit SHA and manifest.\nProject progress → assessed from your weekly-progress GitHub issue, automatic progress report, and your card on the course project board (goals set vs. met, evidence linked, blockers addressed, best practices applied).\n\nSee Turn In Work for the submission contract and automatic assessment report format. See Project and Compendium Rubric for the project-progress, presentation, and final-compendium criteria.\nLate policy: 40% deduction; not accepted more than 5 days past due."
+    "text": "Submitting work\n\nQuestion sets → work in your folder in the assignments repository and open a pull request; a bot pre-checks it and comments.\nClass assignments → same repository and pull-request flow, with a rendered report, output files, and a submission.yml manifest in your week folder.\nProject progress → assessed from your weekly-progress GitHub issue, automatic progress report, and your card on the course project board (goals set vs. met, evidence linked, blockers addressed, best practices applied).\n\nSee Turn In Work for the submission contract and automatic assessment report format. See Project and Compendium Rubric for the project-progress, presentation, and final-compendium criteria.\nLate policy: 40% deduction; not accepted more than 5 days past due."
   },
   {
     "objectID": "index.html#core-competencies",
@@ -1943,34 +2006,34 @@
     "href": "questions/week09.html",
     "title": "Week 09 Questions",
     "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat is the main biological claim your project can support right now?\nWhich figure or table best supports that claim?\nWhat evidence would make the claim stronger?\nWhat is the most important limitation or caveat?\nWhat is the largest remaining gap before your final compendium?"
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat is the main biological claim your project can support right now?\nWhich figure or table best supports that claim?\nWhat evidence would make the claim stronger?\nWhat is the most important limitation or caveat?\nWhat is the largest remaining gap before your final compendium?"
   },
   {
     "objectID": "questions/week01.html",
     "href": "questions/week01.html",
     "title": "Week 01 Questions - Getting Started and BLAST",
     "section": "",
-    "text": "Week 01 Questions - Getting Started and BLAST\n\n\n\n\n\n\nTipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat does BLAST compare, and what information do percent identity, query coverage, and e-value each contribute?\nWhy can the top BLAST hit be misleading?\nWhat is one sequence, gene, marker, or database that may matter for your project?\nWhat will be the endpoint of your quarter project if everything goes well?\nWhat is one setup or workflow habit you want to make automatic this week?"
+    "text": "Week 01 Questions - Getting Started and BLAST\n\n\n\n\n\n\nDue this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat does BLAST compare, and what information do percent identity, query coverage, and e-value each contribute?\nWhy can the top BLAST hit be misleading?\nWhat is one sequence, gene, marker, or database that may matter for your project?\nWhat will be the endpoint of your quarter project if everything goes well?\nWhat is one setup or workflow habit you want to make automatic this week?"
   },
   {
     "objectID": "questions/week07.html",
     "href": "questions/week07.html",
     "title": "Week 07 Questions",
     "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat biological questions can DNA methylation data help address?\nWhy is genome build/version important when interpreting methylation or genomic-feature data?\nWhat does a genome-browser inspection add that a table alone may not show?\nWhat is one way methylation results could be overinterpreted?\nWhat sections now exist in your draft final project report, and which one is weakest?"
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat biological questions can DNA methylation data help address?\nWhy is genome build/version important when interpreting methylation or genomic-feature data?\nWhat does a genome-browser inspection add that a table alone may not show?\nWhat is one way methylation results could be overinterpreted?\nWhat sections now exist in your draft final project report, and which one is weakest?"
   },
   {
     "objectID": "questions/week04.html",
     "href": "questions/week04.html",
     "title": "Week 04 Questions",
     "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat are the major data products in an RNA-seq workflow, from FASTQ files to differential-expression results?\nWhy is sample metadata as important as the count matrix?\nWhat is the difference between statistical significance and biological importance in differential expression?\nWhat quality-control result would make you hesitate before interpreting a differential-expression table?\nIf your project is not RNA-seq, what is the equivalent of a count matrix and result table in your workflow?"
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat are the major data products in an RNA-seq workflow, from FASTQ files to differential-expression results?\nWhy is sample metadata as important as the count matrix?\nWhat is the difference between statistical significance and biological importance in differential expression?\nWhat quality-control result would make you hesitate before interpreting a differential-expression table?\nIf your project is not RNA-seq, what is the equivalent of a count matrix and result table in your workflow?"
   },
   {
     "objectID": "questions/week03.html",
     "href": "questions/week03.html",
     "title": "Week 03 Questions",
     "section": "",
-    "text": "TipDue this week\n\n\n\n\nQuestions: homework/, Tuesday 3:00pm.\nAssignment: assignment/, Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by commit SHA. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat is the difference between mapping reads to a reference and assembling reads without a reference?\nWhat kind of biological question requires a reference genome, transcriptome, or database?\nWhat intermediate summary would you inspect before trusting a mapping or quantification result?\nWhat does an analysis-ready table look like for one workflow you care about?\nWhat is the smallest meaningful workflow slice you can run for your project this week?"
+    "text": "Due this week\n\n\n\n\nQuestions: due Tuesday 3:00pm.\nAssignment: due Friday 5:00pm.\nProject: update your weekly progress issue.\n\nSubmit by pull request to the assignments repo. Details: Submit · Rubric\n\n\nAnswer these in your repository’s homework/ directory before Tuesday at 3:00pm.\n\nWhat is the difference between mapping reads to a reference and assembling reads without a reference?\nWhat kind of biological question requires a reference genome, transcriptome, or database?\nWhat intermediate summary would you inspect before trusting a mapping or quantification result?\nWhat does an analysis-ready table look like for one workflow you care about?\nWhat is the smallest meaningful workflow slice you can run for your project this week?"
   }
 ]

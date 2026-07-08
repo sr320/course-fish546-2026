@@ -1,6 +1,6 @@
 ---
 title: "Turn In Work"
-subtitle: "GitHub-native submission and automatic assessment"
+subtitle: "Pull-request submission and automatic pre-checks"
 format:
   html:
     toc: true
@@ -9,127 +9,135 @@ format:
 
 ## The idea
 
-You turn in work by opening a GitHub Issue that points to an exact commit in your course repository. The commit contains your answer files, output files, and a small `submission.yml` manifest. GitHub Actions reads the issue, checks the files, and comments with an automatic assessment report.
+You turn in question sets and assignments in one place: the
+[**assignments repository**](https://github.com/sr320/fish546-2026-assignments).
+You are a collaborator on it, so you clone it, do your work in **your own
+folder**, push a branch, and open a **pull request**. A bot pre-checks the pull
+request and comments with a report; the instructor reviews the science and
+merges.
 
-This gives everyone the same workflow:
+Everyone uses the same loop:
 
-1. Do the work in your repository.
-2. Commit and push.
-3. Open the correct submission issue.
-4. Paste the repository URL, commit SHA, and path to your manifest.
-5. Read the automatic report and fix anything flagged before the deadline.
+1. Clone the assignments repo (once) and make your folder: `submissions/<your-username>/`.
+2. Start a branch and do the week's work under `submissions/<your-username>/weekNN/`.
+3. Commit your files, including a rendered report and a `submission.yml` manifest.
+4. Push the branch and open a pull request into `main`.
+5. Read the automatic pre-check comment and fix anything it flags.
 
-The Issue is the receipt. The commit SHA freezes the submitted version. The manifest tells the grader what evidence belongs to the submission.
+The pull request is the receipt. The branch freezes the submitted version. The
+manifest tells the checker what evidence belongs to the submission.
 
-## What gets assessed automatically
+## Where your work lives
 
-The automatic check is not meant to replace instructor judgment. It checks the things software is good at checking:
-
-- Required files exist.
-- Files are in the expected week directory.
-- Rendered reports are present when required.
-- Output tables and figures are non-empty.
-- A `submission.yml` file identifies the week, type, title, and submitted files.
-- Raw data are not accidentally committed from `data/raw/`.
-- The submission issue links to a specific commit.
-- The repository has recent commits before the deadline.
-
-The instructor still evaluates interpretation, biological reasoning, caveats, and scientific quality.
-
-## Question set submissions
-
-Question sets should live in `homework/`.
-
-Example:
+All of your work for the whole term lives under one folder, one subfolder per week:
 
 ```text
-homework/
-  week02.qmd
-  week02.html
-  week02-submission.yml
+submissions/
+  <your-username>/
+    week02/
+      analysis.qmd            # or answers.md for a question set
+      analysis.html           # you render this yourself
+      output/read-counts.csv
+      output/qc-summary.png
+      submission.yml          # the manifest
 ```
 
-Example `week02-submission.yml`:
+Only edit files inside `submissions/<your-username>/`. The bot fails any pull
+request that touches another student's folder or the assignment prompts.
+
+## What gets checked automatically
+
+The automatic check is not meant to replace instructor judgment. It checks the
+things software is good at checking:
+
+- Your pull request only touches your own folder.
+- A `submission.yml` manifest is present in the week folder you changed.
+- The manifest identifies the week, type, title, and submitted files.
+- The source file and rendered report exist and are non-empty.
+- Output tables and figures listed in the manifest exist and are non-empty.
+- Raw data are not committed under any `data/raw/` directory.
+
+The instructor still evaluates interpretation, biological reasoning, caveats,
+and scientific quality. The bot does **not** run or render your code — you commit
+your own rendered `.html`.
+
+## The manifest
+
+Copy `templates/submission.yml` into your week folder and fill it in. **All paths
+are relative to the folder that holds `submission.yml`** (your week folder).
+
+Question set example:
 
 ```yaml
 type: question-set
 week: "02"
 title: "Raw reads, FASTQ, QC, and trimming"
-source: "homework/week02.qmd"
-rendered: "homework/week02.html"
+source: answers.md
+rendered: answers.html
 questions_answered: 5
 project_connection: true
 ```
 
-## Assignment submissions
-
-Assignments should live in `assignment/`.
-
-Example:
-
-```text
-assignment/
-  02-fastq-qc/
-    analysis.qmd
-    analysis.html
-    output/read-counts.csv
-    output/qc-summary.png
-    submission.yml
-```
-
-Example `submission.yml`:
+Assignment example:
 
 ```yaml
 type: assignment
 week: "02"
 title: "FASTQ Quality Control"
-source: "assignment/02-fastq-qc/analysis.qmd"
-rendered: "assignment/02-fastq-qc/analysis.html"
+source: analysis.qmd
+rendered: analysis.html
 outputs:
-  - "assignment/02-fastq-qc/output/read-counts.csv"
-  - "assignment/02-fastq-qc/output/qc-summary.png"
+  - output/read-counts.csv
+  - output/qc-summary.png
 uses_raw_data: true
 raw_data_committed: false
 project_connection: true
 ```
 
-## Automatic report
+## The automatic report
 
-After the issue is opened or edited, GitHub Actions posts a report like:
+After you open or update the pull request, GitHub Actions posts a report as a
+comment (updated in place each time you push) like:
 
 ```text
-Automatic assessment: warning
+Automatic pre-check: warn
 
 Passed
-- Manifest found.
-- Rendered report found.
-- Output table found.
+- All changed files are under your folder `submissions/<you>/`.
+- Manifest type is `assignment`.
+- Rendered file found.
+- Output file found.
 
 Warnings
-- No project_connection field found.
+- Manifest does not confirm a project connection.
 
 Needs human review
 - Biological interpretation and caveats.
 ```
 
-If the report says `fail`, fix the flagged items, push a new commit, and edit the submission issue with the new commit SHA.
+The pull request also gets a label: `auto:pass`, `auto:warn`, or `auto:fail`, and
+the pull-request check turns red on `fail`. If it fails, fix the flagged items,
+commit, and push to the same branch — the pre-check runs again automatically.
 
-## Why this is better than uploads
+## Why this is better than uploads or issues
 
 This system assesses the same habits the course is trying to teach:
 
 - Version-controlled work.
 - Reproducible project structure.
 - Clear evidence trails.
-- Precise submission versions.
+- Precise submission versions (the branch and its commits).
 - Fast feedback before grading.
 - Human review reserved for scientific judgment.
 
-It also lets the instructor see cohort-level progress through labels such as `auto:pass`, `auto:warn`, `auto:fail`, `question-set`, and `assignment`.
+It also lets the instructor see cohort-level progress: open pull requests are
+outstanding submissions, and `auto:*` labels triage them at a glance.
 
 ## Weekly research progress
 
-Weekly project progress is assessed through a separate **Weekly Research Progress** issue. This is not a file submission. It is a structured project-management checkpoint.
+Weekly project progress is **not** a pull request. It is a structured
+project-management checkpoint, submitted through a **Weekly Research Progress
+issue** on the [course repository](https://github.com/sr320/course-fish546-2026).
 
 Each progress issue asks for:
 
@@ -152,4 +160,6 @@ The automatic progress check comments on the issue and applies labels:
 | `progress:watch` | The record is incomplete, thin, risky, or needs instructor attention. |
 | `progress:blocked` | The student reports being blocked and should have a linked Help Request or Blocker/Bug issue. |
 
-The progress checker looks for completeness and evidence, not whether the science is "good enough." The instructor uses the report to review trajectory, intervene early, and assess weekly project-progress credit.
+The progress checker looks for completeness and evidence, not whether the science
+is "good enough." The instructor uses the report to review trajectory, intervene
+early, and assess weekly project-progress credit.

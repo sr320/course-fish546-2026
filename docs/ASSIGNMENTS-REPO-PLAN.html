@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>eDNA &amp; Environmental Metabarcoding – 2026 :: Bioinformatics — FISH 546</title>
+<title>assignments-repo-plan – 2026 :: Bioinformatics — FISH 546</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,74 +142,153 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#module-materials" id="toc-module-materials" class="nav-link active" data-scroll-target="#module-materials">Module materials</a></li>
-  <li><a href="#what-youll-learn" id="toc-what-youll-learn" class="nav-link" data-scroll-target="#what-youll-learn">What you’ll learn</a></li>
-  <li><a href="#where-it-runs" id="toc-where-it-runs" class="nav-link" data-scroll-target="#where-it-runs">Where it runs</a></li>
-  <li><a href="#edna-project-track" id="toc-edna-project-track" class="nav-link" data-scroll-target="#edna-project-track">eDNA project track</a></li>
-  <li><a href="#competency-anchors-roberts-lab-handbook" id="toc-competency-anchors-roberts-lab-handbook" class="nav-link" data-scroll-target="#competency-anchors-roberts-lab-handbook">Competency anchors (Roberts Lab Handbook)</a></li>
+  <li><a href="#plan-move-assessments-assignments-to-a-pull-request-repo" id="toc-plan-move-assessments-assignments-to-a-pull-request-repo" class="nav-link active" data-scroll-target="#plan-move-assessments-assignments-to-a-pull-request-repo">Plan: Move Assessments &amp; Assignments to a Pull-Request Repo</a>
+  <ul class="collapse">
+  <li><a href="#two-repos-clean-split" id="toc-two-repos-clean-split" class="nav-link" data-scroll-target="#two-repos-clean-split">1. Two repos, clean split</a></li>
+  <li><a href="#new-repo-layout" id="toc-new-repo-layout" class="nav-link" data-scroll-target="#new-repo-layout">2. New repo layout</a></li>
+  <li><a href="#student-workflow-branch-model-recommended" id="toc-student-workflow-branch-model-recommended" class="nav-link" data-scroll-target="#student-workflow-branch-model-recommended">3. Student workflow (branch model — recommended)</a></li>
+  <li><a href="#autograding-design" id="toc-autograding-design" class="nav-link" data-scroll-target="#autograding-design">4. Autograding design</a></li>
+  <li><a href="#what-migrates-what-retires" id="toc-what-migrates-what-retires" class="nav-link" data-scroll-target="#what-migrates-what-retires">5. What migrates, what retires</a></li>
+  <li><a href="#instructor-experience" id="toc-instructor-experience" class="nav-link" data-scroll-target="#instructor-experience">6. Instructor experience</a></li>
+  <li><a href="#build-sequence" id="toc-build-sequence" class="nav-link" data-scroll-target="#build-sequence">7. Build sequence</a></li>
+  <li><a href="#open-decisions-need-instructor-input" id="toc-open-decisions-need-instructor-input" class="nav-link" data-scroll-target="#open-decisions-need-instructor-input">8. Open decisions (need instructor input)</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">eDNA &amp; Environmental Metabarcoding</h1>
-<p class="subtitle lead">Topic hub</p>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>Environmental DNA (eDNA) — genetic material shed into water, soil, or air — lets us detect and characterize communities without capturing organisms. This is a growing thread in the course, with its own lecture, assignment, and an optional project track.</p>
-<section id="module-materials" class="level2">
-<h2 class="anchored" data-anchor-id="module-materials">Module materials</h2>
+<section id="plan-move-assessments-assignments-to-a-pull-request-repo" class="level1">
+<h1>Plan: Move Assessments &amp; Assignments to a Pull-Request Repo</h1>
+<p><strong>Goal.</strong> Replace the Issue-Form + external-student-repo + commit-SHA submission system with a single, dedicated <strong>assignments repo</strong> that students clone/fork, work in, and submit to by <strong>pull request</strong>. Each PR is automatically pre-checked by GitHub Actions and commented on, then the instructor merges (accept) or requests changes. This collapses five artifacts (issue form, parser, cross-repo checkout, bot token, label bot) into one legible loop: <em>branch → work → PR → auto-check → review → merge</em>.</p>
+<p>The Quarto <strong>website stays as-is</strong> and becomes purely instructional (syllabus, schedule, lectures, tutorials, support). All <em>doing and turning-in</em> moves to the new repo.</p>
+<hr>
+<section id="two-repos-clean-split" class="level2">
+<h2 class="anchored" data-anchor-id="two-repos-clean-split">1. Two repos, clean split</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 27%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Repo</th>
+<th>Role</th>
+<th>Contains</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>course-fish546-2026</code> (this one)</td>
+<td><strong>Teaching site</strong> (Quarto → Pages)</td>
+<td><code>index</code>, <code>schedule</code>, <code>setup</code>, <code>support</code>, <code>lectures/</code>, <code>tutorials/</code>, <code>edna</code> hub. Links out to the assignments repo.</td>
+</tr>
+<tr class="even">
+<td><code>fish546-2026-assignments</code> (new)</td>
+<td><strong>Work + submission + autograding</strong></td>
+<td>assignment/question prompts, per-student work folders, autograder, PR templates, workflows.</td>
+</tr>
+</tbody>
+</table>
+<p>The website links to each week’s assignment in the new repo instead of hosting the prompt itself. <code>assignments/*.qmd</code> and <code>questions/*.qmd</code> prompt text moves (or is mirrored) into the new repo as plain Markdown task files.</p>
+<hr>
+</section>
+<section id="new-repo-layout" class="level2">
+<h2 class="anchored" data-anchor-id="new-repo-layout">2. New repo layout</h2>
+<pre><code>fish546-2026-assignments/
+├── README.md                     # how to submit (the whole workflow on one page)
+├── assignments/                  # PROMPTS (read-only for students)
+│   ├── 01-blast/README.md
+│   ├── 02-fastq-qc/README.md
+│   └── …
+├── questions/                    # weekly question-set PROMPTS
+│   ├── week01.md … week10.md
+├── submissions/                  # STUDENT WORK — one folder per student
+│   └── &lt;github-username&gt;/
+│       ├── week01/
+│       │   ├── answers.md
+│       │   ├── analysis.html         # student-rendered (CI does NOT render)
+│       │   ├── output/…
+│       │   └── submission.yml        # manifest (reused from current design)
+│       └── week02/…
+├── templates/
+│   └── submission.yml                # manifest template students copy
+├── autograder/                       # the reusable checks (ported from scripts/)
+│   ├── check_submission.py
+│   └── requirements.txt
+├── .github/
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── workflows/
+│       ├── autograde.yml             # runs on PR, produces report artifact
+│       └── autograde-comment.yml     # workflow_run: posts comment + status
+└── CODEOWNERS                        # optional: route review</code></pre>
+<p><strong>Per-student folders are the key design choice.</strong> Every student writes only under <code>submissions/&lt;their-username&gt;/</code>. This means PRs never conflict with each other, the autograder knows exactly which files to check (the PR diff), and the instructor can see one folder = one student’s whole term.</p>
+<hr>
+</section>
+<section id="student-workflow-branch-model-recommended" class="level2">
+<h2 class="anchored" data-anchor-id="student-workflow-branch-model-recommended">3. Student workflow (branch model — recommended)</h2>
+<p>Two options; <strong>collaborator + branch is recommended over fork</strong> because it gives the autograder a full-permission token (comments/labels “just work”, no <code>workflow_run</code> relay, no fork-sync pain).</p>
+<p><strong>Recommended — students are collaborators on the one repo:</strong> 1. Clone the assignments repo (once). 2. <code>git switch -c wk02-&lt;username&gt;</code>; do the work under <code>submissions/&lt;username&gt;/week02/</code>; commit + push the branch. 3. Open a PR into <code>main</code>. The PR template auto-fills the checklist. 4. Autograder runs on the PR, posts a comment, sets a check status. 5. Fix flagged items, push again (PR re-checks). Instructor reviews science, merges.</p>
+<p><strong>Alternative — fork model</strong> (if you don’t want ~25 collaborators): students fork, PR from fork. Same UX for students, but autograding must use the <code>pull_request</code> (build report) + <code>workflow_run</code> (post comment) two-stage pattern because fork PRs get a read-only token with no secrets.</p>
+<p>Either way: <strong>one repo the student pulls from, PRs into, and gets auto-assessed</strong> — exactly the requested model.</p>
+<hr>
+</section>
+<section id="autograding-design" class="level2">
+<h2 class="anchored" data-anchor-id="autograding-design">4. Autograding design</h2>
+<p><strong>Reuse</strong> the logic already in <a href="scripts/assess_submission.py">scripts/assess_submission.py</a>: required files exist, manifest <code>type</code>/<code>week</code> match, source + rendered present, outputs non-empty, <code>questions_answered &gt;= 5</code>, <code>project_connection</code> set, and no <code>data/raw/</code> files committed. Port it to <code>autograder/check_submission.py</code>, but change the input from “checkout external repo at SHA” to <strong>“inspect the files the PR changed.”</strong></p>
+<p>What the workflow does on each PR: 1. Compute the diff (<code>git diff --name-only origin/main...HEAD</code>). 2. <strong>Ownership check:</strong> every changed path must start with <code>submissions/&lt;pr-author&gt;/</code> — reject cross-folder edits (protects other students; also catches accidental edits to prompts). 3. Locate the touched <code>submission.yml</code>, run the structural checks against the files in the working tree. 4. Emit a Markdown report + a <code>pass|warn|fail</code> status. 5. Post the report as a PR comment; set a commit <strong>check</strong> (green/red) so the PR list shows status at a glance; apply <code>auto:pass|warn|fail</code> labels.</p>
+<p><strong>Security posture (unchanged from current design):</strong> CI does <strong>not</strong> execute or render student code. Students commit their own rendered <code>.html</code>; CI only verifies structure/evidence. This keeps untrusted code out of the runner and matches what <code>turn-in.qmd</code> already promises. Human review still owns biological reasoning, interpretation, caveats, and writing.</p>
+<p>The <code>pass|warn|fail</code> split maps cleanly onto the existing <code>auto:*</code> labels and the “automatic checks vs.&nbsp;instructor review” distinction the course already teaches.</p>
+<hr>
+</section>
+<section id="what-migrates-what-retires" class="level2">
+<h2 class="anchored" data-anchor-id="what-migrates-what-retires">5. What migrates, what retires</h2>
+<p><strong>Migrates to the new repo:</strong> - Assignment prompts (<code>assignments/*.qmd</code> → <code>assignments/&lt;slug&gt;/README.md</code>). - Question-set prompts (<code>questions/week*.qmd</code> → <code>questions/weekNN.md</code>). - Manifest schema + <code>submission.yml</code> examples (from <code>turn-in.qmd</code>). - The checking logic in <code>scripts/assess_submission.py</code>.</p>
+<p><strong>Retires (folded into the PR loop):</strong> - <code>.github/ISSUE_TEMPLATE/50-question-set-submission.yml</code> and <code>60-assignment-submission.yml</code> → replaced by the PR template. - <code>scripts/parse_submission_issue.py</code> → no issue to parse; the PR <em>is</em> the submission and the diff <em>is</em> the manifest pointer. - <code>.github/workflows/submission-assessment.yml</code> → replaced by <code>autograde.yml</code>. - <code>COURSE_BOT_TOKEN</code> cross-repo checkout → gone (work lives in-repo).</p>
+<p><strong>Stays on the website / lightweight in the org:</strong> - Help requests + blocker/bug issue forms (<code>30-*</code>, <code>40-*</code>) — still useful; keep as Issues (they aren’t submissions). - Weekly research-progress: decide (see §7) whether to keep it as an Issue Form or convert to a <code>submissions/&lt;username&gt;/progress/weekNN.md</code> PR. Recommend keeping progress as an <strong>Issue</strong> — it’s a narrative checkpoint, not a file packet, and the current <a href=".github/workflows/progress-assessment.yml">progress workflow</a> already fits Issues.</p>
+<hr>
+</section>
+<section id="instructor-experience" class="level2">
+<h2 class="anchored" data-anchor-id="instructor-experience">6. Instructor experience</h2>
 <ul>
-<li><strong>Lecture:</strong> <a href="./lectures/edna.html">eDNA &amp; Metabarcoding</a></li>
-<li><strong>Assignment:</strong> <a href="./assignments/edna-metabarcoding.html">eDNA Metabarcoding pipeline</a></li>
-<li><strong>Question set:</strong> <a href="./questions/week08.html">Week 08</a></li>
+<li><strong>The PR list replaces the project board.</strong> Open PRs = outstanding submissions; <code>auto:*</code> labels + check marks = triage at a glance; filter by label <code>week-02</code> or by author.</li>
+<li>One folder per student under <code>submissions/</code> = the whole term’s paper trail in one place, browsable and <code>git blame</code>-able.</li>
+<li>Merging is the accept action; “request changes” is the rework loop. No separate label dance to track state — PR state (open/changes-requested/merged) carries it.</li>
 </ul>
+<hr>
 </section>
-<section id="what-youll-learn" class="level2">
-<h2 class="anchored" data-anchor-id="what-youll-learn">What you’ll learn</h2>
+<section id="build-sequence" class="level2">
+<h2 class="anchored" data-anchor-id="build-sequence">7. Build sequence</h2>
+<ol type="1">
+<li><strong>Create</strong> <code>fish546-2026-assignments</code> (in the same org). Decide public vs. private (private = FERPA-safer; public = simplest).</li>
+<li><strong>Scaffold</strong> the layout in §2; write the one-page <code>README.md</code> submission guide and the PR template.</li>
+<li><strong>Port</strong> <code>assess_submission.py</code> → <code>autograder/check_submission.py</code>; switch its input to the PR diff; add the ownership check.</li>
+<li><strong>Write</strong> <code>autograde.yml</code> (+ <code>autograde-comment.yml</code> only if using forks).</li>
+<li><strong>Migrate</strong> assignment + question prompts; keep <code>submission.yml</code> schema.</li>
+<li><strong>Seed</strong> <code>submissions/&lt;username&gt;/</code> folders (script from the roster) and add students as collaborators (branch model) or send fork instructions.</li>
+<li><strong>Dry run:</strong> one fake student, one PR, confirm the comment + check + labels.</li>
+<li><strong>Point the website at it:</strong> update <code>turn-in.qmd</code>, <code>schedule.qmd</code>, and the per-week assignment links to the new repo; add a short “how to submit” note.</li>
+<li><strong>Retire</strong> the issue-form submission templates + the cross-repo workflow + the bot token.</li>
+</ol>
+<hr>
+</section>
+<section id="open-decisions-need-instructor-input" class="level2">
+<h2 class="anchored" data-anchor-id="open-decisions-need-instructor-input">8. Open decisions (need instructor input)</h2>
 <ul>
-<li><strong>Concepts:</strong> what environmental nucleic acids are, how samples are collected and filtered, and why contamination control matters.</li>
-<li><strong>Markers:</strong> common metabarcoding markers (COI, 12S, 16S, 18S) and when to use each.</li>
-<li><strong>From reads to biology:</strong> amplicon QC → <strong>DADA2</strong> (amplicon sequence variants) vs.&nbsp;OTU clustering → taxonomic assignment against reference databases → an abundance / occurrence table.</li>
-<li><strong>Ecological readouts:</strong> diversity, species detection and occupancy, and comparing communities across sites or time.</li>
-<li><strong>Caveats:</strong> false positives/negatives, index hopping, and reproducibility concerns specific to eDNA.</li>
-</ul>
-</section>
-<section id="where-it-runs" class="level2">
-<h2 class="anchored" data-anchor-id="where-it-runs">Where it runs</h2>
-<p>The heavy steps (denoising, taxonomic assignment) run on <strong>Hyak/Klone</strong> — this is exactly why you complete the <a href="tutorials/03-hyak.html">Hyak tutorial</a> before class. Interactive exploration and figures happen on <strong>Raven</strong> or your own machine.</p>
-</section>
-<section id="edna-project-track" class="level2">
-<h2 class="anchored" data-anchor-id="edna-project-track">eDNA project track</h2>
-<p>You may take an eDNA dataset as your quarter research project: raw amplicons → community table → figure/report, using the same GitHub, issue-tracking, and compendium workflow as every other project. Flag this in your <strong>project-proposal</strong> issue.</p>
-</section>
-<section id="competency-anchors-roberts-lab-handbook" class="level2">
-<h2 class="anchored" data-anchor-id="competency-anchors-roberts-lab-handbook">Competency anchors (Roberts Lab Handbook)</h2>
-<ul>
-<li><a href="https://robertslab.github.io/resources/bio_Basics/">Bioinformatics Basics</a></li>
-<li><a href="https://robertslab.github.io/resources/bio-Annotation/">Annotation</a></li>
-<li><a href="https://robertslab.github.io/resources/Genomic-Resources/">Genomic Resources</a></li>
-<li><a href="https://robertslab.github.io/resources/Data-Management/">Data Management</a></li>
+<li><strong>Collaborators-on-one-repo vs.&nbsp;forks.</strong> Recommend collaborators+branch for simpler autograding; forks if you’d rather not add ~25 collaborators.</li>
+<li><strong>Public vs.&nbsp;private repo</strong> (student privacy / FERPA vs.&nbsp;simplicity).</li>
+<li><strong>Weekly progress:</strong> keep as an Issue (recommended) or fold into PRs.</li>
+<li><strong>Where prompts live:</strong> single source of truth in the new repo (recommended), or authored in the Quarto site and mirrored.</li>
+<li><strong>Deadlines:</strong> enforce via the commit timestamp on the PR head, or trust the PR-open time. (The old design froze a SHA; a PR head SHA does the same.) ```</li>
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
