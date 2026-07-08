@@ -130,7 +130,7 @@
     "href": "rubric.html#grade-interpretation",
     "title": "Project and Compendium Rubric",
     "section": "Grade interpretation",
-    "text": "Grade interpretation\nUse these ranges as a guide when translating points into feedback:\n\n\n\n\n\n\n\nRange\nMeaning\n\n\n\n\n90-100\nStrong, reproducible, clearly interpreted project work\n\n\n80-89\nSolid work with minor gaps in reproducibility, evidence, or explanation\n\n\n70-79\nMeaningful progress, but important pieces are unclear, incomplete, or weakly connected\n\n\n60-69\nLimited project evidence or substantial reproducibility and interpretation gaps\n\n\nBelow 60\nMissing, inaccessible, or too incomplete to evaluate reliably"
+    "text": "Grade interpretation\nUse these 4.0-scale ranges as a guide when translating scores into feedback:\n\n\n\n\n\n\n\nRange\nMeaning\n\n\n\n\n3.7-4.0\nStrong, reproducible, clearly interpreted project work\n\n\n3.0-3.6\nSolid work with minor gaps in reproducibility, evidence, or explanation\n\n\n2.0-2.9\nMeaningful progress, but important pieces are unclear, incomplete, or weakly connected\n\n\n1.0-1.9\nLimited project evidence or substantial reproducibility and interpretation gaps\n\n\nBelow 1.0\nMissing, inaccessible, or too incomplete to evaluate reliably"
   },
   {
     "objectID": "lectures/10-lastmile.html",

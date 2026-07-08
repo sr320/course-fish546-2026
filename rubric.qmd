@@ -74,12 +74,12 @@ These expectations apply to all project submissions:
 
 ## Grade interpretation
 
-Use these ranges as a guide when translating points into feedback:
+Use these 4.0-scale ranges as a guide when translating scores into feedback:
 
 | Range | Meaning |
 |---:|---|
-| 90-100 | Strong, reproducible, clearly interpreted project work |
-| 80-89 | Solid work with minor gaps in reproducibility, evidence, or explanation |
-| 70-79 | Meaningful progress, but important pieces are unclear, incomplete, or weakly connected |
-| 60-69 | Limited project evidence or substantial reproducibility and interpretation gaps |
-| Below 60 | Missing, inaccessible, or too incomplete to evaluate reliably |
+| 3.7-4.0 | Strong, reproducible, clearly interpreted project work |
+| 3.0-3.6 | Solid work with minor gaps in reproducibility, evidence, or explanation |
+| 2.0-2.9 | Meaningful progress, but important pieces are unclear, incomplete, or weakly connected |
+| 1.0-1.9 | Limited project evidence or substantial reproducibility and interpretation gaps |
+| Below 1.0 | Missing, inaccessible, or too incomplete to evaluate reliably |
