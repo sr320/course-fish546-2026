@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        One issue per student. This issue is the home base for your project all quarter — it will move across the course project board.
+        One issue per student. This issue is the home base for your project all quarter — you link back to it from every weekly-progress issue.
   - type: textarea
     id: question
     attributes:

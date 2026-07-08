@@ -23,7 +23,7 @@ Automatic checks confirm that required files, manifests, rendered reports, links
 
 ## Weekly research project progress
 
-Weekly progress is assessed from the weekly-progress issue, project issue, project board card, linked commits, and linked evidence.
+Weekly progress is assessed from the weekly-progress issue, project issue, automatic progress report, linked commits, and linked evidence.
 
 | Criterion | Points | Excellent | Complete | Developing | Incomplete |
 |---|---:|---|---|---|---|

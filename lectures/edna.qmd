@@ -70,7 +70,7 @@ Once you have the table:
 
 ## This week
 
-- **Assignment:** [eDNA Metabarcoding pipeline](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/edna-metabarcoding)
+- **Assignment:** [eDNA Metabarcoding pipeline](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/08-edna-metabarcoding)
 - **Question set:** [Week 08](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week08.md)
 - **Topic hub:** [eDNA](../edna.qmd)
 

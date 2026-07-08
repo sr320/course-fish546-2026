@@ -22,7 +22,7 @@ Bioinformatics is not only running tools. It is the practice of keeping data pro
 This class is driven in part by student needs and is flexible in content. It is practical and problem-driven. Tuesdays focus on the week's bioinformatics concept and data type. Thursdays are working sessions for applying that concept to assignments and research projects.
 
 ::: {.callout-important style="color: orange"}
-**Issues are how we work.** Structured, trackable work happens in **GitHub Issues** using course [issue forms](https://github.com/course-fish546-2026) — weekly progress, project proposals, and help requests. Open-ended conversation happens in [GitHub Discussions](https://github.com/orgs/course-fish546-2026/discussions) and on [Slack](https://genefish.slack.com). Be sure you have a GitHub account, are part of the course organization, and have notifications turned on.
+**Pull requests and Issues are how we work.** You turn in question sets and assignments as **pull requests** in the [assignments repository](https://github.com/sr320/fish546-2026-assignments) — a bot pre-checks each one ([how to turn in](turn-in.qmd)). Project tracking happens in **GitHub Issues** using course issue forms — project proposals, weekly progress, and help requests. Open-ended conversation happens in [GitHub Discussions](https://github.com/orgs/course-fish546-2026/discussions) and on [Slack](https://genefish.slack.com). Be sure you have a GitHub account, are part of the course organization, and have notifications turned on.
 :::
 
 ## Platforms
@@ -49,7 +49,7 @@ Each week has a bioinformatics assignment, expected research-project progress, a
 |------------------------|------------------------|------------------------|
 | Weekly Question Set | 25% | due Tuesday 3:00pm |
 | Weekly Class Assignment | 35% | due Friday 5:00pm |
-| Weekly Research Project Progress | 20% | assessed via your **weekly-progress issue** + project board |
+| Weekly Research Project Progress | 20% | assessed via your **weekly-progress issues** |
 | Project Presentation | 10% | mid-quarter update + final presentation |
 | Project Completion | 10% | Week 10: compendium |
 
@@ -57,7 +57,7 @@ Each week has a bioinformatics assignment, expected research-project progress, a
 
 - **Question sets** → work in your folder in the [assignments repository](https://github.com/sr320/fish546-2026-assignments) and open a pull request; a bot pre-checks it and comments.
 - **Class assignments** → same repository and pull-request flow, with a rendered report, output files, and a `submission.yml` manifest in your week folder.
-- **Project progress** → assessed from your **weekly-progress GitHub issue**, automatic progress report, and your card on the course project board (goals set vs. met, evidence linked, blockers addressed, best practices applied).
+- **Project progress** → assessed from your **weekly-progress GitHub issues** and their automatic progress reports (goals set vs. met, evidence linked, blockers addressed, best practices applied).
 
 See [Turn In Work](turn-in.qmd) for the submission contract and automatic assessment report format. See [Project and Compendium Rubric](rubric.qmd) for the project-progress, presentation, and final-compendium criteria.
 

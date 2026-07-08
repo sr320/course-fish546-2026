@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        File one of these each week. Progress is assessed from this issue and your card on the course project board.
+        File one of these each week. Progress is assessed from this issue and its automatic progress report.
   - type: dropdown
     id: week
     attributes:
