@@ -23,6 +23,33 @@ quarto render       # build the site into docs/
 
 The three setup tutorials are standalone HTML — just open `tutorials/*.html` in a browser.
 
+## Course-site audit
+
+Run the offline audit before committing student-facing changes:
+
+```bash
+python3 scripts/audit_course_site.py
+```
+
+The audit checks source links, generated-site links and anchors, published tutorial
+copies, and the render-source manifest. After a successful `quarto render`, record the
+new accepted source state with:
+
+```bash
+python3 scripts/audit_course_site.py --write-manifest
+```
+
+Before publishing a course offering, review external destinations from a networked
+environment:
+
+```bash
+python3 scripts/audit_course_site.py --external
+```
+
+See [`maintenance/RESOURCE_INVENTORY.md`](maintenance/RESOURCE_INVENTORY.md) for the
+canonical destination map and [`maintenance/EXTERNAL_LINK_REVIEW.md`](maintenance/EXTERNAL_LINK_REVIEW.md)
+for the review procedure.
+
 ## Structure
 
 | Path | What |
@@ -37,4 +64,6 @@ The three setup tutorials are standalone HTML — just open `tutorials/*.html` i
 | `lectures/` | weekly lecture material (assignments & question sets live in the [assignments repo](https://github.com/sr320/fish546-2026-assignments)) |
 | `.github/` | issue forms, labels, weekly-progress assessment workflow |
 | `scripts/` | weekly-progress parsing/assessment helpers |
+| `maintenance/` | resource inventory, baseline, surveys, link review, and render manifest |
+| `ROADMAP.md` | phased student-experience improvement plan |
 | `PLAN.md` | full build plan & open decisions |
