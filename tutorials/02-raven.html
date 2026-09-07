@@ -11,6 +11,7 @@
   <nav class="side">
     <h1>FISH 546 · Setup 2</h1>
     <div class="sub">Raven:<br>RStudio Server &amp; Analysis</div>
+    <a class="home" href="../setup.html">← Course site · Setup</a>
     <div class="grp">Sections</div>
     <a href="#intro">Overview</a>
     <a href="#why">1 · Server vs. laptop</a>
@@ -28,9 +29,9 @@
 
   <main>
     <section class="hero" id="intro">
-      <div class="kick">Pre-course · Tutorial 2 of 3</div>
+      <div class="kick">Week 1 · Thursday session · Tutorial 2 of 3</div>
       <h2>Raven: RStudio Server &amp; Reproducible Analysis</h2>
-      <p class="lead">Run an interactive analysis on the lab's shared server and push the result back to GitHub. Raven is the middle tier — more power than your laptop, gentler than the HPC cluster.</p>
+      <p class="lead">Run an interactive analysis on the lab's shared server and push the result back to GitHub. Raven is <strong>home</strong> for most of your weekly work — more power than your laptop, gentler than the HPC cluster.</p>
       <div class="pills"><span>~1 hour</span><span>Raven RStudio Server</span><span>Finish Tutorial 1 first</span></div>
     </section>
 
@@ -121,7 +122,7 @@
 <span class="p">git commit -m "Add first Raven output figure"</span>
 <span class="p">git push</span></pre>
       </div>
-      <div class="tip">Refresh your repo on GitHub — the PNG should be there. That's a complete reproducible cycle on the server.</div>
+      <div class="tip">Refresh your repo on GitHub — the PNG should be there. That's a complete reproducible cycle on the server, and exactly the loop of every weekly notebook entry: compute on Raven, write to <code>output/</code>, render the <code>.qmd</code> in <code>notebooks/</code>, commit, push.</div>
       <div class="check" data-check>
         <label><input type="checkbox"> I generated an output file on Raven</label>
         <label><input type="checkbox"> I committed and pushed it — I can see it on GitHub</label>
@@ -149,11 +150,11 @@
     <section id="done">
       <div class="eyebrow">Finish</div>
       <h2 class="sec">✔ Completion <span class="tag">Tutorial 2</span></h2>
-      <p class="lede">All boxes checked? Paste this into your <strong>Setup Check</strong> issue.</p>
+      <p class="lede">All boxes checked? Paste this as a comment on your <strong>Project Proposal</strong> issue on the <a href="https://github.com/sr320/course-fish546-2026/issues">course repository</a>.</p>
       <div class="done-block">## Tutorial 2 — Raven ✅
 Logged into Raven RStudio Server and cloned my repo.
 Output pushed from Raven: https://github.com/course-fish546-2026/&lt;your-repo&gt;/blob/main/output/hello-raven.png</div>
-      <div class="note">Last one — and the toughest: <a href="03-hyak.html">Tutorial 3 — Hyak / Klone HPC</a>. Give yourself time and don't panic when something breaks.</div>
+      <div class="note">Last one — and the toughest: <a href="03-hyak.html">Tutorial 3 — Hyak / Klone HPC</a>. It is assigned in <strong>Week 3</strong> (Oct 20), so you do not need it yet. When you get there, give yourself time and don't panic when something breaks.</div>
     </section>
   </main>
 </div>
