@@ -1,18 +1,18 @@
 # course-fish546-2026
 
-FISH 546 — **Bioinformatics for Environmental Sciences** (University of Washington, SAFS). This repository builds the 2026 course website with [Quarto](https://quarto.org), published to GitHub Pages from `docs/`.
+FISH 546 — **Bioinformatics for Environmental Sciences** (University of Washington, SAFS), Autumn 2026. This repository builds the course website with [Quarto](https://quarto.org), published to GitHub Pages from `docs/` at <https://sr320.github.io/course-fish546-2026/>. It also hosts the two issue forms students use all quarter.
 
-See **[PLAN.md](PLAN.md)** for the full build plan. In short, this iteration:
+## How the course works
 
-- Stays **Quarto**-based (publishes to `docs/`).
-- Splits student work across two repos: **pull-request submissions** for question sets and assignments in the [assignments repo](https://github.com/sr320/fish546-2026-assignments), and **GitHub Issue forms** + labels (`.github/`) for project proposals, weekly progress, and help requests.
-- Adds an **eDNA / metabarcoding** module (`lectures/edna.qmd`, `edna.qmd`; the assignment lives in the [assignments repo](https://github.com/sr320/fish546-2026-assignments)).
-- Ships **three self-directed, pre-course HTML tutorials** — one per platform students use — in `tutorials/`, with Hyak/Klone getting the deepest treatment.
-- Structures weekly lectures, assignments, and question sets around a bioinformatics-first arc: sequence search, raw reads/QC, mapping/quantification, RNA-seq, annotation/ranges, variants, methylation, eDNA, and project synthesis.
-- Moves RStudio, Quarto, Hyak mechanics, GitHub Issues, and archiving guidance into `support.qmd` as self-directed skills.
-- Uses GitHub-native automatic assessment: pull-request pre-checks with `submission.yml` manifests in the assignments repo, and a weekly-progress assessment workflow on the issue forms here (GitHub Actions).
+One loop, described in full on the site's [How We Work](https://sr320.github.io/course-fish546-2026/how-we-work.html) page:
 
-Core competencies are anchored to the [Roberts Lab Handbook](https://robertslab.github.io/resources/).
+- Each student has **one repository** in the [course organization](https://github.com/course-fish546-2026), created from [`project-template`](https://github.com/course-fish546-2026/project-template).
+- Each week has **one deliverable**: a notebook entry (`notebooks/weekNN.qmd`) containing the week's analysis, reflection questions, project progress, blockers, and next-week goals. Due Friday 5:00 PM.
+- Students post the commit link as a comment on their **Project Proposal issue** here. The instructor replies in the thread.
+- Weeks 1–4 are shared exercises; Weeks 5–8 apply each method to the student's own project (canned fallbacks provided). Week 5 is the mid-quarter update; Week 10 is the compendium and final talk.
+- Platforms come online in stages: own computer before Week 1, Raven in Week 1, Hyak in Week 3.
+
+Design rationale and the implementation plan: [SIMPLIFY-PLAN.md](SIMPLIFY-PLAN.md). Earlier plans are in `planning/` for history.
 
 ## Local preview
 
@@ -21,7 +21,7 @@ quarto preview      # live-reload while editing
 quarto render       # build the site into docs/
 ```
 
-The three setup tutorials are standalone HTML — just open `tutorials/*.html` in a browser.
+The three setup tutorials are standalone HTML; open `tutorials/*.html` directly in a browser.
 
 ## Course-site audit
 
@@ -54,16 +54,14 @@ for the review procedure.
 
 | Path | What |
 |------|------|
-| `index.qmd` | Syllabus |
-| `schedule.qmd` | 10-week bioinformatics-first schedule |
-| `setup.qmd` | Before-class landing page → the 3 tutorials |
-| `support.qmd` | Self-directed skills: RStudio, Quarto, GitHub Issues, Hyak, archiving |
-| `turn-in.qmd` | How to submit: pull requests to the [assignments repo](https://github.com/sr320/fish546-2026-assignments) |
-| `edna.qmd` | eDNA topic hub |
-| `tutorials/` | 3 pre-course HTML tutorials (+ shared CSS/JS) |
-| `lectures/` | weekly lecture material (assignments & question sets live in the [assignments repo](https://github.com/sr320/fish546-2026-assignments)) |
-| `.github/` | issue forms, labels, weekly-progress assessment workflow |
-| `scripts/` | weekly-progress parsing/assessment helpers |
-| `maintenance/` | resource inventory, baseline, surveys, link review, and render manifest |
-| `ROADMAP.md` | phased student-experience improvement plan |
-| `PLAN.md` | full build plan & open decisions |
+| `index.qmd` | Syllabus: format, meeting times, grading |
+| `schedule.qmd` | Dated weekly cards; the current week is outlined automatically |
+| `setup.qmd` | The three platform tutorials and when each is needed |
+| `how-we-work.qmd` | Weekly loop, where things live, notebook template, all rubrics, skills reference |
+| `lectures/` | Weekly topic pages (with reflection questions) |
+| `assignments/` | Weekly analysis pages |
+| `tutorials/` | Three self-paced HTML tutorials + shared CSS/JS |
+| `roster.md` | Week 1 pull-request exercise |
+| `.github/ISSUE_TEMPLATE/` | Project Proposal and Help Request forms |
+| `.github/workflows/` | First-issue greeting, label sync |
+| `SIMPLIFY-PLAN.md` | Course design and implementation plan |

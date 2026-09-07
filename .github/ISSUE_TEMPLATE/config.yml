@@ -1,12 +1,12 @@
-# Force students through the structured issue forms; route open chat elsewhere.
+# Students use the two structured forms; open chat goes to Slack.
 blank_issues_enabled: false
 contact_links:
-  - name: 💬 Open-ended question or discussion
-    url: https://github.com/orgs/course-fish546-2026/discussions
-    about: For broad questions, ideas, and peer help, use Discussions (not an issue).
   - name: 💬 Slack (day-to-day chat)
     url: https://genefish.slack.com
-    about: Quick, informal questions during the quarter.
+    about: Quick, informal questions during the quarter. Anything that needs a record goes in an issue.
   - name: 📖 Roberts Lab Handbook
     url: https://robertslab.github.io/resources/
     about: Computing, data management, Raven, and Klone/Hyak reference guides.
+  - name: 🌐 Course site
+    url: https://sr320.github.io/course-fish546-2026/
+    about: Syllabus, schedule, weekly topics and analyses, How We Work.

@@ -1,3 +1,5 @@
+> **Superseded** by [SIMPLIFY-PLAN.md](../SIMPLIFY-PLAN.md) (September 2026). Kept for history.
+
 # FISH 546 (2026) — Build Plan
 
 Bioinformatics for Environmental Sciences. This document is the blueprint for the

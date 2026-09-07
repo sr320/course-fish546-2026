@@ -11,6 +11,7 @@
   <nav class="side">
     <h1>FISH 546 · Setup 3</h1>
     <div class="sub">Hyak / Klone:<br>HPC, SLURM &amp; Containers</div>
+    <a class="home" href="../setup.html">← Course site · Setup</a>
     <div class="grp">Sections</div>
     <a href="#intro">Overview</a>
     <a href="#model">1 · How a cluster works</a>
@@ -30,10 +31,10 @@
 
   <main>
     <section class="hero" id="intro">
-      <div class="kick">Pre-course · Tutorial 3 of 3 · The steepest climb</div>
+      <div class="kick">Week 3 · Tutorial 3 of 3 · The steepest climb</div>
       <h2>Hyak / Klone: HPC with SLURM &amp; Containers</h2>
       <p class="lead">Hyak (the <strong>Klone</strong> cluster) is where the heavy compute happens — RNA-seq, eDNA metabarcoding, big alignments. It has the steepest learning curve of the three platforms, so this tutorial goes slow and explains the <em>why</em>. Your only goal today: submit one trivial job and read its output.</p>
-      <div class="pills"><span>~1.5–2 hours</span><span>Klone HPC</span><span>Finish Tutorials 1 &amp; 2 first</span></div>
+      <div class="pills"><span>~1.5–2 hours</span><span>Klone HPC</span><span>Finish Tutorials 1 &amp; 2 first</span><span>Use Hyak when Raven is not enough</span></div>
     </section>
 
     <section id="model">
@@ -206,7 +207,7 @@
           <tr><td>Permission denied on your script</td><td>Make it executable: <code>chmod +x yourscript.sh</code>.</td></tr>
         </table>
       </div>
-      <div class="tip"><strong>Asking for help the right way</strong> gets you unstuck fastest. Open a <strong>Help Request</strong> issue in your repo (platform = Hyak) with: what you were trying to do, the exact command, the full error text, and your job ID. This is the same skill you'll use all quarter — vague "it doesn't work" gets slow answers; a precise report gets fast ones.</div>
+      <div class="tip"><strong>Asking for help the right way</strong> gets you unstuck fastest. Open a <strong>Help Request</strong> issue on the <a href="https://github.com/sr320/course-fish546-2026/issues/new/choose">course repository</a> (platform = Hyak) with: what you were trying to do, the exact command, the full error text, and your job ID. This is the same skill you'll use all quarter — vague "it doesn't work" gets slow answers; a precise report gets fast ones.</div>
       <div class="check" data-check>
         <label><input type="checkbox"> I know where to look when a job fails, and how to file a good Help Request issue</label>
       </div>
@@ -215,7 +216,7 @@
     <section id="done">
       <div class="eyebrow">Finish</div>
       <h2 class="sec">✔ Completion <span class="tag">Tutorial 3</span></h2>
-      <p class="lede">You submitted a real job to a supercomputer and read its output — the hardest setup milestone in the course. Paste this into your <strong>Setup Check</strong> issue (fill in the blanks).</p>
+      <p class="lede">You submitted a real job to a supercomputer and read its output — the hardest setup milestone in the course. Paste this as a comment on your <strong>Project Proposal</strong> issue on the <a href="https://github.com/sr320/course-fish546-2026/issues">course repository</a> (fill in the blanks).</p>
       <div class="done-block">## Tutorial 3 — Hyak / Klone ✅
 SLURM job ID: &lt;paste your job number&gt;
 Ran on compute node: &lt;the hostname from your .out&gt;
@@ -223,7 +224,7 @@ Tail of slurm-*.out:
   Hello from Klone!
   ...
   Job finished.</div>
-      <div class="note">That completes all three setup tutorials. Open your <strong>Setup Check</strong> issue, paste in the three completion blocks, and you're ready for Week 1. See you in class.</div>
+      <div class="note">That completes all three platforms. From here on: your laptop for editing and Git, Raven for most weekly work, Hyak when Raven is not enough. Back to the <a href="../schedule.html">schedule</a>.</div>
     </section>
   </main>
 </div>

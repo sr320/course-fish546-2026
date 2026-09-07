@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        A good help request gets a fast answer. Tell us **what you expected**, **what happened**, and **what you already tried**.
+        A good help request gets a fast answer. Tell us **what you expected**, **what happened**, and **what you already tried**. Check the [Roberts Lab Handbook](https://robertslab.github.io/resources/) first.
   - type: dropdown
     id: platform
     attributes:
@@ -29,19 +29,24 @@ body:
     id: tried
     attributes:
       label: What have you already tried?
-      description: Show us — this is required. Include the exact command(s) you ran.
+      description: Show us — include the exact command(s) you ran.
     validations:
       required: true
   - type: textarea
     id: error
     attributes:
       label: Exact error message / output
-      description: Copy-paste the full text (not a screenshot of text).
+      description: Copy-paste the full text (not a screenshot of text). On Klone, include the job ID and the tail of slurm-*.out.
       render: text
     validations:
       required: true
-  - type: input
-    id: handbook
+  - type: textarea
+    id: repro
     attributes:
-      label: Relevant handbook page (if you checked one)
-      placeholder: "https://robertslab.github.io/resources/klone_Running-a-Job/"
+      label: Steps to reproduce (if it fails the same way every time)
+      description: Numbered steps someone else could follow to see the same failure. Include software versions or the container hash if relevant.
+  - type: input
+    id: link
+    attributes:
+      label: Link to the relevant commit, file, or log
+      placeholder: "https://github.com/course-fish546-2026/<your-repo>/blob/<sha>/..."

@@ -1,40 +1,12 @@
-# Course labels. Sync with an action (e.g. crazy-max/ghaction-github-labeler) or the gh CLI:
-#   gh label create <name> --color <hex> --description "<desc>"
-# Weekly + workflow labels are applied automatically by the issue forms in ISSUE_TEMPLATE/.
+# Course labels. Synced by .github/workflows/label-sync.yml.
+# Issue forms apply `project` and `help` automatically.
 
-- name: setup
-  color: "0e8a16"
-  description: Pre-course environment setup
 - name: project
   color: "1d76db"
-  description: Student research project (home-base issue)
-- name: progress
-  color: "5319e7"
-  description: Weekly research-progress report
-- name: "progress:on-track"
-  color: "0e8a16"
-  description: Weekly project progress appears on track
-- name: "progress:watch"
-  color: "fbca04"
-  description: Weekly project progress needs attention
-- name: "progress:blocked"
-  color: "b60205"
-  description: Weekly project progress is blocked
-- name: submission
-  color: "0e8a16"
-  description: Work submitted for automatic assessment
-- name: question-set
-  color: "bfdadc"
-  description: Weekly question set submission
-- name: assignment
-  color: "c2e0c6"
-  description: Weekly class assignment submission
+  description: Student research project (home-base issue; weekly commit links go here)
 - name: help
   color: "d93f0b"
   description: Student needs help / is stuck
-- name: bug
-  color: "b60205"
-  description: Reproducible technical failure
 
 # Topic labels
 - name: edna
@@ -48,7 +20,10 @@
   description: DNA methylation / epigenetics
 - name: variants
   color: "fbca04"
-  description: Variants / genomic ranges
+  description: Variants / population genomics
+- name: annotation
+  color: "c2e0c6"
+  description: Annotation / assembly / sequence discovery
 
 # Platform labels
 - name: "platform:own"
@@ -68,36 +43,3 @@
 - name: resolved
   color: "0e8a16"
   description: Closed / resolved
-- name: "auto:pass"
-  color: "0e8a16"
-  description: Automatic checks passed
-- name: "auto:warn"
-  color: "fbca04"
-  description: Automatic checks produced warnings
-- name: "auto:fail"
-  color: "b60205"
-  description: Automatic checks failed
-
-# Weekly labels
-- name: week-00
-  color: "ededed"
-- name: week-01
-  color: "ededed"
-- name: week-02
-  color: "ededed"
-- name: week-03
-  color: "ededed"
-- name: week-04
-  color: "ededed"
-- name: week-05
-  color: "ededed"
-- name: week-06
-  color: "ededed"
-- name: week-07
-  color: "ededed"
-- name: week-08
-  color: "ededed"
-- name: week-09
-  color: "ededed"
-- name: week-10
-  color: "ededed"

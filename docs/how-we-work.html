@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Bioinformatics for Environmental Sciences – 2026 :: Bioinformatics — FISH 546</title>
+<title>How We Work – 2026 :: Bioinformatics — FISH 546</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -39,8 +73,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-afe8206dfd5a87adde9d6d5a45e634ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-a6786bac6a03f085e63821401622f03e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-835195a2ca78c1e24b6bd6484d1e80e6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-ee69c61375e7c5fdea989cd86ce89401.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -91,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
@@ -103,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Setup</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./how-we-work.html"> 
+    <a class="nav-link active" href="./how-we-work.html" aria-current="page"> 
 <span class="menu-text">How We Work</span></a>
   </li>  
 </ul>
@@ -130,13 +164,31 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a></li>
-  <li><a href="#format" id="toc-format" class="nav-link" data-scroll-target="#format">Format</a></li>
+  <li><a href="#the-weekly-loop" id="toc-the-weekly-loop" class="nav-link active" data-scroll-target="#the-weekly-loop">The weekly loop</a></li>
+  <li><a href="#where-things-live" id="toc-where-things-live" class="nav-link" data-scroll-target="#where-things-live">Where things live</a>
+  <ul class="collapse">
   <li><a href="#platforms" id="toc-platforms" class="nav-link" data-scroll-target="#platforms">Platforms</a></li>
-  <li><a href="#textbook" id="toc-textbook" class="nav-link" data-scroll-target="#textbook">Textbook</a></li>
-  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
-  <li><a href="#core-competencies" id="toc-core-competencies" class="nav-link" data-scroll-target="#core-competencies">Core competencies</a></li>
-  <li><a href="#weekly-arc" id="toc-weekly-arc" class="nav-link" data-scroll-target="#weekly-arc">Weekly arc</a></li>
+  </ul></li>
+  <li><a href="#the-weekly-notebook-entry" id="toc-the-weekly-notebook-entry" class="nav-link" data-scroll-target="#the-weekly-notebook-entry">The weekly notebook entry</a>
+  <ul class="collapse">
+  <li><a href="#before-you-push" id="toc-before-you-push" class="nav-link" data-scroll-target="#before-you-push">Before you push</a></li>
+  <li><a href="#weekly-entry-rubric" id="toc-weekly-entry-rubric" class="nav-link" data-scroll-target="#weekly-entry-rubric">Weekly entry rubric</a></li>
+  </ul></li>
+  <li><a href="#final-compendium" id="toc-final-compendium" class="nav-link" data-scroll-target="#final-compendium">Final compendium</a>
+  <ul class="collapse">
+  <li><a href="#baseline-expectations" id="toc-baseline-expectations" class="nav-link" data-scroll-target="#baseline-expectations">Baseline expectations</a></li>
+  </ul></li>
+  <li><a href="#presentations" id="toc-presentations" class="nav-link" data-scroll-target="#presentations">Presentations</a></li>
+  <li><a href="#grade-interpretation" id="toc-grade-interpretation" class="nav-link" data-scroll-target="#grade-interpretation">Grade interpretation</a></li>
+  <li><a href="#skills-reference" id="toc-skills-reference" class="nav-link" data-scroll-target="#skills-reference">Skills reference</a>
+  <ul class="collapse">
+  <li><a href="#rstudio-and-raven" id="toc-rstudio-and-raven" class="nav-link" data-scroll-target="#rstudio-and-raven">RStudio and Raven</a></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
+  <li><a href="#github-issues" id="toc-github-issues" class="nav-link" data-scroll-target="#github-issues">GitHub Issues</a></li>
+  <li><a href="#hyak-and-containers" id="toc-hyak-and-containers" class="nav-link" data-scroll-target="#hyak-and-containers">Hyak and containers</a></li>
+  <li><a href="#archiving-and-the-compendium" id="toc-archiving-and-the-compendium" class="nav-link" data-scroll-target="#archiving-and-the-compendium">Archiving and the compendium</a></li>
+  <li><a href="#when-something-breaks" id="toc-when-something-breaks" class="nav-link" data-scroll-target="#when-something-breaks">When something breaks</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -145,8 +197,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Bioinformatics for Environmental Sciences</h1>
-<p class="subtitle lead">Syllabus — FISH 546 (2026)</p>
+<h1 class="title">How We Work</h1>
+<p class="subtitle lead">The weekly loop, where things live, the notebook entry, and the rubrics</p>
 </div>
 
 
@@ -163,165 +215,462 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="about" class="level2">
-<h2 class="anchored" data-anchor-id="about">About</h2>
-<p>This course teaches graduate students how to move from biological sequence data to defensible environmental bioinformatics interpretation. Each student develops and completes a research project targeting a reproducible final compendium by the end of the quarter. The weekly topics emphasize bioinformatics data types and analyses; computing tools such as RStudio, Quarto, GitHub, Raven, and Hyak are learned in stages and used throughout the quarter.</p>
-<hr>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Do this before Week 1
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="the-weekly-loop" class="level2">
+<h2 class="anchored" data-anchor-id="the-weekly-loop">The weekly loop</h2>
+<p>Everything in this course runs on one repeating cycle. There is one deliverable per week, it lives in one place, and it is always structured the same way.</p>
 <ol type="1">
-<li>Complete <strong>Tutorial 1</strong> on the <a href="./setup.html">Setup</a> page (your computer: shell, Git, GitHub). About one hour.</li>
-<li>Create your course repository from the <a href="https://github.com/course-fish546-2026/project-template">project template</a> in the course organization.</li>
-<li>Open a <strong>Project Proposal</strong> issue on the <a href="https://github.com/sr320/course-fish546-2026/issues/new/choose">course repository</a>. A rough draft is fine; you will refine it all quarter.</li>
+<li><strong>Read</strong> the week’s lecture page before Tuesday.</li>
+<li><strong>Do</strong> the week’s analysis in your repository. In Weeks 1 to 4 this is a shared exercise; in Weeks 5 to 8 it is the week’s method applied to your own project (a canned fallback is always provided).</li>
+<li><strong>Write</strong> <code>notebooks/weekNN.qmd</code> from the template (five sections, below) and render it.</li>
+<li><strong>Push</strong> by <strong>Friday 5:00pm</strong>.</li>
+<li><strong>Post</strong> the commit link as a comment on your <strong>Project Proposal issue</strong>. The instructor replies there with feedback.</li>
 </ol>
-<p>Raven comes online in Week 1 and Hyak in Week 3. You do not need them yet.</p>
-</div>
-</div>
-<p>Bioinformatics is not only running tools. It is the practice of keeping data provenance clear, choosing appropriate analyses, checking intermediate products, and making biological claims that the evidence can support.</p>
-</section>
-<section id="format" class="level2">
-<h2 class="anchored" data-anchor-id="format">Format</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Tuesdays</strong></td>
-<td>3:00–4:20 PM, FSH 203. Topic session: the week’s bioinformatics concept and data type. Oct 6 – Dec 8.</td>
-</tr>
-<tr class="even">
-<td><strong>Thursdays</strong></td>
-<td>9:30–11:20 AM, FSH 203. Working session: apply the concept to your project. Oct 1 – Dec 10, no class Nov 26.</td>
-</tr>
-<tr class="odd">
-<td><strong>Fridays</strong></td>
-<td>5:00 PM. Weekly notebook entry due (Mon Nov 30 for Thanksgiving week).</td>
-</tr>
-</tbody>
-</table>
-<p>This class is driven in part by student needs and is flexible in content. It is practical and problem-driven. The first meeting, Thursday Oct 1, is a setup working session.</p>
-<div class="callout callout-style-default callout-important callout-titled" style="color: orange">
+<p>That is the whole submission contract. Weekly entries are 60% of your grade; the mid-quarter and final presentations are 15%; the final compendium is 25%. Your best 8 of 9 weekly entries count.</p>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Important
+Deadlines
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Your repository is how we work.</strong> Every week you do one analysis, write one notebook entry in your repository, push it, and post the commit link on your Project Proposal issue. The instructor replies there. That single loop is the whole course workflow; it is spelled out on the <a href="./how-we-work.html">How We Work</a> page. Be sure you have a GitHub account, are part of the course organization, and have notifications turned on. Day-to-day chat is on <a href="https://genefish.slack.com">Slack</a>.</p>
+<p>Weekly entry: Friday 5:00 PM (Monday Nov 30 for Thanksgiving week; see the <a href="./schedule.html">Schedule</a>). Late work loses 40% and is not accepted more than 5 days past due. Because the best 8 of 9 entries count, one missed week does not need an excuse.</p>
 </div>
 </div>
 </section>
-<section id="platforms" class="level2">
-<h2 class="anchored" data-anchor-id="platforms">Platforms</h2>
-<p>You will work across three computing tiers. They come online in stages; each has a <a href="./setup.html">setup tutorial</a>.</p>
+<section id="where-things-live" class="level2">
+<h2 class="anchored" data-anchor-id="where-things-live">Where things live</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Tier</th>
+<th>Place</th>
+<th>What goes there</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Your repository</strong> (in the course org, created from the <a href="https://github.com/course-fish546-2026/project-template">project template</a>)</td>
+<td>All code, outputs, weekly notebook entries, README, final compendium</td>
+<td>Clone, commit, push. Raw data are recorded, not committed.</td>
+</tr>
+<tr class="even">
+<td><strong>Course repository</strong> (<a href="https://github.com/sr320/course-fish546-2026/issues">issues</a>)</td>
+<td>One <strong>Project Proposal</strong> issue per student (your home base for the quarter); <strong>Help Request</strong> issues when you are stuck</td>
+<td>Use the issue forms. Weekly commit links and tutorial completion blocks go as comments on your proposal issue.</td>
+</tr>
+<tr class="odd">
+<td><strong>Slack</strong> (<a href="https://genefish.slack.com">genefish.slack.com</a>)</td>
+<td>Quick questions, announcements, scheduling</td>
+<td>Day to day chat. Anything that needs a record goes in an issue instead.</td>
+</tr>
+<tr class="even">
+<td><strong>Roberts Lab Handbook</strong> (<a href="https://robertslab.github.io/resources/">robertslab.github.io/resources</a>)</td>
+<td>The reference standard for computing practices, data management, Raven, and Klone</td>
+<td>Keep it open in a tab.</td>
+</tr>
+</tbody>
+</table>
+<section id="platforms" class="level3">
+<h3 class="anchored" data-anchor-id="platforms">Platforms</h3>
+<p>You will use three computers. They come online in stages, not all at once.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
 <th>Platform</th>
 <th>Role</th>
-<th>When</th>
+<th>Set up</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Your computer</td>
-<td>Local shell + Git/GitHub</td>
-<td>Editing, version control</td>
-<td>Before Week 1</td>
+<td>Editing, Git, GitHub</td>
+<td>Tutorial 1, before Week 1</td>
 </tr>
 <tr class="even">
-<td>Raven</td>
-<td>RStudio Server at <a href="http://raven.fish.washington.edu:8787" class="uri">http://raven.fish.washington.edu:8787</a></td>
-<td><strong>Home</strong> for most weekly work</td>
-<td>Week 1</td>
+<td>Raven (RStudio Server)</td>
+<td><strong>Home.</strong> Interactive analysis, rendering, most weekly work</td>
+<td>Tutorial 2, Week 1</td>
 </tr>
 <tr class="odd">
-<td>Hyak / Klone</td>
-<td>HPC (SLURM + containers): <code>ssh &lt;UWNetID&gt;@klone.hyak.uw.edu</code> · <a href="https://ondemand.hyak.uw.edu">On-Demand</a></td>
-<td>When Raven is not enough</td>
-<td>Week 3</td>
+<td>Hyak / Klone (HPC)</td>
+<td>When Raven is not enough: large mapping, denoising, anything that needs a batch job</td>
+<td>Tutorial 3, Week 3</td>
 </tr>
 </tbody>
 </table>
-<p>Course GitHub Organization: <a href="https://github.com/course-fish546-2026" class="uri">https://github.com/course-fish546-2026</a></p>
+<p>See <a href="./setup.html">Setup</a> for the tutorials.</p>
 </section>
-<section id="textbook" class="level2">
-<h2 class="anchored" data-anchor-id="textbook">Textbook</h2>
-<p><a href="https://www.amazon.com/Bioinformatics-Data-Skills-Reproducible-Research/dp/1449367372/">Bioinformatics Data Skills</a> — Reproducible and Robust Research with Open Source Tools, by Vince Buffalo (O’Reilly, 2015). <a href="https://github.com/vsbuffalo/bds-files">Supplementary repo</a>.</p>
 </section>
-<section id="grading" class="level2">
-<h2 class="anchored" data-anchor-id="grading">Grading</h2>
-<p>There is one deliverable each week: a <strong>notebook entry</strong> in your repository containing the week’s analysis, answers to two or three reflection questions from the lecture, your project progress, blockers, and next week’s goals. You will also give a mid-quarter project update and a final compendium presentation.</p>
+<section id="the-weekly-notebook-entry" class="level2">
+<h2 class="anchored" data-anchor-id="the-weekly-notebook-entry">The weekly notebook entry</h2>
+<p>One Quarto document per week, always the same five sections. Start from <code>notebooks/_template.qmd</code> in your repository.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Week 03 — Mapping, assembly, and quantification"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2026-04-17</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. This week's analysis</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- The week's exercise or your project step. Commands, code, outputs, and</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">     what they mean. Link output files in output/. --&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Reflection questions</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- The 2–3 questions from the lecture page, answered with reasoning. --&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Project progress</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- What moved this week, with links to commits, files, or figures. --&gt;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Blockers</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Specific problems, what you tried, and any linked Help Request. Or "none". --&gt;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Next week</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- One to three concrete, one-week-sized goals. --&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="before-you-push" class="level3">
+<h3 class="anchored" data-anchor-id="before-you-push">Before you push</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">The <code>.qmd</code> and its rendered <code>.html</code> are both committed.</label></li>
+<li><label><input type="checkbox">Rendered from a clean session (Session → Restart R, then Render).</label></li>
+<li><label><input type="checkbox">Paths are relative to the repository root.</label></li>
+<li><label><input type="checkbox">Output tables and figures are saved under <code>output/</code>, not only printed in the HTML.</label></li>
+<li><label><input type="checkbox">No raw data under <code>data/raw/</code> are committed.</label></li>
+<li><label><input type="checkbox">Software, platform, and any container or environment used are named.</label></li>
+<li><label><input type="checkbox">The commit link is posted on your Project Proposal issue.</label></li>
+</ul>
+</section>
+<section id="weekly-entry-rubric" class="level3">
+<h3 class="anchored" data-anchor-id="weekly-entry-rubric">Weekly entry rubric</h3>
+<p>Each entry is scored out of 100.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 43%">
-<col style="width: 12%">
-<col style="width: 43%">
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Component</th>
-<th>Grade %</th>
-<th>Notes</th>
+<th>Criterion</th>
+<th style="text-align: right;">Points</th>
+<th>Excellent</th>
+<th>Complete</th>
+<th>Developing</th>
+<th>Incomplete</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Weekly notebook entries (Weeks 1–9)</td>
-<td>60%</td>
-<td>due Friday 5:00 PM; best 8 of 9 count</td>
+<td>Analysis</td>
+<td style="text-align: right;">30</td>
+<td>Method fits the data and question; intermediate checks are shown; results are interpreted correctly and cautiously.</td>
+<td>Method is appropriate and includes some checks; interpretation is reasonable.</td>
+<td>Method is attempted but weakly justified, unchecked, or misread.</td>
+<td>Analysis is absent, broken, or inappropriate.</td>
 </tr>
 <tr class="even">
-<td>Presentations</td>
-<td>15%</td>
-<td>mid-quarter update (Week 5) + final presentation (Week 10)</td>
+<td>Evidence of work</td>
+<td style="text-align: right;">20</td>
+<td>Links to commits, reports, figures, tables, or logs give concrete proof of progress.</td>
+<td>Evidence is present and generally supports the claims.</td>
+<td>Evidence is thin, hard to inspect, or only partially connected.</td>
+<td>Evidence is missing or cannot be accessed.</td>
 </tr>
 <tr class="odd">
-<td>Final compendium</td>
-<td>25%</td>
-<td>your repository at the Week 10 release</td>
+<td>Reproducible practice</td>
+<td style="text-align: right;">15</td>
+<td>Layout, paths, commit history, and documentation make the work easy to rerun and inspect.</td>
+<td>Most materials are organized and version-controlled.</td>
+<td>Organization is inconsistent, paths unclear, or outputs stale.</td>
+<td>Work cannot be followed from the repository.</td>
+</tr>
+<tr class="even">
+<td>Reflection questions</td>
+<td style="text-align: right;">15</td>
+<td>Answers show reasoning, connect to the week’s material, and relate to the student’s own project.</td>
+<td>Answers are correct and complete.</td>
+<td>Answers are partial or superficial.</td>
+<td>Answers are missing.</td>
+</tr>
+<tr class="odd">
+<td>Blockers and help-seeking</td>
+<td style="text-align: right;">10</td>
+<td>Blockers are precise, with attempted fixes and a linked Help Request when needed.</td>
+<td>Blockers or risks are named with enough context to respond.</td>
+<td>Blockers are vague or raised late.</td>
+<td>Blockers are absent despite stalled progress.</td>
+</tr>
+<tr class="even">
+<td>Next-week plan</td>
+<td style="text-align: right;">10</td>
+<td>Next steps are concrete, prioritized, and sized for one week.</td>
+<td>Next steps are stated and plausible.</td>
+<td>Next steps are too broad or not actionable.</td>
+<td>Next steps are missing.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Weeks 1–4</strong> use shared exercises so everyone practices the same core data types. <strong>Weeks 5–8</strong> apply each week’s method to your own project data; a canned fallback exercise is provided when the method does not fit your project.</p>
-<p>Rubrics for all three components are on the <a href="./how-we-work.html">How We Work</a> page.</p>
-<p><strong>Late policy:</strong> 40% deduction; not accepted more than 5 days past due.</p>
 </section>
-<section id="core-competencies" class="level2">
-<h2 class="anchored" data-anchor-id="core-competencies">Core competencies</h2>
-<p>Skills in this course are anchored to the <a href="https://robertslab.github.io/resources/"><strong>Roberts Lab Handbook</strong></a> — its computing best practices, data management, and platform guides (Raven, Klone) are the reference standard for how you are expected to work.</p>
 </section>
-<section id="weekly-arc" class="level2">
-<h2 class="anchored" data-anchor-id="weekly-arc">Weekly arc</h2>
-<p>The course moves from sequence identification and raw sequencing data toward multi-assay environmental interpretation. See the <a href="./schedule.html">Schedule</a> for each week’s topic and analysis.</p>
+<section id="final-compendium" class="level2">
+<h2 class="anchored" data-anchor-id="final-compendium">Final compendium</h2>
+<p>The final compendium is the complete project package in your repository at the Week 10 tag. It should include a top-level <code>README.md</code>, final rendered report, source <code>.qmd</code> or scripts, key outputs, a data availability statement, a software and platform statement, and a link to your Project Proposal issue.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Criterion</th>
+<th style="text-align: right;">Points</th>
+<th>Excellent</th>
+<th>Complete</th>
+<th>Developing</th>
+<th>Incomplete</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Research question and context</td>
+<td style="text-align: right;">10</td>
+<td>Question is clear, biologically meaningful, and grounded in appropriate background.</td>
+<td>Question and context are understandable.</td>
+<td>Question is present but broad, shifting, or weakly motivated.</td>
+<td>Question or context is missing.</td>
+</tr>
+<tr class="even">
+<td>Data provenance and organization</td>
+<td style="text-align: right;">15</td>
+<td>Data sources, sample structure, file locations, raw/processed distinction, and data availability are explicit.</td>
+<td>Main data sources and project structure are described.</td>
+<td>Some data details are unclear or scattered.</td>
+<td>Data source, structure, or availability cannot be determined.</td>
+</tr>
+<tr class="odd">
+<td>Workflow and reproducibility</td>
+<td style="text-align: right;">20</td>
+<td>A reader can trace the workflow from input to output; code, commands, environment notes, and render instructions are sufficient to rerun or audit the analysis.</td>
+<td>Workflow is mostly reproducible with minor gaps.</td>
+<td>Workflow can be partially followed but requires guessing.</td>
+<td>Workflow is not reproducible from the repository.</td>
+</tr>
+<tr class="even">
+<td>Technical execution</td>
+<td style="text-align: right;">15</td>
+<td>Methods are appropriate for the data type and project question; QC and intermediate checks support the analysis.</td>
+<td>Methods are generally appropriate and include some checks.</td>
+<td>Methods are attempted but weakly justified or missing important checks.</td>
+<td>Analysis is technically absent, broken, or inappropriate.</td>
+</tr>
+<tr class="odd">
+<td>Results and evidence</td>
+<td style="text-align: right;">15</td>
+<td>Figures, tables, and summaries directly support the main result and are clearly labeled.</td>
+<td>Results are present and mostly connected to the question.</td>
+<td>Results are thin, hard to interpret, or disconnected from the question.</td>
+<td>Results are missing or not inspectable.</td>
+</tr>
+<tr class="even">
+<td>Interpretation and biological reasoning</td>
+<td style="text-align: right;">10</td>
+<td>Claims are proportional to the evidence and distinguish results from interpretation.</td>
+<td>Interpretation is reasonable but may be limited.</td>
+<td>Interpretation overreaches, stays superficial, or misses key uncertainty.</td>
+<td>Biological interpretation is missing.</td>
+</tr>
+<tr class="odd">
+<td>Caveats and next steps</td>
+<td style="text-align: right;">10</td>
+<td>Limitations are specific, honest, and connected to concrete next analyses or data needs.</td>
+<td>Main caveats and next steps are included.</td>
+<td>Caveats are generic or next steps are vague.</td>
+<td>Caveats or next steps are missing.</td>
+</tr>
+<tr class="even">
+<td>Communication and polish</td>
+<td style="text-align: right;">5</td>
+<td>Report and README are readable, well structured, linked, and free of avoidable confusion.</td>
+<td>Materials are readable with minor rough spots.</td>
+<td>Materials are difficult to scan or inconsistently formatted.</td>
+<td>Materials are too incomplete or confusing to evaluate.</td>
+</tr>
+</tbody>
+</table>
+<section id="baseline-expectations" class="level3">
+<h3 class="anchored" data-anchor-id="baseline-expectations">Baseline expectations</h3>
+<ul>
+<li>Do not commit large raw data files unless the instructor has explicitly approved it.</li>
+<li>Link to exact commits, not only the repository homepage.</li>
+<li>Keep source files and rendered outputs together or clearly linked.</li>
+<li>Label figures and tables so they can be understood outside the live presentation.</li>
+<li>Document software, platforms, and major package versions when they affect reproducibility.</li>
+<li>Explain what did not work. Failed or partial analyses earn credit when they are documented clearly and used to motivate next steps.</li>
+</ul>
+</section>
+</section>
+<section id="presentations" class="level2">
+<h2 class="anchored" data-anchor-id="presentations">Presentations</h2>
+<p>The presentation grade covers the Week 5 mid-quarter update and the Week 10 final talk. The goal is to explain the project clearly enough that another student can understand the question, workflow, strongest evidence, and remaining uncertainty.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Criterion</th>
+<th style="text-align: right;">Points</th>
+<th>Excellent</th>
+<th>Complete</th>
+<th>Developing</th>
+<th>Incomplete</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Project framing</td>
+<td style="text-align: right;">15</td>
+<td>Research question, motivation, and data type are immediately clear.</td>
+<td>Question and data type are understandable.</td>
+<td>Framing is present but hard to follow.</td>
+<td>Framing is missing.</td>
+</tr>
+<tr class="even">
+<td>Workflow explanation</td>
+<td style="text-align: right;">20</td>
+<td>Workflow is explained at the right level, with key inputs, tools, decisions, and checks.</td>
+<td>Workflow is mostly clear.</td>
+<td>Workflow is too vague, too detailed, or missing important steps.</td>
+<td>Workflow cannot be understood.</td>
+</tr>
+<tr class="odd">
+<td>Evidence and results</td>
+<td style="text-align: right;">25</td>
+<td>Figures or tables are legible, relevant, and support the main claim.</td>
+<td>Results are shown and generally interpreted.</td>
+<td>Results are present but hard to read or weakly connected to the claim.</td>
+<td>Results are missing.</td>
+</tr>
+<tr class="even">
+<td>Interpretation and limits</td>
+<td style="text-align: right;">20</td>
+<td>Speaker clearly separates what the evidence supports from what remains uncertain.</td>
+<td>Interpretation and at least one limitation are included.</td>
+<td>Interpretation is superficial or caveats are generic.</td>
+<td>Interpretation or limitations are missing.</td>
+</tr>
+<tr class="odd">
+<td>Delivery and discussion</td>
+<td style="text-align: right;">20</td>
+<td>Talk is organized, fits the time, uses clear visuals, and handles questions thoughtfully.</td>
+<td>Talk is understandable and mostly within time.</td>
+<td>Talk is hard to follow, too rushed, or visually cluttered.</td>
+<td>Talk is not prepared or cannot be evaluated.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="grade-interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="grade-interpretation">Grade interpretation</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 57%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Range</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">3.7-4.0</td>
+<td>Strong, reproducible, clearly interpreted work</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3.0-3.6</td>
+<td>Solid work with minor gaps in reproducibility, evidence, or explanation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2.0-2.9</td>
+<td>Meaningful progress, but important pieces are unclear, incomplete, or weakly connected</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1.0-1.9</td>
+<td>Limited evidence or substantial reproducibility and interpretation gaps</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Below 1.0</td>
+<td>Missing, inaccessible, or too incomplete to evaluate reliably</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="skills-reference" class="level2">
+<h2 class="anchored" data-anchor-id="skills-reference">Skills reference</h2>
+<p>Short reminders for the tools you will use every week. The tutorials on the <a href="./setup.html">Setup</a> page and the <a href="https://robertslab.github.io/resources/">Roberts Lab Handbook</a> are the full references.</p>
+<section id="rstudio-and-raven" class="level3">
+<h3 class="anchored" data-anchor-id="rstudio-and-raven">RStudio and Raven</h3>
+<p>Raven is home for most weekly work. You should be able to log in to RStudio Server, pull your repository, open the project from the repository root, run R or shell code from a Quarto document, save figures and tables to <code>output/</code>, and commit and push. Raven may require the UW VPN off campus.</p>
+</section>
+<section id="quarto" class="level3">
+<h3 class="anchored" data-anchor-id="quarto">Quarto</h3>
+<p>Quarto is the format for notebook entries and the final report because it keeps code, results, and explanation together.</p>
+<ul>
+<li>Use relative paths from the repository root.</li>
+<li>Render from a clean session before pushing.</li>
+<li>Include enough narrative that another student can follow your reasoning.</li>
+<li>Save important outputs as files, not only as printed tables in HTML.</li>
+<li>Generate figures from code whenever possible.</li>
+</ul>
+</section>
+<section id="github-issues" class="level3">
+<h3 class="anchored" data-anchor-id="github-issues">GitHub Issues</h3>
+<p>Two forms, on the <a href="https://github.com/sr320/course-fish546-2026/issues/new/choose">course repository</a>:</p>
+<ul>
+<li><strong>Project Proposal.</strong> One per student, opened in Week 0 or 1. Your weekly commit links and tutorial completion blocks go here as comments. Edit the top post as the project evolves.</li>
+<li><strong>Help Request.</strong> When you are stuck. Include the platform, the exact command, the exact error text, what you already tried, and a link to the relevant commit or output.</li>
+</ul>
+</section>
+<section id="hyak-and-containers" class="level3">
+<h3 class="anchored" data-anchor-id="hyak-and-containers">Hyak and containers</h3>
+<p>Use Hyak when a step is too large, slow, or environment-sensitive for Raven. For every job, record in your notebook entry the SLURM script, job ID, container path or environment, input and output paths, and the relevant lines of <code>slurm-*.out</code>. Never run heavy analyses on the login node.</p>
+</section>
+<section id="archiving-and-the-compendium" class="level3">
+<h3 class="anchored" data-anchor-id="archiving-and-the-compendium">Archiving and the compendium</h3>
+<p>Archiving is a habit, not a final step. By Week 10 your repository should have a clear top-level <code>README.md</code>, the scripts or Quarto files that generate the final outputs, key output tables and figures, a data availability note, software and platform notes, and a link to your Project Proposal issue. If raw data cannot be committed, document where they came from, how they were named, and how checksums or manifests were recorded.</p>
+</section>
+<section id="when-something-breaks" class="level3">
+<h3 class="anchored" data-anchor-id="when-something-breaks">When something breaks</h3>
 <ol type="1">
-<li>Sequence databases and BLAST.</li>
-<li>Raw reads, FASTQ, quality control, and trimming.</li>
-<li>Mapping, alignment, assembly, and quantification.</li>
-<li>RNA-seq and differential expression.</li>
-<li>Genome annotation and genomic ranges. Mid-quarter update.</li>
-<li>Variants and population signals.</li>
-<li>DNA methylation and regulatory genomics.</li>
-<li>eDNA and metabarcoding.</li>
-<li>Project synthesis and biological interpretation.</li>
-<li>Final compendium and presentations.</li>
+<li>Confirm which platform you are on.</li>
+<li>Confirm the working directory.</li>
+<li>Confirm the input file exists.</li>
+<li>Copy the exact command and error.</li>
+<li>Decide whether the problem is path, permissions, software, memory or time, or data format.</li>
+<li>Open a Help Request if you are still stuck.</li>
 </ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -1,3 +1,5 @@
+> **Superseded** by [SIMPLIFY-PLAN.md](../SIMPLIFY-PLAN.md) (September 2026). Kept for history.
+
 # Plan: Move Assessments & Assignments to a Pull-Request Repo
 
 **Goal.** Replace the Issue-Form + external-student-repo + commit-SHA submission

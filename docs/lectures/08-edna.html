@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Getting Started – 2026 :: Bioinformatics — FISH 546</title>
+<title>eDNA &amp; Environmental Metabarcoding – 2026 :: Bioinformatics — FISH 546</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../assignments/01-blast.html" rel="next">
-<link href="../assignments/00-bash.html" rel="prev">
+<link href="../assignments/08-edna.html" rel="next">
+<link href="../assignments/07-methylation.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -127,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/01-start-up.html">Week 01</a></li><li class="breadcrumb-item"><a href="../lectures/01-start-up.html">Getting Started</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/08-edna.html">Week 08</a></li><li class="breadcrumb-item"><a href="../lectures/08-edna.html">eDNA &amp; Environmental Metabarcoding</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -164,16 +198,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Week 01</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lectures/01-start-up.html" class="sidebar-item-text sidebar-link active">
+  <a href="../lectures/01-start-up.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting Started</span></a>
   </div>
 </li>
@@ -325,16 +359,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">Week 08</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lectures/08-edna.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/08-edna.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">eDNA &amp; Environmental Metabarcoding</span></a>
   </div>
 </li>
@@ -402,30 +436,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#purpose" id="toc-purpose" class="nav-link active" data-scroll-target="#purpose">Purpose</a></li>
-  <li><a href="#by-the-end-of-this-week" id="toc-by-the-end-of-this-week" class="nav-link" data-scroll-target="#by-the-end-of-this-week">By the end of this week</a></li>
-  <li><a href="#biological-sequence-files" id="toc-biological-sequence-files" class="nav-link" data-scroll-target="#biological-sequence-files">Biological sequence files</a></li>
-  <li><a href="#blast-as-a-first-bioinformatics-workflow" id="toc-blast-as-a-first-bioinformatics-workflow" class="nav-link" data-scroll-target="#blast-as-a-first-bioinformatics-workflow">BLAST as a first bioinformatics workflow</a>
-  <ul class="collapse">
-  <li><a href="#aquatic-and-fisheries-examples" id="toc-aquatic-and-fisheries-examples" class="nav-link" data-scroll-target="#aquatic-and-fisheries-examples">Aquatic and fisheries examples</a></li>
-  <li><a href="#database-choice-is-a-biological-decision" id="toc-database-choice-is-a-biological-decision" class="nav-link" data-scroll-target="#database-choice-is-a-biological-decision">Database choice is a biological decision</a></li>
-  <li><a href="#a-misleading-top-hit-example" id="toc-a-misleading-top-hit-example" class="nav-link" data-scroll-target="#a-misleading-top-hit-example">A misleading top-hit example</a></li>
-  <li><a href="#blast-interpretation-checklist" id="toc-blast-interpretation-checklist" class="nav-link" data-scroll-target="#blast-interpretation-checklist">BLAST interpretation checklist</a></li>
-  </ul></li>
-  <li><a href="#github-issues-as-the-course-notebook" id="toc-github-issues-as-the-course-notebook" class="nav-link" data-scroll-target="#github-issues-as-the-course-notebook">GitHub Issues as the course notebook</a></li>
+  <li><a href="#what-is-environmental-dna" id="toc-what-is-environmental-dna" class="nav-link active" data-scroll-target="#what-is-environmental-dna">What is environmental DNA?</a></li>
+  <li><a href="#sampling-and-contamination-control" id="toc-sampling-and-contamination-control" class="nav-link" data-scroll-target="#sampling-and-contamination-control">Sampling and contamination control</a></li>
+  <li><a href="#metabarcoding-markers" id="toc-metabarcoding-markers" class="nav-link" data-scroll-target="#metabarcoding-markers">Metabarcoding markers</a></li>
+  <li><a href="#from-reads-to-biology" id="toc-from-reads-to-biology" class="nav-link" data-scroll-target="#from-reads-to-biology">From reads to biology</a></li>
+  <li><a href="#ecological-readouts" id="toc-ecological-readouts" class="nav-link" data-scroll-target="#ecological-readouts">Ecological readouts</a></li>
+  <li><a href="#caveats-specific-to-edna" id="toc-caveats-specific-to-edna" class="nav-link" data-scroll-target="#caveats-specific-to-edna">Caveats specific to eDNA</a></li>
   <li><a href="#this-week-in-your-project" id="toc-this-week-in-your-project" class="nav-link" data-scroll-target="#this-week-in-your-project">This week in your project</a></li>
   <li><a href="#reflection-questions" id="toc-reflection-questions" class="nav-link" data-scroll-target="#reflection-questions">Reflection questions</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#references-resources" id="toc-references-resources" class="nav-link" data-scroll-target="#references-resources">References &amp; resources</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/01-start-up.html">Week 01</a></li><li class="breadcrumb-item"><a href="../lectures/01-start-up.html">Getting Started</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/08-edna.html">Week 08</a></li><li class="breadcrumb-item"><a href="../lectures/08-edna.html">eDNA &amp; Environmental Metabarcoding</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Getting Started</h1>
-<p class="subtitle lead">Week 01</p>
+<h1 class="title">eDNA &amp; Environmental Metabarcoding</h1>
+<p class="subtitle lead">Week 08 lecture</p>
 </div>
 
 
@@ -448,161 +477,122 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Week 01.</strong> Analysis: <a href="../assignments/01-blast.html">NCBI BLAST</a>. Notebook entry due Friday 5:00pm. How it all fits: <a href="../how-we-work.html">How We Work</a>.</p>
+<p><strong>Week 08.</strong> Analysis: <a href="../assignments/08-edna.html">eDNA metabarcoding</a>. Notebook entry due Friday 5:00pm. How it all fits: <a href="../how-we-work.html">How We Work</a>.</p>
 </div>
 </div>
 </div>
-<section id="purpose" class="level2">
-<h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
-<p>Week 01 turns setup into practice. You will use command-line tools, web resources, GitHub, and NCBI BLAST to answer a small biological question and begin framing your quarter project.</p>
+<section id="what-is-environmental-dna" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-environmental-dna">What is environmental DNA?</h2>
+<p>Environmental DNA (eDNA) is genetic material organisms shed into their surroundings — water, sediment, soil, air. Sampling and sequencing it lets us detect and characterize whole communities without capturing or even seeing the organisms. In aquatic systems it has become a workhorse for biodiversity surveys, invasive-species early warning, and monitoring rare or cryptic taxa.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This lecture connects directly to the <a href="../tutorials/03-hyak.html">Hyak setup tutorial</a> — the compute-heavy steps below run as SLURM jobs on Klone.</p>
+</div>
+</div>
 </section>
-<section id="by-the-end-of-this-week" class="level2">
-<h2 class="anchored" data-anchor-id="by-the-end-of-this-week">By the end of this week</h2>
-<p>You should be able to:</p>
+<section id="sampling-and-contamination-control" class="level2">
+<h2 class="anchored" data-anchor-id="sampling-and-contamination-control">Sampling and contamination control</h2>
 <ul>
-<li>Explain what a FASTA file is.</li>
-<li>Run or interpret a BLAST search.</li>
-<li>Capture commands and results in a reproducible record.</li>
-<li>Refine your Project Proposal issue with a research question, data source, platform, and endpoint.</li>
-<li>Open a pull request (once) and use Issues for help and project tracking.</li>
+<li><strong>Collection:</strong> filter water (capturing DNA on a membrane), or sample sediment/soil; preserve immediately.</li>
+<li><strong>Degradation:</strong> eDNA breaks down over hours to days, so detections are biased toward recent presence — a feature for monitoring, a caveat for interpretation.</li>
+<li><strong>Contamination is the enemy.</strong> Field blanks, filter blanks, and negative controls at extraction and PCR are mandatory. Track them through the whole pipeline; they tell you your false-positive floor.</li>
 </ul>
 </section>
-<section id="biological-sequence-files" class="level2">
-<h2 class="anchored" data-anchor-id="biological-sequence-files">Biological sequence files</h2>
-<p>Many bioinformatics workflows begin with plain-text sequence files. FASTA is one of the most common formats:</p>
-<pre class="text"><code>&gt;sequence_id optional description
-ATGCTAGCTAGCTACGATCG</code></pre>
-<p>The header identifies the sequence. The following lines contain the sequence itself. Simple formats are powerful because they can be inspected, searched, counted, and transformed with many tools.</p>
-</section>
-<section id="blast-as-a-first-bioinformatics-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="blast-as-a-first-bioinformatics-workflow">BLAST as a first bioinformatics workflow</h2>
-<p>BLAST compares a query sequence against a database and reports similar sequences. It is often used to ask:</p>
-<ul>
-<li>What organism or gene does this sequence resemble?</li>
-<li>Is this sequence likely contaminated?</li>
-<li>Does this marker identify the expected taxonomic group?</li>
-<li>Which reference sequence should I use next?</li>
-</ul>
-<p>BLAST results require judgment. A low e-value helps, but interpretation also depends on query coverage, percent identity, database choice, and whether the top hits make biological sense.</p>
-<section id="aquatic-and-fisheries-examples" class="level3">
-<h3 class="anchored" data-anchor-id="aquatic-and-fisheries-examples">Aquatic and fisheries examples</h3>
-<p>BLAST is often the first check in aquatic genomics because many projects begin with sequences from non-model species, mixed communities, or incomplete reference resources.</p>
+<section id="metabarcoding-markers" class="level2">
+<h2 class="anchored" data-anchor-id="metabarcoding-markers">Metabarcoding markers</h2>
+<p>Metabarcoding amplifies a short, taxonomically informative marker across many taxa at once, then sequences the amplicons.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Scenario</th>
-<th>Query</th>
-<th>Useful question</th>
+<th>Marker</th>
+<th>Typical target group</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Fish tissue ID</td>
-<td>Mitochondrial COI barcode</td>
-<td>Does this sample match the expected species or a close congener?</td>
+<td><strong>COI</strong></td>
+<td>metazoan invertebrates</td>
 </tr>
 <tr class="even">
-<td>eDNA monitoring</td>
-<td>12S or 16S amplicon sequence</td>
-<td>Does the marker support a fish, invertebrate, microbial, or contaminant assignment?</td>
+<td><strong>12S</strong></td>
+<td>fish and vertebrates</td>
 </tr>
 <tr class="odd">
-<td>Shellfish stress transcriptomics</td>
-<td>Transcript or predicted protein</td>
-<td>What gene family or pathway might this differentially expressed sequence represent?</td>
+<td><strong>16S</strong></td>
+<td>bacteria / archaea (and some vertebrate assays)</td>
 </tr>
 <tr class="even">
-<td>Disease or parasite screening</td>
-<td>Unknown contig from a metagenomic assembly</td>
-<td>Does the sequence resemble host, pathogen, symbiont, or lab contamination?</td>
-</tr>
-<tr class="odd">
-<td>Conservation genomics</td>
-<td>Flanking sequence near a marker or variant</td>
-<td>Is the sequence in a known gene, repeat, mitochondrial region, or poorly annotated region?</td>
+<td><strong>18S</strong></td>
+<td>broad eukaryotes</td>
 </tr>
 </tbody>
 </table>
+<p>Marker choice determines what you can detect and which reference database you assign against — decide it before you sequence.</p>
 </section>
-<section id="database-choice-is-a-biological-decision" class="level3">
-<h3 class="anchored" data-anchor-id="database-choice-is-a-biological-decision">Database choice is a biological decision</h3>
-<p>There is no single best BLAST database. The right choice depends on the marker, organism, and question.</p>
+<section id="from-reads-to-biology" class="level2">
+<h2 class="anchored" data-anchor-id="from-reads-to-biology">From reads to biology</h2>
+<p>The core pipeline, and where each step runs:</p>
+<ol type="1">
+<li><strong>Demultiplex &amp; QC</strong> — separate samples, trim primers/adapters, filter by quality. <em>(Klone)</em></li>
+<li><strong>Denoise or cluster:</strong>
 <ul>
-<li>Use nucleotide databases such as NCBI <code>nt</code> when you have DNA and need broad taxonomic context.</li>
-<li>Use curated resources such as RefSeq when you want fewer redundant or poorly annotated records.</li>
-<li>Use barcode or marker-focused resources, such as BOLD for COI or a curated 12S database, when the marker has strong taxonomic conventions.</li>
-<li>Use protein databases with <code>blastx</code> when a transcript or contig may encode a protein but the nucleotide sequence is too divergent for a clean nucleotide hit.</li>
-<li>Record the database name and search date because databases change.</li>
+<li><strong>DADA2</strong> infers exact <strong>amplicon sequence variants (ASVs)</strong> — resolves single-nucleotide differences, database-independent, reproducible across studies.</li>
+<li><strong>OTU clustering</strong> groups reads at a similarity threshold (e.g.&nbsp;97%) — coarser, still common. <em>(Klone)</em></li>
+</ul></li>
+<li><strong>Taxonomic assignment</strong> — match ASVs/OTUs to a reference database (BLAST, or classifiers like the RDP/naïve-Bayes approach) to get names. <em>(Klone)</em></li>
+<li><strong>Build the table</strong> — a sample × taxon abundance/occurrence matrix: the analysis-ready product. <em>(Raven / laptop)</em></li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sketch of the heavy step as a Klone job — see the eDNA metabarcoding assignment</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load apptainer</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> exec <span class="at">--home</span> <span class="va">$PWD</span> <span class="at">--bind</span> /gscratch/ <span class="dt">\</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  /gscratch/srlab/containers/srlab-bioinformatics-container-<span class="op">&lt;</span>hash<span class="op">&gt;</span>.sif <span class="dt">\</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span>dada2-or-cutadapt-command<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="ecological-readouts" class="level2">
+<h2 class="anchored" data-anchor-id="ecological-readouts">Ecological readouts</h2>
+<p>Once you have the table:</p>
+<ul>
+<li><strong>Diversity</strong> — richness and community composition per sample.</li>
+<li><strong>Detection / occupancy</strong> — did marker X show up at site Y? Occupancy models can separate true absence from failure-to-detect using your replicates and controls.</li>
+<li><strong>Community comparison</strong> — ordination and differential-abundance methods to compare sites, depths, or time points.</li>
 </ul>
 </section>
-<section id="a-misleading-top-hit-example" class="level3">
-<h3 class="anchored" data-anchor-id="a-misleading-top-hit-example">A misleading top-hit example</h3>
-<p>Imagine a short 12S eDNA sequence from a marine water sample. The top BLAST hit is “Atlantic salmon” with 100% identity, but the query covers only 72 bp, the same sequence also matches several salmonids, and salmon DNA is common in local hatchery, aquaculture, or food-processing contexts. The safest interpretation is not “Atlantic salmon detected.” A better interpretation is “this short marker supports a salmonid-like assignment; species-level confidence is limited by marker length, shared haplotypes, database coverage, and local contamination risk.”</p>
-</section>
-<section id="blast-interpretation-checklist" class="level3">
-<h3 class="anchored" data-anchor-id="blast-interpretation-checklist">BLAST interpretation checklist</h3>
-<p>For every BLAST result you use as evidence, record:</p>
+<section id="caveats-specific-to-edna" class="level2">
+<h2 class="anchored" data-anchor-id="caveats-specific-to-edna">Caveats specific to eDNA</h2>
 <ul>
-<li>Query file and sequence length.</li>
-<li>BLAST program used, such as <code>blastn</code>, <code>blastx</code>, or web BLAST.</li>
-<li>Database searched and search date.</li>
-<li>Top hit accession, description, and organism.</li>
-<li>Percent identity, query coverage, alignment length, and e-value.</li>
-<li>Whether other top hits suggest the same biological interpretation.</li>
-<li>A caveat that explains what the search can and cannot support.</li>
-</ul>
-</section>
-</section>
-<section id="github-issues-as-the-course-notebook" class="level2">
-<h2 class="anchored" data-anchor-id="github-issues-as-the-course-notebook">GitHub Issues as the course notebook</h2>
-<p>This course uses Issues for structured work:</p>
-<ul>
-<li>Project proposal: one home-base issue for your quarter project.</li>
-<li>Weekly progress: what you completed, what slipped, what comes next.</li>
-<li>Help request: what failed, where, and what you already tried.</li>
-<li>Bug/blocker: a reproducible failure with commands and output.</li>
+<li><strong>False positives</strong> — contamination, index hopping between samples on a shared run.</li>
+<li><strong>False negatives</strong> — degradation, PCR inhibition, primer bias against some taxa.</li>
+<li><strong>Abundance is soft</strong> — read counts are a noisy proxy for biomass; treat quantitative claims carefully.</li>
+<li><strong>Reproducibility</strong> — record primers, database version, and every parameter. This is exactly the <a href="https://robertslab.github.io/resources/Data-Management/">Data Management</a> discipline the course emphasizes.</li>
 </ul>
 </section>
 <section id="this-week-in-your-project" class="level2">
 <h2 class="anchored" data-anchor-id="this-week-in-your-project">This week in your project</h2>
-<p>Open your project-proposal issue. At this stage, the proposal can be rough, but it must include:</p>
-<ul>
-<li>A research question or objective.</li>
-<li>The data you expect to use.</li>
-<li>The likely project track.</li>
-<li>The compute platform needed for the heavy work.</li>
-<li>A draft endpoint: the figure, table, or result that would make the project feel complete.</li>
-</ul>
-<p>Treat this first proposal as provisional. You are choosing a plausible starting point, not signing a contract with your Week 1 self.</p>
-<p>Examples of strong draft endpoints:</p>
-<ul>
-<li>RNA-seq / differential expression: a figure showing sample relationships plus a table of genes or pathways associated with temperature, salinity, disease, treatment, or life stage.</li>
-<li>eDNA / metabarcoding: an occurrence or relative-abundance figure comparing taxa among sites, dates, depths, or treatments, with contamination caveats.</li>
-<li>DNA methylation / epigenetics: a genomic-region summary or browser view connecting methylation differences to annotated genes or regulatory context.</li>
-<li>Variants / population signals: a filtered variant summary, PCA, relatedness plot, or population differentiation table tied to a fisheries or conservation question.</li>
-<li>Annotation / sequence discovery: an annotated set of genes, contigs, markers, or BLAST-supported candidates with clear evidence and limits.</li>
-</ul>
+<p>eDNA projects run the full pipeline on their own data this week. Every other project quantifies its own false-positive floor, the eDNA discipline applied to your data type. Both are spelled out in the <a href="../assignments/08-edna.html">Week 08 analysis</a>. Everyone drafts a mock final figure.</p>
 </section>
 <section id="reflection-questions" class="level2">
 <h2 class="anchored" data-anchor-id="reflection-questions">Reflection questions</h2>
-<p>Answer these in section 2 of <code>notebooks/week01.qmd</code>.</p>
+<p>Answer these in section 2 of <code>notebooks/week08.qmd</code>.</p>
 <ol type="1">
-<li>What does BLAST compare, and what do percent identity, query coverage, and e-value each contribute?</li>
-<li>Why can the top BLAST hit be misleading?</li>
-<li>What will be the endpoint of your quarter project if everything goes well?</li>
+<li>How does marker choice affect what organisms can be detected?</li>
+<li>Why are negative controls essential in eDNA metabarcoding, and what is the equivalent in your own project?</li>
+<li>What caveat would you include before making a strong ecological claim from read counts?</li>
 </ol>
 </section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
+<section id="references-resources" class="level2">
+<h2 class="anchored" data-anchor-id="references-resources">References &amp; resources</h2>
 <ul>
-<li><a href="https://blast.ncbi.nlm.nih.gov/doc/blast-help/">NCBI BLAST documentation</a></li>
-<li><a href="https://robertslab.github.io/resources/bio_Basics/">Roberts Lab Handbook: Bioinformatics Basics</a></li>
-<li><a href="https://github.com/vsbuffalo/bds-files">Bioinformatics Data Skills</a>, early chapters on project organization</li>
+<li><a href="https://marineomics.github.io">MarineOmics Portal</a> — reproducible marine genomics, including amplicon workflows.</li>
+<li><a href="https://benjjneb.github.io/dada2/tutorial.html">DADA2 tutorial</a> — the standard ASV workflow.</li>
+<li>Roberts Lab Handbook: <a href="https://robertslab.github.io/resources/bio_Basics/">Bioinformatics Basics</a>, <a href="https://robertslab.github.io/resources/bio-Annotation/">Annotation</a>, <a href="https://robertslab.github.io/resources/Genomic-Resources/">Genomic Resources</a>.</li>
 </ul>
 
 
@@ -1172,13 +1162,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../assignments/00-bash.html" class="pagination-link" aria-label="Week 00 Analysis — Repository and Shell Setup">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 00 Analysis — Repository and Shell Setup</span>
+      <a href="../assignments/07-methylation.html" class="pagination-link" aria-label="Week 07 Analysis — Methylation and Genome-Browser Inspection">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 07 Analysis — Methylation and Genome-Browser Inspection</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../assignments/01-blast.html" class="pagination-link" aria-label="Week 01 Analysis — NCBI BLAST">
-        <span class="nav-page-text">Week 01 Analysis — NCBI BLAST</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../assignments/08-edna.html" class="pagination-link" aria-label="Week 08 Analysis — eDNA Metabarcoding">
+        <span class="nav-page-text">Week 08 Analysis — eDNA Metabarcoding</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

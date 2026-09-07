@@ -11,6 +11,7 @@
   <nav class="side">
     <h1>FISH 546 · Setup 1</h1>
     <div class="sub">Your Computer:<br>Shell &amp; Git/GitHub</div>
+    <a class="home" href="../setup.html">← Course site · Setup</a>
     <div class="grp">Sections</div>
     <a href="#intro">Overview</a>
     <a href="#install">1 · Install the tools</a>
@@ -27,10 +28,10 @@
 
   <main>
     <section class="hero" id="intro">
-      <div class="kick">Pre-course · Tutorial 1 of 3</div>
+      <div class="kick">Before Week 1 · Tutorial 1 of 3</div>
       <h2>Your Computer: Shell &amp; Git/GitHub</h2>
       <p class="lead">Get a working local setup and learn the everyday version-control loop. This is the foundation for everything else in the course — do it first.</p>
-      <div class="pills"><span>~1 hour</span><span>Your laptop/desktop</span><span>No prior experience needed</span></div>
+      <div class="pills"><span>~1 hour</span><span>Your laptop/desktop</span><span>No prior experience needed</span><span>Finish before Thu Oct 1</span></div>
     </section>
 
     <section id="install">
@@ -108,27 +109,30 @@
       <h2 class="sec">Project structure</h2>
       <p class="lede">Every project in this course uses the same skeleton. A <code>README.md</code> in each directory says what's inside.</p>
       <div class="card">
-        <pre>Project-01/
+        <pre>your-repo/
 ├── README.md
-├── code/
+├── code/          scripts and functions
 │   └── README.md
 ├── data/
-│   ├── raw/
-│   │   └── README.md
+│   ├── raw/       never committed; recorded by checksum
+│   ├── processed/
 │   └── README.md
-└── output/
-    └── README.md</pre>
-        <p>The rules that make this reproducible:</p>
+├── output/        tables and figures your code writes
+│   └── README.md
+├── notebooks/     one weekly entry: week01.qmd, week02.qmd, …
+│   └── _template.qmd
+└── docs/          final report</pre>
+        <p>You get this layout for free from the course <a href="https://github.com/course-fish546-2026/project-template">project template</a> in Step 5. The rules that make it reproducible:</p>
         <ul>
           <li><strong>code</strong> reads from <strong>data</strong> and writes to <strong>output</strong> — never the other way around.</li>
-          <li>Raw data in <code>data/raw/</code> is <em>read-only</em>; you never edit it by hand.</li>
-          <li>Number files so the order of operations is obvious: <code>01-QC.Rmd</code>, <code>02-DESeq2.Rmd</code>.</li>
+          <li>Raw data in <code>data/raw/</code> is <em>read-only</em> and stays out of Git; you record where it came from and its checksum.</li>
+          <li>Every week's work is one Quarto document in <code>notebooks/</code>, so the order of operations is obvious.</li>
           <li>Anyone should be able to clone your repo and understand it from the READMEs.</li>
         </ul>
       </div>
       <div class="tip"><strong>Handbook:</strong> This is straight from <a href="https://robertslab.github.io/resources/Data-Management/">Data Management</a> and <a href="https://robertslab.github.io/resources/Computing-Best-Practices/">Computing Best Practices</a> — the standard you'll be assessed against.</div>
       <div class="check" data-check>
-        <label><input type="checkbox"> I understand the <code>code / data / output</code> layout and the read-only raw-data rule</label>
+        <label><input type="checkbox"> I understand the <code>code / data / output / notebooks</code> layout and the read-only raw-data rule</label>
       </div>
     </section>
 
@@ -137,27 +141,29 @@
       <h2 class="sec">The daily loop: clone → edit → commit → push</h2>
       <p class="lede">This four-beat loop is how work moves from your machine to GitHub. You'll do it dozens of times a week.</p>
       <div class="card">
-        <h4>Create your course repo</h4>
-        <p>On GitHub, create a new repository in the <a href="https://github.com/course-fish546-2026">course org</a> named for yourself (e.g. <code>your-name-546</code>), with a README. Then clone it — via GitHub Desktop (<em>File → Clone repository</em>) or the command line:</p>
+        <h4>Create your course repo from the template</h4>
+        <p>Open the <a href="https://github.com/course-fish546-2026/project-template">project template</a> on GitHub and click <strong>Use this template → Create a new repository</strong>. Set the owner to the <a href="https://github.com/course-fish546-2026">course organization</a> and name it for yourself (e.g. <code>lastname-546</code>). Then clone it — via GitHub Desktop (<em>File → Clone repository</em>) or the command line:</p>
         <pre><span class="p">cd ~/GitHub</span>
 <span class="p">git clone https://github.com/course-fish546-2026/your-repo.git</span>
-<span class="p">cd your-repo</span></pre>
+<span class="p">cd your-repo</span>
+<span class="p">ls</span>
+<span class="o">README.md  code  data  docs  notebooks  output</span></pre>
 
-        <h4>Build the skeleton</h4>
-        <pre><span class="p">mkdir -p code data/raw output</span>
-<span class="p">printf "# code\nScripts for this project.\n" &gt; code/README.md</span></pre>
+        <h4>Make it yours</h4>
+        <p>Edit the top-level <code>README.md</code>: replace the placeholder title with your name and a one-line draft of your project idea (it will change; that is fine).</p>
+        <pre><span class="p">printf "# Lastname · FISH 546 project\nDraft idea: ...\n" &gt; README.md</span></pre>
 
         <h4>Commit and push</h4>
         <p>A commit is a labeled snapshot. Push sends it to GitHub.</p>
         <pre><span class="p">git add .</span>
-<span class="p">git commit -m "Add project directory skeleton"</span>
+<span class="p">git commit -m "Personalize README"</span>
 <span class="p">git push</span></pre>
         <p>In GitHub Desktop this is the same three beats: <em>check the changed files → write a summary → Commit → Push origin.</em></p>
       </div>
       <div class="tip"><strong>Good commit messages</strong> describe <em>what changed and why</em> in the imperative: "Add QC script", not "stuff" or "update". Your future self reads these.</div>
       <div class="check" data-check>
-        <label><input type="checkbox"> I created my course repo and cloned it into <code>~/GitHub/</code></label>
-        <label><input type="checkbox"> I built the <code>code / data / output</code> skeleton with READMEs</label>
+        <label><input type="checkbox"> I created my course repo from the template, in the course org, and cloned it into <code>~/GitHub/</code></label>
+        <label><input type="checkbox"> I edited the top-level <code>README.md</code></label>
         <label><input type="checkbox"> I made a commit and pushed it — I can see it on GitHub</label>
       </div>
     </section>
@@ -165,12 +171,12 @@
     <section id="done">
       <div class="eyebrow">Finish</div>
       <h2 class="sec">✔ Completion <span class="tag">Tutorial 1</span></h2>
-      <p class="lede">When every box above is checked, you're done. Copy the block below into your <strong>Setup Check</strong> issue (fill in the two blanks).</p>
+      <p class="lede">When every box above is checked, you're done. Open a <strong>Project Proposal</strong> issue on the <a href="https://github.com/sr320/course-fish546-2026/issues/new/choose">course repository</a> if you have not yet (a rough draft is fine), then paste the block below as a comment on that <strong>Project Proposal</strong> issue on the <a href="https://github.com/sr320/course-fish546-2026/issues">course repository</a> (fill in the two blanks).</p>
       <div class="done-block">## Tutorial 1 — Your Computer ✅
 Repo: https://github.com/course-fish546-2026/&lt;your-repo&gt;
 First commit: &lt;paste the commit URL&gt;
-Directory tree matches code / data / output with READMEs.</div>
-      <div class="note">Next up: <a href="02-raven.html">Tutorial 2 — Raven</a>, where you'll do this same loop on the lab's server.</div>
+Repository created from the project template; README personalized.</div>
+      <div class="note">Next up: <a href="02-raven.html">Tutorial 2 — Raven</a>, where you'll do this same loop on the lab's server. We work through it together in the Week 1 Thursday session (Oct 8); feel free to start early.</div>
     </section>
   </main>
 </div>
