@@ -1,25 +1,25 @@
 ---
-title: "Before Class — Self-Directed Setup"
-subtitle: "Complete all three tutorials before Week 1"
+title: "Setup"
+subtitle: "Three platforms, brought online in stages"
 ---
 
-You will work across **three computing platforms** this quarter. Difficulty ramps up with each tier, so get a working, verified setup on all three *before* the first class. Each tutorial is self-paced, opens in your browser, and ends with a completion checklist.
+You will work across **three computing platforms** this quarter. Each has a self-paced tutorial that opens in your browser and ends with a completion checklist. You do not need all three at once: only Tutorial 1 is required before the first class.
+
+| # | Tutorial | Platform | When | What you'll be able to do |
+|---|----------|----------|------|---------------------------|
+| 1 | [Your Computer: Shell & Git/GitHub](tutorials/01-your-computer.html) | Your laptop/desktop | **Before Week 1** (~1 hour) | Install the tools, create your repository from the template, run the clone → commit → push loop |
+| 2 | [Raven: RStudio Server & Reproducible Analysis](tutorials/02-raven.html) | Raven | **Week 1**, Thursday session (~1 hour) | Log into the lab server, run an analysis, render a notebook entry, push results |
+| 3 | [Hyak / Klone: HPC with SLURM & Containers](tutorials/03-hyak.html) | Hyak / Klone | **Week 3** (~1.5–2 hours) | Submit your first batch job on the cluster |
 
 ::: {.callout-tip}
-Work through them **in order** — each builds on the last. Budget ~1 hour for Tutorial 1, ~1 hour for Tutorial 2, and ~1.5–2 hours for Tutorial 3 (Hyak is the hardest; give yourself time and don't panic when something breaks).
+Raven is home. Your laptop is for editing and Git. Hyak is for when Raven is not enough. Hyak is the hardest of the three; give yourself time and don't panic when something breaks.
 :::
 
-## The three tutorials
+## When you finish a tutorial
 
-| # | Tutorial | Platform | What you'll be able to do |
-|---|----------|----------|---------------------------|
-| 1 | [Your Computer: Shell & Git/GitHub](tutorials/01-your-computer.html) | Your laptop/desktop | Install the tools, organize a repo, run the clone→commit→push loop |
-| 2 | [Raven: RStudio Server & Reproducible Analysis](tutorials/02-raven.html) | Raven | Log into the lab server, run an analysis, push results |
-| 3 | [Hyak / Klone: HPC with SLURM & Containers](tutorials/03-hyak.html) | Hyak / Klone | Submit your first batch job on the cluster |
+Each tutorial ends with a completion block. Paste it as a **comment on your Project Proposal issue** in the [course repository](https://github.com/sr320/course-fish546-2026/issues). That issue is your home base for the quarter; see [How We Work](how-we-work.qmd).
 
-## After you finish
-
-Open a **Setup Check** issue in your course repository (use the *Setup Check* issue form) and paste in the completion block from the bottom of each tutorial. This is how we confirm you're ready — and your first taste of how the course uses [GitHub Issues](index.qmd) to track work.
+If you have not opened a Project Proposal issue yet, open one first. A rough draft is fine.
 
 ## Why these three, and where they come from
 

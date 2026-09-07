@@ -76,7 +76,7 @@
 }
 
 .schedule-card h3 {
-  margin: 0.45rem 0 1rem;
+  margin: 0.6rem 0 1rem;
   font-size: 1.2rem;
   line-height: 1.25;
 }
@@ -88,6 +88,32 @@
 
 .schedule-card-milestone {
   border-color: var(--bs-primary);
+}
+
+.schedule-card.current {
+  outline: 3px solid var(--bs-primary);
+  outline-offset: 2px;
+}
+
+.schedule-card.current .week-label::after {
+  content: " · this week";
+  color: var(--bs-primary);
+}
+
+.schedule-card.past {
+  opacity: 0.72;
+}
+
+.schedule-card.past:hover,
+.schedule-card.past:focus-within {
+  opacity: 1;
+}
+
+.week-dates {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--bs-secondary-color);
+  font-size: 0.85rem;
 }
 
 .schedule-links {
@@ -122,9 +148,8 @@
 }
 
 .schedule-chip {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.25rem;
+  display: inline-block;
+  line-height: 1.5;
   padding: 0.35rem 0.7rem;
   border: 1px solid var(--bs-border-color);
   border-radius: 999px;

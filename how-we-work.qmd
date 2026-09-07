@@ -1,0 +1,189 @@
+---
+title: "How We Work"
+subtitle: "The weekly loop, where things live, the notebook entry, and the rubrics"
+aliases:
+  - support.html
+  - turn-in.html
+  - rubric.html
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-copy: true
+---
+
+## The weekly loop
+
+Everything in this course runs on one repeating cycle. There is one deliverable per week, it lives in one place, and it is always structured the same way.
+
+1. **Read** the week's lecture page before Tuesday.
+2. **Do** the week's analysis in your repository. In Weeks 1 to 4 this is a shared exercise; in Weeks 5 to 8 it is the week's method applied to your own project (a canned fallback is always provided).
+3. **Write** `notebooks/weekNN.qmd` from the template (five sections, below) and render it.
+4. **Push** by **Friday 5:00pm**.
+5. **Post** the commit link as a comment on your **Project Proposal issue**. The instructor replies there with feedback.
+
+That is the whole submission contract. Weekly entries are 60% of your grade; the mid-quarter and final presentations are 15%; the final compendium is 25%. Your best 8 of 9 weekly entries count.
+
+::: {.callout-note}
+## Deadlines
+Weekly entry: Friday 5:00 PM (Monday Nov 30 for Thanksgiving week; see the [Schedule](schedule.qmd)). Late work loses 40% and is not accepted more than 5 days past due. Because the best 8 of 9 entries count, one missed week does not need an excuse.
+:::
+
+## Where things live
+
+| Place | What goes there | How |
+|---|---|---|
+| **Your repository** (in the course org, created from the [project template](https://github.com/course-fish546-2026/project-template)) | All code, outputs, weekly notebook entries, README, final compendium | Clone, commit, push. Raw data are recorded, not committed. |
+| **Course repository** ([issues](https://github.com/sr320/course-fish546-2026/issues)) | One **Project Proposal** issue per student (your home base for the quarter); **Help Request** issues when you are stuck | Use the issue forms. Weekly commit links and tutorial completion blocks go as comments on your proposal issue. |
+| **Slack** ([genefish.slack.com](https://genefish.slack.com)) | Quick questions, announcements, scheduling | Day to day chat. Anything that needs a record goes in an issue instead. |
+| **Roberts Lab Handbook** ([robertslab.github.io/resources](https://robertslab.github.io/resources/)) | The reference standard for computing practices, data management, Raven, and Klone | Keep it open in a tab. |
+
+### Platforms
+
+You will use three computers. They come online in stages, not all at once.
+
+| Platform | Role | Set up |
+|---|---|---|
+| Your computer | Editing, Git, GitHub | Tutorial 1, before Week 1 |
+| Raven (RStudio Server) | **Home.** Interactive analysis, rendering, most weekly work | Tutorial 2, Week 1 |
+| Hyak / Klone (HPC) | When Raven is not enough: large mapping, denoising, anything that needs a batch job | Tutorial 3, Week 3 |
+
+See [Setup](setup.qmd) for the tutorials.
+
+## The weekly notebook entry
+
+One Quarto document per week, always the same five sections. Start from `notebooks/_template.qmd` in your repository.
+
+```markdown
+---
+title: "Week 03 — Mapping, assembly, and quantification"
+date: 2026-04-17
+---
+
+## 1. This week's analysis
+<!-- The week's exercise or your project step. Commands, code, outputs, and
+     what they mean. Link output files in output/. -->
+
+## 2. Reflection questions
+<!-- The 2–3 questions from the lecture page, answered with reasoning. -->
+
+## 3. Project progress
+<!-- What moved this week, with links to commits, files, or figures. -->
+
+## 4. Blockers
+<!-- Specific problems, what you tried, and any linked Help Request. Or "none". -->
+
+## 5. Next week
+<!-- One to three concrete, one-week-sized goals. -->
+```
+
+### Before you push
+
+- [ ] The `.qmd` and its rendered `.html` are both committed.
+- [ ] Rendered from a clean session (Session → Restart R, then Render).
+- [ ] Paths are relative to the repository root.
+- [ ] Output tables and figures are saved under `output/`, not only printed in the HTML.
+- [ ] No raw data under `data/raw/` are committed.
+- [ ] Software, platform, and any container or environment used are named.
+- [ ] The commit link is posted on your Project Proposal issue.
+
+### Weekly entry rubric
+
+Each entry is scored out of 100.
+
+| Criterion | Points | Excellent | Complete | Developing | Incomplete |
+|---|---:|---|---|---|---|
+| Analysis | 30 | Method fits the data and question; intermediate checks are shown; results are interpreted correctly and cautiously. | Method is appropriate and includes some checks; interpretation is reasonable. | Method is attempted but weakly justified, unchecked, or misread. | Analysis is absent, broken, or inappropriate. |
+| Evidence of work | 20 | Links to commits, reports, figures, tables, or logs give concrete proof of progress. | Evidence is present and generally supports the claims. | Evidence is thin, hard to inspect, or only partially connected. | Evidence is missing or cannot be accessed. |
+| Reproducible practice | 15 | Layout, paths, commit history, and documentation make the work easy to rerun and inspect. | Most materials are organized and version-controlled. | Organization is inconsistent, paths unclear, or outputs stale. | Work cannot be followed from the repository. |
+| Reflection questions | 15 | Answers show reasoning, connect to the week's material, and relate to the student's own project. | Answers are correct and complete. | Answers are partial or superficial. | Answers are missing. |
+| Blockers and help-seeking | 10 | Blockers are precise, with attempted fixes and a linked Help Request when needed. | Blockers or risks are named with enough context to respond. | Blockers are vague or raised late. | Blockers are absent despite stalled progress. |
+| Next-week plan | 10 | Next steps are concrete, prioritized, and sized for one week. | Next steps are stated and plausible. | Next steps are too broad or not actionable. | Next steps are missing. |
+
+## Final compendium
+
+The final compendium is the complete project package in your repository at the Week 10 tag. It should include a top-level `README.md`, final rendered report, source `.qmd` or scripts, key outputs, a data availability statement, a software and platform statement, and a link to your Project Proposal issue.
+
+| Criterion | Points | Excellent | Complete | Developing | Incomplete |
+|---|---:|---|---|---|---|
+| Research question and context | 10 | Question is clear, biologically meaningful, and grounded in appropriate background. | Question and context are understandable. | Question is present but broad, shifting, or weakly motivated. | Question or context is missing. |
+| Data provenance and organization | 15 | Data sources, sample structure, file locations, raw/processed distinction, and data availability are explicit. | Main data sources and project structure are described. | Some data details are unclear or scattered. | Data source, structure, or availability cannot be determined. |
+| Workflow and reproducibility | 20 | A reader can trace the workflow from input to output; code, commands, environment notes, and render instructions are sufficient to rerun or audit the analysis. | Workflow is mostly reproducible with minor gaps. | Workflow can be partially followed but requires guessing. | Workflow is not reproducible from the repository. |
+| Technical execution | 15 | Methods are appropriate for the data type and project question; QC and intermediate checks support the analysis. | Methods are generally appropriate and include some checks. | Methods are attempted but weakly justified or missing important checks. | Analysis is technically absent, broken, or inappropriate. |
+| Results and evidence | 15 | Figures, tables, and summaries directly support the main result and are clearly labeled. | Results are present and mostly connected to the question. | Results are thin, hard to interpret, or disconnected from the question. | Results are missing or not inspectable. |
+| Interpretation and biological reasoning | 10 | Claims are proportional to the evidence and distinguish results from interpretation. | Interpretation is reasonable but may be limited. | Interpretation overreaches, stays superficial, or misses key uncertainty. | Biological interpretation is missing. |
+| Caveats and next steps | 10 | Limitations are specific, honest, and connected to concrete next analyses or data needs. | Main caveats and next steps are included. | Caveats are generic or next steps are vague. | Caveats or next steps are missing. |
+| Communication and polish | 5 | Report and README are readable, well structured, linked, and free of avoidable confusion. | Materials are readable with minor rough spots. | Materials are difficult to scan or inconsistently formatted. | Materials are too incomplete or confusing to evaluate. |
+
+### Baseline expectations
+
+- Do not commit large raw data files unless the instructor has explicitly approved it.
+- Link to exact commits, not only the repository homepage.
+- Keep source files and rendered outputs together or clearly linked.
+- Label figures and tables so they can be understood outside the live presentation.
+- Document software, platforms, and major package versions when they affect reproducibility.
+- Explain what did not work. Failed or partial analyses earn credit when they are documented clearly and used to motivate next steps.
+
+## Presentations
+
+The presentation grade covers the Week 5 mid-quarter update and the Week 10 final talk. The goal is to explain the project clearly enough that another student can understand the question, workflow, strongest evidence, and remaining uncertainty.
+
+| Criterion | Points | Excellent | Complete | Developing | Incomplete |
+|---|---:|---|---|---|---|
+| Project framing | 15 | Research question, motivation, and data type are immediately clear. | Question and data type are understandable. | Framing is present but hard to follow. | Framing is missing. |
+| Workflow explanation | 20 | Workflow is explained at the right level, with key inputs, tools, decisions, and checks. | Workflow is mostly clear. | Workflow is too vague, too detailed, or missing important steps. | Workflow cannot be understood. |
+| Evidence and results | 25 | Figures or tables are legible, relevant, and support the main claim. | Results are shown and generally interpreted. | Results are present but hard to read or weakly connected to the claim. | Results are missing. |
+| Interpretation and limits | 20 | Speaker clearly separates what the evidence supports from what remains uncertain. | Interpretation and at least one limitation are included. | Interpretation is superficial or caveats are generic. | Interpretation or limitations are missing. |
+| Delivery and discussion | 20 | Talk is organized, fits the time, uses clear visuals, and handles questions thoughtfully. | Talk is understandable and mostly within time. | Talk is hard to follow, too rushed, or visually cluttered. | Talk is not prepared or cannot be evaluated. |
+
+## Grade interpretation
+
+| Range | Meaning |
+|---:|---|
+| 3.7-4.0 | Strong, reproducible, clearly interpreted work |
+| 3.0-3.6 | Solid work with minor gaps in reproducibility, evidence, or explanation |
+| 2.0-2.9 | Meaningful progress, but important pieces are unclear, incomplete, or weakly connected |
+| 1.0-1.9 | Limited evidence or substantial reproducibility and interpretation gaps |
+| Below 1.0 | Missing, inaccessible, or too incomplete to evaluate reliably |
+
+## Skills reference
+
+Short reminders for the tools you will use every week. The tutorials on the [Setup](setup.qmd) page and the [Roberts Lab Handbook](https://robertslab.github.io/resources/) are the full references.
+
+### RStudio and Raven
+
+Raven is home for most weekly work. You should be able to log in to RStudio Server, pull your repository, open the project from the repository root, run R or shell code from a Quarto document, save figures and tables to `output/`, and commit and push. Raven may require the UW VPN off campus.
+
+### Quarto
+
+Quarto is the format for notebook entries and the final report because it keeps code, results, and explanation together.
+
+- Use relative paths from the repository root.
+- Render from a clean session before pushing.
+- Include enough narrative that another student can follow your reasoning.
+- Save important outputs as files, not only as printed tables in HTML.
+- Generate figures from code whenever possible.
+
+### GitHub Issues
+
+Two forms, on the [course repository](https://github.com/sr320/course-fish546-2026/issues/new/choose):
+
+- **Project Proposal.** One per student, opened in Week 0 or 1. Your weekly commit links and tutorial completion blocks go here as comments. Edit the top post as the project evolves.
+- **Help Request.** When you are stuck. Include the platform, the exact command, the exact error text, what you already tried, and a link to the relevant commit or output.
+
+### Hyak and containers
+
+Use Hyak when a step is too large, slow, or environment-sensitive for Raven. For every job, record in your notebook entry the SLURM script, job ID, container path or environment, input and output paths, and the relevant lines of `slurm-*.out`. Never run heavy analyses on the login node.
+
+### Archiving and the compendium
+
+Archiving is a habit, not a final step. By Week 10 your repository should have a clear top-level `README.md`, the scripts or Quarto files that generate the final outputs, key output tables and figures, a data availability note, software and platform notes, and a link to your Project Proposal issue. If raw data cannot be committed, document where they came from, how they were named, and how checksums or manifests were recorded.
+
+### When something breaks
+
+1. Confirm which platform you are on.
+2. Confirm the working directory.
+3. Confirm the input file exists.
+4. Copy the exact command and error.
+5. Decide whether the problem is path, permissions, software, memory or time, or data format.
+6. Open a Help Request if you are still stuck.
