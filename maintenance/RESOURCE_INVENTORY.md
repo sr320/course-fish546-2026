@@ -1,126 +1,108 @@
-> **Note (Sep 2026):** this document predates the course simplification recorded in [SIMPLIFY-PLAN.md](../SIMPLIFY-PLAN.md). The assignments repository, Discussions, Setup Check and Weekly Progress forms, and the progress-assessment workflow described below were retired; the student-facing contract is now the site's [How We Work](https://sr320.github.io/course-fish546-2026/how-we-work.html) page. Kept for the audit tooling and baseline survey it defines.
-
 # FISH 546 Resource Inventory
 
-**Inventory date:** 2026-07-31
+**Inventory date:** 2026-09-07 (supersedes the 2026-07-31 inventory)
 
 **Review owner:** Course instructor
 
-**Next required review:** Before the 2026 course site is published
+**Next required review:** Week 0 (Thu Oct 1, 2026), then before the next offering
 
-This inventory identifies every student-facing course resource and records which location is authoritative. Generated files under `docs/` are published copies; their corresponding source files are authoritative.
+This inventory identifies every student-facing course resource and records which location is authoritative. Generated files under `docs/` are published copies; their corresponding source files are authoritative. The course design these resources implement is recorded in [`SIMPLIFY-PLAN.md`](../SIMPLIFY-PLAN.md).
 
 ## Canonical destinations
 
 | Destination | Canonical URL or address | Purpose | Authority note |
 |---|---|---|---|
-| Published course site | <https://sr320.github.io/course-fish546-2026/> | Student-facing syllabus and course materials | Expected Pages URL based on the repository owner and prior course sites; confirm after the first 2026 deployment. The different setup-page URL currently embedded in the Setup Check form returned `404` on 2026-07-31. |
-| Course source and central workflow repository | <https://github.com/sr320/course-fish546-2026> | Website source, central issue forms, labels, and progress automation | The configured Git remote; authoritative for course infrastructure. |
-| Course GitHub organization | <https://github.com/course-fish546-2026> | Home for student project repositories | This is an organization, not the course source repository. |
-| Assignments repository | <https://github.com/sr320/fish546-2026-assignments> | Question sets, assignment prompts, templates, and pull-request submissions | Authoritative for assessed weekly question sets and assignments. |
-| Course Discussions | <https://github.com/orgs/course-fish546-2026/discussions> | Open-ended questions, ideas, and peer discussion | Use for conversation that does not require a structured issue form. |
-| Course Slack | <https://genefish.slack.com> | Quick, informal course communication | Access requires membership in the workspace. |
+| Published course site | <https://sr320.github.io/course-fish546-2026/> | Syllabus, schedule, weekly topics and analyses, How We Work | Confirmed live 2026-09-07. The only student-facing instructional source. |
+| Course repository | <https://github.com/sr320/course-fish546-2026> | Site source, the two issue forms, labels, `roster.md` | The configured Git remote. Students open issues here and make exactly one pull request here (Week 1 roster). |
+| Course GitHub organization | <https://github.com/course-fish546-2026> | Home for student project repositories | Created 2026-09-07. An organization, not a repository. |
+| Project template | <https://github.com/course-fish546-2026/project-template> | Starting point for every student repository ("Use this template") | Authoritative repository layout and notebook-entry template. Local clone at `~/Documents/GitHub/project-template`. |
+| Student project repository | `https://github.com/course-fish546-2026/<student-repo>` | All of a student's work: code, outputs, weekly notebook entries, final compendium | The submission. The commit link posted on the Project Proposal issue identifies what is assessed. |
+| Course Slack | <https://genefish.slack.com> | Quick, informal communication and announcements | Access requires workspace membership. Anything needing a record goes in an issue instead. |
 | Roberts Lab Handbook | <https://robertslab.github.io/resources/> | Computing, data-management, Raven, and Hyak reference standard | Authoritative for platform operations unless a course page explicitly overrides it. |
-| Raven | <http://raven.fish.washington.edu:8787> | RStudio Server | May require UW network or VPN access. |
-| Hyak OnDemand | <https://ondemand.hyak.uw.edu> | Browser access to Hyak services | Requires UW and allocation credentials. |
-| Klone SSH | `ssh <UWNetID>@klone.hyak.uw.edu` | Command-line Hyak access | Requires UW, Duo, and allocation credentials. |
+| Raven | <http://raven.fish.washington.edu:8787> | RStudio Server; home for most weekly work from Week 1 | May require UW network or VPN access. |
+| Hyak OnDemand | <https://ondemand.hyak.uw.edu> | Browser access to Hyak services | Requires UW and allocation credentials. Introduced Week 3. |
+| Klone SSH | `ssh <UWNetID>@klone.hyak.uw.edu` | Command-line Hyak access | Requires UW, Duo, and `srlab` allocation. |
+
+Retired in September 2026 and no longer referenced anywhere student-facing: the separate assignments repository, GitHub Discussions, the Setup Check and Weekly Progress issue forms, the Blocker/Bug form, and the progress-assessment workflow.
 
 ### Repository roles
 
-- The **central workflow repository** hosts the issue forms and the workflow that assesses weekly progress.
-- A **student project repository** under the course organization contains that student's project code, documentation, and evidence.
-- The **assignments repository** contains prompts and receives question-set and assignment pull requests.
-- Central issue-form submissions should link to evidence in the student's project repository; the evidence itself does not belong in the central repository.
+- The **course repository** publishes the site and hosts the Project Proposal and Help Request forms. Students touch it twice: the Week 1 roster pull request, and issues.
+- Each **student project repository** is created from the template into the organization and holds everything the student produces. Weekly entries live in `notebooks/weekNN.qmd`; outputs in `output/weekNN/`; the final report in `docs/`.
+- The **Project Proposal issue** is the per-student home base: the weekly commit link, tutorial completion blocks, and instructor feedback all live in its comment thread.
 
-## Central issue forms
+## Issue forms
 
 | Form | Direct URL | Evidence expected |
 |---|---|---|
-| Setup Check | <https://github.com/sr320/course-fish546-2026/issues/new?template=00-setup-check.yml> | Tutorial completion blocks and student repository links |
-| Project Proposal | <https://github.com/sr320/course-fish546-2026/issues/new?template=10-project-proposal.yml> | Question, data, project track, platform, endpoint, and risks |
-| Weekly Research Progress | <https://github.com/sr320/course-fish546-2026/issues/new?template=20-weekly-progress.yml> | Project issue, commit/compare URL, evidence, goals, and blockers |
-| Help Request | <https://github.com/sr320/course-fish546-2026/issues/new?template=30-help-request.yml> | Goal, attempted fixes, exact error, and platform |
-| Technical Blocker/Bug | <https://github.com/sr320/course-fish546-2026/issues/new?template=40-blocker-bug.yml> | Reproduction steps, expected/actual result, environment, and code/log link |
+| Project Proposal | <https://github.com/sr320/course-fish546-2026/issues/new?template=10-project-proposal.yml> | Repository link, question, track, data, platform, endpoint, risks. One per student; weekly commit links and tutorial completion blocks are posted as comments. |
+| Help Request | <https://github.com/sr320/course-fish546-2026/issues/new?template=30-help-request.yml> | Platform, goal, what was tried, exact error, optional reproduction steps and link |
 
-The forms currently exist only in the central workflow repository. References to opening one “in your course repository” are ambiguous and should be corrected during Phase 1.
+The issue chooser also links Slack, the Handbook, and the course site. Blank issues are disabled.
 
 ## Student-facing site pages
 
 | Source | Published path | Purpose | Authority |
 |---|---|---|---|
-| `index.qmd` | `/index.html` | Syllabus, course format, grading, and weekly arc | Authoritative course overview |
-| `schedule.qmd` | `/schedule.html` | Weekly topics, questions, assignments, and project checkpoints | Authoritative weekly sequence; exact dates are still pending Phase 1 |
-| `setup.qmd` | `/setup.html` | Landing page for the three setup tutorials | Authoritative setup sequence |
-| `support.qmd` | `/support.html` | Self-directed tool and platform skills | Course summary; handbook remains authoritative for platform details |
-| `turn-in.qmd` | `/turn-in.html` | Pull-request submission contract and progress workflow | Authoritative course submission explanation |
-| `rubric.qmd` | `/rubric.html` | Project progress, presentation, and compendium rubric | Authoritative project-facing rubric |
-| `edna.qmd` | `/edna.html` | eDNA topic hub | Navigation hub; lecture page contains instructional content |
-| `about.qmd` | `/about.html` | Instructor/course and site information | Authoritative site metadata |
+| `index.qmd` | `/index.html` | Syllabus: meeting times, format, platforms, grading, weekly arc | Authoritative course overview |
+| `schedule.qmd` | `/schedule.html` | Dated weekly cards with Topic, Analysis, and Project lines; current week outlined by script | Authoritative dates and weekly sequence |
+| `setup.qmd` | `/setup.html` | The three platform tutorials and when each is required | Authoritative setup sequence |
+| `how-we-work.qmd` | `/how-we-work.html` | Weekly loop, where things live, notebook template and checklist, all three rubrics, skills reference | Authoritative submission contract and grading criteria |
+| `about.qmd` | `/about.html` | Instructor and site information (footer link) | Site metadata |
+| (aliases) | `/support.html`, `/turn-in.html`, `/rubric.html` | Redirect to `/how-we-work.html` | Kept so old bookmarks resolve |
 
 ## Weekly modules
 
-| Week | Source | Topic |
-|---:|---|---|
-| 00 | `lectures/00-before.qmd` | Bioinformatics habits and data provenance |
-| 01 | `lectures/01-start-up.qmd` | Sequence databases and BLAST |
-| 02 | `lectures/02-raw-reads-qc.qmd` | Raw reads, FASTQ, QC, and trimming |
-| 03 | `lectures/03-mapping-quantification.qmd` | Mapping, assembly, and quantification |
-| 04 | `lectures/04-rna-seq-dge.qmd` | RNA-seq and differential expression |
-| 05 | `lectures/05-annotation-ranges.qmd` | Genome annotation and genomic ranges |
-| 06 | `lectures/06-variants.qmd` | Variants and population signals |
-| 07 | `lectures/07-methylation.qmd` | Epigenetics and DNA methylation |
-| 08 | `lectures/edna.qmd` | eDNA and metabarcoding |
-| 09 | `lectures/09-synthesis.qmd` | Project synthesis and biological interpretation |
-| 10 | `lectures/10-lastmile.qmd` | Presentations and final compendium |
+Each week has a topic page (`lectures/`) and an analysis page (`assignments/`), grouped in the site sidebar with previous/next navigation. Reflection questions live on the topic page; the analysis page states what goes in section 1 of the notebook entry.
+
+| Week | Topic source | Analysis source | Mode |
+|---:|---|---|---|
+| 00 | `lectures/00-before.qmd` | `assignments/00-bash.qmd` | Setup session Thu Oct 1; entry ungraded |
+| 01 | `lectures/01-start-up.qmd` | `assignments/01-blast.qmd` | Shared exercise; roster pull request |
+| 02 | `lectures/02-raw-reads-qc.qmd` | `assignments/02-fastq-qc.qmd` | Shared exercise |
+| 03 | `lectures/03-mapping-quantification.qmd` | `assignments/03-mapping-quantification.qmd` | Shared exercise; Hyak tutorial assigned |
+| 04 | `lectures/04-rna-seq-dge.qmd` | `assignments/04-dge.qmd` | Shared exercise |
+| 05 | `lectures/05-annotation-ranges.qmd` | `assignments/05-annotation-ranges.qmd` | Own project, canned fallback; mid-quarter update |
+| 06 | `lectures/06-variants.qmd` | `assignments/06-variants.qmd` | Own project, canned fallback |
+| 07 | `lectures/07-methylation.qmd` | `assignments/07-methylation.qmd` | Own project, canned fallback |
+| 08 | `lectures/08-edna.qmd` | `assignments/08-edna.qmd` | Own project, canned fallback; no Thursday (Thanksgiving) |
+| 09 | `lectures/09-synthesis.qmd` | `assignments/09-synthesis.qmd` | Own project |
+| 10 | `lectures/10-lastmile.qmd` | `assignments/10-compendium.qmd` | Compendium tag `v1.0`; final talks |
+
+`assignments/provided-query.fasta` is the Week 01 practice query and is copied to `docs/assignments/`.
+
+**Provided datasets** for Weeks 2 to 8 (FASTQ, reference, count matrix, BED/GFF, VCF, methylation table, amplicon run) are not yet placed. Each analysis page says "paths on Slack." Decision D5 in `SIMPLIFY-PLAN.md`: put them under a shared Raven path and `/gscratch/srlab/fish546/` on Klone and record the paths here once they exist.
 
 ## Setup tutorials
 
-| Order | Source | Purpose | Completion evidence |
+| Order | Source | When required | Completion evidence |
 |---:|---|---|---|
-| 1 | `tutorials/01-your-computer.html` | Local shell, Git/GitHub, and project structure | Repository and first commit |
-| 2 | `tutorials/02-raven.html` | Raven/RStudio workflow and server data hygiene | Output committed from Raven |
-| 3 | `tutorials/03-hyak.html` | Hyak/Klone, storage, containers, and SLURM | Job ID and output tail |
+| 1 | `tutorials/01-your-computer.html` | Before Thu Oct 1 | Repository created from the template; README personalized; first push |
+| 2 | `tutorials/02-raven.html` | Week 1 Thursday session (Oct 8) | Output committed from Raven |
+| 3 | `tutorials/03-hyak.html` | Week 3 (assigned Oct 20) | Job ID and output tail |
 
-`tutorials/tutorial.css` and `tutorials/progress.js` are shared authoritative assets. Copies under `docs/tutorials/` are generated/published resources and must match exactly.
-
-## Weekly assessed materials
-
-All paths below are relative to <https://github.com/sr320/fish546-2026-assignments>.
-
-| Week | Question set | Assignment |
-|---:|---|---|
-| 00 | None | `assignments/00-bash/` |
-| 01 | `questions/week01.md` | `assignments/01-blast/` |
-| 02 | `questions/week02.md` | `assignments/02-fastq-qc/` |
-| 03 | `questions/week03.md` | `assignments/03-mapping-quantification/` |
-| 04 | `questions/week04.md` | `assignments/04-dge/` |
-| 05 | `questions/week05.md` | `assignments/05-annotation-ranges/` |
-| 06 | `questions/week06.md` | `assignments/06-variants/` |
-| 07 | `questions/week07.md` | `assignments/07-methylation/` |
-| 08 | `questions/week08.md` | `assignments/08-edna-metabarcoding/` |
-| 09 | `questions/week09.md` | `assignments/09-synthesis/` |
-| 10 | `questions/week10.md` | `assignments/10-compendium/` |
-
-The assignments repository is authoritative if its prompt conflicts with a summary on the course schedule. Conflicts should still be treated as defects and reconciled.
+Completion blocks are posted as comments on the student's Project Proposal issue. `tutorials/tutorial.css` and `tutorials/progress.js` are shared authoritative assets; copies under `docs/tutorials/` must match exactly (the audit checks this). Tutorial links to site pages (`../setup.html`) resolve against the published copy.
 
 ## Automation and derived resources
 
 | Resource | Role |
 |---|---|
-| `.github/workflows/progress-assessment.yml` | Assesses central weekly-progress issues and applies triage labels |
-| `.github/workflows/label-sync.yml` | Synchronizes course labels |
-| `.github/workflows/greetings.yml` | Greets a student's first central issue |
-| `.github/workflows/site-audit.yml` | Runs the offline course-site audit on pushes and pull requests |
-| `scripts/parse_progress_issue.py` | Extracts structured issue-form content |
-| `scripts/assess_progress_issue.py` | Produces progress reports and status labels |
-| `scripts/audit_course_site.py` | Checks links, generated tutorial copies, and render-source freshness |
+| `.github/workflows/site-audit.yml` | Runs `scripts/audit_course_site.py` on pushes and pull requests |
+| `.github/workflows/label-sync.yml` | Synchronizes labels from `.github/labels.yml` (does not delete) |
+| `.github/workflows/greetings.yml` | Greets a student's first issue with the proposal-issue loop |
+| `.github/PULL_REQUEST_TEMPLATE.md` | Checklist for the Week 1 roster pull request |
+| `scripts/audit_course_site.py` | Checks source links, generated links and anchors, tutorial copies, and the render-source manifest |
+| `maintenance/render-source-manifest.json` | Hashes of every render source at the last accepted render; rewrite with `--write-manifest` after `quarto render` |
 | `docs/` | Published output; never the primary editing location |
+
+There is no automated assessment. Weekly feedback is one instructor comment per student per week on the Project Proposal issue.
 
 ## Authority rules
 
-1. Edit `.qmd` sources and `tutorials/` assets, not their copies under `docs/`.
-2. The assignments repository controls assignment and question-set requirements.
-3. `rubric.qmd` controls project grading expectations.
-4. The Roberts Lab Handbook controls platform procedures unless the course explicitly documents a temporary exception.
-5. The exact submitted commit and manifest control what is evaluated for a weekly submission.
-6. When two student-facing sources conflict, record and fix the conflict; do not rely on students to infer precedence.
+1. Edit `.qmd` sources and `tutorials/` assets, not their copies under `docs/`. Re-render, then rewrite the manifest.
+2. `how-we-work.qmd` controls the submission contract and all grading criteria.
+3. Each week's `assignments/NN-*.qmd` page controls that week's analysis requirements; the schedule card summarizes it.
+4. `project-template` controls the repository layout and the notebook entry structure.
+5. The Roberts Lab Handbook controls platform procedures unless the course explicitly documents a temporary exception.
+6. The commit link posted on the Project Proposal issue identifies the version of a weekly entry that is assessed.
+7. When two student-facing sources conflict, record and fix the conflict; do not rely on students to infer precedence.
