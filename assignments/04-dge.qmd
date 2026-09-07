@@ -1,0 +1,44 @@
+---
+title: "Week 04 Analysis — Differential Gene Expression"
+subtitle: "Shared exercise"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+::: {.callout-note appearance="simple"}
+**Due Friday 5:00pm** as section 1 of `notebooks/week04.qmd`. Topic: [RNA-seq and Differential Expression](../lectures/04-rna-seq-dge.qmd). Checklist and rubric: [How We Work](../how-we-work.qmd#the-weekly-notebook-entry).
+:::
+
+## Goal
+
+Move from a count matrix and sample metadata to a differential-expression table and a cautious biological interpretation.
+
+## Data
+
+A count matrix, sample metadata table, and an R scaffold are provided (paths on Slack). RNA-seq projects may substitute their own count matrix if it exists by this week.
+
+## Tasks
+
+1. Record data provenance and read the sample metadata carefully. Which columns are the design?
+2. Load the count matrix and metadata; confirm that sample names match.
+3. Check sample structure with a diagnostic plot (PCA or sample-distance heatmap).
+4. Run a simple differential-expression workflow with the scaffold.
+5. Save `output/week04/dge-results.csv`, the diagnostic plot, and one focused figure or table (an MA plot, a volcano plot, or a handful of genes).
+6. Write a caveats paragraph about design, sample size, and biological interpretation.
+
+## In your project
+
+Every project has the equivalent of these four stages: raw input, analysis-ready table, model or summary step, biological interpretation. Name each stage for your own workflow in your entry. If your project is RNA-seq, say how the provided scaffold would need to change for your design.
+
+## What goes in your notebook entry
+
+- Source code or `.qmd` chunks.
+- The results table and at least one figure.
+- A short interpretation linked to annotation or biological context.
+- The caveats paragraph.
+
+## Assessment
+
+Scored with the [weekly entry rubric](../how-we-work.qmd#weekly-entry-rubric). A small, reproducible, well-interpreted analysis beats an elaborate one that cannot be rerun.

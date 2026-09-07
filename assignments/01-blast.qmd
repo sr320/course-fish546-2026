@@ -1,0 +1,73 @@
+---
+title: "Week 01 Analysis — NCBI BLAST"
+subtitle: "Shared exercise"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+::: {.callout-note appearance="simple"}
+**Due Friday 5:00pm** as section 1 of `notebooks/week01.qmd`. Topic: [Getting Started](../lectures/01-start-up.qmd). Checklist and rubric: [How We Work](../how-we-work.qmd#the-weekly-notebook-entry).
+:::
+
+## Goal
+
+Use BLAST to identify or interpret an unknown sequence, then document the search so that someone else could audit it.
+
+## Provided query
+
+If you do not yet have a project sequence, use the practice fish COI query in [provided-query.fasta](provided-query.fasta). Everyone can complete the workflow with it before project data are settled.
+
+```text
+>week01_unknown_fish_coi_practice
+CCTATACCTAATCTTCGGTGCATGAGCCGGAATAGTAGGGACAGCCCTAAGCCTCCTCATTCGAGCAGAATTAGGCCAACCAGGGGCCCTTCTAGGTGACGACCAAATTTATAATGTAATCGTAACAGCACATGCCTTCGTAATAATTTTCTTTATAGTAATACCAATTATAATTGGAGGATTCGGAAATTGACTTGTACCTCTAATACTAGGGGCCCCTGACATAGCATTCCCCCGAATAAATAATATAAGCTTCTGACTTCTCCCCCCATCCTTCCTTCTCCTCCTAGCATCCTCTGGTGTAGAAGCAGGGGCCGGAACAGGATGAACAGTATACCCTCCTCTAGCCGGAAACCTAGCCCACGCAGGAGCATCCGTAGACCTAACTATCTTCTCCCTACACCTAGCAGGTGTCTCCTCAATCCTAGGGGCCATTAATTTTATTACAACAATTATCAATATGAAACCCCCAGCAATATCACAGTACC
+```
+
+## Tasks
+
+1. Save the query as `data/week01/query.fasta` (small query files are fine to commit).
+2. Run a BLAST search with NCBI web BLAST, or command-line BLAST on Raven if you already have it working.
+3. Save the top-hit table or downloaded results under `output/week01/`.
+4. In your notebook entry, report the database searched, top hit, percent identity, query coverage, e-value, and whether the result makes biological sense.
+
+## In your project
+
+If you already have a sequence from your own project (a transcript, contig, marker, or amplicon), BLAST it too and report the same fields. Note whether sequence similarity, annotation, or database choice is going to matter for your project. This becomes part of your proposal.
+
+## Interpretation checklist
+
+Your entry should make the search auditable:
+
+- Query file and sequence length.
+- BLAST program used (`blastn`, `blastx`, or NCBI web BLAST).
+- Database searched and date searched.
+- Top hit accession, description, and organism.
+- Percent identity, query coverage, alignment length, and e-value.
+- Whether the next few hits support the same interpretation.
+- One caveat: short marker length, close congeners, incomplete references, contamination, or database bias.
+
+## Database choice
+
+- For broad DNA identification, start with NCBI `nt`.
+- For COI barcodes, compare NCBI results with what a barcode-focused database such as BOLD would give.
+- For transcripts or contigs that may encode proteins, consider whether `blastx` against a protein database is more informative than nucleotide BLAST.
+- For eDNA-style markers, note whether the marker is long and variable enough for species-level claims.
+
+## The one pull request
+
+This is the only week that requires a pull request. Fork the [course repository](https://github.com/sr320/course-fish546-2026), add one line to `roster.md` with your name, your repository link, and your project track, and open a pull request. We review and merge them together in Thursday's session. After this week, all of your work goes directly into your own repository.
+
+## Project Proposal
+
+Refine your Project Proposal issue this week: research question, data source, platform, and a draft endpoint. The proposal is provisional. Examples of strong draft endpoints:
+
+- RNA-seq: a differential-expression result linked to treatment, environment, tissue, or life stage.
+- eDNA / metabarcoding: a taxon-by-site or taxon-by-time summary with contamination caveats.
+- DNA methylation: a methylation difference connected to genome annotation or regulatory context.
+- Variants: a filtered variant summary, PCA, or population comparison.
+- Annotation / discovery: candidate genes, contigs, or markers supported by sequence-similarity evidence.
+
+## Assessment
+
+Scored with the [weekly entry rubric](../how-we-work.qmd#weekly-entry-rubric). The Analysis criterion looks for an auditable search and a biologically reasoned interpretation, not merely a top hit.

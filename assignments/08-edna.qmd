@@ -1,0 +1,56 @@
+---
+title: "Week 08 Analysis — eDNA Metabarcoding"
+subtitle: "Track week · apply to your project"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+::: {.callout-note appearance="simple"}
+**Due Friday 5:00pm** as section 1 of `notebooks/week08.qmd`. Topic: [eDNA & Environmental Metabarcoding](../lectures/08-edna.qmd). Checklist and rubric: [How We Work](../how-we-work.qmd#the-weekly-notebook-entry).
+:::
+
+## Goal
+
+Take amplicon reads to an analysis-ready sample × taxon table, and reason about false positives using controls.
+
+## In your project
+
+**If your project is eDNA / metabarcoding:** run the full pipeline below on your own data. The compute-heavy steps run on Klone; exploration and figures on Raven or your laptop.
+
+**Every other project:** the eDNA discipline of negative controls and a false-positive floor applies to you too. Identify the equivalent in your own data and quantify it:
+
+- RNA-seq or methylation: reads mapping to the wrong organism, rRNA, or spike-ins; sample-swap checks using sex or genotype markers.
+- Variants: variant calls in a blank, duplicate, or known-homozygous sample; strand-bias or depth outliers.
+- Assembly or annotation: contamination screening of contigs (BLAST a random subset against `nt`; look for non-target taxa).
+
+Report the number, what it implies about your false-positive floor, and how you will handle it. Save the evidence under `output/week08/`.
+
+## If your project has no natural fit, or you are on the eDNA track
+
+Run the pipeline on the provided 12S or COI amplicon set (paths on Slack). Note its marker and the reference database.
+
+1. **Inspect and QC.** Count reads, look at quality profiles, trim primers and adapters (for example with `cutadapt`). Record the exact primer sequences.
+2. **Denoise to ASVs** with DADA2: filter and trim, learn errors, denoise, merge pairs, remove chimeras. Report how many reads survive each step.
+3. **Assign taxonomy** against the reference database for the marker. Record the database name and version.
+4. **Build the table:** a sample × taxon abundance matrix at `output/week08/asv-table.csv`.
+5. **One figure:** a stacked-bar composition plot or richness by sample.
+6. **Controls:** report what the negative or blank controls contained and what that implies about false positives.
+
+Run everything inside the lab [Apptainer container](https://robertslab.github.io/resources/klone_containers/) as SLURM jobs. Request modest `--mem` and `--time` first and scale up only if a job is killed. Keep raw reads in `data/raw/` uncommitted, with checksums recorded.
+
+## In your project, part two
+
+Draft your final figure. It can be a mock-up with placeholder data, but it should show the shape of the answer to your research question.
+
+## What goes in your notebook entry
+
+- Code and commentary for each step, including SLURM scripts and the tail of the relevant `slurm-*.out` if you used Klone.
+- The read-survival table (eDNA pipeline) or the false-positive quantification (other projects).
+- The table and figure.
+- A caveats paragraph: given your controls and marker or data type, how confident are you in the detections?
+
+## Assessment
+
+Scored with the [weekly entry rubric](../how-we-work.qmd#weekly-entry-rubric). Reproducibility counts as much as results: primers, parameters, database version, and which steps ran where should all be recorded.

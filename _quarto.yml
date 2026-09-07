@@ -4,13 +4,16 @@ project:
   render:
     - "*.qmd"
     - "lectures/*.qmd"
+    - "assignments/*.qmd"
   resources:
+    - assignments/provided-query.fasta
     - tutorials/*.html
     - tutorials/tutorial.css
     - tutorials/progress.js
 
 website:
   title: "2026 :: Bioinformatics — FISH 546"
+  page-navigation: true
   navbar:
     left:
       - href: index.qmd
@@ -19,18 +22,71 @@ website:
         text: Schedule
       - href: setup.qmd
         text: Setup
-      - href: support.qmd
-        text: Skills
-      - href: turn-in.qmd
-        text: Submit
-      - href: rubric.qmd
-        text: Rubric
-      - href: https://github.com/course-fish546-2026
-        text: GitHub
+      - href: how-we-work.qmd
+        text: How We Work
     right:
       - icon: github
-        href: https://github.com/course-fish546-2026
-        aria-label: GitHub
+        href: https://github.com/sr320/course-fish546-2026
+        aria-label: Course repository on GitHub
+  sidebar:
+    - id: lectures
+      title: "Weekly topics"
+      style: docked
+      collapse-level: 1
+      contents:
+        - section: "Week 00"
+          contents:
+            - lectures/00-before.qmd
+            - assignments/00-bash.qmd
+        - section: "Week 01"
+          contents:
+            - lectures/01-start-up.qmd
+            - assignments/01-blast.qmd
+        - section: "Week 02"
+          contents:
+            - lectures/02-raw-reads-qc.qmd
+            - assignments/02-fastq-qc.qmd
+        - section: "Week 03"
+          contents:
+            - lectures/03-mapping-quantification.qmd
+            - assignments/03-mapping-quantification.qmd
+        - section: "Week 04"
+          contents:
+            - lectures/04-rna-seq-dge.qmd
+            - assignments/04-dge.qmd
+        - section: "Week 05"
+          contents:
+            - lectures/05-annotation-ranges.qmd
+            - assignments/05-annotation-ranges.qmd
+        - section: "Week 06"
+          contents:
+            - lectures/06-variants.qmd
+            - assignments/06-variants.qmd
+        - section: "Week 07"
+          contents:
+            - lectures/07-methylation.qmd
+            - assignments/07-methylation.qmd
+        - section: "Week 08"
+          contents:
+            - lectures/08-edna.qmd
+            - assignments/08-edna.qmd
+        - section: "Week 09"
+          contents:
+            - lectures/09-synthesis.qmd
+            - assignments/09-synthesis.qmd
+        - section: "Week 10"
+          contents:
+            - lectures/10-lastmile.qmd
+            - assignments/10-compendium.qmd
+  page-footer:
+    left: "FISH 546 · Bioinformatics for Environmental Sciences · University of Washington"
+    right:
+      - text: About
+        href: about.qmd
+      - text: Roberts Lab Handbook
+        href: https://robertslab.github.io/resources/
+      - text: Slack
+        href: https://genefish.slack.com
 
 format:
   html:

@@ -7,6 +7,10 @@ format:
     code-copy: true
 ---
 
+::: {.callout-note appearance="simple"}
+**Week 04.** Analysis: [Differential gene expression](../assignments/04-dge.qmd). Notebook entry due Friday 5:00pm. How it all fits: [How We Work](../how-we-work.qmd).
+:::
+
 ## Purpose
 
 Week 04 focuses on RNA-seq as a full bioinformatics workflow: raw reads become expression estimates, expression estimates become model outputs, and model outputs become biological claims.
@@ -42,6 +46,14 @@ A differential-expression table is not a list of truths. It is evidence from a m
 - Biological function.
 - Consistency with QC and exploratory plots.
 
-## Project checkpoint
+## This week in your project
 
 If your project is not RNA-seq, use this week to compare your own workflow to RNA-seq: what is your raw input, analysis-ready table, model or summary step, and final biological interpretation?
+
+## Reflection questions
+
+Answer these in section 2 of `notebooks/week04.qmd`.
+
+1. Why is sample metadata as important as the count matrix?
+2. What is the difference between statistical significance and biological importance in differential expression?
+3. If your project is not RNA-seq, what is the equivalent of a count matrix and a results table in your workflow?

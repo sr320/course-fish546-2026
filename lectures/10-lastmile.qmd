@@ -7,6 +7,10 @@ format:
     code-copy: true
 ---
 
+::: {.callout-note appearance="simple"}
+**Week 10.** Analysis: [Final research compendium](../assignments/10-compendium.qmd). Due at the final class meeting. How it all fits: [How We Work](../how-we-work.qmd).
+:::
+
 ## Purpose
 
 Week 10 turns the quarter's work into a final research compendium and presentation. The focus is synthesis: what you did, what you found, what remains uncertain, and how someone else can inspect the work.
@@ -49,10 +53,18 @@ Before submission:
 - Confirm links work.
 - Confirm figures are not stale screenshots.
 - Confirm raw data are handled according to policy.
-- Confirm the project issue and weekly progress issues tell the story of the work.
+- Confirm the Project Proposal issue and your notebook entries tell the story of the work.
+
+## Reflection questions
+
+Answer these in section 2 of `notebooks/week10.qmd`.
+
+1. What is the strongest result from your project?
+2. What would you do next with four more weeks?
+3. Which part of your workflow is most reproducible, and which is least?
 
 ## References
 
-- Quarto documentation
-- Roberts Lab Handbook: Data Management
-- Course final-release assignment
+- [Quarto documentation](https://quarto.org/docs/guide/)
+- [Roberts Lab Handbook: Data Management](https://robertslab.github.io/resources/Data-Management/)
+- [Week 10: Final research compendium](../assignments/10-compendium.qmd)

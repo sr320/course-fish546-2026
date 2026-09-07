@@ -1,0 +1,45 @@
+---
+title: "Week 03 Analysis — Mapping or Quantification Slice"
+subtitle: "Shared exercise, ideally on your own data"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+::: {.callout-note appearance="simple"}
+**Due Friday 5:00pm** as section 1 of `notebooks/week03.qmd`. Topic: [Mapping, Assembly, and Quantification](../lectures/03-mapping-quantification.qmd). Checklist and rubric: [How We Work](../how-we-work.qmd#the-weekly-notebook-entry). **This week also assigns [Tutorial 3: Hyak](../tutorials/03-hyak.html).**
+:::
+
+## Goal
+
+Run one small mapping, assembly, or quantification step from input to an intermediate product, and explain what that product means and what it cannot yet prove.
+
+## Tasks
+
+1. Choose the smallest meaningful slice of a workflow. Prefer your own project data; the provided reads from Week 02 and a matching reference are available as a fallback (paths on Slack).
+2. Identify the reference genome, transcriptome, marker database, or assembly strategy, and record its source and version.
+3. Run one step, for example:
+   - Map reads to a reference.
+   - Quantify reads against transcripts or features.
+   - Assemble a small subset.
+   - Summarize an existing mapping or assignment output.
+4. Save the command or script in `code/`, the log and a summary in `output/week03/`.
+5. Inspect the intermediate checks: input read count, proportion mapped or assigned, output size and format, a small preview of the result.
+
+## In your project
+
+Write the endpoint of your project in one sentence in your repository `README.md` ("By Week 10 I will have ..."). Then describe how this week's slice connects to it: what is the next step, and what input does it need?
+
+If your slice needs more compute than Raven offers, complete the [Hyak tutorial](../tutorials/03-hyak.html) this week and run the step as a SLURM job. Record the SLURM script, job ID, and container in your entry.
+
+## What goes in your notebook entry
+
+- Commands or scripts.
+- A log or summary file.
+- A small output table or diagnostic.
+- A paragraph connecting the output to the next workflow step.
+
+## Assessment
+
+Scored with the [weekly entry rubric](../how-we-work.qmd#weekly-entry-rubric). The Analysis criterion looks for evidence that you understand the transformation from reads to an intermediate data product and checked it.

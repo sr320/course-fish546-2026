@@ -7,6 +7,10 @@ format:
     code-copy: true
 ---
 
+::: {.callout-note appearance="simple"}
+**Week 08.** Analysis: [eDNA metabarcoding](../assignments/08-edna.qmd). Notebook entry due Friday 5:00pm. How it all fits: [How We Work](../how-we-work.qmd).
+:::
+
 ## What is environmental DNA?
 
 Environmental DNA (eDNA) is genetic material organisms shed into their surroundings — water, sediment, soil, air. Sampling and sequencing it lets us detect and characterize whole communities without capturing or even seeing the organisms. In aquatic systems it has become a workhorse for biodiversity surveys, invasive-species early warning, and monitoring rare or cryptic taxa.
@@ -68,11 +72,17 @@ Once you have the table:
 - **Abundance is soft** — read counts are a noisy proxy for biomass; treat quantitative claims carefully.
 - **Reproducibility** — record primers, database version, and every parameter. This is exactly the [Data Management](https://robertslab.github.io/resources/Data-Management/) discipline the course emphasizes.
 
-## This week
+## This week in your project
 
-- **Assignment:** [eDNA Metabarcoding pipeline](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/08-edna-metabarcoding)
-- **Question set:** [Week 08](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week08.md)
-- **Topic hub:** [eDNA](../edna.qmd)
+eDNA projects run the full pipeline on their own data this week. Every other project quantifies its own false-positive floor, the eDNA discipline applied to your data type. Both are spelled out in the [Week 08 analysis](../assignments/08-edna.qmd). Everyone drafts a mock final figure.
+
+## Reflection questions
+
+Answer these in section 2 of `notebooks/week08.qmd`.
+
+1. How does marker choice affect what organisms can be detected?
+2. Why are negative controls essential in eDNA metabarcoding, and what is the equivalent in your own project?
+3. What caveat would you include before making a strong ecological claim from read counts?
 
 ## References & resources
 

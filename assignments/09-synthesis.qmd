@@ -1,0 +1,37 @@
+---
+title: "Week 09 Analysis — Project Synthesis"
+subtitle: "Your project"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+::: {.callout-note appearance="simple"}
+**Due Friday 5:00pm** as section 1 of `notebooks/week09.qmd`. Topic: [Project Synthesis and Biological Interpretation](../lectures/09-synthesis.qmd). Checklist and rubric: [How We Work](../how-we-work.qmd#the-weekly-notebook-entry).
+:::
+
+## Goal
+
+Turn your project outputs into a clear biological argument and get the repository ready for the compendium.
+
+## Tasks
+
+1. Write your main project claim in one sentence.
+2. Select the figure or table that best supports it. Regenerate it from code and save it to `output/`.
+3. Write a caption that explains the evidence without overstating it.
+4. Write a limitations paragraph that would make a skeptical reader trust you more.
+5. Check that the figure can be regenerated from documented code or commands in a clean session.
+6. Clean the repository: every directory has a current `README.md`, stale outputs are removed or clearly labeled, and the top-level `README.md` describes the project and how to reproduce it.
+
+## What goes in your notebook entry
+
+- The main claim.
+- The draft final figure or table with its caption.
+- The limitations paragraph.
+- A reproducibility checklist: what can be rerun, from what inputs, on which platform.
+- The list of remaining tasks before the compendium.
+
+## Assessment
+
+Scored with the [weekly entry rubric](../how-we-work.qmd#weekly-entry-rubric). Strong entries make a clear claim, show the evidence, and name the limits of the analysis.

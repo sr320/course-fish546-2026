@@ -7,6 +7,10 @@ format:
     code-copy: true
 ---
 
+::: {.callout-note appearance="simple"}
+**Week 05.** Analysis: [Annotation and genomic ranges](../assignments/05-annotation-ranges.qmd). Notebook entry due Friday 5:00pm. How it all fits: [How We Work](../how-we-work.qmd).
+:::
+
 ## Purpose
 
 Week 05 gives students the coordinate logic needed across genomics: features, intervals, annotation, genome versions, and overlaps.
@@ -42,6 +46,14 @@ A genomic range is a chromosome/scaffold, start, end, and sometimes strand. Rang
 - Which peaks overlap promoters?
 - Which features are closest to my candidate loci?
 
-## Project checkpoint
+## This week in your project
 
 Prepare a mid-quarter update that shows the current evidence, not only a plan. Include one concrete output, diagnostic, or figure.
+
+## Reflection questions
+
+Answer these in section 2 of `notebooks/week05.qmd`.
+
+1. Why do genome build and coordinate convention matter?
+2. What does an overlap between two genomic features show, and what does it not show?
+3. What is the clearest current result, diagnostic, or proof-of-work you can show in your mid-quarter update?

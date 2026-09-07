@@ -7,6 +7,10 @@ format:
     code-copy: true
 ---
 
+::: {.callout-note appearance="simple"}
+**Week 03.** Analysis: [Mapping or quantification slice](../assignments/03-mapping-quantification.qmd). Notebook entry due Friday 5:00pm. How it all fits: [How We Work](../how-we-work.qmd).
+:::
+
 ## Purpose
 
 Week 03 covers the central transformation in many bioinformatics workflows: reads are connected to biological references or assembled into inferred sequences, then summarized into analysis-ready tables.
@@ -44,6 +48,14 @@ Do not skip intermediate checks. For any mapping or quantification workflow, ins
 - A small preview of the result.
 - Logs or summary reports.
 
-## Project checkpoint
+## This week in your project
 
 Choose the smallest meaningful slice of your project workflow. Run it from raw or prepared input to one intermediate product, then document what the output means.
+
+## Reflection questions
+
+Answer these in section 2 of `notebooks/week03.qmd`.
+
+1. What is the difference between mapping reads to a reference and assembling reads without one?
+2. What intermediate summary would you inspect before trusting a mapping or quantification result?
+3. What is the smallest meaningful workflow slice you can run for your project this week?

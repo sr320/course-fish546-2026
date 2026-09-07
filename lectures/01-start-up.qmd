@@ -7,6 +7,10 @@ format:
     code-copy: true
 ---
 
+::: {.callout-note appearance="simple"}
+**Week 01.** Analysis: [NCBI BLAST](../assignments/01-blast.qmd). Notebook entry due Friday 5:00pm. How it all fits: [How We Work](../how-we-work.qmd).
+:::
+
 ## Purpose
 
 Week 01 turns setup into practice. You will use command-line tools, web resources, GitHub, and NCBI BLAST to answer a small biological question and begin framing your quarter project.
@@ -18,8 +22,8 @@ You should be able to:
 - Explain what a FASTA file is.
 - Run or interpret a BLAST search.
 - Capture commands and results in a reproducible record.
-- Open a project-proposal issue with a research question, data source, platform, and endpoint.
-- Use Issues for help and project tracking.
+- Refine your Project Proposal issue with a research question, data source, platform, and endpoint.
+- Open a pull request (once) and use Issues for help and project tracking.
 
 ## Biological sequence files
 
@@ -90,7 +94,7 @@ This course uses Issues for structured work:
 - Help request: what failed, where, and what you already tried.
 - Bug/blocker: a reproducible failure with commands and output.
 
-## Project checkpoint
+## This week in your project
 
 Open your project-proposal issue. At this stage, the proposal can be rough, but it must include:
 
@@ -110,8 +114,16 @@ Examples of strong draft endpoints:
 - Variants / population signals: a filtered variant summary, PCA, relatedness plot, or population differentiation table tied to a fisheries or conservation question.
 - Annotation / sequence discovery: an annotated set of genes, contigs, markers, or BLAST-supported candidates with clear evidence and limits.
 
+## Reflection questions
+
+Answer these in section 2 of `notebooks/week01.qmd`.
+
+1. What does BLAST compare, and what do percent identity, query coverage, and e-value each contribute?
+2. Why can the top BLAST hit be misleading?
+3. What will be the endpoint of your quarter project if everything goes well?
+
 ## References
 
-- NCBI BLAST documentation
-- Roberts Lab Handbook: Bioinformatics Basics
-- Bioinformatics Data Skills, early chapters on project organization
+- [NCBI BLAST documentation](https://blast.ncbi.nlm.nih.gov/doc/blast-help/)
+- [Roberts Lab Handbook: Bioinformatics Basics](https://robertslab.github.io/resources/bio_Basics/)
+- [Bioinformatics Data Skills](https://github.com/vsbuffalo/bds-files), early chapters on project organization

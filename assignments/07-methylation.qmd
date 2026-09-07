@@ -1,0 +1,43 @@
+---
+title: "Week 07 Analysis — Methylation and Genome-Browser Inspection"
+subtitle: "Track week · apply to your project"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+::: {.callout-note appearance="simple"}
+**Due Friday 5:00pm** as section 1 of `notebooks/week07.qmd`. Topic: [Epigenetics and DNA Methylation](../lectures/07-methylation.qmd). Checklist and rubric: [How We Work](../how-we-work.qmd#the-weekly-notebook-entry).
+:::
+
+## Goal
+
+Interpret a genomic result in context using coordinates, annotation, and visual inspection in a genome browser.
+
+## In your project
+
+**If your project is methylation:** take your loci or regions, confirm the build and coordinate convention, annotate nearby features, inspect at least one region in IGV, and write what the result does and does not show.
+
+**Every other project:** genome-browser inspection is a universal check. Load your genome and annotation in IGV (desktop, or the web app), then add one of your own outputs: a BAM, a BED of candidate regions, a coverage track, or a VCF. Navigate to one region that matters for your project. Capture the view with a caption that says what the reader is looking at and what you concluded. Save the image and a small table of the region's features under `output/week07/`.
+
+Projects without a reference genome (some eDNA and de novo assembly projects): load a representative contig or the reference sequences for your marker and inspect read support for one ASV or contig.
+
+## If your project has no natural fit
+
+Use the provided methylation table (path on Slack): identify build and coordinates, annotate nearby genes, inspect one region in IGV, produce one table and one inspection image, and write the caveats paragraph.
+
+## In your project, part two
+
+Launch the structure of your final report: create `docs/report.qmd` (or your chosen location) with every planned section present and a note in each about what evidence will go there. Placeholders are fine.
+
+## What goes in your notebook entry
+
+- Any script used to process the data.
+- A small annotated table.
+- One figure or browser inspection image with a caption.
+- A caveats paragraph. Do not overstate what a single locus or region proves.
+
+## Assessment
+
+Scored with the [weekly entry rubric](../how-we-work.qmd#weekly-entry-rubric). The Analysis criterion looks for coordinate hygiene, a legible inspection image, and appropriate caution.

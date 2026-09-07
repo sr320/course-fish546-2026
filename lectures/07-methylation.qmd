@@ -7,6 +7,10 @@ format:
     code-copy: true
 ---
 
+::: {.callout-note appearance="simple"}
+**Week 07.** Analysis: [Methylation and genome-browser inspection](../assignments/07-methylation.qmd). Notebook entry due Friday 5:00pm. How it all fits: [How We Work](../how-we-work.qmd).
+:::
+
 ## Purpose
 
 Week 07 introduces DNA methylation and related genomic-feature workflows. The emphasis is on interpreting methylation calls in genomic context and using genome browsers or motif tools carefully.
@@ -44,12 +48,20 @@ A coordinate alone is not an interpretation. You usually need annotation:
 - Nearby genes or features.
 - Genome version.
 
-## Project checkpoint
+## This week in your project
 
 Launch the structure of your final project report. It can be mostly placeholders, but every planned section should exist with notes about what evidence will go there.
 
+## Reflection questions
+
+Answer these in section 2 of `notebooks/week07.qmd`.
+
+1. What does a genome-browser inspection add that a table alone may not show?
+2. What is one way methylation results could be overinterpreted?
+3. Which sections now exist in your draft final report, and which one is weakest?
+
 ## References
 
-- Roberts Lab Handbook: Genomic Resources
-- IGV documentation
-- BEDtools documentation
+- [Roberts Lab Handbook: Genomic Resources](https://robertslab.github.io/resources/Genomic-Resources/)
+- [IGV documentation](https://igv.org/doc/desktop/)
+- [BEDtools documentation](https://bedtools.readthedocs.io/)

@@ -7,6 +7,10 @@ format:
     code-copy: true
 ---
 
+::: {.callout-note appearance="simple"}
+**Week 09.** Analysis: [Project synthesis](../assignments/09-synthesis.qmd). Notebook entry due Friday 5:00pm. How it all fits: [How We Work](../how-we-work.qmd).
+:::
+
 ## Purpose
 
 Week 09 is where bioinformatics results become an argument. Students synthesize evidence, choose the final figure, write caveats, and make the project understandable to another scientist.
@@ -42,6 +46,14 @@ Watch for:
 - Overstated conclusions from weak design.
 - Results that cannot be regenerated.
 
-## Project checkpoint
+## This week in your project
 
 By the end of this week, your project should have a complete report skeleton, a candidate final figure, and a short list of remaining fixes.
+
+## Reflection questions
+
+Answer these in section 2 of `notebooks/week09.qmd`.
+
+1. What is the main biological claim your project can support right now?
+2. What evidence would make that claim stronger?
+3. What is the most important limitation or caveat?

@@ -1,0 +1,46 @@
+---
+title: "Week 05 Analysis — Annotation and Genomic Ranges"
+subtitle: "Track week · apply to your project · mid-quarter update"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+::: {.callout-note appearance="simple"}
+**Due Friday 5:00pm** as section 1 of `notebooks/week05.qmd`. Topic: [Genome Annotation and Genomic Ranges](../lectures/05-annotation-ranges.qmd). Checklist and rubric: [How We Work](../how-we-work.qmd#the-weekly-notebook-entry). **Mid-quarter update in class this week.**
+:::
+
+## Goal
+
+Connect a result to genomic context using annotation and interval logic, with clean coordinate hygiene.
+
+## In your project
+
+Do this with your own data. Almost every project has a list of identifiers or coordinates by now.
+
+1. State the genome build (or transcriptome version) and the annotation source and version you are using. If your organism has neither, say what you are using instead.
+2. Take one set of features from your project: differentially expressed genes, variant positions, methylated loci, ASVs with BLAST hits, candidate contigs.
+3. Perform one annotation or overlap operation: attach gene names and descriptions, find the nearest gene, count overlaps with exons or promoters, or summarize features per scaffold.
+4. Save the annotated table to `output/week05/` and summarize it in one table or figure.
+5. State what the overlap or annotation shows and what it does not.
+
+## If your project has no natural fit
+
+Use the provided BED and GFF files (paths on Slack): identify the build and coordinate convention, compute overlaps between the two feature sets, count features per scaffold, and report the nearest gene for ten intervals. Same outputs as above.
+
+## Mid-quarter update
+
+Prepare a five-minute update for Tuesday's class: question, data, one concrete current result or diagnostic, and the riskiest step remaining. Slides or a rendered notebook are both fine; commit whatever you show. Link it from your entry.
+
+## What goes in your notebook entry
+
+- Commands or code.
+- Input file descriptions with build and version.
+- The annotated output table.
+- Summary figure or table.
+- A link to the mid-quarter update materials.
+
+## Assessment
+
+Scored with the [weekly entry rubric](../how-we-work.qmd#weekly-entry-rubric). The Analysis criterion looks for coordinate hygiene, correct use of annotation, and restraint in interpretation. The update itself is part of the presentation grade.

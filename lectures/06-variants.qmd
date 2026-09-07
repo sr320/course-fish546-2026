@@ -7,6 +7,10 @@ format:
     code-copy: true
 ---
 
+::: {.callout-note appearance="simple"}
+**Week 06.** Analysis: [Variants](../assignments/06-variants.qmd). Notebook entry due Friday 5:00pm. How it all fits: [How We Work](../how-we-work.qmd).
+:::
+
 ## Purpose
 
 Week 06 introduces variant data and the kinds of biological questions they can support, from individual genotypes to population structure and candidate loci.
@@ -51,6 +55,14 @@ Depending on the design, variant data can support questions about:
 
 These claims require careful filtering and appropriate sampling.
 
-## Project checkpoint
+## This week in your project
 
 Update your project issue with a four-week plan. Identify the strongest output you already have and the riskiest step remaining.
+
+## Reflection questions
+
+Answer these in section 2 of `notebooks/week06.qmd`.
+
+1. What does a variant call represent?
+2. How can read depth, genotype quality, or filtering thresholds change a biological interpretation?
+3. What is your strongest current project output, and what is the riskiest step remaining?

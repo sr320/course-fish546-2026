@@ -1,0 +1,46 @@
+---
+title: "Week 02 Analysis — FASTQ Quality Control"
+subtitle: "Shared exercise"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+::: {.callout-note appearance="simple"}
+**Due Friday 5:00pm** as section 1 of `notebooks/week02.qmd`. Topic: [Raw Reads, FASTQ, QC, and Trimming](../lectures/02-raw-reads-qc.qmd). Checklist and rubric: [How We Work](../how-we-work.qmd#the-weekly-notebook-entry).
+:::
+
+## Goal
+
+Inspect raw sequencing reads and decide whether the data are ready for downstream analysis.
+
+## Data
+
+A small paired-end FASTQ set is provided on Raven and Klone; the paths are announced in class and pinned on Slack. If you already have raw reads for your project, use one or two of your own files instead, or in addition.
+
+Raw reads stay out of the repository. Record the source path, date, and `md5sum` of each file in `data/README.md` or `data/week02/checksums.txt`.
+
+## Tasks
+
+1. Record provenance: file source, date, sample names, and checksums.
+2. Count reads in each file.
+3. Run FastQC (and MultiQC if more than two files) on Raven. Save the reports under `output/week02/`.
+4. Identify adapters, primers, low-quality tails, overrepresented sequences, or other concerns.
+5. If trimming is justified, run a small trimming step and compare before and after summaries. Record the exact command, software version, and parameters.
+6. Write a one-paragraph decision: proceed, trim more, exclude a sample, or investigate.
+
+## In your project
+
+Whether or not you used your own reads above, write down for your project: the raw input format, where the raw files live, the expected sample structure, and the first QC step. Put this in your notebook entry and in your repository `README.md`.
+
+## What goes in your notebook entry
+
+- Commands or code used for read counts and QC.
+- A small table of samples and read counts.
+- Before and after QC evidence if trimming was performed.
+- The decision paragraph.
+
+## Assessment
+
+Scored with the [weekly entry rubric](../how-we-work.qmd#weekly-entry-rubric). The Analysis criterion looks for data provenance, correct reading of the QC reports, and a reasoned decision about next steps.

@@ -7,9 +7,13 @@ format:
     code-copy: true
 ---
 
+::: {.callout-note appearance="simple"}
+**Week 00.** Analysis: [Repository and shell setup](../assignments/00-bash.qmd). Not graded; it establishes the loop. How it all fits: [How We Work](../how-we-work.qmd).
+:::
+
 ## Purpose
 
-Week 00 makes sure every student starts with the same working habits: a GitHub repository, a sensible project layout, a terminal they can use, and a first record of their setup in GitHub Issues.
+Week 00 makes sure every student starts with the same working habits: a GitHub repository, a sensible project layout, a terminal they can use, and a first notebook entry pushed to GitHub.
 
 The goal is not speed. The goal is to make your work legible to yourself, your future collaborators, and the instructor.
 
@@ -18,9 +22,9 @@ The goal is not speed. The goal is to make your work legible to yourself, your f
 You should be able to:
 
 - Navigate your computer with the shell.
-- Create and explain a `code/`, `data/`, `output/`, `docs/`, and `notebooks/` project layout.
+- Explain the `code/`, `data/`, `output/`, `docs/`, and `notebooks/` project layout.
 - Clone, edit, commit, and push to GitHub.
-- Open a GitHub Issue with enough context that someone else can help you.
+- Open a Project Proposal issue, and a Help Request with enough context that someone else can help you.
 - Describe which tasks belong on your computer, Raven, and Hyak.
 
 ## Core habits
@@ -39,26 +43,37 @@ A commit should capture a meaningful step: a script added, a result regenerated,
 
 ## Project setup checklist
 
-Create this structure in your repository:
+Your repository comes from the [project template](https://github.com/course-fish546-2026/project-template), which already has this structure:
+
+```text
+code/   data/raw/   data/processed/   output/   docs/   notebooks/
+```
+
+`data/raw/` is already in `.gitignore`. Raw or very large data are recorded (source, checksum) but not committed. If you build a repository by hand instead, create the same layout:
 
 ```bash
-mkdir -p code data/raw data/processed output docs notebooks assignment homework
+mkdir -p code data/raw data/processed output docs notebooks
 touch code/README.md data/README.md output/README.md docs/README.md
 ```
 
-Add `data/raw/` to `.gitignore` if it will contain large or restricted files.
+## This week in your project
 
-## Project checkpoint
-
-Open your setup issue after the three pre-course tutorials are complete. Then make sure your repository has:
+Open your Project Proposal issue (a draft is fine) and post your first commit link on it. Then make sure your repository has:
 
 - A clear top-level `README.md`.
 - The standard project directories.
 - At least one pushed commit after setup.
 - A note about any setup problems you still have.
 
+## Reflection questions
+
+Answer these in section 2 of `notebooks/week00.qmd`.
+
+1. Which tasks belong on your own computer, which on Raven, and which on Hyak? Give one example of each.
+2. What is one setup or workflow habit you want to make automatic this quarter?
+
 ## References
 
-- Roberts Lab Handbook: Computing Best Practices
-- Roberts Lab Handbook: Data Management
-- Happy Git with R
+- [Roberts Lab Handbook: Computing Best Practices](https://robertslab.github.io/resources/Computing-Best-Practices/)
+- [Roberts Lab Handbook: Data Management](https://robertslab.github.io/resources/Data-Management/)
+- [Happy Git with R](https://happygitwithr.com/)

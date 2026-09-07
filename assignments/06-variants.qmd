@@ -1,0 +1,48 @@
+---
+title: "Week 06 Analysis — Variants"
+subtitle: "Track week · apply to your project"
+format:
+  html:
+    toc: true
+    code-copy: true
+---
+
+::: {.callout-note appearance="simple"}
+**Due Friday 5:00pm** as section 1 of `notebooks/week06.qmd`. Topic: [Variants and Population Signals](../lectures/06-variants.qmd). Checklist and rubric: [How We Work](../how-we-work.qmd#the-weekly-notebook-entry).
+:::
+
+## Goal
+
+Understand what variant calls contain and how filtering choices shape conclusions.
+
+## In your project
+
+**If your project has variant data:** read the VCF header and identify the key fields; count variants before and after one simple filter (depth, quality, missingness, or minor allele frequency); summarize by scaffold, sample, or annotation; produce one table or figure; and explain how the filter changes the biological picture.
+
+**If your project does not:** genetic variation among your samples can still affect your analysis. Pick the version that fits:
+
+- RNA-seq: check whether sample clustering (PCA) tracks individual or population rather than treatment. Report what you see.
+- Methylation: C to T variants are indistinguishable from unmethylated cytosines in bisulfite data. Describe how you would detect and handle them, and check whether your pipeline does.
+- eDNA / metabarcoding: intraspecific variation inflates ASV counts. Compare the number of ASVs to the number of assigned taxa for one sample.
+- Annotation / assembly: heterozygosity fragments assemblies. Report an estimate or a diagnostic for your data.
+
+Save whatever you compute to `output/week06/`.
+
+## If your project has no natural fit
+
+Use the provided small VCF (path on Slack) and do the variant-data version above: header, one filter with before and after counts, a summary by scaffold or sample, one figure, and a caveats paragraph.
+
+## In your project, part two
+
+Update your Project Proposal issue with a four-week plan to the compendium. Name the strongest output you already have and the riskiest step remaining.
+
+## What goes in your notebook entry
+
+- Commands or code.
+- A summary table.
+- One figure or focused table.
+- A caveats paragraph on how filtering or variation affects interpretation.
+
+## Assessment
+
+Scored with the [weekly entry rubric](../how-we-work.qmd#weekly-entry-rubric). This is not a full variant-calling pipeline. The Analysis criterion looks for understanding of what the calls contain and how choices shape conclusions.
