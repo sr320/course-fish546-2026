@@ -1,6 +1,6 @@
 ---
 title: "Schedule"
-
+subtitle: "Autumn 2026 · Oct 1 – Dec 10 · FSH 203"
 format:
   html:
     code-fold: true
@@ -12,23 +12,23 @@ format:
 
 ::: {.schedule-hero}
 ::: {.schedule-hero-copy}
-Dates are placeholders for 2026. The course moves from sequence identification to raw reads, analysis workflows, interpretation, and final synthesis.
+The course moves from sequence identification to raw reads, analysis workflows, interpretation, and final synthesis. Weeks 1–4 are shared exercises; Weeks 5–8 apply each method to your own project. No class Thursday Nov 26 (Thanksgiving).
 :::
 
 ::: {.schedule-rhythm aria-label="Weekly rhythm"}
 ::: {.rhythm-item}
-<span class="rhythm-kicker">Tuesday</span>
-<span class="rhythm-title">Questions due</span>
+<span class="rhythm-kicker">Tuesday 3:00–4:20 PM</span>
+<span class="rhythm-title">Topic session</span>
 :::
 
 ::: {.rhythm-item}
-<span class="rhythm-kicker">Friday</span>
-<span class="rhythm-title">Assignment due</span>
+<span class="rhythm-kicker">Thursday 9:30–11:20 AM</span>
+<span class="rhythm-title">Working session</span>
 :::
 
 ::: {.rhythm-item}
-<span class="rhythm-kicker">Weekly</span>
-<span class="rhythm-title">Project progress issue</span>
+<span class="rhythm-kicker">Friday 5:00 PM</span>
+<span class="rhythm-title">Notebook entry due</span>
 :::
 :::
 :::
@@ -36,244 +36,228 @@ Dates are placeholders for 2026. The course moves from sequence identification t
 ::: {.callout-tip appearance="simple"}
 ## How to use this page
 
-Start with the current week, open the lecture topic, then work through the question set, assignment, and project checkpoint. Questions and assignments live in the [**assignments repository**](https://github.com/sr320/fish546-2026-assignments) — clone it, work in your folder, and open a pull request ([how to turn in](turn-in.qmd)). Use [Skills](support.qmd) when an assignment asks for GitHub, Quarto, Raven, Hyak, containers, or archiving.
+Find the current week (outlined), read the Topic before Tuesday, do the Analysis, and push your notebook entry by Friday 5:00 PM. The Project line is what should move in your own project that week. Everything about the loop itself is on [How We Work](how-we-work.qmd).
 :::
 
 ::: {.schedule-grid}
-::: {.schedule-card .schedule-card-feature}
-<span class="week-label">Before class</span>
+::: {.schedule-card .schedule-card-feature data-start="2026-09-28" data-end="2026-10-04"}
+<span class="week-label">Week 00</span>
+<span class="week-dates">Thu Oct 1 · setup session · entry by Fri Oct 2 (ungraded)</span>
 
 ### Get set up
 
-[Setup: your computer, Raven, Hyak](setup.qmd)
-
-::: {.schedule-actions}
-<span class="schedule-chip">Complete 3 tutorials</span>
-<span class="schedule-chip">Open **Setup Check** issue</span>
-:::
-:::
-
-::: {.schedule-card}
-<span class="week-label">Week 00</span>
-
-### Bioinformatics habits and data provenance
-
 ::: {.schedule-links}
-<span>Questions</span>
-<span class="schedule-muted">none</span>
-
 <span>Topic</span>
-[Bioinformatics habits and data provenance](lectures/00-before.qmd)
+[Preparing for class](lectures/00-before.qmd)
 
-<span>Assignment</span>
-[Repository and data setup](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/00-bash)
+<span>Analysis</span>
+[Repository and shell setup](assignments/00-bash.qmd)
 
 <span>Project</span>
-Establish repos
+Repository from template; Project Proposal issue (draft)
+:::
+
+::: {.schedule-actions}
+<span class="schedule-chip">Before Oct 1: [Tutorial 1](tutorials/01-your-computer.html)</span>
+<span class="schedule-chip">Create repo from template</span>
+<span class="schedule-chip">Open **Project Proposal** issue</span>
 :::
 :::
 
-::: {.schedule-card}
+::: {.schedule-card data-start="2026-10-05" data-end="2026-10-11"}
 <span class="week-label">Week 01</span>
+<span class="week-dates">Tue Oct 6 · Thu Oct 8 · due Fri Oct 9</span>
 
 ### Sequence databases and BLAST
 
 ::: {.schedule-links}
-<span>Questions</span>
-[Week 01](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week01.md)
-
 <span>Topic</span>
-[Sequence databases and BLAST](lectures/01-start-up.qmd)
+[Getting started](lectures/01-start-up.qmd)
 
-<span>Assignment</span>
-[NCBI BLAST](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/01-blast)
+<span>Analysis</span>
+[NCBI BLAST](assignments/01-blast.qmd)
 
 <span>Project</span>
-Open **project-proposal** issue
+Refine proposal; roster pull request. Thursday: [Tutorial 2, Raven](tutorials/02-raven.html) together
 :::
 :::
 
-::: {.schedule-card}
+::: {.schedule-card data-start="2026-10-12" data-end="2026-10-18"}
 <span class="week-label">Week 02</span>
+<span class="week-dates">Tue Oct 13 · Thu Oct 15 · due Fri Oct 16</span>
 
 ### Raw reads, FASTQ, QC, and trimming
 
 ::: {.schedule-links}
-<span>Questions</span>
-[Week 02](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week02.md)
-
 <span>Topic</span>
 [Raw reads, FASTQ, QC, and trimming](lectures/02-raw-reads-qc.qmd)
 
-<span>Assignment</span>
-[FASTQ QC](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/02-fastq-qc)
+<span>Analysis</span>
+[FASTQ quality control](assignments/02-fastq-qc.qmd)
 
 <span>Project</span>
-Explore project data, QC, add hashes
+Locate project data; record provenance and checksums; first QC
 :::
 :::
 
-::: {.schedule-card}
+::: {.schedule-card data-start="2026-10-19" data-end="2026-10-25"}
 <span class="week-label">Week 03</span>
+<span class="week-dates">Tue Oct 20 · Thu Oct 22 · due Fri Oct 23</span>
 
 ### Mapping, assembly, and quantification
 
 ::: {.schedule-links}
-<span>Questions</span>
-[Week 03](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week03.md)
-
 <span>Topic</span>
 [Mapping, assembly, and quantification](lectures/03-mapping-quantification.qmd)
 
-<span>Assignment</span>
-[Mapping or quantification workflow](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/03-mapping-quantification)
+<span>Analysis</span>
+[Mapping or quantification slice](assignments/03-mapping-quantification.qmd)
 
 <span>Project</span>
-ID endpoint in README; start workflow
+Endpoint sentence in README; first workflow slice. [Tutorial 3, Hyak](tutorials/03-hyak.html) assigned
 :::
 :::
 
-::: {.schedule-card}
+::: {.schedule-card data-start="2026-10-26" data-end="2026-11-01"}
 <span class="week-label">Week 04</span>
+<span class="week-dates">Tue Oct 27 · Thu Oct 29 · due Fri Oct 30</span>
 
 ### RNA-seq and differential expression
 
 ::: {.schedule-links}
-<span>Questions</span>
-[Week 04](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week04.md)
-
 <span>Topic</span>
 [RNA-seq and differential expression](lectures/04-rna-seq-dge.qmd)
 
-<span>Assignment</span>
-[Differential gene expression](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/04-dge)
+<span>Analysis</span>
+[Differential gene expression](assignments/04-dge.qmd)
 
 <span>Project</span>
-Complete sliced workflow -> endpoint
+Map your workflow onto the four stages: input, table, model, interpretation
 :::
 :::
 
-::: {.schedule-card .schedule-card-milestone}
+::: {.schedule-card .schedule-card-milestone data-start="2026-11-02" data-end="2026-11-08"}
 <span class="week-label">Week 05</span>
+<span class="week-dates">Tue Nov 3 · Thu Nov 5 · due Fri Nov 6</span>
 
 ### Genome annotation and genomic ranges
 
 ::: {.schedule-links}
-<span>Questions</span>
-[Week 05](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week05.md)
-
 <span>Topic</span>
 [Genome annotation and genomic ranges](lectures/05-annotation-ranges.qmd)
 
-<span>Assignment</span>
-[Annotation and ranges](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/05-annotation-ranges)
+<span>Analysis</span>
+[Annotation and ranges, on your project](assignments/05-annotation-ranges.qmd)
 
 <span>Project</span>
-**Mid-quarter project update**
+**Mid-quarter update** in class Tuesday
 :::
 :::
 
-::: {.schedule-card}
+::: {.schedule-card data-start="2026-11-09" data-end="2026-11-15"}
 <span class="week-label">Week 06</span>
+<span class="week-dates">Tue Nov 10 · Thu Nov 12 · due Fri Nov 13</span>
 
 ### Variants and population signals
 
 ::: {.schedule-links}
-<span>Questions</span>
-[Week 06](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week06.md)
-
 <span>Topic</span>
 [Variants and population signals](lectures/06-variants.qmd)
 
-<span>Assignment</span>
-[VCF and variant summary](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/06-variants)
+<span>Analysis</span>
+[Variants, on your project](assignments/06-variants.qmd)
 
 <span>Project</span>
-README w/ results; 4-week plan; issues resolved
+Four-week plan on your proposal issue; strongest output and riskiest step named
 :::
 :::
 
-::: {.schedule-card}
+::: {.schedule-card data-start="2026-11-16" data-end="2026-11-22"}
 <span class="week-label">Week 07</span>
+<span class="week-dates">Tue Nov 17 · Thu Nov 19 · due Fri Nov 20</span>
 
 ### Epigenetics and DNA methylation
 
 ::: {.schedule-links}
-<span>Questions</span>
-[Week 07](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week07.md)
-
 <span>Topic</span>
 [Epigenetics and DNA methylation](lectures/07-methylation.qmd)
 
-<span>Assignment</span>
-[Methylation, motifs, IGV](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/07-methylation)
+<span>Analysis</span>
+[Methylation and genome-browser inspection, on your project](assignments/07-methylation.qmd)
 
 <span>Project</span>
-Launch project report; all sections noted
+Final report skeleton with every section present
 :::
 :::
 
-::: {.schedule-card}
+::: {.schedule-card data-start="2026-11-23" data-end="2026-11-29"}
 <span class="week-label">Week 08</span>
+<span class="week-dates">Tue Nov 24 · no Thursday (Thanksgiving) · due Mon Nov 30</span>
 
 ### eDNA and metabarcoding
 
 ::: {.schedule-links}
-<span>Questions</span>
-[Week 08](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week08.md)
-
 <span>Topic</span>
-[eDNA and metabarcoding](lectures/edna.qmd)
+[eDNA and metabarcoding](lectures/08-edna.qmd)
 
-<span>Assignment</span>
-[eDNA metabarcoding](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/08-edna-metabarcoding)
+<span>Analysis</span>
+[eDNA metabarcoding, on your project](assignments/08-edna.qmd)
 
 <span>Project</span>
-Mock ultimate figure
+Mock final figure
 :::
 :::
 
-::: {.schedule-card}
+::: {.schedule-card data-start="2026-11-30" data-end="2026-12-06"}
 <span class="week-label">Week 09</span>
+<span class="week-dates">Tue Dec 1 · Thu Dec 3 · due Fri Dec 4</span>
 
 ### Project synthesis and biological interpretation
 
 ::: {.schedule-links}
-<span>Questions</span>
-[Week 09](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week09.md)
-
 <span>Topic</span>
 [Project synthesis and biological interpretation](lectures/09-synthesis.qmd)
 
-<span>Assignment</span>
-[Project synthesis](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/09-synthesis)
+<span>Analysis</span>
+[Project synthesis](assignments/09-synthesis.qmd)
 
 <span>Project</span>
-Clear repo organization
+Main claim, final figure, limitations; clean repository
 :::
 :::
 
-::: {.schedule-card .schedule-card-milestone}
+::: {.schedule-card .schedule-card-milestone data-start="2026-12-07" data-end="2026-12-13"}
 <span class="week-label">Week 10</span>
+<span class="week-dates">Tue Dec 8 · Thu Dec 10 · compendium due Thu Dec 10</span>
 
 ### Final compendium and presentations
 
 ::: {.schedule-links}
-<span>Questions</span>
-[Week 10](https://github.com/sr320/fish546-2026-assignments/blob/main/questions/week10.md)
-
 <span>Topic</span>
-[Final compendium and presentations](lectures/10-lastmile.qmd)
+[Presentations and the last mile](lectures/10-lastmile.qmd)
 
-<span>Assignment</span>
-[Final release](https://github.com/sr320/fish546-2026-assignments/tree/main/assignments/10-compendium)
+<span>Analysis</span>
+[Final research compendium](assignments/10-compendium.qmd)
 
 <span>Project</span>
-**Compendium**
+**Compendium** tagged `v1.0`; final presentations Tuesday and Thursday
 :::
 :::
 :::
 
-------------------------------------------------------------------------
-
-<img src="https://img.shields.io/github/commit-activity/w/course-fish546-2026/course-fish546-2026" alt="GitHub commit activity"/>
+<script>
+// Outline the current week's card and mute past weeks, based on the
+// data-start / data-end attributes above. Exposed on window so it can be
+// tested with an arbitrary date from the console: markCurrentWeek(new Date("2026-10-14")).
+window.markCurrentWeek = function (today) {
+  today = today || new Date();
+  var day = today.toISOString().slice(0, 10);
+  document.querySelectorAll(".schedule-card[data-start]").forEach(function (card) {
+    card.classList.remove("current", "past");
+    var start = card.getAttribute("data-start"), end = card.getAttribute("data-end");
+    if (day >= start && day <= end) card.classList.add("current");
+    else if (day > end) card.classList.add("past");
+  });
+};
+window.markCurrentWeek();
+</script>
