@@ -1,3 +1,5 @@
+> **Note (Sep 2026):** this document predates the course simplification recorded in [SIMPLIFY-PLAN.md](../SIMPLIFY-PLAN.md). The assignments repository, Discussions, Setup Check and Weekly Progress forms, and the progress-assessment workflow described below were retired; the student-facing contract is now the site's [How We Work](https://sr320.github.io/course-fish546-2026/how-we-work.html) page. Kept for the audit tooling and baseline survey it defines.
+
 # FISH 546 Resource Inventory
 
 **Inventory date:** 2026-07-31

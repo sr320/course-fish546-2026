@@ -63,6 +63,7 @@ def source_files() -> list[Path]:
     files = [ROOT / "_quarto.yml", ROOT / "styles.css"]
     files.extend(sorted(ROOT.glob("*.qmd")))
     files.extend(sorted((ROOT / "lectures").glob("*.qmd")))
+    files.extend(sorted((ROOT / "assignments").glob("*.qmd")))
     for pattern in ("*.html", "*.css", "*.js"):
         files.extend(sorted((ROOT / "tutorials").glob(pattern)))
     return sorted({path for path in files if path.is_file()})
@@ -72,6 +73,7 @@ def source_documents() -> list[Path]:
     files: list[Path] = []
     files.extend(sorted(ROOT.glob("*.qmd")))
     files.extend(sorted((ROOT / "lectures").glob("*.qmd")))
+    files.extend(sorted((ROOT / "assignments").glob("*.qmd")))
     files.extend(sorted((ROOT / "tutorials").glob("*.html")))
     return files
 
@@ -113,6 +115,12 @@ def check_source_links() -> list[str]:
             candidate = (source.parent / unquote(parsed.path)).resolve()
             if not parsed.path or candidate.exists():
                 continue
+            # Tutorials are copied verbatim to docs/tutorials/, so their links to
+            # site pages (../setup.html) resolve against the published copy.
+            if source.parent == ROOT / "tutorials":
+                published = (DOCS / "tutorials" / unquote(parsed.path)).resolve()
+                if published.exists():
+                    continue
             errors.append(f"{display(source)} -> missing {target}")
     return errors
 

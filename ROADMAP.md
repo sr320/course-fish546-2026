@@ -1,3 +1,5 @@
+> **Note (Sep 2026):** this document predates the course simplification recorded in [SIMPLIFY-PLAN.md](SIMPLIFY-PLAN.md). The assignments repository, Discussions, Setup Check and Weekly Progress forms, and the progress-assessment workflow described below were retired; the student-facing contract is now the site's [How We Work](https://sr320.github.io/course-fish546-2026/how-we-work.html) page. Kept for the audit tooling and baseline survey it defines.
+
 # FISH 546 Course Improvement Roadmap
 
 This roadmap turns the student-experience review into a phased improvement plan for the 2026 course website and learning materials. The phases are ordered by student impact and dependency: first establish a reliable course contract and navigation system, then improve onboarding, weekly learning, assessment, accessibility, and long-term maintenance.
