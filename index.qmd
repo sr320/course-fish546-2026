@@ -47,7 +47,9 @@ You will work across three computing tiers. They come online in stages; each has
 
 Course GitHub Organization: <https://github.com/course-fish546-2026>
 
-## Textbook
+## Textbook (optional)
+
+The textbook is **optional** — you are not required to buy it. Lectures and tutorials cover what you need; the book is a useful reference if you want more depth.
 
 [Bioinformatics Data Skills](https://www.amazon.com/Bioinformatics-Data-Skills-Reproducible-Research/dp/1449367372/) — Reproducible and Robust Research with Open Source Tools, by Vince Buffalo (O'Reilly, 2015). [Supplementary repo](https://github.com/vsbuffalo/bds-files).
 
