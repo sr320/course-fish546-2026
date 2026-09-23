@@ -17,7 +17,7 @@ Run one small mapping, assembly, or quantification step from input to an interme
 
 ## Tasks
 
-1. Choose the smallest meaningful slice of a workflow. Prefer your own project data; the provided reads from Week 02 and a matching reference are available as a fallback (paths announced in class; open a Help Request if you can't find them).
+1. Choose the smallest meaningful slice of a workflow. Prefer your own project data; the provided reads from Week 02 and a matching reference are available as a fallback (paths in the pinned [Provided datasets issue](https://github.com/sr320/course-fish546-2026/issues/1)).
 2. Identify the reference genome, transcriptome, marker database, or assembly strategy, and record its source and version.
 3. Run one step, for example:
    - Map reads to a reference.

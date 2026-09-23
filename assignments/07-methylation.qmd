@@ -25,7 +25,7 @@ Projects without a reference genome (some eDNA and de novo assembly projects): l
 
 ## If your project has no natural fit
 
-Use the provided methylation table (path announced in class; open a Help Request if you can't find it): identify build and coordinates, annotate nearby genes, inspect one region in IGV, produce one table and one inspection image, and write the caveats paragraph.
+Use the provided methylation table (path in the pinned [Provided datasets issue](https://github.com/sr320/course-fish546-2026/issues/1)): identify build and coordinates, annotate nearby genes, inspect one region in IGV, produce one table and one inspection image, and write the caveats paragraph.
 
 ## In your project, part two
 

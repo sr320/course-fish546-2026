@@ -27,7 +27,7 @@ Do this with your own data. Almost every project has a list of identifiers or co
 
 ## If your project has no natural fit
 
-Use the provided BED and GFF files (paths announced in class; open a Help Request if you can't find them): identify the build and coordinate convention, compute overlaps between the two feature sets, count features per scaffold, and report the nearest gene for ten intervals. Same outputs as above.
+Use the provided BED and GFF files (paths in the pinned [Provided datasets issue](https://github.com/sr320/course-fish546-2026/issues/1)): identify the build and coordinate convention, compute overlaps between the two feature sets, count features per scaffold, and report the nearest gene for ten intervals. Same outputs as above.
 
 ## Mid-quarter update
 

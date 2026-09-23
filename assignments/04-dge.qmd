@@ -17,7 +17,7 @@ Move from a count matrix and sample metadata to a differential-expression table 
 
 ## Data
 
-A count matrix, sample metadata table, and an R scaffold are provided (paths announced in class; open a Help Request if you can't find them). RNA-seq projects may substitute their own count matrix if it exists by this week.
+A count matrix, sample metadata table, and an R scaffold are provided (paths in the pinned [Provided datasets issue](https://github.com/sr320/course-fish546-2026/issues/1)). RNA-seq projects may substitute their own count matrix if it exists by this week.
 
 ## Tasks
 

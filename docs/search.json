@@ -719,7 +719,7 @@
     "href": "assignments/07-methylation.html#if-your-project-has-no-natural-fit",
     "title": "Week 07 Analysis — Methylation and Genome-Browser Inspection",
     "section": "If your project has no natural fit",
-    "text": "If your project has no natural fit\nUse the provided methylation table (path announced in class; open a Help Request if you can’t find it): identify build and coordinates, annotate nearby genes, inspect one region in IGV, produce one table and one inspection image, and write the caveats paragraph.",
+    "text": "If your project has no natural fit\nUse the provided methylation table (path in the pinned Provided datasets issue): identify build and coordinates, annotate nearby genes, inspect one region in IGV, produce one table and one inspection image, and write the caveats paragraph.",
     "crumbs": [
       "Week 07",
       "Week 07 Analysis — Methylation and Genome-Browser Inspection"
@@ -796,7 +796,7 @@
     "href": "assignments/05-annotation-ranges.html#if-your-project-has-no-natural-fit",
     "title": "Week 05 Analysis — Annotation and Genomic Ranges",
     "section": "If your project has no natural fit",
-    "text": "If your project has no natural fit\nUse the provided BED and GFF files (paths announced in class; open a Help Request if you can’t find them): identify the build and coordinate convention, compute overlaps between the two feature sets, count features per scaffold, and report the nearest gene for ten intervals. Same outputs as above.",
+    "text": "If your project has no natural fit\nUse the provided BED and GFF files (paths in the pinned Provided datasets issue): identify the build and coordinate convention, compute overlaps between the two feature sets, count features per scaffold, and report the nearest gene for ten intervals. Same outputs as above.",
     "crumbs": [
       "Week 05",
       "Week 05 Analysis — Annotation and Genomic Ranges"
@@ -862,7 +862,7 @@
     "href": "assignments/03-mapping-quantification.html#tasks",
     "title": "Week 03 Analysis — Mapping or Quantification Slice",
     "section": "Tasks",
-    "text": "Tasks\n\nChoose the smallest meaningful slice of a workflow. Prefer your own project data; the provided reads from Week 02 and a matching reference are available as a fallback (paths announced in class; open a Help Request if you can’t find them).\nIdentify the reference genome, transcriptome, marker database, or assembly strategy, and record its source and version.\nRun one step, for example:\n\nMap reads to a reference.\nQuantify reads against transcripts or features.\nAssemble a small subset.\nSummarize an existing mapping or assignment output.\n\nSave the command or script in code/, the log and a summary in output/week03/.\nInspect the intermediate checks: input read count, proportion mapped or assigned, output size and format, a small preview of the result.",
+    "text": "Tasks\n\nChoose the smallest meaningful slice of a workflow. Prefer your own project data; the provided reads from Week 02 and a matching reference are available as a fallback (paths in the pinned Provided datasets issue).\nIdentify the reference genome, transcriptome, marker database, or assembly strategy, and record its source and version.\nRun one step, for example:\n\nMap reads to a reference.\nQuantify reads against transcripts or features.\nAssemble a small subset.\nSummarize an existing mapping or assignment output.\n\nSave the command or script in code/, the log and a summary in output/week03/.\nInspect the intermediate checks: input read count, proportion mapped or assigned, output size and format, a small preview of the result.",
     "crumbs": [
       "Week 03",
       "Week 03 Analysis — Mapping or Quantification Slice"
@@ -1100,7 +1100,7 @@
     "href": "assignments/02-fastq-qc.html#data",
     "title": "Week 02 Analysis — FASTQ Quality Control",
     "section": "Data",
-    "text": "Data\nA small paired-end FASTQ set is provided on Raven and Klone; the paths are announced in class and posted on the course repository. If you already have raw reads for your project, use one or two of your own files instead, or in addition.\nRaw reads stay out of the repository. Record the source path, date, and md5sum of each file in data/README.md or data/week02/checksums.txt.",
+    "text": "Data\nA small paired-end FASTQ set is provided on Raven and Klone; the paths are listed in the pinned Provided datasets issue. If you already have raw reads for your project, use one or two of your own files instead, or in addition.\nRaw reads stay out of the repository. Record the source path, date, and md5sum of each file in data/README.md or data/week02/checksums.txt.",
     "crumbs": [
       "Week 02",
       "Week 02 Analysis — FASTQ Quality Control"
@@ -1177,7 +1177,7 @@
     "href": "assignments/04-dge.html#data",
     "title": "Week 04 Analysis — Differential Gene Expression",
     "section": "Data",
-    "text": "Data\nA count matrix, sample metadata table, and an R scaffold are provided (paths announced in class; open a Help Request if you can’t find them). RNA-seq projects may substitute their own count matrix if it exists by this week.",
+    "text": "Data\nA count matrix, sample metadata table, and an R scaffold are provided (paths in the pinned Provided datasets issue). RNA-seq projects may substitute their own count matrix if it exists by this week.",
     "crumbs": [
       "Week 04",
       "Week 04 Analysis — Differential Gene Expression"
@@ -1265,7 +1265,7 @@
     "href": "assignments/06-variants.html#if-your-project-has-no-natural-fit",
     "title": "Week 06 Analysis — Variants",
     "section": "If your project has no natural fit",
-    "text": "If your project has no natural fit\nUse the provided small VCF (path announced in class; open a Help Request if you can’t find it) and do the variant-data version above: header, one filter with before and after counts, a summary by scaffold or sample, one figure, and a caveats paragraph.",
+    "text": "If your project has no natural fit\nUse the provided small VCF (path in the pinned Provided datasets issue) and do the variant-data version above: header, one filter with before and after counts, a summary by scaffold or sample, one figure, and a caveats paragraph.",
     "crumbs": [
       "Week 06",
       "Week 06 Analysis — Variants"
@@ -1342,7 +1342,7 @@
     "href": "assignments/08-edna.html#if-your-project-has-no-natural-fit-or-you-are-on-the-edna-track",
     "title": "Week 08 Analysis — eDNA Metabarcoding",
     "section": "If your project has no natural fit, or you are on the eDNA track",
-    "text": "If your project has no natural fit, or you are on the eDNA track\nRun the pipeline on the provided 12S or COI amplicon set (paths announced in class; open a Help Request if you can’t find them). Note its marker and the reference database.\n\nInspect and QC. Count reads, look at quality profiles, trim primers and adapters (for example with cutadapt). Record the exact primer sequences.\nDenoise to ASVs with DADA2: filter and trim, learn errors, denoise, merge pairs, remove chimeras. Report how many reads survive each step.\nAssign taxonomy against the reference database for the marker. Record the database name and version.\nBuild the table: a sample × taxon abundance matrix at output/week08/asv-table.csv.\nOne figure: a stacked-bar composition plot or richness by sample.\nControls: report what the negative or blank controls contained and what that implies about false positives.\n\nRun everything inside the lab Apptainer container as SLURM jobs. Request modest --mem and --time first and scale up only if a job is killed. Keep raw reads in data/raw/ uncommitted, with checksums recorded.",
+    "text": "If your project has no natural fit, or you are on the eDNA track\nRun the pipeline on the provided 12S or COI amplicon set (paths in the pinned Provided datasets issue). Note its marker and the reference database.\n\nInspect and QC. Count reads, look at quality profiles, trim primers and adapters (for example with cutadapt). Record the exact primer sequences.\nDenoise to ASVs with DADA2: filter and trim, learn errors, denoise, merge pairs, remove chimeras. Report how many reads survive each step.\nAssign taxonomy against the reference database for the marker. Record the database name and version.\nBuild the table: a sample × taxon abundance matrix at output/week08/asv-table.csv.\nOne figure: a stacked-bar composition plot or richness by sample.\nControls: report what the negative or blank controls contained and what that implies about false positives.\n\nRun everything inside the lab Apptainer container as SLURM jobs. Request modest --mem and --time first and scale up only if a job is killed. Keep raw reads in data/raw/ uncommitted, with checksums recorded.",
     "crumbs": [
       "Week 08",
       "Week 08 Analysis — eDNA Metabarcoding"

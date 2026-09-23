@@ -70,7 +70,7 @@ Each week has a topic page (`lectures/`) and an analysis page (`assignments/`), 
 
 `assignments/provided-query.fasta` is the Week 01 practice query and is copied to `docs/assignments/`.
 
-**Provided datasets** for Weeks 2 to 8 (FASTQ, reference, count matrix, BED/GFF, VCF, methylation table, amplicon run) are not yet placed. Each analysis page says "paths announced in class." Decision D5 in `SIMPLIFY-PLAN.md`: put them under a shared Raven path and `/gscratch/srlab/fish546/` on Klone and record the paths here once they exist.
+**Provided datasets** for Weeks 2 to 8 (FASTQ, reference, count matrix, BED/GFF, VCF, methylation table, amplicon run) are not yet placed. Each analysis page links to the pinned [Provided datasets issue](https://github.com/sr320/course-fish546-2026/issues/1), which lists every path as TBD until placed. Decision D5 in `SIMPLIFY-PLAN.md`: put them under a shared Raven path and `/gscratch/srlab/fish546/` on Klone and record the paths here and in that issue once they exist.
 
 ## Setup tutorials
 
