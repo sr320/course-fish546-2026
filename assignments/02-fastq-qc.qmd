@@ -17,7 +17,7 @@ Inspect raw sequencing reads and decide whether the data are ready for downstrea
 
 ## Data
 
-A small paired-end FASTQ set is provided on Raven and Klone; the paths are announced in class and pinned on Slack. If you already have raw reads for your project, use one or two of your own files instead, or in addition.
+A small paired-end FASTQ set is provided on Raven and Klone; the paths are announced in class and posted on the course repository. If you already have raw reads for your project, use one or two of your own files instead, or in addition.
 
 Raw reads stay out of the repository. Record the source path, date, and `md5sum` of each file in `data/README.md` or `data/week02/checksums.txt`.
 

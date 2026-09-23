@@ -32,7 +32,7 @@ Bioinformatics is not only running tools. It is the practice of keeping data pro
 This class is driven in part by student needs and is flexible in content. It is practical and problem-driven. The first meeting, Thursday Oct 1, is a setup working session.
 
 ::: {.callout-important style="color: orange"}
-**Your repository is how we work.** Every week you do one analysis, write one notebook entry in your repository, push it, and post the commit link on your Project Proposal issue. The instructor replies there. That single loop is the whole course workflow; it is spelled out on the [How We Work](how-we-work.qmd) page. Be sure you have a GitHub account, are part of the course organization, and have notifications turned on. Day-to-day chat is on [Slack](https://genefish.slack.com).
+**Your repository is how we work.** Every week you do one analysis, write one notebook entry in your repository, push it, and post the commit link on your Project Proposal issue. The instructor replies there. That single loop is the whole course workflow; it is spelled out on the [How We Work](how-we-work.qmd) page. Be sure you have a GitHub account, are part of the course organization, and have notifications turned on. Questions go in a [Help Request](https://github.com/sr320/course-fish546-2026/issues/new?template=30-help-request.yml) issue on the course repository.
 :::
 
 ## Platforms

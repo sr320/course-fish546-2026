@@ -13,7 +13,6 @@
 1. Which required accounts or services can you currently access?
    - GitHub account
    - FISH 546 GitHub organization
-   - Course Slack
    - UW VPN/Husky OnNet
    - Raven RStudio Server
    - Hyak/Klone by SSH or OnDemand

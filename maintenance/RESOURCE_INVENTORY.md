@@ -17,7 +17,6 @@ This inventory identifies every student-facing course resource and records which
 | Course GitHub organization | <https://github.com/course-fish546-2026> | Home for student project repositories | Created 2026-09-07. An organization, not a repository. |
 | Project template | <https://github.com/course-fish546-2026/project-template> | Starting point for every student repository ("Use this template") | Authoritative repository layout and notebook-entry template. Local clone at `~/Documents/GitHub/project-template`. |
 | Student project repository | `https://github.com/course-fish546-2026/<student-repo>` | All of a student's work: code, outputs, weekly notebook entries, final compendium | The submission. The commit link posted on the Project Proposal issue identifies what is assessed. |
-| Course Slack | <https://genefish.slack.com> | Quick, informal communication and announcements | Access requires workspace membership. Anything needing a record goes in an issue instead. |
 | Roberts Lab Handbook | <https://robertslab.github.io/resources/> | Computing, data-management, Raven, and Hyak reference standard | Authoritative for platform operations unless a course page explicitly overrides it. |
 | Raven | <http://raven.fish.washington.edu:8787> | RStudio Server; home for most weekly work from Week 1 | May require UW network or VPN access. |
 | Hyak OnDemand | <https://ondemand.hyak.uw.edu> | Browser access to Hyak services | Requires UW and allocation credentials. Introduced Week 3. |
@@ -38,7 +37,7 @@ Retired in September 2026 and no longer referenced anywhere student-facing: the 
 | Project Proposal | <https://github.com/sr320/course-fish546-2026/issues/new?template=10-project-proposal.yml> | Repository link, question, track, data, platform, endpoint, risks. One per student; weekly commit links and tutorial completion blocks are posted as comments. |
 | Help Request | <https://github.com/sr320/course-fish546-2026/issues/new?template=30-help-request.yml> | Platform, goal, what was tried, exact error, optional reproduction steps and link |
 
-The issue chooser also links Slack, the Handbook, and the course site. Blank issues are disabled.
+The issue chooser also links the Handbook and the course site. Blank issues are disabled.
 
 ## Student-facing site pages
 
@@ -71,7 +70,7 @@ Each week has a topic page (`lectures/`) and an analysis page (`assignments/`), 
 
 `assignments/provided-query.fasta` is the Week 01 practice query and is copied to `docs/assignments/`.
 
-**Provided datasets** for Weeks 2 to 8 (FASTQ, reference, count matrix, BED/GFF, VCF, methylation table, amplicon run) are not yet placed. Each analysis page says "paths on Slack." Decision D5 in `SIMPLIFY-PLAN.md`: put them under a shared Raven path and `/gscratch/srlab/fish546/` on Klone and record the paths here once they exist.
+**Provided datasets** for Weeks 2 to 8 (FASTQ, reference, count matrix, BED/GFF, VCF, methylation table, amplicon run) are not yet placed. Each analysis page says "paths announced in class." Decision D5 in `SIMPLIFY-PLAN.md`: put them under a shared Raven path and `/gscratch/srlab/fish546/` on Klone and record the paths here once they exist.
 
 ## Setup tutorials
 

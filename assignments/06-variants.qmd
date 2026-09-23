@@ -30,7 +30,7 @@ Save whatever you compute to `output/week06/`.
 
 ## If your project has no natural fit
 
-Use the provided small VCF (path on Slack) and do the variant-data version above: header, one filter with before and after counts, a summary by scaffold or sample, one figure, and a caveats paragraph.
+Use the provided small VCF (path announced in class; open a Help Request if you can't find it) and do the variant-data version above: header, one filter with before and after counts, a summary by scaffold or sample, one figure, and a caveats paragraph.
 
 ## In your project, part two
 

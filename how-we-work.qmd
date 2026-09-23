@@ -34,8 +34,7 @@ Weekly entry: Friday 5:00 PM (Monday Nov 30 for Thanksgiving week; see the [Sche
 | Place | What goes there | How |
 |---|---|---|
 | **Your repository** (in the course org, created from the [project template](https://github.com/course-fish546-2026/project-template)) | All code, outputs, weekly notebook entries, README, final compendium | Clone, commit, push. Raw data are recorded, not committed. |
-| **Course repository** ([issues](https://github.com/sr320/course-fish546-2026/issues)) | One **Project Proposal** issue per student (your home base for the quarter); **Help Request** issues when you are stuck | Use the issue forms. Weekly commit links and tutorial completion blocks go as comments on your proposal issue. |
-| **Slack** ([genefish.slack.com](https://genefish.slack.com)) | Quick questions, announcements, scheduling | Day to day chat. Anything that needs a record goes in an issue instead. |
+| **Course repository** ([issues](https://github.com/sr320/course-fish546-2026/issues)) | One **Project Proposal** issue per student (your home base for the quarter); **Help Request** issues for any question or when you are stuck | Use the issue forms. All course communication happens here. Weekly commit links and tutorial completion blocks go as comments on your proposal issue. |
 | **Roberts Lab Handbook** ([robertslab.github.io/resources](https://robertslab.github.io/resources/)) | The reference standard for computing practices, data management, Raven, and Klone | Keep it open in a tab. |
 
 ### Platforms

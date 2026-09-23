@@ -29,7 +29,7 @@ Report the number, what it implies about your false-positive floor, and how you 
 
 ## If your project has no natural fit, or you are on the eDNA track
 
-Run the pipeline on the provided 12S or COI amplicon set (paths on Slack). Note its marker and the reference database.
+Run the pipeline on the provided 12S or COI amplicon set (paths announced in class; open a Help Request if you can't find them). Note its marker and the reference database.
 
 1. **Inspect and QC.** Count reads, look at quality profiles, trim primers and adapters (for example with `cutadapt`). Record the exact primer sequences.
 2. **Denoise to ASVs** with DADA2: filter and trim, learn errors, denoise, merge pairs, remove chimeras. Report how many reads survive each step.

@@ -589,7 +589,7 @@
     "href": "how-we-work.html#where-things-live",
     "title": "How We Work",
     "section": "Where things live",
-    "text": "Where things live\n\n\n\nPlace\nWhat goes there\nHow\n\n\n\n\nYour repository (in the course org, created from the project template)\nAll code, outputs, weekly notebook entries, README, final compendium\nClone, commit, push. Raw data are recorded, not committed.\n\n\nCourse repository (issues)\nOne Project Proposal issue per student (your home base for the quarter); Help Request issues when you are stuck\nUse the issue forms. Weekly commit links and tutorial completion blocks go as comments on your proposal issue.\n\n\nSlack (genefish.slack.com)\nQuick questions, announcements, scheduling\nDay to day chat. Anything that needs a record goes in an issue instead.\n\n\nRoberts Lab Handbook (robertslab.github.io/resources)\nThe reference standard for computing practices, data management, Raven, and Klone\nKeep it open in a tab.\n\n\n\n\nPlatforms\nYou will use three computers. They come online in stages, not all at once.\n\n\n\n\n\n\n\n\nPlatform\nRole\nSet up\n\n\n\n\nYour computer\nEditing, Git, GitHub\nTutorial 1, before Week 1\n\n\nRaven (RStudio Server)\nHome. Interactive analysis, rendering, most weekly work\nTutorial 2, Week 1\n\n\nHyak / Klone (HPC)\nWhen Raven is not enough: large mapping, denoising, anything that needs a batch job\nTutorial 3, Week 3\n\n\n\nSee Setup for the tutorials."
+    "text": "Where things live\n\n\n\nPlace\nWhat goes there\nHow\n\n\n\n\nYour repository (in the course org, created from the project template)\nAll code, outputs, weekly notebook entries, README, final compendium\nClone, commit, push. Raw data are recorded, not committed.\n\n\nCourse repository (issues)\nOne Project Proposal issue per student (your home base for the quarter); Help Request issues for any question or when you are stuck\nUse the issue forms. All course communication happens here. Weekly commit links and tutorial completion blocks go as comments on your proposal issue.\n\n\nRoberts Lab Handbook (robertslab.github.io/resources)\nThe reference standard for computing practices, data management, Raven, and Klone\nKeep it open in a tab.\n\n\n\n\nPlatforms\nYou will use three computers. They come online in stages, not all at once.\n\n\n\n\n\n\n\n\nPlatform\nRole\nSet up\n\n\n\n\nYour computer\nEditing, Git, GitHub\nTutorial 1, before Week 1\n\n\nRaven (RStudio Server)\nHome. Interactive analysis, rendering, most weekly work\nTutorial 2, Week 1\n\n\nHyak / Klone (HPC)\nWhen Raven is not enough: large mapping, denoising, anything that needs a batch job\nTutorial 3, Week 3\n\n\n\nSee Setup for the tutorials."
   },
   {
     "objectID": "how-we-work.html#the-weekly-notebook-entry",
@@ -719,7 +719,7 @@
     "href": "assignments/07-methylation.html#if-your-project-has-no-natural-fit",
     "title": "Week 07 Analysis — Methylation and Genome-Browser Inspection",
     "section": "If your project has no natural fit",
-    "text": "If your project has no natural fit\nUse the provided methylation table (path on Slack): identify build and coordinates, annotate nearby genes, inspect one region in IGV, produce one table and one inspection image, and write the caveats paragraph.",
+    "text": "If your project has no natural fit\nUse the provided methylation table (path announced in class; open a Help Request if you can’t find it): identify build and coordinates, annotate nearby genes, inspect one region in IGV, produce one table and one inspection image, and write the caveats paragraph.",
     "crumbs": [
       "Week 07",
       "Week 07 Analysis — Methylation and Genome-Browser Inspection"
@@ -796,7 +796,7 @@
     "href": "assignments/05-annotation-ranges.html#if-your-project-has-no-natural-fit",
     "title": "Week 05 Analysis — Annotation and Genomic Ranges",
     "section": "If your project has no natural fit",
-    "text": "If your project has no natural fit\nUse the provided BED and GFF files (paths on Slack): identify the build and coordinate convention, compute overlaps between the two feature sets, count features per scaffold, and report the nearest gene for ten intervals. Same outputs as above.",
+    "text": "If your project has no natural fit\nUse the provided BED and GFF files (paths announced in class; open a Help Request if you can’t find them): identify the build and coordinate convention, compute overlaps between the two feature sets, count features per scaffold, and report the nearest gene for ten intervals. Same outputs as above.",
     "crumbs": [
       "Week 05",
       "Week 05 Analysis — Annotation and Genomic Ranges"
@@ -862,7 +862,7 @@
     "href": "assignments/03-mapping-quantification.html#tasks",
     "title": "Week 03 Analysis — Mapping or Quantification Slice",
     "section": "Tasks",
-    "text": "Tasks\n\nChoose the smallest meaningful slice of a workflow. Prefer your own project data; the provided reads from Week 02 and a matching reference are available as a fallback (paths on Slack).\nIdentify the reference genome, transcriptome, marker database, or assembly strategy, and record its source and version.\nRun one step, for example:\n\nMap reads to a reference.\nQuantify reads against transcripts or features.\nAssemble a small subset.\nSummarize an existing mapping or assignment output.\n\nSave the command or script in code/, the log and a summary in output/week03/.\nInspect the intermediate checks: input read count, proportion mapped or assigned, output size and format, a small preview of the result.",
+    "text": "Tasks\n\nChoose the smallest meaningful slice of a workflow. Prefer your own project data; the provided reads from Week 02 and a matching reference are available as a fallback (paths announced in class; open a Help Request if you can’t find them).\nIdentify the reference genome, transcriptome, marker database, or assembly strategy, and record its source and version.\nRun one step, for example:\n\nMap reads to a reference.\nQuantify reads against transcripts or features.\nAssemble a small subset.\nSummarize an existing mapping or assignment output.\n\nSave the command or script in code/, the log and a summary in output/week03/.\nInspect the intermediate checks: input read count, proportion mapped or assigned, output size and format, a small preview of the result.",
     "crumbs": [
       "Week 03",
       "Week 03 Analysis — Mapping or Quantification Slice"
@@ -1100,7 +1100,7 @@
     "href": "assignments/02-fastq-qc.html#data",
     "title": "Week 02 Analysis — FASTQ Quality Control",
     "section": "Data",
-    "text": "Data\nA small paired-end FASTQ set is provided on Raven and Klone; the paths are announced in class and pinned on Slack. If you already have raw reads for your project, use one or two of your own files instead, or in addition.\nRaw reads stay out of the repository. Record the source path, date, and md5sum of each file in data/README.md or data/week02/checksums.txt.",
+    "text": "Data\nA small paired-end FASTQ set is provided on Raven and Klone; the paths are announced in class and posted on the course repository. If you already have raw reads for your project, use one or two of your own files instead, or in addition.\nRaw reads stay out of the repository. Record the source path, date, and md5sum of each file in data/README.md or data/week02/checksums.txt.",
     "crumbs": [
       "Week 02",
       "Week 02 Analysis — FASTQ Quality Control"
@@ -1177,7 +1177,7 @@
     "href": "assignments/04-dge.html#data",
     "title": "Week 04 Analysis — Differential Gene Expression",
     "section": "Data",
-    "text": "Data\nA count matrix, sample metadata table, and an R scaffold are provided (paths on Slack). RNA-seq projects may substitute their own count matrix if it exists by this week.",
+    "text": "Data\nA count matrix, sample metadata table, and an R scaffold are provided (paths announced in class; open a Help Request if you can’t find them). RNA-seq projects may substitute their own count matrix if it exists by this week.",
     "crumbs": [
       "Week 04",
       "Week 04 Analysis — Differential Gene Expression"
@@ -1265,7 +1265,7 @@
     "href": "assignments/06-variants.html#if-your-project-has-no-natural-fit",
     "title": "Week 06 Analysis — Variants",
     "section": "If your project has no natural fit",
-    "text": "If your project has no natural fit\nUse the provided small VCF (path on Slack) and do the variant-data version above: header, one filter with before and after counts, a summary by scaffold or sample, one figure, and a caveats paragraph.",
+    "text": "If your project has no natural fit\nUse the provided small VCF (path announced in class; open a Help Request if you can’t find it) and do the variant-data version above: header, one filter with before and after counts, a summary by scaffold or sample, one figure, and a caveats paragraph.",
     "crumbs": [
       "Week 06",
       "Week 06 Analysis — Variants"
@@ -1342,7 +1342,7 @@
     "href": "assignments/08-edna.html#if-your-project-has-no-natural-fit-or-you-are-on-the-edna-track",
     "title": "Week 08 Analysis — eDNA Metabarcoding",
     "section": "If your project has no natural fit, or you are on the eDNA track",
-    "text": "If your project has no natural fit, or you are on the eDNA track\nRun the pipeline on the provided 12S or COI amplicon set (paths on Slack). Note its marker and the reference database.\n\nInspect and QC. Count reads, look at quality profiles, trim primers and adapters (for example with cutadapt). Record the exact primer sequences.\nDenoise to ASVs with DADA2: filter and trim, learn errors, denoise, merge pairs, remove chimeras. Report how many reads survive each step.\nAssign taxonomy against the reference database for the marker. Record the database name and version.\nBuild the table: a sample × taxon abundance matrix at output/week08/asv-table.csv.\nOne figure: a stacked-bar composition plot or richness by sample.\nControls: report what the negative or blank controls contained and what that implies about false positives.\n\nRun everything inside the lab Apptainer container as SLURM jobs. Request modest --mem and --time first and scale up only if a job is killed. Keep raw reads in data/raw/ uncommitted, with checksums recorded.",
+    "text": "If your project has no natural fit, or you are on the eDNA track\nRun the pipeline on the provided 12S or COI amplicon set (paths announced in class; open a Help Request if you can’t find them). Note its marker and the reference database.\n\nInspect and QC. Count reads, look at quality profiles, trim primers and adapters (for example with cutadapt). Record the exact primer sequences.\nDenoise to ASVs with DADA2: filter and trim, learn errors, denoise, merge pairs, remove chimeras. Report how many reads survive each step.\nAssign taxonomy against the reference database for the marker. Record the database name and version.\nBuild the table: a sample × taxon abundance matrix at output/week08/asv-table.csv.\nOne figure: a stacked-bar composition plot or richness by sample.\nControls: report what the negative or blank controls contained and what that implies about false positives.\n\nRun everything inside the lab Apptainer container as SLURM jobs. Request modest --mem and --time first and scale up only if a job is killed. Keep raw reads in data/raw/ uncommitted, with checksums recorded.",
     "crumbs": [
       "Week 08",
       "Week 08 Analysis — eDNA Metabarcoding"
@@ -1477,7 +1477,7 @@
     "href": "index.html#format",
     "title": "Bioinformatics for Environmental Sciences",
     "section": "Format",
-    "text": "Format\n\n\n\n\n\n\n\nTuesdays\n3:00–4:20 PM, FSH 203. Topic session: the week’s bioinformatics concept and data type. Oct 6 – Dec 8.\n\n\nThursdays\n9:30–11:20 AM, FSH 203. Working session: apply the concept to your project. Oct 1 – Dec 10, no class Nov 26.\n\n\nFridays\n5:00 PM. Weekly notebook entry due (Mon Nov 30 for Thanksgiving week).\n\n\n\nThis class is driven in part by student needs and is flexible in content. It is practical and problem-driven. The first meeting, Thursday Oct 1, is a setup working session.\n\n\n\n\n\n\nImportant\n\n\n\nYour repository is how we work. Every week you do one analysis, write one notebook entry in your repository, push it, and post the commit link on your Project Proposal issue. The instructor replies there. That single loop is the whole course workflow; it is spelled out on the How We Work page. Be sure you have a GitHub account, are part of the course organization, and have notifications turned on. Day-to-day chat is on Slack."
+    "text": "Format\n\n\n\n\n\n\n\nTuesdays\n3:00–4:20 PM, FSH 203. Topic session: the week’s bioinformatics concept and data type. Oct 6 – Dec 8.\n\n\nThursdays\n9:30–11:20 AM, FSH 203. Working session: apply the concept to your project. Oct 1 – Dec 10, no class Nov 26.\n\n\nFridays\n5:00 PM. Weekly notebook entry due (Mon Nov 30 for Thanksgiving week).\n\n\n\nThis class is driven in part by student needs and is flexible in content. It is practical and problem-driven. The first meeting, Thursday Oct 1, is a setup working session.\n\n\n\n\n\n\nImportant\n\n\n\nYour repository is how we work. Every week you do one analysis, write one notebook entry in your repository, push it, and post the commit link on your Project Proposal issue. The instructor replies there. That single loop is the whole course workflow; it is spelled out on the How We Work page. Be sure you have a GitHub account, are part of the course organization, and have notifications turned on. Questions go in a Help Request issue on the course repository."
   },
   {
     "objectID": "index.html#platforms",
@@ -1487,11 +1487,11 @@
     "text": "Platforms\nYou will work across three computing tiers. They come online in stages; each has a setup tutorial.\n\n\n\nTier\nPlatform\nRole\nWhen\n\n\n\n\nYour computer\nLocal shell + Git/GitHub\nEditing, version control\nBefore Week 1\n\n\nRaven\nRStudio Server at http://raven.fish.washington.edu:8787\nHome for most weekly work\nWeek 1\n\n\nHyak / Klone\nHPC (SLURM + containers): ssh &lt;UWNetID&gt;@klone.hyak.uw.edu · On-Demand\nWhen Raven is not enough\nWeek 3\n\n\n\nCourse GitHub Organization: https://github.com/course-fish546-2026"
   },
   {
-    "objectID": "index.html#textbook",
-    "href": "index.html#textbook",
+    "objectID": "index.html#textbook-optional",
+    "href": "index.html#textbook-optional",
     "title": "Bioinformatics for Environmental Sciences",
-    "section": "Textbook",
-    "text": "Textbook\nBioinformatics Data Skills — Reproducible and Robust Research with Open Source Tools, by Vince Buffalo (O’Reilly, 2015). Supplementary repo."
+    "section": "Textbook (optional)",
+    "text": "Textbook (optional)\nThe textbook is optional — you are not required to buy it. Lectures and tutorials cover what you need; the book is a useful reference if you want more depth.\nBioinformatics Data Skills — Reproducible and Robust Research with Open Source Tools, by Vince Buffalo (O’Reilly, 2015). Supplementary repo."
   },
   {
     "objectID": "index.html#grading",
@@ -1949,12 +1949,5 @@
     "title": "Schedule",
     "section": "",
     "text": "The course moves from sequence identification to raw reads, analysis workflows, interpretation, and final synthesis. Weeks 1–4 are shared exercises; Weeks 5–8 apply each method to your own project. No class Thursday Nov 26 (Thanksgiving).\n\n\n\nTuesday 3:00–4:20 PM Topic session\n\n\nThursday 9:30–11:20 AM Working session\n\n\nFriday 5:00 PM Notebook entry due\n\n\n\n\n\n\n\n\n\nHow to use this page\n\n\n\nFind the current week (outlined), read the Topic before Tuesday, do the Analysis, and push your notebook entry by Friday 5:00 PM. The Project line is what should move in your own project that week. Everything about the loop itself is on How We Work.\n\n\n\n\nWeek 00 Thu Oct 1 · setup session · entry by Fri Oct 2 (ungraded)\n\nGet set up\n\nTopic Preparing for class\nAnalysis Repository and shell setup\nProject Repository from template; Project Proposal issue (draft)\n\n\nBefore Oct 1: Tutorial 1 Create repo from template Open Project Proposal issue\n\n\n\n\nWeek 01 Tue Oct 6 · Thu Oct 8 · due Fri Oct 9\n\nSequence databases and BLAST\n\nTopic Getting started\nAnalysis NCBI BLAST\nProject Refine proposal; roster pull request. Thursday: Tutorial 2, Raven together\n\n\n\n\nWeek 02 Tue Oct 13 · Thu Oct 15 · due Fri Oct 16\n\nRaw reads, FASTQ, QC, and trimming\n\nTopic Raw reads, FASTQ, QC, and trimming\nAnalysis FASTQ quality control\nProject Locate project data; record provenance and checksums; first QC\n\n\n\n\nWeek 03 Tue Oct 20 · Thu Oct 22 · due Fri Oct 23\n\nMapping, assembly, and quantification\n\nTopic Mapping, assembly, and quantification\nAnalysis Mapping or quantification slice\nProject Endpoint sentence in README; first workflow slice. Tutorial 3, Hyak assigned\n\n\n\n\nWeek 04 Tue Oct 27 · Thu Oct 29 · due Fri Oct 30\n\nRNA-seq and differential expression\n\nTopic RNA-seq and differential expression\nAnalysis Differential gene expression\nProject Map your workflow onto the four stages: input, table, model, interpretation\n\n\n\n\nWeek 05 Tue Nov 3 · Thu Nov 5 · due Fri Nov 6\n\nGenome annotation and genomic ranges\n\nTopic Genome annotation and genomic ranges\nAnalysis Annotation and ranges, on your project\nProject Mid-quarter update in class Tuesday\n\n\n\n\nWeek 06 Tue Nov 10 · Thu Nov 12 · due Fri Nov 13\n\nVariants and population signals\n\nTopic Variants and population signals\nAnalysis Variants, on your project\nProject Four-week plan on your proposal issue; strongest output and riskiest step named\n\n\n\n\nWeek 07 Tue Nov 17 · Thu Nov 19 · due Fri Nov 20\n\nEpigenetics and DNA methylation\n\nTopic Epigenetics and DNA methylation\nAnalysis Methylation and genome-browser inspection, on your project\nProject Final report skeleton with every section present\n\n\n\n\nWeek 08 Tue Nov 24 · no Thursday (Thanksgiving) · due Mon Nov 30\n\neDNA and metabarcoding\n\nTopic eDNA and metabarcoding\nAnalysis eDNA metabarcoding, on your project\nProject Mock final figure\n\n\n\n\nWeek 09 Tue Dec 1 · Thu Dec 3 · due Fri Dec 4\n\nProject synthesis and biological interpretation\n\nTopic Project synthesis and biological interpretation\nAnalysis Project synthesis\nProject Main claim, final figure, limitations; clean repository\n\n\n\n\nWeek 10 Tue Dec 8 · Thu Dec 10 · compendium due Thu Dec 10\n\nFinal compendium and presentations\n\nTopic Presentations and the last mile\nAnalysis Final research compendium\nProject Compendium tagged v1.0; final presentations Tuesday and Thursday"
-  },
-  {
-    "objectID": "index.html#textbook-optional",
-    "href": "index.html#textbook-optional",
-    "title": "Bioinformatics for Environmental Sciences",
-    "section": "Textbook (optional)",
-    "text": "Textbook (optional)\nThe textbook is optional — you are not required to buy it. Lectures and tutorials cover what you need; the book is a useful reference if you want more depth.\nBioinformatics Data Skills — Reproducible and Robust Research with Open Source Tools, by Vince Buffalo (O’Reilly, 2015). Supplementary repo."
   }
 ]

@@ -19,6 +19,6 @@ jobs:
 
             A few reminders:
             - Your **Project Proposal** issue is your home base: post each week's commit link there as a comment.
-            - For quick questions use [Slack](https://genefish.slack.com); if you're stuck, the [Roberts Lab Handbook](https://robertslab.github.io/resources/) is your first stop.
+            - Questions of any size go in a **Help Request** issue; the [Roberts Lab Handbook](https://robertslab.github.io/resources/) is a good first stop.
             - Good Help Requests show **what you tried** and the **exact error text** — that gets you a faster answer.
             - How everything fits: [How We Work](https://sr320.github.io/course-fish546-2026/how-we-work.html).

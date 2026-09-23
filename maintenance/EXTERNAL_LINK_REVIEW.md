@@ -4,7 +4,7 @@
 
 **Authoritative command:** `python3 scripts/audit_course_site.py --external`
 
-External links change independently of this repository. The audit reports HTTP responses and redirects but does not fail by default because authenticated services such as Slack, Raven, and Hyak may reject automated requests while remaining available to students.
+External links change independently of this repository. The audit reports HTTP responses and redirects but does not fail by default because authenticated services such as Raven and Hyak may reject automated requests while remaining available to students.
 
 ## Review procedure
 
@@ -58,7 +58,6 @@ These results describe anonymous HTTP access on the review date. Authentication-
 
 - Raven may require the UW network or VPN.
 - Hyak OnDemand and Klone require UW credentials and an allocation.
-- Slack requires workspace membership.
 - Private or not-yet-published GitHub repositories may return `404` to anonymous requests.
 
 Do not replace a working authenticated destination solely because an anonymous automated request cannot access it. Document the restriction and verify it using the same access path students will use.

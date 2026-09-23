@@ -85,8 +85,8 @@ website:
         href: about.qmd
       - text: Roberts Lab Handbook
         href: https://robertslab.github.io/resources/
-      - text: Slack
-        href: https://genefish.slack.com
+      - text: Help Request
+        href: https://github.com/sr320/course-fish546-2026/issues/new?template=30-help-request.yml
 
 format:
   html:
