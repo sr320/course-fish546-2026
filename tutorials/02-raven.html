@@ -134,7 +134,11 @@
       <h2 class="sec">Data hygiene on a shared server</h2>
       <div class="card">
         <ul>
-          <li><strong>Don't commit big data.</strong> Sequence files and large outputs don't belong in Git. Add them to <code>.gitignore</code> and keep them in <code>data/</code> on the server.</li>
+          <li><strong>Don't commit big data.</strong> Git keeps every version of every file forever, and GitHub refuses files over 100&nbsp;MB, so sequence files (<code>.fastq.gz</code>, <code>.bam</code>, and similar) and other large outputs stay on the server, not in Git. Your template already handles the common case: anything inside <code>data/raw/</code> is ignored by Git because <code>data/raw/</code> is listed in the <code>.gitignore</code> file at the top of your repository. Put raw data there and Git will not track it.
+            <p>To check that a file is being ignored, run <code>git status</code>: ignored files are not listed. For one specific file, <code>git check-ignore</code> prints the rule that ignores it (and prints nothing if the file is <em>not</em> ignored):</p>
+            <pre><span class="p">git check-ignore -v data/raw/sample1.fastq.gz</span></pre>
+            <p>If a large file has to live somewhere else, open <code>.gitignore</code> in RStudio, add a line naming the file or folder (for example <code>output/alignments/</code> or <code>*.bam</code>), save, then commit the updated <code>.gitignore</code>. A good rule of thumb: if a file is bigger than about 50&nbsp;MB, or you are not sure, don't commit it and ask in a <a href="https://github.com/sr320/course-fish546-2026/issues/new?template=30-help-request.yml">Help Request</a>.</p>
+          </li>
           <li><strong>Record provenance.</strong> When you bring in raw data, store a checksum/manifest so you can prove it didn't change:
             <pre><span class="p">md5sum data/raw/*.fastq.gz &gt; data/raw/md5.txt</span></pre>
           </li>

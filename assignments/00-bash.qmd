@@ -35,7 +35,7 @@ find . -path ./.git -prune -o -type f -print | sort > output/week00/file-list.tx
 
 6. **Write your first notebook entry.** Copy `notebooks/_template.qmd` to `notebooks/week00.qmd`. In section 1, describe what you set up and paste the first ten lines of the file list. Fill in the other sections briefly (your draft project idea counts as progress). Render it.
 7. **Commit and push.** Both the `.qmd` and the rendered `.html`.
-8. **Open a Project Proposal issue** on the [course repository](https://github.com/sr320/course-fish546-2026/issues/new/choose). A rough draft is fine. Then post the commit link from step 7 as the first comment.
+8. **Open a Project Proposal issue** on the [course repository](https://github.com/sr320/course-fish546-2026/issues/new/choose). A rough draft is fine. Then post the commit link from step 7 as the first comment ([how to find your commit link](../how-we-work.qmd#finding-your-commit-link)).
 
 ## What goes in your notebook entry
 

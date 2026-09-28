@@ -92,7 +92,7 @@ This course uses Issues for structured work:
 - Project proposal: one home-base issue for your quarter project.
 - Weekly progress: what you completed, what slipped, what comes next.
 - Help request: what failed, where, and what you already tried.
-- Bug/blocker: a reproducible failure with commands and output.
+- Bug report: a reproducible failure with commands and output.
 
 ## This week in your project
 

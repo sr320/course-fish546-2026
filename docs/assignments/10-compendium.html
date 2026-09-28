@@ -40,8 +40,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-835195a2ca78c1e24b6bd6484d1e80e6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-ee69c61375e7c5fdea989cd86ce89401.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ba79b9d2371eb6463c1559e71ab7067c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-0f292082cf92380ef64f3eed7ab49cd5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -403,6 +403,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#goal" id="toc-goal" class="nav-link active" data-scroll-target="#goal">Goal</a></li>
   <li><a href="#required-components" id="toc-required-components" class="nav-link" data-scroll-target="#required-components">Required components</a></li>
+  <li><a href="#creating-your-v1.0-release" id="toc-creating-your-v1.0-release" class="nav-link" data-scroll-target="#creating-your-v1.0-release">Creating your v1.0 release</a></li>
   <li><a href="#final-report-structure" id="toc-final-report-structure" class="nav-link" data-scroll-target="#final-report-structure">Final report structure</a></li>
   <li><a href="#final-presentation" id="toc-final-presentation" class="nav-link" data-scroll-target="#final-presentation">Final presentation</a></li>
   <li><a href="#last-mile-checks" id="toc-last-mile-checks" class="nav-link" data-scroll-target="#last-mile-checks">Last-mile checks</a></li>
@@ -439,7 +440,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Due at the final class meeting.</strong> Tag the release <code>v1.0</code> in your repository and post the tag link on your Project Proposal issue. Topic: <a href="../lectures/10-lastmile.html">Presentations and the Last Mile</a>. Rubric: <a href="../how-we-work.html#final-compendium">How We Work</a>.</p>
+<p><strong>Due at the final class meeting.</strong> Create a <code>v1.0</code> release of your repository (<a href="#creating-your-v1.0-release">how</a>) and post the release link on your Project Proposal issue. Topic: <a href="../lectures/10-lastmile.html">Presentations and the Last Mile</a>. Rubric: <a href="../how-we-work.html#final-compendium">How We Work</a>.</p>
 </div>
 </div>
 </div>
@@ -449,7 +450,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="required-components" class="level2">
 <h2 class="anchored" data-anchor-id="required-components">Required components</h2>
-<p>Your repository at tag <code>v1.0</code> should include:</p>
+<p>Your <code>v1.0</code> release should include:</p>
 <ul>
 <li>Top-level <code>README.md</code> with project overview, repository map, and reproduction notes.</li>
 <li>Final rendered report (for example <code>docs/report.html</code> with its <code>.qmd</code>).</li>
@@ -460,6 +461,20 @@ ul.task-list li input[type="checkbox"] {
 <li>A link to your Project Proposal issue.</li>
 <li>Your weekly notebook entries, as they are.</li>
 </ul>
+</section>
+<section id="creating-your-v1.0-release" class="level2">
+<h2 class="anchored" data-anchor-id="creating-your-v1.0-release">Creating your v1.0 release</h2>
+<p>A release is a named, permanent snapshot of your repository at one commit. Git calls the name a <em>tag</em>; <code>v1.0</code> means “version 1.0”. You can keep committing afterward, but the <code>v1.0</code> release always shows the repository exactly as it was when you created it, and that is what gets graded.</p>
+<p>Commit and push everything first. Then, on github.com:</p>
+<ol type="1">
+<li>Open your repository. In the right-hand sidebar, under <strong>Releases</strong>, click <strong>Create a new release</strong>.</li>
+<li>Open the tag menu (labeled <strong>Choose a tag</strong> or <strong>Select tag</strong>), type <code>v1.0</code>, and pick the option to create a new tag named <code>v1.0</code>. Leave the target branch as <code>main</code>.</li>
+<li>Give it a title such as “Final compendium” and, optionally, a one-line description.</li>
+<li>Click <strong>Publish release</strong>.</li>
+<li>Copy the address of the release page. It looks like <code>https://github.com/course-fish546-2026/your-repo/releases/tag/v1.0</code>. Post it on your Project Proposal issue.</li>
+</ol>
+<p>From the terminal the same thing is <code>git tag -a v1.0 -m "Final compendium"</code> followed by <code>git push origin v1.0</code>; the tag then appears under <strong>Releases</strong> (click <strong>Tags</strong>).</p>
+<p>If you need to fix something after publishing, commit the fix and publish a new release named <code>v1.1</code>, and post that link too.</p>
 </section>
 <section id="final-report-structure" class="level2">
 <h2 class="anchored" data-anchor-id="final-report-structure">Final report structure</h2>

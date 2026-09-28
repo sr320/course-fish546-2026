@@ -20,7 +20,7 @@ Everything in this course runs on one repeating cycle. There is one deliverable 
 2. **Do** the week's analysis in your repository. In Weeks 1 to 4 this is a shared exercise; in Weeks 5 to 8 it is the week's method applied to your own project (a canned fallback is always provided).
 3. **Write** `notebooks/weekNN.qmd` from the template (five sections, below) and render it.
 4. **Push** by **Friday 5:00pm**.
-5. **Post** the commit link as a comment on your **Project Proposal issue**. The instructor replies there with feedback.
+5. **Post** the commit link ([how to find it](#finding-your-commit-link)) as a comment on your **Project Proposal issue**. The instructor replies there with feedback.
 
 That is the whole submission contract. Weekly entries are 60% of your grade; the mid-quarter and final presentations are 15%; the final compendium is 25%. Your best 8 of 9 weekly entries count.
 
@@ -28,6 +28,20 @@ That is the whole submission contract. Weekly entries are 60% of your grade; the
 ## Deadlines
 Weekly entry: Friday 5:00 PM (Monday Nov 30 for Thanksgiving week; see the [Schedule](schedule.qmd)). Late work loses 40% and is not accepted more than 5 days past due. Because the best 8 of 9 entries count, one missed week does not need an excuse.
 :::
+
+### Finding your commit link
+
+A commit link points at one exact saved version of your repository, so the instructor sees what you submitted even if you keep working afterward. Push first; a commit that exists only on your computer has no link.
+
+1. Open your repository on github.com.
+2. Above the file list, on the right, click the clock icon labeled **Commits** (it shows a count, such as "12 Commits").
+3. Click the message of the commit you want (usually the top one).
+4. Copy the address from your browser's address bar. It looks like `https://github.com/course-fish546-2026/your-repo/commit/3f9c2e1...`, ending in a long string of letters and numbers.
+5. Paste it as a new comment on your Project Proposal issue, with a line saying which week it is.
+
+GitHub shows a pasted commit link as a short code (for example `3f9c2e1`). That is expected; it still links to the full commit.
+
+From the terminal you can also print the ID of your latest commit with `git log -1 --format=%H`, then add it to the end of `https://github.com/course-fish546-2026/your-repo/commit/`.
 
 ## Where things live
 
@@ -69,8 +83,9 @@ date: 2026-04-17
 ## 3. Project progress
 <!-- What moved this week, with links to commits, files, or figures. -->
 
-## 4. Blockers
-<!-- Specific problems, what you tried, and any linked Help Request. Or "none". -->
+## 4. Problems and help needed
+<!-- Anything that stopped or slowed your work: what went wrong, what you tried,
+     and any linked Help Request. Or "none". -->
 
 ## 5. Next week
 <!-- One to three concrete, one-week-sized goals. -->
@@ -84,7 +99,7 @@ date: 2026-04-17
 - [ ] Output tables and figures are saved under `output/`, not only printed in the HTML.
 - [ ] No raw data under `data/raw/` are committed.
 - [ ] Software, platform, and any container or environment used are named.
-- [ ] The commit link is posted on your Project Proposal issue.
+- [ ] The commit link is posted on your Project Proposal issue ([how to find it](#finding-your-commit-link)).
 
 ### Weekly entry rubric
 
@@ -96,12 +111,12 @@ Each entry is scored out of 100.
 | Evidence of work | 20 | Links to commits, reports, figures, tables, or logs give concrete proof of progress. | Evidence is present and generally supports the claims. | Evidence is thin, hard to inspect, or only partially connected. | Evidence is missing or cannot be accessed. |
 | Reproducible practice | 15 | Layout, paths, commit history, and documentation make the work easy to rerun and inspect. | Most materials are organized and version-controlled. | Organization is inconsistent, paths unclear, or outputs stale. | Work cannot be followed from the repository. |
 | Reflection questions | 15 | Answers show reasoning, connect to the week's material, and relate to the student's own project. | Answers are correct and complete. | Answers are partial or superficial. | Answers are missing. |
-| Blockers and help-seeking | 10 | Blockers are precise, with attempted fixes and a linked Help Request when needed. | Blockers or risks are named with enough context to respond. | Blockers are vague or raised late. | Blockers are absent despite stalled progress. |
+| Problems and help-seeking | 10 | Problems are described precisely, with attempted fixes and a linked Help Request when needed. | Problems or risks are named with enough context to respond. | Problems are vague or raised late. | No problems are reported despite stalled progress. |
 | Next-week plan | 10 | Next steps are concrete, prioritized, and sized for one week. | Next steps are stated and plausible. | Next steps are too broad or not actionable. | Next steps are missing. |
 
 ## Final compendium
 
-The final compendium is the complete project package in your repository at the Week 10 tag. It should include a top-level `README.md`, final rendered report, source `.qmd` or scripts, key outputs, a data availability statement, a software and platform statement, and a link to your Project Proposal issue.
+The final compendium is the complete project package in your repository, saved as the `v1.0` release you create in Week 10 ([how to create it](assignments/10-compendium.qmd#creating-your-v1.0-release)). It should include a top-level `README.md`, final rendered report, source `.qmd` or scripts, key outputs, a data availability statement, a software and platform statement, and a link to your Project Proposal issue.
 
 | Criterion | Points | Excellent | Complete | Developing | Incomplete |
 |---|---:|---|---|---|---|

@@ -8,7 +8,7 @@ format:
 ---
 
 ::: {.callout-note appearance="simple"}
-**Due at the final class meeting.** Tag the release `v1.0` in your repository and post the tag link on your Project Proposal issue. Topic: [Presentations and the Last Mile](../lectures/10-lastmile.qmd). Rubric: [How We Work](../how-we-work.qmd#final-compendium).
+**Due at the final class meeting.** Create a `v1.0` release of your repository ([how](#creating-your-v1.0-release)) and post the release link on your Project Proposal issue. Topic: [Presentations and the Last Mile](../lectures/10-lastmile.qmd). Rubric: [How We Work](../how-we-work.qmd#final-compendium).
 :::
 
 ## Goal
@@ -17,7 +17,7 @@ Deliver a complete, reproducible project package: question, data, workflow, resu
 
 ## Required components
 
-Your repository at tag `v1.0` should include:
+Your `v1.0` release should include:
 
 - Top-level `README.md` with project overview, repository map, and reproduction notes.
 - Final rendered report (for example `docs/report.html` with its `.qmd`).
@@ -27,6 +27,22 @@ Your repository at tag `v1.0` should include:
 - Software and platform statement: tools, versions, containers, and which steps ran on Raven or Klone.
 - A link to your Project Proposal issue.
 - Your weekly notebook entries, as they are.
+
+## Creating your v1.0 release
+
+A release is a named, permanent snapshot of your repository at one commit. Git calls the name a *tag*; `v1.0` means "version 1.0". You can keep committing afterward, but the `v1.0` release always shows the repository exactly as it was when you created it, and that is what gets graded.
+
+Commit and push everything first. Then, on github.com:
+
+1. Open your repository. In the right-hand sidebar, under **Releases**, click **Create a new release**.
+2. Open the tag menu (labeled **Choose a tag** or **Select tag**), type `v1.0`, and pick the option to create a new tag named `v1.0`. Leave the target branch as `main`.
+3. Give it a title such as "Final compendium" and, optionally, a one-line description.
+4. Click **Publish release**.
+5. Copy the address of the release page. It looks like `https://github.com/course-fish546-2026/your-repo/releases/tag/v1.0`. Post it on your Project Proposal issue.
+
+From the terminal the same thing is `git tag -a v1.0 -m "Final compendium"` followed by `git push origin v1.0`; the tag then appears under **Releases** (click **Tags**).
+
+If you need to fix something after publishing, commit the fix and publish a new release named `v1.1`, and post that link too.
 
 ## Final report structure
 

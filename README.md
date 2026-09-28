@@ -7,7 +7,7 @@ FISH 546 — **Bioinformatics for Environmental Sciences** (University of Washin
 One loop, described in full on the site's [How We Work](https://sr320.github.io/course-fish546-2026/how-we-work.html) page:
 
 - Each student has **one repository** in the [course organization](https://github.com/course-fish546-2026), created from [`project-template`](https://github.com/course-fish546-2026/project-template).
-- Each week has **one deliverable**: a notebook entry (`notebooks/weekNN.qmd`) containing the week's analysis, reflection questions, project progress, blockers, and next-week goals. Due Friday 5:00 PM.
+- Each week has **one deliverable**: a notebook entry (`notebooks/weekNN.qmd`) containing the week's analysis, reflection questions, project progress, problems and help needed, and next-week goals. Due Friday 5:00 PM.
 - Students post the commit link as a comment on their **Project Proposal issue** here. The instructor replies in the thread.
 - Weeks 1–4 are shared exercises; Weeks 5–8 apply each method to the student's own project (canned fallbacks provided). Week 5 is the mid-quarter update; Week 10 is the compendium and final talk.
 - Platforms come online in stages: own computer before Week 1, Raven in Week 1, Hyak in Week 3.

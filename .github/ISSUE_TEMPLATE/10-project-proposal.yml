@@ -8,7 +8,7 @@ body:
       value: |
         **One issue per student, opened in Week 0 or 1.** This is your home base for the quarter:
 
-        - Every week, post the **commit link** to your notebook entry here as a comment. The instructor replies in the thread.
+        - Every week, post the **commit link** to your notebook entry here as a comment ([how to find it](https://sr320.github.io/course-fish546-2026/how-we-work.html#finding-your-commit-link)). The instructor replies in the thread.
         - Paste each **tutorial completion block** here as a comment.
         - Edit the top post as your project evolves. A rough draft is fine to start.
 

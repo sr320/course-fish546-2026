@@ -240,7 +240,7 @@ Main claim, final figure, limitations; clean repository
 [Final research compendium](assignments/10-compendium.qmd)
 
 <span>Project</span>
-**Compendium** tagged `v1.0`; final presentations Tuesday and Thursday
+**Compendium** released as version `v1.0`; final presentations Tuesday and Thursday
 :::
 :::
 :::

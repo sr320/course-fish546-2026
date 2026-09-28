@@ -73,8 +73,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-835195a2ca78c1e24b6bd6484d1e80e6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-ee69c61375e7c5fdea989cd86ce89401.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-ba79b9d2371eb6463c1559e71ab7067c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-0f292082cf92380ef64f3eed7ab49cd5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -164,7 +164,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-weekly-loop" id="toc-the-weekly-loop" class="nav-link active" data-scroll-target="#the-weekly-loop">The weekly loop</a></li>
+  <li><a href="#the-weekly-loop" id="toc-the-weekly-loop" class="nav-link active" data-scroll-target="#the-weekly-loop">The weekly loop</a>
+  <ul class="collapse">
+  <li><a href="#finding-your-commit-link" id="toc-finding-your-commit-link" class="nav-link" data-scroll-target="#finding-your-commit-link">Finding your commit link</a></li>
+  </ul></li>
   <li><a href="#where-things-live" id="toc-where-things-live" class="nav-link" data-scroll-target="#where-things-live">Where things live</a>
   <ul class="collapse">
   <li><a href="#platforms" id="toc-platforms" class="nav-link" data-scroll-target="#platforms">Platforms</a></li>
@@ -223,7 +226,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Do</strong> the week’s analysis in your repository. In Weeks 1 to 4 this is a shared exercise; in Weeks 5 to 8 it is the week’s method applied to your own project (a canned fallback is always provided).</li>
 <li><strong>Write</strong> <code>notebooks/weekNN.qmd</code> from the template (five sections, below) and render it.</li>
 <li><strong>Push</strong> by <strong>Friday 5:00pm</strong>.</li>
-<li><strong>Post</strong> the commit link as a comment on your <strong>Project Proposal issue</strong>. The instructor replies there with feedback.</li>
+<li><strong>Post</strong> the commit link (<a href="#finding-your-commit-link">how to find it</a>) as a comment on your <strong>Project Proposal issue</strong>. The instructor replies there with feedback.</li>
 </ol>
 <p>That is the whole submission contract. Weekly entries are 60% of your grade; the mid-quarter and final presentations are 15%; the final compendium is 25%. Your best 8 of 9 weekly entries count.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -239,6 +242,19 @@ Deadlines
 <p>Weekly entry: Friday 5:00 PM (Monday Nov 30 for Thanksgiving week; see the <a href="./schedule.html">Schedule</a>). Late work loses 40% and is not accepted more than 5 days past due. Because the best 8 of 9 entries count, one missed week does not need an excuse.</p>
 </div>
 </div>
+<section id="finding-your-commit-link" class="level3">
+<h3 class="anchored" data-anchor-id="finding-your-commit-link">Finding your commit link</h3>
+<p>A commit link points at one exact saved version of your repository, so the instructor sees what you submitted even if you keep working afterward. Push first; a commit that exists only on your computer has no link.</p>
+<ol type="1">
+<li>Open your repository on github.com.</li>
+<li>Above the file list, on the right, click the clock icon labeled <strong>Commits</strong> (it shows a count, such as “12 Commits”).</li>
+<li>Click the message of the commit you want (usually the top one).</li>
+<li>Copy the address from your browser’s address bar. It looks like <code>https://github.com/course-fish546-2026/your-repo/commit/3f9c2e1...</code>, ending in a long string of letters and numbers.</li>
+<li>Paste it as a new comment on your Project Proposal issue, with a line saying which week it is.</li>
+</ol>
+<p>GitHub shows a pasted commit link as a short code (for example <code>3f9c2e1</code>). That is expected; it still links to the full commit.</p>
+<p>From the terminal you can also print the ID of your latest commit with <code>git log -1 --format=%H</code>, then add it to the end of <code>https://github.com/course-fish546-2026/your-repo/commit/</code>.</p>
+</section>
 </section>
 <section id="where-things-live" class="level2">
 <h2 class="anchored" data-anchor-id="where-things-live">Where things live</h2>
@@ -323,11 +339,12 @@ Deadlines
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Project progress</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- What moved this week, with links to commits, files, or figures. --&gt;</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Blockers</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Specific problems, what you tried, and any linked Help Request. Or "none". --&gt;</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Next week</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- One to three concrete, one-week-sized goals. --&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Problems and help needed</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Anything that stopped or slowed your work: what went wrong, what you tried,</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">     and any linked Help Request. Or "none". --&gt;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Next week</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- One to three concrete, one-week-sized goals. --&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="before-you-push" class="level3">
 <h3 class="anchored" data-anchor-id="before-you-push">Before you push</h3>
 <ul class="task-list">
@@ -337,7 +354,7 @@ Deadlines
 <li><label><input type="checkbox">Output tables and figures are saved under <code>output/</code>, not only printed in the HTML.</label></li>
 <li><label><input type="checkbox">No raw data under <code>data/raw/</code> are committed.</label></li>
 <li><label><input type="checkbox">Software, platform, and any container or environment used are named.</label></li>
-<li><label><input type="checkbox">The commit link is posted on your Project Proposal issue.</label></li>
+<li><label><input type="checkbox">The commit link is posted on your Project Proposal issue (<a href="#finding-your-commit-link">how to find it</a>).</label></li>
 </ul>
 </section>
 <section id="weekly-entry-rubric" class="level3">
@@ -396,12 +413,12 @@ Deadlines
 <td>Answers are missing.</td>
 </tr>
 <tr class="odd">
-<td>Blockers and help-seeking</td>
+<td>Problems and help-seeking</td>
 <td style="text-align: right;">10</td>
-<td>Blockers are precise, with attempted fixes and a linked Help Request when needed.</td>
-<td>Blockers or risks are named with enough context to respond.</td>
-<td>Blockers are vague or raised late.</td>
-<td>Blockers are absent despite stalled progress.</td>
+<td>Problems are described precisely, with attempted fixes and a linked Help Request when needed.</td>
+<td>Problems or risks are named with enough context to respond.</td>
+<td>Problems are vague or raised late.</td>
+<td>No problems are reported despite stalled progress.</td>
 </tr>
 <tr class="even">
 <td>Next-week plan</td>
@@ -417,7 +434,7 @@ Deadlines
 </section>
 <section id="final-compendium" class="level2">
 <h2 class="anchored" data-anchor-id="final-compendium">Final compendium</h2>
-<p>The final compendium is the complete project package in your repository at the Week 10 tag. It should include a top-level <code>README.md</code>, final rendered report, source <code>.qmd</code> or scripts, key outputs, a data availability statement, a software and platform statement, and a link to your Project Proposal issue.</p>
+<p>The final compendium is the complete project package in your repository, saved as the <code>v1.0</code> release you create in Week 10 (<a href="./assignments/10-compendium.html#creating-your-v1.0-release">how to create it</a>). It should include a top-level <code>README.md</code>, final rendered report, source <code>.qmd</code> or scripts, key outputs, a data availability statement, a software and platform statement, and a link to your Project Proposal issue.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 15%">

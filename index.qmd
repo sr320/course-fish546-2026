@@ -55,7 +55,7 @@ The textbook is **optional** — you are not required to buy it. Lectures and tu
 
 ## Grading
 
-There is one deliverable each week: a **notebook entry** in your repository containing the week's analysis, answers to two or three reflection questions from the lecture, your project progress, blockers, and next week's goals. You will also give a mid-quarter project update and a final compendium presentation.
+There is one deliverable each week: a **notebook entry** in your repository containing the week's analysis, answers to two or three reflection questions from the lecture, your project progress, any problems you ran into, and next week's goals. You will also give a mid-quarter project update and a final compendium presentation.
 
 | Component | Grade % | Notes |
 |--------------------------------|---------|--------------------------------|
