@@ -17,7 +17,7 @@ Run one small mapping, assembly, or quantification step from input to an interme
 
 ## Tasks
 
-1. Choose the smallest meaningful slice of a workflow. Prefer your own project data; the provided reads from Week 02 and a matching reference are available as a fallback (paths in the pinned [Provided datasets issue](https://github.com/sr320/course-fish546-2026/issues/1)).
+1. Choose the smallest meaningful slice of a workflow. Prefer your own project data; if you don't have data ready, see [Starting points](#starting-points) below.
 2. Identify the reference genome, transcriptome, marker database, or assembly strategy, and record its source and version.
 3. Run one step, for example:
    - Map reads to a reference.
@@ -26,6 +26,54 @@ Run one small mapping, assembly, or quantification step from input to an interme
    - Summarize an existing mapping or assignment output.
 4. Save the command or script in `code/`, the log and a summary in `output/week03/`.
 5. Inspect the intermediate checks: input read count, proportion mapped or assigned, output size and format, a small preview of the result.
+
+## Starting points
+
+### Worked examples
+
+These two walkthroughs match interests that came up in class. Use them as models for structure and checks. You don't need to copy them.
+
+- [Stacks RAD-seq demo](https://course-fish546-2026.github.io/Roberts-546/code/04-stacks-demo.html): goes from pooled RAD-seq reads to loci, SNP genotypes, and population statistics (F~ST~, π) in a simulated eelgrass dataset. Use it if your project is about population structure or genotyping.
+- [Beginner eDNA workflow](https://course-fish546-2026.github.io/Roberts-546/code/03.2-eDNA.html): uses QIIME 2 on six 18S V9 samples from Yellow Island, going from raw reads through primer removal, DADA2 ASVs, and PR2 taxonomy to a bar plot. Use it if your project uses amplicon or eDNA data.
+
+### Optional: align Olympia oyster lcWGS reads to the USDA-ARS genome
+
+If you want a mapping slice on real data, take one or two samples from the [oly-lc-WGS](https://github.com/zbengt/oly-lc-WGS) project. It has low-coverage whole-genome sequencing of 112 *Ostrea lurida* from 15 Pacific Northwest sites. Its `data/README.md` describes the samples, and the root `README.md` lists the sites.
+
+**Where the files are.** The project's data are archived on the Roberts Lab web server:
+
+- Reads: <https://gannet.fish.washington.edu/v1_web/owlshell/bu-github/oly-lc-WGS/data/raw/>. These are paired-end FASTQs named `<sample_id>_S<n>_L004_R{1,2}_001.fastq.gz`, about 1.6–2 GB per file.
+- Genome: [GCA_061535525.1 (xbOstLuri2, USDA-ARS / PSRF)](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_061535525.1/). This chromosome-level assembly has 10 chromosomes and is about 1.03 Gb. A copy is at <https://gannet.fish.washington.edu/v1_web/owlshell/bu-github/oly-lc-WGS/data/genome/GCA_061535525.1_xbOstLuri2_USDA-ARS_PSRF_primary_genomic.fna> (about 1 GB). Record the accession in your entry.
+
+**Keep it small.** You don't need the full files. The commands below stream the first 1 million read pairs of one sample instead. R1 and R2 are in the same order, so taking the same number of lines from each keeps the pairs matched.
+
+```bash
+base=https://gannet.fish.washington.edu/v1_web/owlshell/bu-github/oly-lc-WGS/data
+sample=Coos_Bay_7_S104   # or e.g. MB_14a_S40, LS_13a_S90, FB18_Wild_10_S3
+mkdir -p ../data/oly-lcwgs && cd ../data/oly-lcwgs
+
+for r in R1 R2; do
+  curl -s ${base}/raw/${sample}_L004_${r}_001.fastq.gz \
+    | gunzip -c | head -n 4000000 | gzip > ${sample}_${r}.sub.fastq.gz
+done
+
+curl -O ${base}/genome/GCA_061535525.1_xbOstLuri2_USDA-ARS_PSRF_primary_genomic.fna
+```
+
+**A simple alignment.** These commands use `bwa` and `samtools`, and `bwa-mem2` works the same way. Indexing a 1 Gb genome takes a while and several GB of memory, so run that step once, and on Hyak if Raven is busy.
+
+```bash
+genome=GCA_061535525.1_xbOstLuri2_USDA-ARS_PSRF_primary_genomic.fna
+mkdir -p ../../output/week03
+bwa index ${genome}
+bwa mem -t 8 ${genome} ${sample}_R1.sub.fastq.gz ${sample}_R2.sub.fastq.gz \
+  | samtools sort -@ 4 -o ../../output/week03/${sample}.sub.bam
+samtools index ../../output/week03/${sample}.sub.bam
+samtools flagstat ../../output/week03/${sample}.sub.bam > ../../output/week03/${sample}.flagstat.txt
+samtools idxstats ../../output/week03/${sample}.sub.bam | head -n 12   # reads per chromosome
+```
+
+One million pairs covers only a small fraction of this genome, so don't expect to call variants from it. Base your checks on the mapping rate, the proper-pair rate, and how reads are spread across the 10 chromosomes. If you have time, compare one sample from Puget Sound with one from outside it, for example Coos Bay or Willapa Bay. To see where this leads, step 05 of the project re-aligns all 112 samples to this genome, and step 06 builds population structure from the resulting BAMs.
 
 ## In your project
 
