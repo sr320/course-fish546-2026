@@ -25,9 +25,147 @@ Do this with your own data. Almost every project has a list of identifiers or co
 4. Save the annotated table to `output/week05/` and summarize it in one table or figure.
 5. State what the overlap or annotation shows and what it does not.
 
+Ideas for the two main project types this quarter:
+
+- **eDNA / metabarcoding.** Your features are amplicons and ASVs. Run the worked example below with your own primer pair and a mitogenome from one of your target taxa. Which gene does your marker sit in, how long is the amplicon, and how many mismatches do your primers have against that taxon? If you already have ASVs with BLAST hits, attach the hit's taxonomy and the gene it falls in, and save that table as well.
+- **RAD-seq in eelgrass.** Your features are SNP or RAD-locus positions. Load them as a `GRanges` object, load the *Zostera marina* genome annotation that matches the assembly your reads were aligned to (record its version), and use `findOverlaps()` and `distanceToNearest()` to label each locus as genic or intergenic and to report the nearest gene. The code pattern is the same as in steps 3–5 of the worked example.
+
 ## If your project has no natural fit
 
-Use the provided BED and GFF files (paths in the pinned [Provided datasets issue](https://github.com/sr320/course-fish546-2026/issues/1)): identify the build and coordinate convention, compute overlaps between the two feature sets, count features per scaffold, and report the nearest gene for ten intervals. Same outputs as above.
+Do the worked example below as written. Same outputs as above.
+
+## Worked example: where do eDNA primers land?
+
+eDNA markers are short pieces of the mitochondrial genome. In this example you find where two common fish 12S primer pairs land on the Chinook salmon (*Oncorhynchus tshawytscha*) mitogenome, [NC_002980.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_002980.1). Then you use the genome annotation to say which gene each amplicon falls in. Everything downloads from NCBI, so you can paste the chunks into your notebook and run them as they are. The ideas are the same ones you'd use on a whole genome: a FASTA file, a GFF file, coordinates, and overlaps.
+
+Install the two Bioconductor packages once if you don't have them:
+
+```r
+BiocManager::install(c("Biostrings", "GenomicRanges"))
+```
+
+### 1. Download the genome and its annotation
+
+```r
+library(Biostrings)
+library(GenomicRanges)
+
+dir.create("data/week05", recursive = TRUE, showWarnings = FALSE)
+dir.create("output/week05", recursive = TRUE, showWarnings = FALSE)
+
+acc <- "NC_002980.1"
+download.file(paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&rettype=fasta&retmode=text&id=", acc),
+              "data/week05/chinook-mito.fa")
+download.file(paste0("https://www.ncbi.nlm.nih.gov/sviewer/viewer.cgi?db=nuccore&report=gff3&id=", acc),
+              "data/week05/chinook-mito.gff")
+
+genome <- readDNAStringSet("data/week05/chinook-mito.fa")
+names(genome) <- acc
+genome   # one circular sequence, 16,644 bp
+```
+
+Record the accession *with its version number* (`.1`) in your notebook. That is the "genome build" for this example.
+
+### 2. Read the GFF
+
+A GFF file has nine tab-separated columns. Coordinates are **1-based** and include both ends.
+
+```r
+gff <- read.delim("data/week05/chinook-mito.gff", header = FALSE, comment.char = "#",
+                  col.names = c("seqid", "source", "type", "start", "end",
+                                "score", "strand", "phase", "attributes"))
+table(gff$type)
+
+# Keep one row per feature and pull the gene product out of the attributes column
+features <- gff[gff$type %in% c("rRNA", "tRNA", "CDS", "D_loop"), ]
+features$product <- sub(".*product=([^;]*).*", "\\1", features$attributes)
+features$product[features$type == "D_loop"] <- "control region (D-loop)"
+features[, c("type", "start", "end", "strand", "product")]
+```
+
+### 3. Turn the features into genomic ranges
+
+```r
+feat_gr <- GRanges(seqnames = features$seqid,
+                   ranges   = IRanges(start = features$start, end = features$end),
+                   strand   = features$strand,
+                   type     = features$type,
+                   product  = features$product)
+feat_gr
+as.data.frame(table(feat_gr$type))   # features per type
+```
+
+### 4. Find where the primers land
+
+The reverse primer binds the opposite strand, so search for its reverse complement. `max.mismatch` allows a few differences, because primers are rarely a perfect match to every species.
+
+```r
+primers <- data.frame(
+  marker  = c("MiFish-U", "Riaz 12S"),
+  forward = c("GTCGGTAAAACTCGTGCCAGC", "ACTGGGATTAGATACCCC"),
+  reverse = c("CATAGTGGGGTATCTAATCCCAGTTTG", "TAGAACAGGCTCCTCTAG")
+)
+
+find_amplicon <- function(fwd, rev, genome, max_mismatch = 2) {
+  f <- matchPattern(DNAString(fwd), genome[[1]], max.mismatch = max_mismatch)
+  r <- matchPattern(reverseComplement(DNAString(rev)), genome[[1]], max.mismatch = max_mismatch)
+  c(start = start(f)[1], end = end(r)[1])
+}
+
+amp <- t(mapply(find_amplicon, primers$forward, primers$reverse,
+                MoreArgs = list(genome = genome)))
+amp_gr <- GRanges(seqnames = acc,
+                  ranges   = IRanges(start = amp[, "start"], end = amp[, "end"]),
+                  marker   = primers$marker)
+amp_gr
+width(amp_gr)   # amplicon length, primers included
+```
+
+You should get MiFish-U at 1,279–1,496 (218 bp) and Riaz 12S at 1,473–1,614 (142 bp).
+
+### 5. Annotate the amplicons with overlaps
+
+```r
+hits <- findOverlaps(amp_gr, feat_gr)
+
+annotated <- data.frame(
+  marker       = amp_gr$marker[queryHits(hits)],
+  amp_start    = start(amp_gr)[queryHits(hits)],
+  amp_end      = end(amp_gr)[queryHits(hits)],
+  feature_type = feat_gr$type[subjectHits(hits)],
+  product      = feat_gr$product[subjectHits(hits)],
+  feat_start   = start(feat_gr)[subjectHits(hits)],
+  feat_end     = end(feat_gr)[subjectHits(hits)]
+)
+annotated
+write.csv(annotated, "output/week05/amplicon-annotation.csv", row.names = FALSE)
+```
+
+Both amplicons fall inside the 12S ribosomal RNA gene.
+
+### 6. Save the amplicons as a BED file
+
+BED is **0-based** and excludes the end coordinate, so subtract 1 from each start and leave each end as it is. This one-off shift is the most common coordinate bug in genomics.
+
+```r
+bed <- data.frame(chrom = as.character(seqnames(amp_gr)),
+                  start = start(amp_gr) - 1,
+                  end   = end(amp_gr),
+                  name  = amp_gr$marker)
+bed
+write.table(bed, "output/week05/amplicons.bed", sep = "\t", quote = FALSE,
+            row.names = FALSE, col.names = FALSE)
+```
+
+### What to write
+
+- The accession and version you used, and the coordinate convention of each file you read or wrote (GFF, BED, `GRanges`).
+- Which gene each amplicon falls in, and how much the two amplicons overlap each other. `pintersect(amp_gr[1], amp_gr[2])` will tell you.
+- What this does and does not show. For example, a primer site matching this one Chinook genome says nothing about how well the primer matches other salmon species, or other individuals.
+
+### Optional: go further
+
+Not required. Try the Leray COI primers (forward `GGWACWGGWTGAACWGTWTAYCCYCC`, reverse `TANACYTCNGGRTGNCCRAARAAYCA`). They contain IUPAC ambiguity codes, so add `fixed = FALSE` to both `matchPattern()` calls. How many mismatches do you have to allow before the forward primer lands? Which gene does this amplicon fall in, and how long is it?
 
 ## Mid-quarter update
 
