@@ -1,6 +1,6 @@
 ---
 title: "Week 05 Analysis — Annotation and Genomic Ranges"
-subtitle: "Track week · apply to your project · mid-quarter update"
+subtitle: "Shared exercise · mid-quarter update"
 format:
   html:
     toc: true
@@ -15,28 +15,9 @@ format:
 
 Connect a result to genomic context using annotation and interval logic, with clean coordinate hygiene.
 
-## In your project
-
-Do this with your own data. Almost every project has a list of identifiers or coordinates by now.
-
-1. State the genome build (or transcriptome version) and the annotation source and version you are using. If your organism has neither, say what you are using instead.
-2. Take one set of features from your project: differentially expressed genes, variant positions, methylated loci, ASVs with BLAST hits, candidate contigs.
-3. Perform one annotation or overlap operation: attach gene names and descriptions, find the nearest gene, count overlaps with exons or promoters, or summarize features per scaffold.
-4. Save the annotated table to `output/week05/` and summarize it in one table or figure.
-5. State what the overlap or annotation shows and what it does not.
-
-Ideas for the two main project types this quarter:
-
-- **eDNA / metabarcoding.** Your features are amplicons and ASVs. Run the worked example below with your own primer pair and a mitogenome from one of your target taxa. Which gene does your marker sit in, how long is the amplicon, and how many mismatches do your primers have against that taxon? If you already have ASVs with BLAST hits, attach the hit's taxonomy and the gene it falls in, and save that table as well.
-- **RAD-seq in eelgrass.** Your features are SNP or RAD-locus positions. Load them as a `GRanges` object, load the *Zostera marina* genome annotation that matches the assembly your reads were aligned to (record its version), and use `findOverlaps()` and `distanceToNearest()` to label each locus as genic or intergenic and to report the nearest gene. The code pattern is the same as in steps 3–5 of the worked example.
-
-## If your project has no natural fit
-
-Do the worked example below as written. Same outputs as above.
-
 ## Worked example: where do eDNA primers land?
 
-eDNA markers are short pieces of the mitochondrial genome. In this example you find where two common fish 12S primer pairs land on the Chinook salmon (*Oncorhynchus tshawytscha*) mitogenome, [NC_002980.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_002980.1). Then you use the genome annotation to say which gene each amplicon falls in. Everything downloads from NCBI, so you can paste the chunks into your notebook and run them as they are. The ideas are the same ones you'd use on a whole genome: a FASTA file, a GFF file, coordinates, and overlaps.
+Everyone does this exercise this week, whatever your project is. eDNA markers are short pieces of the mitochondrial genome. In this example you find where two common fish 12S primer pairs land on the Chinook salmon (*Oncorhynchus tshawytscha*) mitogenome, [NC_002980.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_002980.1). Then you use the genome annotation to say which gene each amplicon falls in. Everything downloads from NCBI, so you can paste the chunks into your notebook and run them as they are. The ideas are the same ones you'd use on a whole genome: a FASTA file, a GFF file, coordinates, and overlaps.
 
 Install the two Bioconductor packages once if you don't have them:
 
@@ -173,10 +154,10 @@ Prepare a five-minute update for Tuesday's class: question, data, one concrete c
 
 ## What goes in your notebook entry
 
-- Commands or code.
-- Input file descriptions with build and version.
-- The annotated output table.
-- Summary figure or table.
+- The code from the worked example.
+- The accession and version you used.
+- `output/week05/amplicon-annotation.csv` and `output/week05/amplicons.bed`.
+- Your answers to "What to write".
 - A link to the mid-quarter update materials.
 
 ## Assessment

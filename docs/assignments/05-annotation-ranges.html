@@ -437,8 +437,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#goal" id="toc-goal" class="nav-link active" data-scroll-target="#goal">Goal</a></li>
-  <li><a href="#in-your-project" id="toc-in-your-project" class="nav-link" data-scroll-target="#in-your-project">In your project</a></li>
-  <li><a href="#if-your-project-has-no-natural-fit" id="toc-if-your-project-has-no-natural-fit" class="nav-link" data-scroll-target="#if-your-project-has-no-natural-fit">If your project has no natural fit</a></li>
   <li><a href="#worked-example-where-do-edna-primers-land" id="toc-worked-example-where-do-edna-primers-land" class="nav-link" data-scroll-target="#worked-example-where-do-edna-primers-land">Worked example: where do eDNA primers land?</a>
   <ul class="collapse">
   <li><a href="#download-the-genome-and-its-annotation" id="toc-download-the-genome-and-its-annotation" class="nav-link" data-scroll-target="#download-the-genome-and-its-annotation">1. Download the genome and its annotation</a></li>
@@ -462,7 +460,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/05-annotation-ranges.html">Week 05</a></li><li class="breadcrumb-item"><a href="../assignments/05-annotation-ranges.html">Week 05 Analysis — Annotation and Genomic Ranges</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Week 05 Analysis — Annotation and Genomic Ranges</h1>
-<p class="subtitle lead">Track week · apply to your project · mid-quarter update</p>
+<p class="subtitle lead">Shared exercise · mid-quarter update</p>
 </div>
 
 
@@ -493,29 +491,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="goal">Goal</h2>
 <p>Connect a result to genomic context using annotation and interval logic, with clean coordinate hygiene.</p>
 </section>
-<section id="in-your-project" class="level2">
-<h2 class="anchored" data-anchor-id="in-your-project">In your project</h2>
-<p>Do this with your own data. Almost every project has a list of identifiers or coordinates by now.</p>
-<ol type="1">
-<li>State the genome build (or transcriptome version) and the annotation source and version you are using. If your organism has neither, say what you are using instead.</li>
-<li>Take one set of features from your project: differentially expressed genes, variant positions, methylated loci, ASVs with BLAST hits, candidate contigs.</li>
-<li>Perform one annotation or overlap operation: attach gene names and descriptions, find the nearest gene, count overlaps with exons or promoters, or summarize features per scaffold.</li>
-<li>Save the annotated table to <code>output/week05/</code> and summarize it in one table or figure.</li>
-<li>State what the overlap or annotation shows and what it does not.</li>
-</ol>
-<p>Ideas for the two main project types this quarter:</p>
-<ul>
-<li><strong>eDNA / metabarcoding.</strong> Your features are amplicons and ASVs. Run the worked example below with your own primer pair and a mitogenome from one of your target taxa. Which gene does your marker sit in, how long is the amplicon, and how many mismatches do your primers have against that taxon? If you already have ASVs with BLAST hits, attach the hit’s taxonomy and the gene it falls in, and save that table as well.</li>
-<li><strong>RAD-seq in eelgrass.</strong> Your features are SNP or RAD-locus positions. Load them as a <code>GRanges</code> object, load the <em>Zostera marina</em> genome annotation that matches the assembly your reads were aligned to (record its version), and use <code>findOverlaps()</code> and <code>distanceToNearest()</code> to label each locus as genic or intergenic and to report the nearest gene. The code pattern is the same as in steps 3–5 of the worked example.</li>
-</ul>
-</section>
-<section id="if-your-project-has-no-natural-fit" class="level2">
-<h2 class="anchored" data-anchor-id="if-your-project-has-no-natural-fit">If your project has no natural fit</h2>
-<p>Do the worked example below as written. Same outputs as above.</p>
-</section>
 <section id="worked-example-where-do-edna-primers-land" class="level2">
 <h2 class="anchored" data-anchor-id="worked-example-where-do-edna-primers-land">Worked example: where do eDNA primers land?</h2>
-<p>eDNA markers are short pieces of the mitochondrial genome. In this example you find where two common fish 12S primer pairs land on the Chinook salmon (<em>Oncorhynchus tshawytscha</em>) mitogenome, <a href="https://www.ncbi.nlm.nih.gov/nuccore/NC_002980.1">NC_002980.1</a>. Then you use the genome annotation to say which gene each amplicon falls in. Everything downloads from NCBI, so you can paste the chunks into your notebook and run them as they are. The ideas are the same ones you’d use on a whole genome: a FASTA file, a GFF file, coordinates, and overlaps.</p>
+<p>Everyone does this exercise this week, whatever your project is. eDNA markers are short pieces of the mitochondrial genome. In this example you find where two common fish 12S primer pairs land on the Chinook salmon (<em>Oncorhynchus tshawytscha</em>) mitogenome, <a href="https://www.ncbi.nlm.nih.gov/nuccore/NC_002980.1">NC_002980.1</a>. Then you use the genome annotation to say which gene each amplicon falls in. Everything downloads from NCBI, so you can paste the chunks into your notebook and run them as they are. The ideas are the same ones you’d use on a whole genome: a FASTA file, a GFF file, coordinates, and overlaps.</p>
 <p>Install the two Bioconductor packages once if you don’t have them:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(<span class="st">"Biostrings"</span>, <span class="st">"GenomicRanges"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="download-the-genome-and-its-annotation" class="level3">
@@ -633,10 +611,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="what-goes-in-your-notebook-entry" class="level2">
 <h2 class="anchored" data-anchor-id="what-goes-in-your-notebook-entry">What goes in your notebook entry</h2>
 <ul>
-<li>Commands or code.</li>
-<li>Input file descriptions with build and version.</li>
-<li>The annotated output table.</li>
-<li>Summary figure or table.</li>
+<li>The code from the worked example.</li>
+<li>The accession and version you used.</li>
+<li><code>output/week05/amplicon-annotation.csv</code> and <code>output/week05/amplicons.bed</code>.</li>
+<li>Your answers to “What to write”.</li>
 <li>A link to the mid-quarter update materials.</li>
 </ul>
 </section>
