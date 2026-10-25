@@ -447,7 +447,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#check-sample-structure" id="toc-check-sample-structure" class="nav-link" data-scroll-target="#check-sample-structure">4. Check sample structure</a></li>
   <li><a href="#test-for-differential-expression" id="toc-test-for-differential-expression" class="nav-link" data-scroll-target="#test-for-differential-expression">5. Test for differential expression</a></li>
   <li><a href="#plot-and-save-the-results" id="toc-plot-and-save-the-results" class="nav-link" data-scroll-target="#plot-and-save-the-results">6. Plot and save the results</a></li>
-  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn">Your turn</a></li>
+  <li><a href="#optional-go-further" id="toc-optional-go-further" class="nav-link" data-scroll-target="#optional-go-further">Optional: go further</a></li>
   </ul></li>
   <li><a href="#in-your-project" id="toc-in-your-project" class="nav-link" data-scroll-target="#in-your-project">In your project</a></li>
   <li><a href="#what-goes-in-your-notebook-entry" id="toc-what-goes-in-your-notebook-entry" class="nav-link" data-scroll-target="#what-goes-in-your-notebook-entry">What goes in your notebook entry</a></li>
@@ -509,7 +509,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="worked-example-deseq2-on-tanner-crab-rna-seq" class="level2">
 <h2 class="anchored" data-anchor-id="worked-example-deseq2-on-tanner-crab-rna-seq">Worked example: DESeq2 on Tanner crab RNA-seq</h2>
-<p>This is a short version of the <a href="https://github.com/RobertsLab/paper-tanner-crab/blob/master/scripts/DESeq.Rmd">Tanner crab DESeq2 analysis</a>. It uses four <em>Chionoecetes bairdi</em> libraries quantified with kallisto: cold and warm crabs, each either infected or uninfected with <em>Hematodinium</em>. The count matrix is public, so you can paste these chunks into your notebook and run them as they are. The second half asks you to finish the analysis yourself.</p>
+<p>This is a short version of the <a href="https://github.com/RobertsLab/paper-tanner-crab/blob/master/scripts/DESeq.Rmd">Tanner crab DESeq2 analysis</a>. It uses four <em>Chionoecetes bairdi</em> libraries quantified with kallisto: cold and warm crabs, each either infected or uninfected with <em>Hematodinium</em>. The count matrix is public, so you can paste these chunks into your notebook and run them as they are. Running steps 1–6 and writing your interpretation and caveats is enough to complete this week’s tasks. The extensions at the end are optional.</p>
 <p>Install DESeq2 once if you don’t have it:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"BiocManager"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">"DESeq2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -580,9 +580,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(res_df, <span class="st">"output/week04/dge-results.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>With DESeq2 1.42 this gives about 1,166 transcripts at <code>padj &lt; 0.05</code>. Other versions may give slightly different numbers.</p>
 </section>
-<section id="your-turn" class="level3">
-<h3 class="anchored" data-anchor-id="your-turn">Your turn</h3>
-<p>Fill in the blanks (<code>___</code>) and answer the questions in your notebook.</p>
+<section id="optional-go-further" class="level3">
+<h3 class="anchored" data-anchor-id="optional-go-further">Optional: go further</h3>
+<p>These are not required. If you want to push the example further, fill in the blanks (<code>___</code>) and answer the questions in your notebook.</p>
 <p><strong>A. Account for temperature.</strong> Temperature differs between the two pairs of crabs. Add it to the design so the infection test controls for it.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dds2 <span class="ot">&lt;-</span> <span class="fu">DESeqDataSetFromMatrix</span>(<span class="at">countData =</span> counts,</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>                               <span class="at">colData   =</span> coldata,</span>

@@ -30,7 +30,7 @@ A count matrix, sample metadata table, and an R scaffold are provided (paths in 
 
 ## Worked example: DESeq2 on Tanner crab RNA-seq
 
-This is a short version of the [Tanner crab DESeq2 analysis](https://github.com/RobertsLab/paper-tanner-crab/blob/master/scripts/DESeq.Rmd). It uses four *Chionoecetes bairdi* libraries quantified with kallisto: cold and warm crabs, each either infected or uninfected with *Hematodinium*. The count matrix is public, so you can paste these chunks into your notebook and run them as they are. The second half asks you to finish the analysis yourself.
+This is a short version of the [Tanner crab DESeq2 analysis](https://github.com/RobertsLab/paper-tanner-crab/blob/master/scripts/DESeq.Rmd). It uses four *Chionoecetes bairdi* libraries quantified with kallisto: cold and warm crabs, each either infected or uninfected with *Hematodinium*. The count matrix is public, so you can paste these chunks into your notebook and run them as they are. Running steps 1–6 and writing your interpretation and caveats is enough to complete this week's tasks. The extensions at the end are optional.
 
 Install DESeq2 once if you don't have it:
 
@@ -121,9 +121,9 @@ write.csv(res_df, "output/week04/dge-results.csv", row.names = FALSE)
 
 With DESeq2 1.42 this gives about 1,166 transcripts at `padj < 0.05`. Other versions may give slightly different numbers.
 
-### Your turn
+### Optional: go further
 
-Fill in the blanks (`___`) and answer the questions in your notebook.
+These are not required. If you want to push the example further, fill in the blanks (`___`) and answer the questions in your notebook.
 
 **A. Account for temperature.** Temperature differs between the two pairs of crabs. Add it to the design so the infection test controls for it.
 
