@@ -28,6 +28,133 @@ A count matrix, sample metadata table, and an R scaffold are provided (paths in 
 5. Save `output/week04/dge-results.csv`, the diagnostic plot, and one focused figure or table (an MA plot, a volcano plot, or a handful of genes).
 6. Write a caveats paragraph about design, sample size, and biological interpretation.
 
+## Worked example: DESeq2 on Tanner crab RNA-seq
+
+This is a short version of the [Tanner crab DESeq2 analysis](https://github.com/RobertsLab/paper-tanner-crab/blob/master/scripts/DESeq.Rmd). It uses four *Chionoecetes bairdi* libraries quantified with kallisto: cold and warm crabs, each either infected or uninfected with *Hematodinium*. The count matrix is public, so you can paste these chunks into your notebook and run them as they are. The second half asks you to finish the analysis yourself.
+
+Install DESeq2 once if you don't have it:
+
+```r
+install.packages("BiocManager")
+BiocManager::install("DESeq2")
+```
+
+### 1. Load the counts
+
+```r
+library(DESeq2)
+
+counts_url <- "https://raw.githubusercontent.com/RobertsLab/paper-tanner-crab/master/analyses/kallisto-0812/kallisto-0812.isoform.counts.matrix"
+counts <- read.delim(counts_url, row.names = 1, check.names = FALSE)
+
+# kallisto gives estimated counts with decimals; DESeq2 needs whole numbers
+counts <- round(counts)
+
+dim(counts)   # 78,649 transcripts x 4 samples
+head(counts)
+```
+
+### 2. Describe the samples
+
+Each row of the metadata describes one column of the count matrix, in the same order.
+
+```r
+coldata <- data.frame(
+  row.names   = colnames(counts),
+  infection   = factor(c("uninfected", "infected", "uninfected", "infected")),
+  temperature = factor(c("cold", "cold", "warm", "warm"))
+)
+coldata
+
+# Stop here if the names don't line up
+stopifnot(all(rownames(coldata) == colnames(counts)))
+```
+
+### 3. Build the DESeq2 object
+
+```r
+dds <- DESeqDataSetFromMatrix(countData = counts,
+                              colData   = coldata,
+                              design    = ~ infection)
+
+# Levels are alphabetical by default, so "infected" would be the reference.
+# Make "uninfected" the baseline so a positive log2FoldChange means higher in infected crabs.
+dds$infection <- relevel(dds$infection, ref = "uninfected")
+
+# Drop transcripts with almost no reads
+dds <- dds[rowSums(counts(dds)) >= 10, ]
+nrow(dds)
+```
+
+### 4. Check sample structure
+
+Do this before testing anything. Do the samples group by infection, by temperature, or by neither?
+
+```r
+vsd <- vst(dds, blind = TRUE)
+plotPCA(vsd, intgroup = c("infection", "temperature"))
+```
+
+### 5. Test for differential expression
+
+```r
+dds <- DESeq(dds)
+res <- results(dds, alpha = 0.05)
+
+summary(res)
+sum(res$padj < 0.05, na.rm = TRUE)   # number of significant transcripts
+```
+
+### 6. Plot and save the results
+
+```r
+plotMA(res, ylim = c(-10, 10), main = "Infected vs uninfected")
+
+res_df <- as.data.frame(res)
+res_df$transcript_id <- rownames(res_df)
+res_df <- res_df[order(res_df$padj), ]
+head(res_df)
+
+dir.create("output/week04", recursive = TRUE, showWarnings = FALSE)
+write.csv(res_df, "output/week04/dge-results.csv", row.names = FALSE)
+```
+
+With DESeq2 1.42 this gives about 1,166 transcripts at `padj < 0.05`. Other versions may give slightly different numbers.
+
+### Your turn
+
+Fill in the blanks (`___`) and answer the questions in your notebook.
+
+**A. Account for temperature.** Temperature differs between the two pairs of crabs. Add it to the design so the infection test controls for it.
+
+```r
+dds2 <- DESeqDataSetFromMatrix(countData = counts,
+                               colData   = coldata,
+                               design    = ~ ___ + infection)
+dds2$infection <- relevel(dds2$infection, ref = "___")
+dds2 <- dds2[rowSums(counts(dds2)) >= 10, ]
+dds2 <- DESeq(dds2)
+
+resultsNames(dds2)
+res2 <- results(dds2, alpha = 0.05)   # the last term in the design is tested by default
+sum(res2$padj < 0.05, na.rm = TRUE)
+```
+
+How many transcripts are significant now? Why might that number differ from the infection-only model?
+
+**B. Test temperature instead.** Use a contrast to compare warm against cold.
+
+```r
+res_temp <- results(dds2, contrast = c("temperature", "___", "___"))
+sum(res_temp$padj < 0.05, na.rm = TRUE)
+```
+
+In a contrast, which level is the numerator and which is the denominator? What does a positive `log2FoldChange` mean here?
+
+**C. Look closely at the top hits.** Several of the top transcripts have a `log2FoldChange` around ±22. Use `counts(dds, normalized = TRUE)["TRANSCRIPT_ID", ]` to look at the counts for one of them. What is going on, and should you trust a fold change that large?
+
+**D. Caveats.** This design has two crabs per infection group and one crab per infection-by-temperature combination. What can these data support, and what can't they? Put your answer in your caveats paragraph.
+
 ## In your project
 
 Every project has the equivalent of these four stages: raw input, analysis-ready table, model or summary step, biological interpretation. Name each stage for your own workflow in your entry. If your project is RNA-seq, say how the provided scaffold would need to change for your design.
