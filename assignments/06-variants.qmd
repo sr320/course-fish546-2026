@@ -1,6 +1,6 @@
 ---
 title: "Week 06 Analysis — Variants"
-subtitle: "Track week · apply to your project"
+subtitle: "Shared exercise"
 format:
   html:
     toc: true
@@ -15,33 +15,142 @@ format:
 
 Understand what variant calls contain and how filtering choices shape conclusions.
 
+## Worked example: filtering eelgrass SNPs
+
+Everyone does this exercise this week, whatever your project is. The data are a small RAD-seq VCF from the [Stacks demo](https://course-fish546-2026.github.io/Roberts-546/code/04-stacks-demo.html): 20 eelgrass plants from two sites, PB and SJ, with 213 SNPs. The reads were **simulated**, so treat the results as a teaching example, not a finding about real eelgrass. Everything downloads from GitHub and uses only base R, so you can paste the chunks into your notebook and run them as they are.
+
+### 1. Download the VCF and the population map
+
+```r
+dir.create("data/week06", recursive = TRUE, showWarnings = FALSE)
+dir.create("output/week06", recursive = TRUE, showWarnings = FALSE)
+
+base <- "https://raw.githubusercontent.com/course-fish546-2026/Roberts-546/main"
+download.file(paste0(base, "/output/04-stacks-demo/populations/populations.snps.vcf"),
+              "data/week06/eelgrass-demo.vcf")
+download.file(paste0(base, "/data/stacks-demo/popmap.tsv"),
+              "data/week06/popmap.tsv")
+```
+
+### 2. Read the header
+
+Lines starting with `##` describe the file: the program that made it, and what each `INFO` and `FORMAT` field means.
+
+```r
+lines  <- readLines("data/week06/eelgrass-demo.vcf")
+header <- lines[startsWith(lines, "##")]
+header
+```
+
+### 3. Read the variant table
+
+After the header comes one row per SNP. The first nine columns describe the variant, and each column after that is one sample.
+
+```r
+vcf <- read.delim("data/week06/eelgrass-demo.vcf", comment.char = "",
+                  skip = length(header), check.names = FALSE)
+names(vcf)[1] <- "CHROM"   # was "#CHROM"
+dim(vcf)                   # 213 SNPs; 9 fixed columns + 20 samples
+vcf[1:3, 1:10]
+
+samples <- names(vcf)[10:ncol(vcf)]
+popmap  <- read.delim("data/week06/popmap.tsv", header = FALSE, col.names = c("sample", "pop"))
+stopifnot(all(popmap$sample == samples))
+```
+
+### 4. Pull out genotypes and depth
+
+Each sample cell looks like `0/1:15:9,6:40:...`. The `FORMAT` column says what the pieces are: `GT:DP:AD:GQ:GL`. `GT` is the genotype (`0` = REF allele, `1` = ALT allele, `./.` = missing), and `DP` is the read depth.
+
+```r
+gt <- sapply(vcf[, samples], function(x) sub(":.*", "", x))
+# Missing genotypes ("./.") have no depth, so they become NA
+dp <- suppressWarnings(sapply(vcf[, samples],
+                              function(x) as.numeric(sub("^[^:]*:([^:]*):.*", "\\1", x))))
+rownames(gt) <- rownames(dp) <- vcf$ID
+table(gt)
+
+# Count ALT alleles per genotype: 0, 1, or 2
+alt <- apply(gt, 2, function(g) c("0/0" = 0, "0/1" = 1, "1/1" = 2)[g])
+rownames(alt) <- vcf$ID
+
+colSums(is.na(alt))   # missing genotypes per sample
+```
+
+### 5. Summarize each SNP
+
+```r
+snps <- data.frame(
+  id         = vcf$ID,
+  locus      = vcf$CHROM,
+  pos        = vcf$POS,
+  n_called   = rowSums(!is.na(alt)),
+  mean_depth = rowMeans(dp, na.rm = TRUE),
+  alt_freq   = rowSums(alt, na.rm = TRUE) / (2 * rowSums(!is.na(alt)))
+)
+snps$maf <- pmin(snps$alt_freq, 1 - snps$alt_freq)   # minor allele frequency
+summary(snps)
+hist(snps$maf, breaks = 20, main = "Minor allele frequency", xlab = "MAF")
+```
+
+### 6. Filter, and count before and after
+
+Keep SNPs genotyped in at least 18 of the 20 plants and with a minor allele frequency of at least 0.05.
+
+```r
+keep <- snps$n_called >= 18 & snps$maf >= 0.05
+nrow(snps)   # before
+sum(keep)    # after
+table(called_18 = snps$n_called >= 18, maf_05 = snps$maf >= 0.05)
+```
+
+You should keep 194 of 213 SNPs. All 19 are removed by the missingness filter, and the MAF filter removes nothing. Why? (Hint: look at the smallest MAF in `summary(snps)`.)
+
+### 7. Compare the two sites
+
+```r
+filtered <- snps[keep, ]
+is_pb <- popmap$pop == "PB"
+af <- function(a) rowSums(a, na.rm = TRUE) / (2 * rowSums(!is.na(a)))
+
+filtered$freq_PB   <- af(alt[keep, is_pb])
+filtered$freq_SJ   <- af(alt[keep, !is_pb])
+filtered$freq_diff <- abs(filtered$freq_PB - filtered$freq_SJ)
+filtered <- filtered[order(-filtered$freq_diff), ]
+head(filtered, 10)
+
+plot(filtered$freq_PB, filtered$freq_SJ, xlim = c(0, 1), ylim = c(0, 1),
+     xlab = "ALT allele frequency, PB", ylab = "ALT allele frequency, SJ",
+     pch = 19, col = ifelse(filtered$freq_diff > 0.5, "red", "grey40"))
+abline(0, 1, lty = 2)   # SNPs on this line have the same frequency at both sites
+
+write.csv(filtered, "output/week06/snp-summary-filtered.csv", row.names = FALSE)
+sum(filtered$freq_diff > 0.5)
+```
+
+Most SNPs sit near the diagonal. About 19 differ between sites by more than 0.5 in allele frequency.
+
+### What to write
+
+- What the `INFO` and `FORMAT` fields in this VCF contain. This file has no `QUAL` score (`.`). What does that mean for filtering?
+- Your before and after counts, and why the MAF filter removed nothing here.
+- Change one threshold (for example `n_called >= 20`, or `maf >= 0.2`) and report how the counts and the number of strongly different SNPs change.
+- A caveats paragraph. With 10 plants per site, how much would you trust a single SNP's frequency difference? What would you need before calling a SNP a sign of local adaptation?
+
+### Optional: go further
+
+Not required. Plot `mean_depth` against `n_called`, or make a histogram of per-genotype depth with `hist(dp)`. Would a depth filter (for example, dropping genotypes with `DP < 10`) change anything in this dataset?
+
 ## In your project
-
-**If your project has variant data:** read the VCF header and identify the key fields; count variants before and after one simple filter (depth, quality, missingness, or minor allele frequency); summarize by scaffold, sample, or annotation; produce one table or figure; and explain how the filter changes the biological picture.
-
-**If your project does not:** genetic variation among your samples can still affect your analysis. Pick the version that fits:
-
-- RNA-seq: check whether sample clustering (PCA) tracks individual or population rather than treatment. Report what you see.
-- Methylation: C to T variants are indistinguishable from unmethylated cytosines in bisulfite data. Describe how you would detect and handle them, and check whether your pipeline does.
-- eDNA / metabarcoding: intraspecific variation inflates ASV counts. Compare the number of ASVs to the number of assigned taxa for one sample.
-- Annotation / assembly: heterozygosity fragments assemblies. Report an estimate or a diagnostic for your data.
-
-Save whatever you compute to `output/week06/`.
-
-## If your project has no natural fit
-
-Use the provided small VCF (path in the pinned [Provided datasets issue](https://github.com/sr320/course-fish546-2026/issues/1)) and do the variant-data version above: header, one filter with before and after counts, a summary by scaffold or sample, one figure, and a caveats paragraph.
-
-## In your project, part two
 
 Update your Project Proposal issue with a four-week plan to the compendium. Name the strongest output you already have and the riskiest step remaining.
 
 ## What goes in your notebook entry
 
-- Commands or code.
-- A summary table.
-- One figure or focused table.
-- A caveats paragraph on how filtering or variation affects interpretation.
+- The code from the worked example.
+- `output/week06/snp-summary-filtered.csv`.
+- The site-comparison plot.
+- Your answers to "What to write", including the caveats paragraph.
 
 ## Assessment
 
