@@ -12,18 +12,13 @@ format:
 
 ::: {.schedule-hero}
 ::: {.schedule-hero-copy}
-The course moves from sequence identification to raw reads, analysis workflows, interpretation, and final synthesis. Weeks 1–4 are shared exercises; Weeks 5–8 apply each method to your own project. No class Thursday Nov 26 (Thanksgiving).
+The course moves from sequence identification to raw reads, analysis workflows, interpretation, and final synthesis. Weeks 1–4 are shared exercises; Weeks 5–8 apply each method to your own project. As of Week 05 the class meets on Thursdays only; there are no Tuesday sessions. No class Thursday Nov 26 (Thanksgiving).
 :::
 
 ::: {.schedule-rhythm aria-label="Weekly rhythm"}
 ::: {.rhythm-item}
-<span class="rhythm-kicker">Tuesday 3:00–4:20 PM</span>
-<span class="rhythm-title">Topic session</span>
-:::
-
-::: {.rhythm-item}
 <span class="rhythm-kicker">Thursday 9:30–11:20 AM</span>
-<span class="rhythm-title">Working session</span>
+<span class="rhythm-title">Class session</span>
 :::
 
 ::: {.rhythm-item}
@@ -36,7 +31,7 @@ The course moves from sequence identification to raw reads, analysis workflows, 
 ::: {.callout-tip appearance="simple"}
 ## How to use this page
 
-Find the current week (outlined), read the Topic before Tuesday, do the Analysis, and push your notebook entry by Friday 5:00 PM. The Project line is what should move in your own project that week. Everything about the loop itself is on [How We Work](how-we-work.qmd).
+Find the current week (outlined), read the Topic before Thursday, do the Analysis, and push your notebook entry by Friday 5:00 PM. The Project line is what should move in your own project that week. Everything about the loop itself is on [How We Work](how-we-work.qmd).
 :::
 
 ::: {.schedule-grid}
@@ -138,7 +133,7 @@ Map your workflow onto the four stages: input, table, model, interpretation
 
 ::: {.schedule-card .schedule-card-milestone data-start="2026-11-02" data-end="2026-11-08"}
 <span class="week-label">Week 05</span>
-<span class="week-dates">Tue Nov 3 · Thu Nov 5 · due Fri Nov 6</span>
+<span class="week-dates">Thu Nov 5 · due Fri Nov 6</span>
 
 ### Genome annotation and genomic ranges
 
@@ -150,13 +145,13 @@ Map your workflow onto the four stages: input, table, model, interpretation
 [Annotation and ranges, on your project](assignments/05-annotation-ranges.qmd)
 
 <span>Project</span>
-**Mid-quarter update** in class Tuesday
+**Mid-quarter update** in class Thursday
 :::
 :::
 
 ::: {.schedule-card data-start="2026-11-09" data-end="2026-11-15"}
 <span class="week-label">Week 06</span>
-<span class="week-dates">Tue Nov 10 · Thu Nov 12 · due Fri Nov 13</span>
+<span class="week-dates">Thu Nov 12 · due Fri Nov 13</span>
 
 ### Variants and population signals
 
@@ -174,7 +169,7 @@ Four-week plan on your proposal issue; strongest output and riskiest step named
 
 ::: {.schedule-card data-start="2026-11-16" data-end="2026-11-22"}
 <span class="week-label">Week 07</span>
-<span class="week-dates">Tue Nov 17 · Thu Nov 19 · due Fri Nov 20</span>
+<span class="week-dates">Thu Nov 19 · due Fri Nov 20</span>
 
 ### Epigenetics and DNA methylation
 
@@ -192,7 +187,7 @@ Final report skeleton with every section present
 
 ::: {.schedule-card data-start="2026-11-23" data-end="2026-11-29"}
 <span class="week-label">Week 08</span>
-<span class="week-dates">Tue Nov 24 · no Thursday (Thanksgiving) · due Mon Nov 30</span>
+<span class="week-dates">no class (Thanksgiving) · due Mon Nov 30</span>
 
 ### eDNA and metabarcoding
 
@@ -210,7 +205,7 @@ Mock final figure
 
 ::: {.schedule-card data-start="2026-11-30" data-end="2026-12-06"}
 <span class="week-label">Week 09</span>
-<span class="week-dates">Tue Dec 1 · Thu Dec 3 · due Fri Dec 4</span>
+<span class="week-dates">Thu Dec 3 · due Fri Dec 4</span>
 
 ### Project synthesis and biological interpretation
 
@@ -228,7 +223,7 @@ Main claim, final figure, limitations; clean repository
 
 ::: {.schedule-card .schedule-card-milestone data-start="2026-12-07" data-end="2026-12-13"}
 <span class="week-label">Week 10</span>
-<span class="week-dates">Tue Dec 8 · Thu Dec 10 · compendium due Thu Dec 10</span>
+<span class="week-dates">Thu Dec 10 · compendium due Thu Dec 10</span>
 
 ### Final compendium and presentations
 
@@ -240,7 +235,7 @@ Main claim, final figure, limitations; clean repository
 [Final research compendium](assignments/10-compendium.qmd)
 
 <span>Project</span>
-**Compendium** tagged `v1.0`; final presentations Tuesday and Thursday
+**Compendium** tagged `v1.0`; final presentations in class Thursday
 :::
 :::
 :::

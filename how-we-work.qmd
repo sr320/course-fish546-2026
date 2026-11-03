@@ -16,7 +16,7 @@ format:
 
 Everything in this course runs on one repeating cycle. There is one deliverable per week, it lives in one place, and it is always structured the same way.
 
-1. **Read** the week's lecture page before Tuesday.
+1. **Read** the week's lecture page before Thursday's class.
 2. **Do** the week's analysis in your repository. In Weeks 1 to 4 this is a shared exercise; in Weeks 5 to 8 it is the week's method applied to your own project (a canned fallback is always provided).
 3. **Write** `notebooks/weekNN.qmd` from the template (five sections, below) and render it.
 4. **Push** by **Friday 5:00pm**.

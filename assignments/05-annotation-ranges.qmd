@@ -8,7 +8,7 @@ format:
 ---
 
 ::: {.callout-note appearance="simple"}
-**Due Friday 5:00pm** as section 1 of `notebooks/week05.qmd`. Topic: [Genome Annotation and Genomic Ranges](../lectures/05-annotation-ranges.qmd). Checklist and rubric: [How We Work](../how-we-work.qmd#the-weekly-notebook-entry). **Mid-quarter update in class this week.**
+**Due Friday 5:00pm** as section 1 of `notebooks/week05.qmd`. Topic: [Genome Annotation and Genomic Ranges](../lectures/05-annotation-ranges.qmd). Checklist and rubric: [How We Work](../how-we-work.qmd#the-weekly-notebook-entry). **Mid-quarter update in class Thursday Nov 5.**
 :::
 
 ## Goal
@@ -150,7 +150,7 @@ Not required. Try the Leray COI primers (forward `GGWACWGGWTGAACWGTWTAYCCYCC`, r
 
 ## Mid-quarter update
 
-Prepare a five-minute update for Tuesday's class: question, data, one concrete current result or diagnostic, and the riskiest step remaining. Slides or a rendered notebook are both fine; commit whatever you show. Link it from your entry.
+Prepare a five-minute update for Thursday's class (Nov 5; we no longer meet on Tuesdays): question, data, one concrete current result or diagnostic, and the riskiest step remaining. Slides or a rendered notebook are both fine; commit whatever you show. Link it from your entry.
 
 ## What goes in your notebook entry
 
