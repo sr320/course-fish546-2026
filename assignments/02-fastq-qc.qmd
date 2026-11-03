@@ -17,7 +17,22 @@ Inspect raw sequencing reads and decide whether the data are ready for downstrea
 
 ## Data
 
-A small paired-end FASTQ set is provided on Raven and Klone; the paths are listed in the pinned [Provided datasets issue](https://github.com/sr320/course-fish546-2026/issues/1). If you already have raw reads for your project, use one or two of your own files instead, or in addition.
+Pick one of three sources:
+
+1. **Provided set.** A small paired-end FASTQ set is on Raven and Klone; the paths are listed in the pinned [Provided datasets issue](https://github.com/sr320/course-fish546-2026/issues/1).
+2. **Roberts Lab Data Portal.** Browse the [data portal](https://robertslab.github.io/resources/data-portal/) and choose a library that interests you. Filter to an Illumina platform and pick one with both **R1↓** and **R2↓** links so you have a paired-end set. Note the species, library name, molecule, and experiment.
+3. **Your own reads.** If you already have raw reads for your project, use one or two of your own files instead, or in addition.
+
+If you use the portal, copy the R1 and R2 links (right-click → Copy Link) and download on Raven, not your laptop:
+
+```bash
+mkdir -p data/week02
+cd data/week02
+wget <R1 link>
+wget <R2 link>
+```
+
+Portal files can be several GB. If a file is large, you may run FastQC on a subset (for example the first 1,000,000 reads: `zcat file_R1_001.fastq.gz | head -n 4000000 | gzip > sub_R1.fastq.gz`) and say so in your notebook. Some libraries also have a **QC** link to an existing FastQC report; compare it with yours.
 
 Raw reads stay out of the repository. Record the source path, date, and `md5sum` of each file in `data/README.md` or `data/week02/checksums.txt`.
 
