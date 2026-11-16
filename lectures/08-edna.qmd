@@ -16,7 +16,7 @@ format:
 Environmental DNA (eDNA) is genetic material organisms shed into their surroundings — water, sediment, soil, air. Sampling and sequencing it lets us detect and characterize whole communities without capturing or even seeing the organisms. In aquatic systems it has become a workhorse for biodiversity surveys, invasive-species early warning, and monitoring rare or cryptic taxa.
 
 ::: {.callout-note}
-This lecture connects directly to the [Hyak setup tutorial](../tutorials/03-hyak.html). The compute-heavy steps below run in an RStudio session on Klone, launched through Hyak OnDemand with the lab container.
+Everything this week runs on Raven, in the same RStudio Server session you set up in [Tutorial 2](../tutorials/02-raven.html).
 :::
 
 ## Sampling and contamination control
@@ -42,18 +42,18 @@ Marker choice determines what you can detect and which reference database you as
 
 The core pipeline, and where each step runs:
 
-1. **Demultiplex & QC** — separate samples, trim primers/adapters, filter by quality. *(Klone)*
+1. **Demultiplex & QC** — separate samples, trim primers/adapters, filter by quality. *(Raven)*
 2. **Denoise or cluster:**
    - **DADA2** infers exact **amplicon sequence variants (ASVs)** — resolves single-nucleotide differences, database-independent, reproducible across studies.
-   - **OTU clustering** groups reads at a similarity threshold (e.g. 97%) — coarser, still common. *(Klone)*
-3. **Taxonomic assignment** — match ASVs/OTUs to a reference database (BLAST, or classifiers like the RDP/naïve-Bayes approach) to get names. *(Klone)*
-4. **Build the table** — a sample × taxon abundance/occurrence matrix: the analysis-ready product. *(Raven / laptop)*
+   - **OTU clustering** groups reads at a similarity threshold (e.g. 97%) — coarser, still common. *(Raven)*
+3. **Taxonomic assignment** — match ASVs/OTUs to a reference database (BLAST, or classifiers like the RDP/naïve-Bayes approach) to get names. *(Raven)*
+4. **Build the table** — a sample × taxon abundance/occurrence matrix: the analysis-ready product. *(Raven)*
 
 ```r
-# Sketch of the heavy step, run in RStudio on Klone (OnDemand session, lab container)
-# See the eDNA metabarcoding assignment for session size and details
+# Sketch of the heavy step, run in RStudio on Raven
+# See the eDNA metabarcoding assignment for thread limits and details
 library(dada2)
-errF <- learnErrors(filtFs, multithread = 8)   # match the CPUs you requested
+errF <- learnErrors(filtFs, multithread = 8)   # Raven is shared: cap threads at 8
 saveRDS(errF, "output/week08/errF.rds")        # save slow steps as you go
 ```
 
