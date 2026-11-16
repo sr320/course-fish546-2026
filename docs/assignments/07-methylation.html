@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 07 Analysis — Methylation and Genome-Browser Inspection – 2026 :: Bioinformatics — FISH 546</title>
+<title>Week 07 — Methylation and the Genome Browser: Show and Tell – 2026 :: Bioinformatics — FISH 546</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -45,8 +45,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5fd3a266be6f2a2f14b5ee22df90acdf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-2909f7c475bb33a9fd7f395b60405fde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-dba42b0e8a73762b9a247e444e192db4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-3bea599cb692cbf2e1308bd1668d69fb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -291,7 +291,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/07-methylation.html">Week 07</a></li><li class="breadcrumb-item"><a href="../assignments/07-methylation.html">Week 07 Analysis — Methylation and Genome-Browser Inspection</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/07-methylation.html">Week 07</a></li><li class="breadcrumb-item"><a href="../assignments/07-methylation.html">Week 07 — Methylation and the Genome Browser: Show and Tell</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -482,7 +482,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../assignments/07-methylation.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Week 07 Analysis — Methylation and Genome-Browser Inspection</span></a>
+ <span class="menu-text">Week 07 — Methylation and the Genome Browser: Show and Tell</span></a>
   </div>
 </li>
       </ul>
@@ -566,12 +566,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#goal" id="toc-goal" class="nav-link active" data-scroll-target="#goal">Goal</a></li>
-  <li><a href="#in-your-project" id="toc-in-your-project" class="nav-link" data-scroll-target="#in-your-project">In your project</a></li>
-  <li><a href="#if-your-project-has-no-natural-fit" id="toc-if-your-project-has-no-natural-fit" class="nav-link" data-scroll-target="#if-your-project-has-no-natural-fit">If your project has no natural fit</a></li>
-  <li><a href="#in-your-project-part-two" id="toc-in-your-project-part-two" class="nav-link" data-scroll-target="#in-your-project-part-two">In your project, part two</a></li>
-  <li><a href="#what-goes-in-your-notebook-entry" id="toc-what-goes-in-your-notebook-entry" class="nav-link" data-scroll-target="#what-goes-in-your-notebook-entry">What goes in your notebook entry</a></li>
-  <li><a href="#assessment" id="toc-assessment" class="nav-link" data-scroll-target="#assessment">Assessment</a></li>
+  <li><a href="#what-this-page-is" id="toc-what-this-page-is" class="nav-link active" data-scroll-target="#what-this-page-is">What this page is</a></li>
+  <li><a href="#the-project-in-one-paragraph" id="toc-the-project-in-one-paragraph" class="nav-link" data-scroll-target="#the-project-in-one-paragraph">The project in one paragraph</a></li>
+  <li><a href="#how-methylation-data-become-a-browser-track" id="toc-how-methylation-data-become-a-browser-track" class="nav-link" data-scroll-target="#how-methylation-data-become-a-browser-track">How methylation data become a browser track</a></li>
+  <li><a href="#open-the-browsers" id="toc-open-the-browsers" class="nav-link" data-scroll-target="#open-the-browsers">Open the browsers</a></li>
+  <li><a href="#what-we-will-look-at-in-class" id="toc-what-we-will-look-at-in-class" class="nav-link" data-scroll-target="#what-we-will-look-at-in-class">What we will look at in class</a></li>
+  <li><a href="#lessons-the-example-teaches" id="toc-lessons-the-example-teaches" class="nav-link" data-scroll-target="#lessons-the-example-teaches">Lessons the example teaches</a></li>
+  <li><a href="#want-to-try-it-on-your-own-project-optional" id="toc-want-to-try-it-on-your-own-project-optional" class="nav-link" data-scroll-target="#want-to-try-it-on-your-own-project-optional">Want to try it on your own project? (optional)</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -579,10 +581,10 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/07-methylation.html">Week 07</a></li><li class="breadcrumb-item"><a href="../assignments/07-methylation.html">Week 07 Analysis — Methylation and Genome-Browser Inspection</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/07-methylation.html">Week 07</a></li><li class="breadcrumb-item"><a href="../assignments/07-methylation.html">Week 07 — Methylation and the Genome Browser: Show and Tell</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week 07 Analysis — Methylation and Genome-Browser Inspection</h1>
-<p class="subtitle lead">Track week · apply to your project</p>
+<h1 class="title">Week 07 — Methylation and the Genome Browser: Show and Tell</h1>
+<p class="subtitle lead">In-class demo · no analysis due</p>
 </div>
 
 
@@ -605,40 +607,82 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Due Friday 5:00pm</strong> as section 1 of <code>notebooks/week07.qmd</code>. Topic: <a href="../lectures/07-methylation.html">Epigenetics and DNA Methylation</a>. Checklist and rubric: <a href="../how-we-work.html#the-weekly-notebook-entry">How We Work</a>.</p>
+<p><strong>No analysis assignment this week.</strong> The only thing due Friday 5:00pm is your answers to the <a href="../lectures/07-methylation.html#reflection-questions">reflection questions</a> in <code>notebooks/week07.qmd</code>. Topic: <a href="../lectures/07-methylation.html">Epigenetics and DNA Methylation</a>.</p>
 </div>
 </div>
 </div>
-<section id="goal" class="level2">
-<h2 class="anchored" data-anchor-id="goal">Goal</h2>
-<p>Interpret a genomic result in context using coordinates, annotation, and visual inspection in a genome browser.</p>
+<section id="what-this-page-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-page-is">What this page is</h2>
+<p>A guided look at a real methylation project in a genome browser. We will walk through it together in class. You can also click through it on your own; nothing here needs to be installed or turned in.</p>
+<p>The example is the Roberts Lab <a href="https://robertslab.github.io/project-lake-trout/">Lake Trout EpiGenomics Project</a>.</p>
 </section>
-<section id="in-your-project" class="level2">
-<h2 class="anchored" data-anchor-id="in-your-project">In your project</h2>
-<p><strong>If your project is methylation:</strong> take your loci or regions, confirm the build and coordinate convention, annotate nearby features, inspect at least one region in IGV, and write what the result does and does not show.</p>
-<p><strong>Every other project:</strong> genome-browser inspection is a universal check. Load your genome and annotation in IGV (desktop, or the web app), then add one of your own outputs: a BAM, a BED of candidate regions, a coverage track, or a VCF. Navigate to one region that matters for your project. Capture the view with a caption that says what the reader is looking at and what you concluded. Save the image and a small table of the region’s features under <code>output/week07/</code>.</p>
-<p>Projects without a reference genome (some eDNA and de novo assembly projects): load a representative contig or the reference sequences for your marker and inspect read support for one ASV or contig.</p>
+<section id="the-project-in-one-paragraph" class="level2">
+<h2 class="anchored" data-anchor-id="the-project-in-one-paragraph">The project in one paragraph</h2>
+<p>Lake trout (<em>Salvelinus namaycush</em>) in the Great Lakes come in two ecotypes that share the same water but live differently. <strong>Lean</strong> fish live in shallow water and carry little fat. <strong>Siscowet</strong> fish live deep and store a lot of lipid. The project sequenced four fish of each ecotype with PacBio HiFi long reads. Those reads carry the DNA sequence and, at the same time, the methylation state of each CpG (5mC). The question is which parts of the genome differ between the ecotypes, in sequence and in methylation.</p>
 </section>
-<section id="if-your-project-has-no-natural-fit" class="level2">
-<h2 class="anchored" data-anchor-id="if-your-project-has-no-natural-fit">If your project has no natural fit</h2>
-<p>Use the provided methylation table (path in the pinned <a href="https://github.com/sr320/course-fish546-2026/issues/1">Provided datasets issue</a>): identify build and coordinates, annotate nearby genes, inspect one region in IGV, produce one table and one inspection image, and write the caveats paragraph.</p>
+<section id="how-methylation-data-become-a-browser-track" class="level2">
+<h2 class="anchored" data-anchor-id="how-methylation-data-become-a-browser-track">How methylation data become a browser track</h2>
+<ol type="1">
+<li><strong>Reads to genome.</strong> Long reads are aligned to a reference genome (here NCBI SaNama_1.0, plus lean and siscowet assemblies built for the project).</li>
+<li><strong>Per-CpG methylation.</strong> For each CpG, the fraction of reads that are methylated is computed for each fish. This is a table of chromosome, position, and percent methylation.</li>
+<li><strong>Differential methylation.</strong> CpGs (DMCs) or short regions (DMRs) that differ between ecotypes are called with a statistical test.</li>
+<li><strong>Into the browser.</strong> Each of those tables becomes a track: per-sample CpG methylation, DMR intervals, gene annotation, and other evidence such as presence/absence variation (PAV).</li>
+</ol>
+<p>A track is just a file with coordinates. If the coordinates and genome version match, the browser can stack it under the others.</p>
 </section>
-<section id="in-your-project-part-two" class="level2">
-<h2 class="anchored" data-anchor-id="in-your-project-part-two">In your project, part two</h2>
-<p>Launch the structure of your final report: create <code>docs/report.qmd</code> (or your chosen location) with every planned section present and a note in each about what evidence will go there. Placeholders are fine.</p>
+<section id="open-the-browsers" class="level2">
+<h2 class="anchored" data-anchor-id="open-the-browsers">Open the browsers</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Browser</th>
+<th>What it is good for</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>IGV.js</td>
+<td>Fast look at genes, PAV, per-sample CpG methylation, and DMRs on the reference</td>
+<td><a href="https://robertslab.github.io/project-lake-trout/genome-browser/index.html">Launch IGV</a></td>
+</tr>
+<tr class="even">
+<td>JBrowse 2</td>
+<td>The same tracks on all three assemblies, plus a lean ↔︎ siscowet synteny view</td>
+<td><a href="https://robertslab.github.io/project-lake-trout/jbrowse/index.html">Launch JBrowse 2</a></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="what-goes-in-your-notebook-entry" class="level2">
-<h2 class="anchored" data-anchor-id="what-goes-in-your-notebook-entry">What goes in your notebook entry</h2>
+<section id="what-we-will-look-at-in-class" class="level2">
+<h2 class="anchored" data-anchor-id="what-we-will-look-at-in-class">What we will look at in class</h2>
+<p><strong>1. Orient yourself.</strong> Before looking at any data, name the genome build and the chromosome or scaffold you are on. A coordinate means nothing without them.</p>
+<p><strong>2. Read the tracks top to bottom.</strong> Genes and exons, then the eight per-fish CpG methylation tracks (four lean, four siscowet), then the DMR and PAV tracks. Ask what each row is and where it came from.</p>
+<p><strong>3. Find a DMR and zoom in.</strong> Do all four fish of one ecotype look alike? Is the difference a few CpGs or a broad region? Is it in a gene, a promoter, or between genes?</p>
+<p><strong>4. Check the context.</strong> Is there a PAV or structural difference at the same spot? If part of the sequence is missing in one ecotype, a “methylation difference” there may really be a sequence difference.</p>
+<p><strong>5. Compare to the summary page.</strong> The project page lists candidate genes such as <em>gpia</em> and <em>ttll9</em>, and it explains which earlier findings did <em>not</em> hold up once each ecotype’s own genome was assembled. Seeing a region in the browser is how you judge whether a table row is believable.</p>
+</section>
+<section id="lessons-the-example-teaches" class="level2">
+<h2 class="anchored" data-anchor-id="lessons-the-example-teaches">Lessons the example teaches</h2>
 <ul>
-<li>Any script used to process the data.</li>
-<li>A small annotated table.</li>
-<li>One figure or browser inspection image with a caption.</li>
-<li>A caveats paragraph. Do not overstate what a single locus or region proves.</li>
+<li><strong>Coordinates need a genome version.</strong> The same DMR has different coordinates on the reference and on each ecotype assembly.</li>
+<li><strong>The reference can bias results.</strong> The reference genome came from a lean fish, so siscowet reads that align poorly can look like deletions or methylation differences that are not real.</li>
+<li><strong>Repeats and multi-copy regions mislead.</strong> About half of the original reference DMRs fell in multi-copy sequence.</li>
+<li><strong>Genetics and methylation are tangled.</strong> Many DMRs sit near sequence differences, and methylation often follows the haplotype.</li>
+<li><strong>Small n, no validation.</strong> Four fish per ecotype is enough to generate hypotheses, not to prove function. The project page says so directly, and that kind of statement belongs in your own reports too.</li>
 </ul>
 </section>
-<section id="assessment" class="level2">
-<h2 class="anchored" data-anchor-id="assessment">Assessment</h2>
-<p>Scored with the <a href="../how-we-work.html#weekly-entry-rubric">weekly entry rubric</a>. The Analysis criterion looks for coordinate hygiene, a legible inspection image, and appropriate caution.</p>
+<section id="want-to-try-it-on-your-own-project-optional" class="level2">
+<h2 class="anchored" data-anchor-id="want-to-try-it-on-your-own-project-optional">Want to try it on your own project? (optional)</h2>
+<p>If you have a BAM, BED, VCF, or coverage file and a matching genome, you can load them into <a href="https://igv.org/doc/desktop/">IGV desktop</a> or the <a href="https://igv.org/app/">IGV web app</a> and look at one region that matters to you. This is a good habit before trusting any result, but it is not required this week.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li><a href="https://robertslab.github.io/project-lake-trout/">Lake Trout EpiGenomics Project</a> and its <a href="https://github.com/RobertsLab/project-lake-trout">GitHub repository</a></li>
+<li><a href="https://igv.org/doc/desktop/">IGV documentation</a></li>
+<li><a href="https://jbrowse.org/jb2/docs/">JBrowse 2 documentation</a></li>
+</ul>
 
 
 </section>

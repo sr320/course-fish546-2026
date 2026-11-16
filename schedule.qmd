@@ -178,10 +178,10 @@ Four-week plan on your proposal issue; strongest output and riskiest step named
 [Epigenetics and DNA methylation](lectures/07-methylation.qmd)
 
 <span>Analysis</span>
-[Methylation and genome-browser inspection, on your project](assignments/07-methylation.qmd)
+[Show and tell: methylation in a genome browser](assignments/07-methylation.qmd)
 
-<span>Project</span>
-Final report skeleton with every section present
+<span>Due</span>
+Reflection questions only
 :::
 :::
 

@@ -1,43 +1,67 @@
 ---
-title: "Week 07 Analysis — Methylation and Genome-Browser Inspection"
-subtitle: "Track week · apply to your project"
+title: "Week 07 — Methylation and the Genome Browser: Show and Tell"
+subtitle: "In-class demo · no analysis due"
 format:
   html:
     toc: true
-    code-copy: true
 ---
 
 ::: {.callout-note appearance="simple"}
-**Due Friday 5:00pm** as section 1 of `notebooks/week07.qmd`. Topic: [Epigenetics and DNA Methylation](../lectures/07-methylation.qmd). Checklist and rubric: [How We Work](../how-we-work.qmd#the-weekly-notebook-entry).
+**No analysis assignment this week.** The only thing due Friday 5:00pm is your answers to the [reflection questions](../lectures/07-methylation.qmd#reflection-questions) in `notebooks/week07.qmd`. Topic: [Epigenetics and DNA Methylation](../lectures/07-methylation.qmd).
 :::
 
-## Goal
+## What this page is
 
-Interpret a genomic result in context using coordinates, annotation, and visual inspection in a genome browser.
+A guided look at a real methylation project in a genome browser. We will walk through it together in class. You can also click through it on your own; nothing here needs to be installed or turned in.
 
-## In your project
+The example is the Roberts Lab [Lake Trout EpiGenomics Project](https://robertslab.github.io/project-lake-trout/).
 
-**If your project is methylation:** take your loci or regions, confirm the build and coordinate convention, annotate nearby features, inspect at least one region in IGV, and write what the result does and does not show.
+## The project in one paragraph
 
-**Every other project:** genome-browser inspection is a universal check. Load your genome and annotation in IGV (desktop, or the web app), then add one of your own outputs: a BAM, a BED of candidate regions, a coverage track, or a VCF. Navigate to one region that matters for your project. Capture the view with a caption that says what the reader is looking at and what you concluded. Save the image and a small table of the region's features under `output/week07/`.
+Lake trout (*Salvelinus namaycush*) in the Great Lakes come in two ecotypes that share the same water but live differently. **Lean** fish live in shallow water and carry little fat. **Siscowet** fish live deep and store a lot of lipid. The project sequenced four fish of each ecotype with PacBio HiFi long reads. Those reads carry the DNA sequence and, at the same time, the methylation state of each CpG (5mC). The question is which parts of the genome differ between the ecotypes, in sequence and in methylation.
 
-Projects without a reference genome (some eDNA and de novo assembly projects): load a representative contig or the reference sequences for your marker and inspect read support for one ASV or contig.
+## How methylation data become a browser track
 
-## If your project has no natural fit
+1. **Reads to genome.** Long reads are aligned to a reference genome (here NCBI SaNama_1.0, plus lean and siscowet assemblies built for the project).
+2. **Per-CpG methylation.** For each CpG, the fraction of reads that are methylated is computed for each fish. This is a table of chromosome, position, and percent methylation.
+3. **Differential methylation.** CpGs (DMCs) or short regions (DMRs) that differ between ecotypes are called with a statistical test.
+4. **Into the browser.** Each of those tables becomes a track: per-sample CpG methylation, DMR intervals, gene annotation, and other evidence such as presence/absence variation (PAV).
 
-Use the provided methylation table (path in the pinned [Provided datasets issue](https://github.com/sr320/course-fish546-2026/issues/1)): identify build and coordinates, annotate nearby genes, inspect one region in IGV, produce one table and one inspection image, and write the caveats paragraph.
+A track is just a file with coordinates. If the coordinates and genome version match, the browser can stack it under the others.
 
-## In your project, part two
+## Open the browsers
 
-Launch the structure of your final report: create `docs/report.qmd` (or your chosen location) with every planned section present and a note in each about what evidence will go there. Placeholders are fine.
+| Browser | What it is good for | Link |
+|---|---|---|
+| IGV.js | Fast look at genes, PAV, per-sample CpG methylation, and DMRs on the reference | [Launch IGV](https://robertslab.github.io/project-lake-trout/genome-browser/index.html) |
+| JBrowse 2 | The same tracks on all three assemblies, plus a lean ↔ siscowet synteny view | [Launch JBrowse 2](https://robertslab.github.io/project-lake-trout/jbrowse/index.html) |
 
-## What goes in your notebook entry
+## What we will look at in class
 
-- Any script used to process the data.
-- A small annotated table.
-- One figure or browser inspection image with a caption.
-- A caveats paragraph. Do not overstate what a single locus or region proves.
+**1. Orient yourself.** Before looking at any data, name the genome build and the chromosome or scaffold you are on. A coordinate means nothing without them.
 
-## Assessment
+**2. Read the tracks top to bottom.** Genes and exons, then the eight per-fish CpG methylation tracks (four lean, four siscowet), then the DMR and PAV tracks. Ask what each row is and where it came from.
 
-Scored with the [weekly entry rubric](../how-we-work.qmd#weekly-entry-rubric). The Analysis criterion looks for coordinate hygiene, a legible inspection image, and appropriate caution.
+**3. Find a DMR and zoom in.** Do all four fish of one ecotype look alike? Is the difference a few CpGs or a broad region? Is it in a gene, a promoter, or between genes?
+
+**4. Check the context.** Is there a PAV or structural difference at the same spot? If part of the sequence is missing in one ecotype, a "methylation difference" there may really be a sequence difference.
+
+**5. Compare to the summary page.** The project page lists candidate genes such as *gpia* and *ttll9*, and it explains which earlier findings did *not* hold up once each ecotype's own genome was assembled. Seeing a region in the browser is how you judge whether a table row is believable.
+
+## Lessons the example teaches
+
+- **Coordinates need a genome version.** The same DMR has different coordinates on the reference and on each ecotype assembly.
+- **The reference can bias results.** The reference genome came from a lean fish, so siscowet reads that align poorly can look like deletions or methylation differences that are not real.
+- **Repeats and multi-copy regions mislead.** About half of the original reference DMRs fell in multi-copy sequence.
+- **Genetics and methylation are tangled.** Many DMRs sit near sequence differences, and methylation often follows the haplotype.
+- **Small n, no validation.** Four fish per ecotype is enough to generate hypotheses, not to prove function. The project page says so directly, and that kind of statement belongs in your own reports too.
+
+## Want to try it on your own project? (optional)
+
+If you have a BAM, BED, VCF, or coverage file and a matching genome, you can load them into [IGV desktop](https://igv.org/doc/desktop/) or the [IGV web app](https://igv.org/app/) and look at one region that matters to you. This is a good habit before trusting any result, but it is not required this week.
+
+## References
+
+- [Lake Trout EpiGenomics Project](https://robertslab.github.io/project-lake-trout/) and its [GitHub repository](https://github.com/RobertsLab/project-lake-trout)
+- [IGV documentation](https://igv.org/doc/desktop/)
+- [JBrowse 2 documentation](https://jbrowse.org/jb2/docs/)
