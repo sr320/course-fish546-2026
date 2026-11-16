@@ -8,7 +8,7 @@ format:
 ---
 
 ::: {.callout-note appearance="simple"}
-**Week 07.** Analysis: [Methylation and genome-browser inspection](../assignments/07-methylation.qmd). Notebook entry due Friday 5:00pm. How it all fits: [How We Work](../how-we-work.qmd).
+**Week 07.** Show and tell: [Methylation and the genome browser](../assignments/07-methylation.qmd). No analysis due; answer the [reflection questions](#reflection-questions) in `notebooks/week07.qmd` by Friday 5:00pm.
 :::
 
 ## Purpose
@@ -50,11 +50,11 @@ A coordinate alone is not an interpretation. You usually need annotation:
 
 ## This week in your project
 
-Launch the structure of your final project report. It can be mostly placeholders, but every planned section should exist with notes about what evidence will go there.
+No project deliverable this week. If you have time, start the structure of your final project report: every planned section with a note about what evidence will go there. Placeholders are fine.
 
 ## Reflection questions
 
-Answer these in section 2 of `notebooks/week07.qmd`.
+Answer these in `notebooks/week07.qmd`. This is the only thing due this week.
 
 1. What does a genome-browser inspection add that a table alone may not show?
 2. What is one way methylation results could be overinterpreted?
