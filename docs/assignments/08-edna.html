@@ -482,7 +482,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../assignments/07-methylation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 07 Analysis — Methylation and Genome-Browser Inspection</span></a>
+ <span class="menu-text">Week 07 — Methylation and the Genome Browser: Show and Tell</span></a>
   </div>
 </li>
       </ul>
@@ -570,7 +570,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#in-your-project" id="toc-in-your-project" class="nav-link" data-scroll-target="#in-your-project">In your project</a></li>
   <li><a href="#if-your-project-has-no-natural-fit-or-you-are-on-the-edna-track" id="toc-if-your-project-has-no-natural-fit-or-you-are-on-the-edna-track" class="nav-link" data-scroll-target="#if-your-project-has-no-natural-fit-or-you-are-on-the-edna-track">If your project has no natural fit, or you are on the eDNA track</a>
   <ul class="collapse">
-  <li><a href="#running-it-on-klone" id="toc-running-it-on-klone" class="nav-link" data-scroll-target="#running-it-on-klone">Running it on Klone</a></li>
+  <li><a href="#running-it-on-raven" id="toc-running-it-on-raven" class="nav-link" data-scroll-target="#running-it-on-raven">Running it on Raven</a></li>
   </ul></li>
   <li><a href="#in-your-project-part-two" id="toc-in-your-project-part-two" class="nav-link" data-scroll-target="#in-your-project-part-two">In your project, part two</a></li>
   <li><a href="#what-goes-in-your-notebook-entry" id="toc-what-goes-in-your-notebook-entry" class="nav-link" data-scroll-target="#what-goes-in-your-notebook-entry">What goes in your notebook entry</a></li>
@@ -618,7 +618,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="in-your-project" class="level2">
 <h2 class="anchored" data-anchor-id="in-your-project">In your project</h2>
-<p><strong>If your project is eDNA / metabarcoding:</strong> run the full pipeline below on your own data. The compute-heavy steps (primer trimming, denoising, taxonomy) run in an RStudio session on Klone through <a href="../tutorials/03-hyak.html">Hyak OnDemand</a>; exploration and figures can stay on Raven or your laptop.</p>
+<p><strong>If your project is eDNA / metabarcoding:</strong> run the full pipeline below on your own data. Everything, including primer trimming, denoising, and taxonomy, runs on Raven in RStudio Server (<a href="../tutorials/02-raven.html">Tutorial 2</a>).</p>
 <p><strong>Every other project:</strong> the eDNA discipline of negative controls and a false-positive floor applies to you too. Identify the equivalent in your own data and quantify it:</p>
 <ul>
 <li>RNA-seq or methylation: reads mapping to the wrong organism, rRNA, or spike-ins; sample-swap checks using sex or genotype markers.</li>
@@ -638,42 +638,14 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>One figure:</strong> a stacked-bar composition plot or richness by sample.</li>
 <li><strong>Controls:</strong> report what the negative or blank controls contained and what that implies about false positives.</li>
 </ol>
-<section id="running-it-on-klone" class="level3">
-<h3 class="anchored" data-anchor-id="running-it-on-klone">Running it on Klone</h3>
-<p>Launch RStudio through OnDemand exactly as in <a href="../tutorials/03-hyak.html#rstudio">Tutorial 3</a> (account <code>srlab</code>, partition <code>ckpt</code>, <strong>Custom</strong> container <code>/gscratch/srlab/containers/srlab-bioinformatics-container-2bd5d44.sif</code>), but ask for a bigger slice than the tutorial:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Setting</th>
-<th>Start with</th>
-<th>If it isn’t enough</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>CPUs</td>
-<td>8</td>
-<td>16</td>
-</tr>
-<tr class="even">
-<td>Memory</td>
-<td>32 GB</td>
-<td>64 GB</td>
-</tr>
-<tr class="odd">
-<td>Hours</td>
-<td>4</td>
-<td>8</td>
-</tr>
-</tbody>
-</table>
+<section id="running-it-on-raven" class="level3">
+<h3 class="anchored" data-anchor-id="running-it-on-raven">Running it on Raven</h3>
+<p>Open RStudio Server on Raven as in <a href="../tutorials/02-raven.html">Tutorial 2</a>, open your <code>fish546.Rproj</code> project, and <code>git pull</code> before you start.</p>
 <ul>
-<li><strong>Use the CPUs you asked for.</strong> Pass the count to each tool: <code>cutadapt -j 8</code>, and <code>multithread = 8</code> in DADA2’s <code>filterAndTrim()</code>, <code>learnErrors()</code>, <code>dada()</code>, and <code>removeBimeraDenovo()</code>.</li>
-<li><strong>Work in <code>~/fish546</code></strong> (your <code>/gscratch/srlab</code> folder), not your home directory.</li>
-<li><strong>Closing the browser tab does not stop your session.</strong> Reopen it from <strong>My Interactive Sessions</strong>. The session ends only when its hours run out or you delete it.</li>
-<li><strong>Save as you go.</strong> <code>ckpt</code> sessions can occasionally be stopped early. After each slow DADA2 step, save the result (for example <code>saveRDS(errF, "output/week08/errF.rds")</code>) so a restart picks up where you left off instead of starting over.</li>
-<li><strong>Out of memory or out of time?</strong> Delete the session, relaunch with the next size up, and reload your saved <code>.rds</code> files.</li>
-<li><strong>Delete the session when you’re done</strong> so the node goes back to the pool.</li>
+<li><strong>Raven is shared, so cap your threads at 8.</strong> Pass the count to each tool: <code>cutadapt -j 8</code>, and <code>multithread = 8</code> in DADA2’s <code>filterAndTrim()</code>, <code>learnErrors()</code>, <code>dada()</code>, and <code>removeBimeraDenovo()</code>. Check the load with <code>htop</code> in the Terminal tab before starting a long step.</li>
+<li><strong>Closing the browser tab does not stop R.</strong> RStudio Server keeps your session running; reopen the page to pick it back up.</li>
+<li><strong>Save as you go.</strong> After each slow DADA2 step, save the result (for example <code>saveRDS(errF, "output/week08/errF.rds")</code>) so a restart picks up where you left off instead of starting over.</li>
+<li><strong>Long shell steps</strong> (such as <code>cutadapt</code> over many samples) can run in the Terminal tab; keep a log by redirecting output to a file in <code>output/week08/</code>.</li>
 </ul>
 <p>Keep raw reads in <code>data/raw/</code> uncommitted, with checksums recorded.</p>
 </section>
@@ -685,7 +657,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="what-goes-in-your-notebook-entry" class="level2">
 <h2 class="anchored" data-anchor-id="what-goes-in-your-notebook-entry">What goes in your notebook entry</h2>
 <ul>
-<li>Code and commentary for each step. If you used Klone, a short platform note: the OnDemand session size (CPUs, memory, hours), the container file name, and the job ID (<code>echo $SLURM_JOB_ID</code>).</li>
+<li>Code and commentary for each step. A short platform note: that it ran on Raven, the number of threads used, and the versions of the main tools (<code>cutadapt --version</code>, <code>packageVersion("dada2")</code>).</li>
 <li>The read-survival table (eDNA pipeline) or the false-positive quantification (other projects).</li>
 <li>The table and figure.</li>
 <li>A caveats paragraph: given your controls and marker or data type, how confident are you in the detections?</li>
