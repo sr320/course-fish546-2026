@@ -517,7 +517,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../assignments/07-methylation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 07 Analysis — Methylation and Genome-Browser Inspection</span></a>
+ <span class="menu-text">Week 07 — Methylation and the Genome Browser: Show and Tell</span></a>
   </div>
 </li>
       </ul>
@@ -660,7 +660,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This lecture connects directly to the <a href="../tutorials/03-hyak.html">Hyak setup tutorial</a>. The compute-heavy steps below run in an RStudio session on Klone, launched through Hyak OnDemand with the lab container.</p>
+<p>Everything this week runs on Raven, in the same RStudio Server session you set up in <a href="../tutorials/02-raven.html">Tutorial 2</a>.</p>
 </div>
 </div>
 </section>
@@ -707,19 +707,19 @@ Note
 <h2 class="anchored" data-anchor-id="from-reads-to-biology">From reads to biology</h2>
 <p>The core pipeline, and where each step runs:</p>
 <ol type="1">
-<li><strong>Demultiplex &amp; QC</strong> — separate samples, trim primers/adapters, filter by quality. <em>(Klone)</em></li>
+<li><strong>Demultiplex &amp; QC</strong> — separate samples, trim primers/adapters, filter by quality. <em>(Raven)</em></li>
 <li><strong>Denoise or cluster:</strong>
 <ul>
 <li><strong>DADA2</strong> infers exact <strong>amplicon sequence variants (ASVs)</strong> — resolves single-nucleotide differences, database-independent, reproducible across studies.</li>
-<li><strong>OTU clustering</strong> groups reads at a similarity threshold (e.g.&nbsp;97%) — coarser, still common. <em>(Klone)</em></li>
+<li><strong>OTU clustering</strong> groups reads at a similarity threshold (e.g.&nbsp;97%) — coarser, still common. <em>(Raven)</em></li>
 </ul></li>
-<li><strong>Taxonomic assignment</strong> — match ASVs/OTUs to a reference database (BLAST, or classifiers like the RDP/naïve-Bayes approach) to get names. <em>(Klone)</em></li>
-<li><strong>Build the table</strong> — a sample × taxon abundance/occurrence matrix: the analysis-ready product. <em>(Raven / laptop)</em></li>
+<li><strong>Taxonomic assignment</strong> — match ASVs/OTUs to a reference database (BLAST, or classifiers like the RDP/naïve-Bayes approach) to get names. <em>(Raven)</em></li>
+<li><strong>Build the table</strong> — a sample × taxon abundance/occurrence matrix: the analysis-ready product. <em>(Raven)</em></li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sketch of the heavy step, run in RStudio on Klone (OnDemand session, lab container)</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># See the eDNA metabarcoding assignment for session size and details</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sketch of the heavy step, run in RStudio on Raven</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># See the eDNA metabarcoding assignment for thread limits and details</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dada2)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>errF <span class="ot">&lt;-</span> <span class="fu">learnErrors</span>(filtFs, <span class="at">multithread =</span> <span class="dv">8</span>)   <span class="co"># match the CPUs you requested</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>errF <span class="ot">&lt;-</span> <span class="fu">learnErrors</span>(filtFs, <span class="at">multithread =</span> <span class="dv">8</span>)   <span class="co"># Raven is shared: cap threads at 8</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(errF, <span class="st">"output/week08/errF.rds"</span>)        <span class="co"># save slow steps as you go</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="ecological-readouts" class="level2">
@@ -1180,8 +1180,8 @@ Note
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../assignments/07-methylation.html" class="pagination-link" aria-label="Week 07 Analysis — Methylation and Genome-Browser Inspection">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 07 Analysis — Methylation and Genome-Browser Inspection</span>
+      <a href="../assignments/07-methylation.html" class="pagination-link" aria-label="Week 07 — Methylation and the Genome Browser: Show and Tell">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 07 — Methylation and the Genome Browser: Show and Tell</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

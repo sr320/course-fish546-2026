@@ -17,7 +17,7 @@ Take amplicon reads to an analysis-ready sample × taxon table, and reason about
 
 ## In your project
 
-**If your project is eDNA / metabarcoding:** run the full pipeline below on your own data. The compute-heavy steps (primer trimming, denoising, taxonomy) run in an RStudio session on Klone through [Hyak OnDemand](../tutorials/03-hyak.html); exploration and figures can stay on Raven or your laptop.
+**If your project is eDNA / metabarcoding:** run the full pipeline below on your own data. Everything, including primer trimming, denoising, and taxonomy, runs on Raven in RStudio Server ([Tutorial 2](../tutorials/02-raven.html)).
 
 **Every other project:** the eDNA discipline of negative controls and a false-positive floor applies to you too. Identify the equivalent in your own data and quantify it:
 
@@ -38,22 +38,14 @@ Run the pipeline on the provided 12S or COI amplicon set (paths in the pinned [P
 5. **One figure:** a stacked-bar composition plot or richness by sample.
 6. **Controls:** report what the negative or blank controls contained and what that implies about false positives.
 
-### Running it on Klone
+### Running it on Raven
 
-Launch RStudio through OnDemand exactly as in [Tutorial 3](../tutorials/03-hyak.html#rstudio) (account `srlab`, partition `ckpt`, **Custom** container `/gscratch/srlab/containers/srlab-bioinformatics-container-2bd5d44.sif`), but ask for a bigger slice than the tutorial:
+Open RStudio Server on Raven as in [Tutorial 2](../tutorials/02-raven.html), open your `fish546.Rproj` project, and `git pull` before you start.
 
-| Setting | Start with | If it isn't enough |
-|---|---|---|
-| CPUs | 8 | 16 |
-| Memory | 32 GB | 64 GB |
-| Hours | 4 | 8 |
-
-- **Use the CPUs you asked for.** Pass the count to each tool: `cutadapt -j 8`, and `multithread = 8` in DADA2's `filterAndTrim()`, `learnErrors()`, `dada()`, and `removeBimeraDenovo()`.
-- **Work in `~/fish546`** (your `/gscratch/srlab` folder), not your home directory.
-- **Closing the browser tab does not stop your session.** Reopen it from **My Interactive Sessions**. The session ends only when its hours run out or you delete it.
-- **Save as you go.** `ckpt` sessions can occasionally be stopped early. After each slow DADA2 step, save the result (for example `saveRDS(errF, "output/week08/errF.rds")`) so a restart picks up where you left off instead of starting over.
-- **Out of memory or out of time?** Delete the session, relaunch with the next size up, and reload your saved `.rds` files.
-- **Delete the session when you're done** so the node goes back to the pool.
+- **Raven is shared, so cap your threads at 8.** Pass the count to each tool: `cutadapt -j 8`, and `multithread = 8` in DADA2's `filterAndTrim()`, `learnErrors()`, `dada()`, and `removeBimeraDenovo()`. Check the load with `htop` in the Terminal tab before starting a long step.
+- **Closing the browser tab does not stop R.** RStudio Server keeps your session running; reopen the page to pick it back up.
+- **Save as you go.** After each slow DADA2 step, save the result (for example `saveRDS(errF, "output/week08/errF.rds")`) so a restart picks up where you left off instead of starting over.
+- **Long shell steps** (such as `cutadapt` over many samples) can run in the Terminal tab; keep a log by redirecting output to a file in `output/week08/`.
 
 Keep raw reads in `data/raw/` uncommitted, with checksums recorded.
 
@@ -63,7 +55,7 @@ Draft your final figure. It can be a mock-up with placeholder data, but it shoul
 
 ## What goes in your notebook entry
 
-- Code and commentary for each step. If you used Klone, a short platform note: the OnDemand session size (CPUs, memory, hours), the container file name, and the job ID (`echo $SLURM_JOB_ID`).
+- Code and commentary for each step. A short platform note: that it ran on Raven, the number of threads used, and the versions of the main tools (`cutadapt --version`, `packageVersion("dada2")`).
 - The read-survival table (eDNA pipeline) or the false-positive quantification (other projects).
 - The table and figure.
 - A caveats paragraph: given your controls and marker or data type, how confident are you in the detections?
